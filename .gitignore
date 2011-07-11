@@ -1,7 +1,12 @@
-<<<<<<< HEAD
-.idea/
+.idea
 .fuck/
-=======
-.idea/
-
->>>>>>> 2821b529880d3e5fa3b5847820e1ffc4ad23a543
+.bundle
+db/*.sqlite3*
+log/*.log
+*.log
+/tmp/
+doc/
+*.swp
+*~
+.project
+.DS_Store 
