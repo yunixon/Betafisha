@@ -1,4 +1,23 @@
 Oddschecker::Application.routes.draw do
+
+  get "site_top_navigation/betting"
+  match "/betting" => "site_top_navigation#betting", :as => :betting
+
+  get "site_top_navigation/free_bets"
+  match "/free_bets" => "site_top_navigation#free_bets", :as => :free_bets
+
+  get "site_top_navigation/in_play"
+  match "/in_play" => "site_top_navigation#in_play", :as => :in_play
+
+  get "site_top_navigation/tipping"
+  match "/tipping" => "site_top_navigation#tipping", :as => :tipping
+
+  get "site_top_navigation/gaming"
+   match "/gaming" => "site_top_navigation#gaming", :as => :gaming
+
+  get "site_top_navigation/news"
+  match "/news" => "site_top_navigation#news", :as => :news
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +67,7 @@ Oddschecker::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "index#index"
+  root :to => "site_top_navigation#betting"
 
   # See how all your routes lay out with "rake routes"
 
