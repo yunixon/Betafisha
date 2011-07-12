@@ -1532,3 +1532,695 @@ Started GET "/news" for 127.0.0.1 at 2011-07-12 19:35:05 +0400
   Processing by SiteTopNavigationController#news as HTML
 Rendered site_top_navigation/news.html.erb within layouts/application (4.0ms)
 Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 20:16:45 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 20:19:57 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 20:24:29 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 20:31:34 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 18ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 20:32:55 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 20:33:11 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 20:33:27 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 18ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 20:34:22 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 20:37:38 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 20:37:55 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 20:38:54 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 20ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news" for 127.0.0.1 at 2011-07-12 20:38:59 +0400
+  Processing by SiteTopNavigationController#news as HTML
+Rendered site_top_navigation/news.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 37ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gaming" for 127.0.0.1 at 2011-07-12 20:39:00 +0400
+  Processing by SiteTopNavigationController#gaming as HTML
+Rendered site_top_navigation/gaming.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 19ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipping" for 127.0.0.1 at 2011-07-12 20:39:01 +0400
+  Processing by SiteTopNavigationController#tipping as HTML
+Rendered site_top_navigation/tipping.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/in_play" for 127.0.0.1 at 2011-07-12 20:39:01 +0400
+  Processing by SiteTopNavigationController#in_play as HTML
+Rendered site_top_navigation/in_play.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets" for 127.0.0.1 at 2011-07-12 20:39:02 +0400
+  Processing by SiteTopNavigationController#free_bets as HTML
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 20ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 20:39:02 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 20ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets" for 127.0.0.1 at 2011-07-12 20:39:03 +0400
+  Processing by SiteTopNavigationController#free_bets as HTML
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets" for 127.0.0.1 at 2011-07-12 20:39:04 +0400
+  Processing by SiteTopNavigationController#free_bets as HTML
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 20ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/in_play" for 127.0.0.1 at 2011-07-12 20:39:04 +0400
+  Processing by SiteTopNavigationController#in_play as HTML
+Rendered site_top_navigation/in_play.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipping" for 127.0.0.1 at 2011-07-12 20:39:04 +0400
+  Processing by SiteTopNavigationController#tipping as HTML
+Rendered site_top_navigation/tipping.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 45ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news" for 127.0.0.1 at 2011-07-12 20:39:05 +0400
+  Processing by SiteTopNavigationController#news as HTML
+Rendered site_top_navigation/news.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gaming" for 127.0.0.1 at 2011-07-12 20:39:05 +0400
+  Processing by SiteTopNavigationController#gaming as HTML
+Rendered site_top_navigation/gaming.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 20:39:06 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets" for 127.0.0.1 at 2011-07-12 20:39:07 +0400
+  Processing by SiteTopNavigationController#free_bets as HTML
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 19ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets" for 127.0.0.1 at 2011-07-12 20:39:07 +0400
+  Processing by SiteTopNavigationController#free_bets as HTML
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/in_play" for 127.0.0.1 at 2011-07-12 20:39:08 +0400
+  Processing by SiteTopNavigationController#in_play as HTML
+Rendered site_top_navigation/in_play.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 19ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipping" for 127.0.0.1 at 2011-07-12 20:39:08 +0400
+  Processing by SiteTopNavigationController#tipping as HTML
+Rendered site_top_navigation/tipping.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gaming" for 127.0.0.1 at 2011-07-12 20:39:08 +0400
+  Processing by SiteTopNavigationController#gaming as HTML
+Rendered site_top_navigation/gaming.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news" for 127.0.0.1 at 2011-07-12 20:39:08 +0400
+  Processing by SiteTopNavigationController#news as HTML
+Rendered site_top_navigation/news.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 22ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 20:39:29 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 19ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets" for 127.0.0.1 at 2011-07-12 20:39:37 +0400
+  Processing by SiteTopNavigationController#free_bets as HTML
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 18ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/in_play" for 127.0.0.1 at 2011-07-12 20:39:38 +0400
+  Processing by SiteTopNavigationController#in_play as HTML
+Rendered site_top_navigation/in_play.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipping" for 127.0.0.1 at 2011-07-12 20:39:39 +0400
+  Processing by SiteTopNavigationController#tipping as HTML
+Rendered site_top_navigation/tipping.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 20ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gaming" for 127.0.0.1 at 2011-07-12 20:39:40 +0400
+  Processing by SiteTopNavigationController#gaming as HTML
+Rendered site_top_navigation/gaming.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 20ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news" for 127.0.0.1 at 2011-07-12 20:39:41 +0400
+  Processing by SiteTopNavigationController#news as HTML
+Rendered site_top_navigation/news.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 21ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 20:39:41 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 21ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news" for 127.0.0.1 at 2011-07-12 20:45:18 +0400
+  Processing by SiteTopNavigationController#news as HTML
+Rendered site_top_navigation/news.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 20:50:44 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 46ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news" for 127.0.0.1 at 2011-07-12 20:58:52 +0400
+  Processing by SiteTopNavigationController#news as HTML
+Rendered site_top_navigation/news.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 36ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 20:58:53 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 29ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets" for 127.0.0.1 at 2011-07-12 20:58:54 +0400
+  Processing by SiteTopNavigationController#free_bets as HTML
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 51ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets" for 127.0.0.1 at 2011-07-12 20:58:55 +0400
+  Processing by SiteTopNavigationController#free_bets as HTML
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/in_play" for 127.0.0.1 at 2011-07-12 20:58:55 +0400
+  Processing by SiteTopNavigationController#in_play as HTML
+Rendered site_top_navigation/in_play.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 39ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/in_play" for 127.0.0.1 at 2011-07-12 21:01:02 +0400
+  Processing by SiteTopNavigationController#in_play as HTML
+Rendered site_top_navigation/in_play.html.erb within layouts/application (96.0ms)
+Completed   in 123ms
+
+ActionView::Template::Error (undefined method `stringify_keys' for "/in_play":String):
+    30:     <ul>
+    31:       <li><%= link_to "Ставки", root_path %></li>
+    32:       <li><%= link_to "Свободные ставки", free_bets_path %></li>
+    33:       <li><%= link_to "В игре", "/in_play", in_play_path %></li>
+    34:       <li><%= link_to "Советы", "/tipping", tipping_path  %></li>
+    35:       <li><%= link_to "Игры", "/gaming", gaming_path %></li>
+    36:       <li><%= link_to "Новости", "/news", news_path %></li>
+  app/views/layouts/application.html.erb:33:in `_app_views_layouts_application_html_erb___55737348_38639988__752428519'
+
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (32.0ms)
+Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (67.0ms)
+
+
+Started GET "/in_play" for 127.0.0.1 at 2011-07-12 21:01:46 +0400
+  Processing by SiteTopNavigationController#in_play as HTML
+Rendered site_top_navigation/in_play.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 35ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 21:01:48 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets" for 127.0.0.1 at 2011-07-12 21:01:48 +0400
+  Processing by SiteTopNavigationController#free_bets as HTML
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 35ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/in_play" for 127.0.0.1 at 2011-07-12 21:01:49 +0400
+  Processing by SiteTopNavigationController#in_play as HTML
+Rendered site_top_navigation/in_play.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 26ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipping" for 127.0.0.1 at 2011-07-12 21:01:50 +0400
+  Processing by SiteTopNavigationController#tipping as HTML
+Rendered site_top_navigation/tipping.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 37ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gaming" for 127.0.0.1 at 2011-07-12 21:01:50 +0400
+  Processing by SiteTopNavigationController#gaming as HTML
+Rendered site_top_navigation/gaming.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 34ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news" for 127.0.0.1 at 2011-07-12 21:01:51 +0400
+  Processing by SiteTopNavigationController#news as HTML
+Rendered site_top_navigation/news.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 50ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news" for 127.0.0.1 at 2011-07-12 21:01:55 +0400
+  Processing by SiteTopNavigationController#news as HTML
+Rendered site_top_navigation/news.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 30ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gaming" for 127.0.0.1 at 2011-07-12 21:01:55 +0400
+  Processing by SiteTopNavigationController#gaming as HTML
+Rendered site_top_navigation/gaming.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 24ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipping" for 127.0.0.1 at 2011-07-12 21:01:56 +0400
+  Processing by SiteTopNavigationController#tipping as HTML
+Rendered site_top_navigation/tipping.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 79ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/in_play" for 127.0.0.1 at 2011-07-12 21:01:57 +0400
+  Processing by SiteTopNavigationController#in_play as HTML
+Rendered site_top_navigation/in_play.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets" for 127.0.0.1 at 2011-07-12 21:01:57 +0400
+  Processing by SiteTopNavigationController#free_bets as HTML
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 67ms (Views: 65.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 21:01:58 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 59ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 21:03:49 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 21:03:50 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 32ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 21:04:00 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 39ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 21:04:35 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 83ms (Views: 83.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 21:04:57 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 30ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 21:05:43 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 31ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets" for 127.0.0.1 at 2011-07-12 21:05:43 +0400
+  Processing by SiteTopNavigationController#free_bets as HTML
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 29ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/in_play" for 127.0.0.1 at 2011-07-12 21:05:44 +0400
+  Processing by SiteTopNavigationController#in_play as HTML
+Rendered site_top_navigation/in_play.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipping" for 127.0.0.1 at 2011-07-12 21:05:45 +0400
+  Processing by SiteTopNavigationController#tipping as HTML
+Rendered site_top_navigation/tipping.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 38ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gaming" for 127.0.0.1 at 2011-07-12 21:05:46 +0400
+  Processing by SiteTopNavigationController#gaming as HTML
+Rendered site_top_navigation/gaming.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 31ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news" for 127.0.0.1 at 2011-07-12 21:05:47 +0400
+  Processing by SiteTopNavigationController#news as HTML
+Rendered site_top_navigation/news.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 55ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 21:05:48 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 74ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets" for 127.0.0.1 at 2011-07-12 21:05:49 +0400
+  Processing by SiteTopNavigationController#free_bets as HTML
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/in_play" for 127.0.0.1 at 2011-07-12 21:05:50 +0400
+  Processing by SiteTopNavigationController#in_play as HTML
+Rendered site_top_navigation/in_play.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 27ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipping" for 127.0.0.1 at 2011-07-12 21:05:50 +0400
+  Processing by SiteTopNavigationController#tipping as HTML
+Rendered site_top_navigation/tipping.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 37ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gaming" for 127.0.0.1 at 2011-07-12 21:05:52 +0400
+  Processing by SiteTopNavigationController#gaming as HTML
+Rendered site_top_navigation/gaming.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news" for 127.0.0.1 at 2011-07-12 21:05:52 +0400
+  Processing by SiteTopNavigationController#news as HTML
+Rendered site_top_navigation/news.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news" for 127.0.0.1 at 2011-07-12 21:05:57 +0400
+  Processing by SiteTopNavigationController#news as HTML
+Rendered site_top_navigation/news.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 38ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gaming" for 127.0.0.1 at 2011-07-12 21:05:58 +0400
+  Processing by SiteTopNavigationController#gaming as HTML
+Rendered site_top_navigation/gaming.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 74ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipping" for 127.0.0.1 at 2011-07-12 21:05:58 +0400
+  Processing by SiteTopNavigationController#tipping as HTML
+Rendered site_top_navigation/tipping.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 74ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/in_play" for 127.0.0.1 at 2011-07-12 21:05:59 +0400
+  Processing by SiteTopNavigationController#in_play as HTML
+Rendered site_top_navigation/in_play.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets" for 127.0.0.1 at 2011-07-12 21:05:59 +0400
+  Processing by SiteTopNavigationController#free_bets as HTML
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 30ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 21:06:00 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 21:06:33 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 21:08:58 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 34ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 21:09:59 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 21:10:21 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 21:10:24 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 21:10:31 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets" for 127.0.0.1 at 2011-07-12 21:10:32 +0400
+  Processing by SiteTopNavigationController#free_bets as HTML
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 37ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 21:10:33 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 32ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 21:10:49 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/betting" for 127.0.0.1 at 2011-07-12 21:10:51 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets" for 127.0.0.1 at 2011-07-12 21:10:52 +0400
+  Processing by SiteTopNavigationController#free_bets as HTML
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/in_play" for 127.0.0.1 at 2011-07-12 21:10:52 +0400
+  Processing by SiteTopNavigationController#in_play as HTML
+Rendered site_top_navigation/in_play.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipping" for 127.0.0.1 at 2011-07-12 21:10:53 +0400
+  Processing by SiteTopNavigationController#tipping as HTML
+Rendered site_top_navigation/tipping.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gaming" for 127.0.0.1 at 2011-07-12 21:10:54 +0400
+  Processing by SiteTopNavigationController#gaming as HTML
+Rendered site_top_navigation/gaming.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news" for 127.0.0.1 at 2011-07-12 21:10:54 +0400
+  Processing by SiteTopNavigationController#news as HTML
+Rendered site_top_navigation/news.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 21:10:55 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 40ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/betting" for 127.0.0.1 at 2011-07-12 21:10:57 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets" for 127.0.0.1 at 2011-07-12 21:10:57 +0400
+  Processing by SiteTopNavigationController#free_bets as HTML
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 38ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/in_play" for 127.0.0.1 at 2011-07-12 21:10:58 +0400
+  Processing by SiteTopNavigationController#in_play as HTML
+Rendered site_top_navigation/in_play.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipping" for 127.0.0.1 at 2011-07-12 21:10:59 +0400
+  Processing by SiteTopNavigationController#tipping as HTML
+Rendered site_top_navigation/tipping.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gaming" for 127.0.0.1 at 2011-07-12 21:10:59 +0400
+  Processing by SiteTopNavigationController#gaming as HTML
+Rendered site_top_navigation/gaming.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 73ms (Views: 72.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news" for 127.0.0.1 at 2011-07-12 21:11:00 +0400
+  Processing by SiteTopNavigationController#news as HTML
+Rendered site_top_navigation/news.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news" for 127.0.0.1 at 2011-07-12 21:11:29 +0400
+  Processing by SiteTopNavigationController#news as HTML
+Rendered site_top_navigation/news.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/betting" for 127.0.0.1 at 2011-07-12 21:11:39 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 55ms (Views: 54.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets" for 127.0.0.1 at 2011-07-12 21:11:40 +0400
+  Processing by SiteTopNavigationController#free_bets as HTML
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/in_play" for 127.0.0.1 at 2011-07-12 21:11:41 +0400
+  Processing by SiteTopNavigationController#in_play as HTML
+Rendered site_top_navigation/in_play.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 46ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipping" for 127.0.0.1 at 2011-07-12 21:11:41 +0400
+  Processing by SiteTopNavigationController#tipping as HTML
+Rendered site_top_navigation/tipping.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gaming" for 127.0.0.1 at 2011-07-12 21:11:42 +0400
+  Processing by SiteTopNavigationController#gaming as HTML
+Rendered site_top_navigation/gaming.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 47ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news" for 127.0.0.1 at 2011-07-12 21:11:42 +0400
+  Processing by SiteTopNavigationController#news as HTML
+Rendered site_top_navigation/news.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 46ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/betting" for 127.0.0.1 at 2011-07-12 21:11:55 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 28ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-12 21:11:55 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 32ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/betting" for 127.0.0.1 at 2011-07-12 21:11:56 +0400
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.0ms)
