@@ -1,22 +1,22 @@
 Oddschecker::Application.routes.draw do
 
+  get "sing_up/singup"
+  match "/singup", :to => "sing_up#singup", :as => :singup
+  get "sing_up/singin"
+  match "/singin", :to =>"sing_up#singin", :as => :singin
+
   get "site_top_navigation/betting"
-  match "/betting" => "site_top_navigation#betting", :as => :betting
-
+  match "/betting", :to =>  "site_top_navigation#betting", :as => :betting
   get "site_top_navigation/free_bets"
-  match "/free_bets" => "site_top_navigation#free_bets", :as => :free_bets
-
+  match "/free_bets" , :to =>  "site_top_navigation#free_bets", :as => :free_bets
   get "site_top_navigation/in_play"
-  match "/in_play" => "site_top_navigation#in_play", :as => :in_play
-
+  match "/in_play" , :to =>  "site_top_navigation#in_play", :as => :in_play
   get "site_top_navigation/tipping"
-  match "/tipping" => "site_top_navigation#tipping", :as => :tipping
-
+  match "/tipping" , :to =>  "site_top_navigation#tipping", :as => :tipping
   get "site_top_navigation/gaming"
-   match "/gaming" => "site_top_navigation#gaming", :as => :gaming
-
+   match "/gaming" , :to =>  "site_top_navigation#gaming", :as => :gaming
   get "site_top_navigation/news"
-  match "/news" => "site_top_navigation#news", :as => :news
+  match "/news" , :to =>  "site_top_navigation#news", :as => :news
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
