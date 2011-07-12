@@ -4,48 +4,89 @@ section, header, footer, aside, article, nav {
     display: block;
 }
 
-
 /* Basic settings*/
 
 body {
     font: 14px Arial, Helvetica, sans-serif;
 }
 
+/* Logo */
+
+#logo {
+    margin-top: 10px;
+}
+
+#logo a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
 /* Navigation */
 
 nav {
-  background-color: white;
-  padding: 0 0.7em;
-  white-space: nowrap;
+    background-color: white;
+    white-space: nowrap;
 }
 
 nav ul {
-  margin: 0;
-  padding: 0;
+    margin-top: 10px;
+    padding: 0;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
 }
 
 nav ul li {
-  list-style-type: none;
-  display: inline-block;
-  padding: 0.2em 0;
+    margin-left: 20px;
+    list-style-type: none;
+    display: inline-block;
 }
 
 nav ul li a {
-  padding: 0 5px;
-  text-decoration: none;
+    text-decoration: none;
+    color: #09f;
 }
 
 nav ul li a:visited {
-  color: #09c;
+    color: #09c;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
+/* Registration */
+#user_entrance {
+    margin-top: 10px;
+    padding: 0;
+}
+
+#user_entrance ul {
+    float: right;
+}
+
+#user_entrance ul li {
+    list-style-type: none;
+    display: inline-block;
+    color: #09f;
+}
+
+#user_entrance ul li a {
+    text-decoration: none;
+}
+
+#user_entrance ul li a:visited {
+    color: #09c;
+}
+
+#user_entrance ul li a:hover {
+    text-decoration: underline;
+}
 
 /* Content */
 
 #content {
-    margin: 50px 0 0 20px;
+    margin: 20px 0 0 0;
 }

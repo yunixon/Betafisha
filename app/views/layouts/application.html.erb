@@ -2,48 +2,57 @@
 <html>
 <head>
   <title><%= title %></title>
-    <%= csrf_meta_tag %>
+  <%= csrf_meta_tag %>
 
-   <!--[if lt IE 9]>
-     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-
-
-
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
 
 </head>
 <body>
-    <header class="container_24">
-         <nav class="grid_24">
-           <ul>
-             <li><%= link_to "Ставки", "/"  %></li>
-             <li><%= link_to "Свободные ставки", "/free_bets"  %></li>
-             <li><%= link_to "В игре", "/in_play"  %></li>
-             <li><%= link_to "Советы", "/tipping"  %></li>
-             <li><%= link_to "Игры", "/gaming"  %></li>
-             <li><%= link_to "Новости", "/news"  %></li>
-           </ul>
-         </nav>
-    </header>
+<header class="container_24">
 
-    <section class="container_24">
-        <div id="content" class="grid_24">
-          <%= yield %>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
-    </section>
+  <div id="logo" class="grid_12">
+    <%= link_to "BETSCHECKER.ru", root_path %>
+  </div>
+
+  <div id="user_entrance" class="grid_12">
+    <ul>
+      <li><a>Регистрация</a></li>
+      <li><b><a>Вход</a></b></li>
+    </ul>
+  </div>
+
+  <nav class="grid_24">
+    <ul>
+      <li><%= link_to "Ставки", betting_path %></li>
+      <li><%= link_to "Свободные ставки", free_bets_path %></li>
+      <li><%= link_to "В игре", in_play_path %></li>
+      <li><%= link_to "Советы", tipping_path  %></li>
+      <li><%= link_to "Игры", gaming_path %></li>
+      <li><%= link_to "Новости", news_path %></li>
+    </ul>
+  </nav>
+
+</header>
+
+<section class="container_24">
+  <div id="content" class="grid_24">
+    <%= yield %>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+      minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+      aliquip ex ea commodo consequat. Duis aute irure dolor in
+      reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+      culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </div>
+</section>
 
 </body>
 </html>
