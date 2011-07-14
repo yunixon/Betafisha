@@ -1,32 +1,52 @@
 <h1>Регистрация</h1>
 
 <%= form_for(@user) do |f| %>
+
+    <% if @user.errors.any? %>
+        <div id="errorExplanation">
+          <h2>Необходимо исправить <%= @user.errors.count %>
+            <% if @user.errors.count == 1 %>
+                <%= "ошибку" %>
+            <% elsif @user.errors.count <= 4 %>
+                <%= "ошибки" %>
+            <% else %>
+                <%= "ошибок" %>
+            <% end %>  :</h2>
+          <ul>
+            <% @user.errors.each do |attr, msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
     <br/>
     <div class="field">
       <%= f.label :name, "Имя пользователя" %>
       <br/>
       <%= f.text_field :name %>
     </div>
-     <br/>
+    <br/>
     <div class="field">
       <%= f.label :email, "Адрес электронной почты" %>
       <br/>
       <%= f.text_field :email %>
     </div>
-     <br/>
+    <br/>
     <div class="field">
       <%= f.label :password, "Пароль" %>
       <br/>
       <%= f.password_field :password %>
     </div>
-     <br/>
+    <br/>
     <div class="field">
       <%= f.label :password_confirmation, "Подтверждение пароля" %>
       <br/>
       <%= f.password_field :password_confirmation %>
     </div>
-     <br/>
+    <br/>
     <div class="actions">
       <%= f.submit " Создать учетную запись!" %>
     </div>
+
 <% end %>
