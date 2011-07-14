@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class UsersControllerTest < ActionController::TestCase
+class SingUpControllerTest < ActionController::TestCase
   test "should get singup" do
-    get :new
+    get :singup
     assert_response :success
   end
 
