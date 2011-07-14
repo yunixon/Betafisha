@@ -1,9 +1,9 @@
 Oddschecker::Application.routes.draw do
 
-  get "sing_up/singup"
-  match "/singup", :to => "sing_up#singup", :as => :singup
-  get "sing_up/singin"
-  match "/singin", :to =>"sing_up#singin", :as => :singin
+  resources :users
+
+  match "/singup", :to => "users#new" , :as => :singup
+
 
   get "site_top_navigation/betting"
   match "/betting", :to =>  "site_top_navigation#betting", :as => :betting
