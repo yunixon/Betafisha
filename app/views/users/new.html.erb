@@ -1,4 +1,4 @@
-<h1>Регистрация</h1>
+<h1><%=t :top_menu_sing_up %></h1>
 
 <%= form_for(@user) do |f| %>
 
@@ -22,31 +22,31 @@
 
     <br/>
     <div class="field">
-      <%= f.label :name, "Имя пользователя" %>
+      <%= f.label :name, t(:sing_up_username) %>
       <br/>
       <%= f.text_field :name %>
     </div>
     <br/>
     <div class="field">
-      <%= f.label :email, "Адрес электронной почты" %>
+      <%= f.label :email, t(:sing_up_email) %>
       <br/>
       <%= f.text_field :email %>
     </div>
     <br/>
     <div class="field">
-      <%= f.label :password, "Пароль" %>
+      <%= f.label :password, t(:sing_up_password) %>
       <br/>
       <%= f.password_field :password %>
     </div>
     <br/>
     <div class="field">
-      <%= f.label :password_confirmation, "Подтверждение пароля" %>
+      <%= f.label :password_confirmation, t(:sing_up_password_confirmation) %>
       <br/>
       <%= f.password_field :password_confirmation %>
     </div>
     <br/>
     <div class="actions">
-      <%= f.submit " Создать учетную запись!" %>
+      <%= f.submit t(:sing_up_submit) %>
     </div>
 
 <% end %>

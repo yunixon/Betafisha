@@ -1,0 +1,33 @@
+
+ru:
+
+  top_menu_bettings: "Ставки"
+  top_menu_free_bets: "Свободные ставки"
+  top_menu_in_play: "Сейчас в игре"
+  top_menu_tipping: "Советы"
+  top_menu_gaming: "Игры"
+  top_menu_news: "Новости"
+  
+  top_menu_sing_up: "Регистрация"
+  top_menu_sing_in: "Войти"
+  
+  sing_up_username: "Имя пользователя"
+  sing_up_email: "Адрес электронной почты"
+  sing_up_password: "Пароль" 
+  sing_up_password_confirmation: "Подтверждение пароля"
+  sing_up_submit: "Создать учетную запись!"
+  
+  sing_up_error_username_size: "Имя пользователя должно содержать не менее 2 и не более 15 знаков."
+  sing_up_error_password_size: "Пароль должен содержать не менее 6 и не более 40 знаков. Без пробелов."
+  sing_up_error_password_confirmation: "Необходимо подтвердить пароль!"
+  sing_up_error_email_format: "Не верный формат адреса электронной почты!"
+  
+  flash_sing_up_success: "Добро пожаловать в ваш личный кабинет!"
+  flash_sing_up_failed: "" 
+  
+    
+            
+  
+  
+    
+  

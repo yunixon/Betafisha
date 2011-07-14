@@ -2,27 +2,27 @@
 class SiteTopNavigationController < ApplicationController
 
   def betting
-    @title = "Ставки"
+    @title = I18n.t(:top_menu_bettings)
   end
 
   def free_bets
-    @title = "Свободные ставки"
+    @title = I18n.t(:top_menu_free_bets)
   end
 
   def in_play
-    @title = "В игре"
+    @title = I18n.t(:top_menu_in_play)
   end
 
   def tipping
-    @title = "Советы"
+    @title = I18n.t(:top_menu_tipping)
   end
 
   def gaming
-   @title = "Игры"
+   @title = I18n.t(:top_menu_gaming)
   end
 
   def news
-    @title = "Новости"
+    @title = I18n.t(:top_menu_news)
   end
 
 end

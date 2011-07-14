@@ -1,7 +1,11 @@
 Oddschecker::Application.routes.draw do
 
+  #resources :users
+  
+  #scope "/:locale" do
   resources :users
-
+  #end
+  
   get "users/new"
   match '/signup', :to => 'users#new', :as => :singup
 

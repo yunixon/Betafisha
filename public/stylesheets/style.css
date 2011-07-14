@@ -10,6 +10,10 @@ body {
     font: 14px Arial, Helvetica, sans-serif;
 }
 
+a {
+    color: #09f;
+}
+
 /* Logo */
 
 #logo {

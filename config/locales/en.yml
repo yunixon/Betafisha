@@ -1,5 +1,25 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  top_menu_bettings: "Bettings"
+  top_menu_free_bets: "Free bets"
+  top_menu_in_play: "In play"
+  top_menu_tipping: "Tipping"
+  top_menu_gaming: "Gaming"
+  top_menu_news: "News"
+
+  top_menu_sing_up: "Sing up"
+  top_menu_sing_in: "Sing in"
+  
+  sing_up_username: "Username"
+  sing_up_email: "E-mail"
+  sing_up_password: "Password" 
+  sing_up_password_confirmation: "Confirm password"
+  sing_up_submit: "Create  account!"
+  
+  sing_up_error_username_size: "Password must be from 2 to 15 characters long."
+  sing_up_error_password_size: "Password must be from 2 to 40 characters long. No whitespace."
+  sing_up_error_password_confirmation: "Need a new password confirmation!"
+  sing_up_error_email_format: "It doesn't look like a valid email format."
+  
+  flash_sing_up_success: "Welcome to your profile!"
+  flash_sing_up_failed: "" 

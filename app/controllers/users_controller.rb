@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-    @title = "Регистрация"
+    @title = I18n.t(:top_menu_sing_up)
   end
 
   def show
@@ -13,10 +13,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      flash[:success] = "Добро пожаловать в ваш личный кабинет!"
+      flash[:success] = I18n.t(:flash_sing_up_success)
       redirect_to @user
     else
-      @title = "Регистрация"
+      @title = I18n.t(:top_menu_sing_up)
       render 'new'
     end
   end
