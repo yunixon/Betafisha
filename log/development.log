@@ -10285,3 +10285,1059 @@ Started GET "/news?locale=en" for 127.0.0.1 at Fri Jul 15 01:02:24 +0400 2011
   Parameters: {"locale"=>"en"}
 Rendered site_top_navigation/news.html.erb within layouts/application (9.0ms)
 Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 01:39:03 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:06 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/betting.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:08 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"en"}
+Rendered users/new.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 72ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:09 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create  account!", "authenticity_token"=>"npem2I1aLWAIepPuoDQvLV4t1rjVnmKFTEWhNFTBgVU=", "utf8"=>"✓", "locale"=>"en", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered users/new.html.erb within layouts/application (75.0ms)
+Completed 200 OK in 129ms (Views: 94.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:18 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"en"}
+Rendered users/new.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 66ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:19 +0400 2011
+  Processing by SiteTopNavigationController#free_bets as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/in_play?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:20 +0400 2011
+  Processing by SiteTopNavigationController#in_play as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/in_play.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipping?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:21 +0400 2011
+  Processing by SiteTopNavigationController#tipping as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/tipping.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 35ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gaming?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:21 +0400 2011
+  Processing by SiteTopNavigationController#gaming as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/gaming.html.erb within layouts/application (69.0ms)
+Completed 200 OK in 91ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:22 +0400 2011
+  Processing by SiteTopNavigationController#news as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/news.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/betting?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:23 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/betting.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:23 +0400 2011
+  Processing by SiteTopNavigationController#free_bets as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 35ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/in_play?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:24 +0400 2011
+  Processing by SiteTopNavigationController#in_play as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/in_play.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipping?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:25 +0400 2011
+  Processing by SiteTopNavigationController#tipping as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/tipping.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gaming?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:25 +0400 2011
+  Processing by SiteTopNavigationController#gaming as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/gaming.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:26 +0400 2011
+  Processing by SiteTopNavigationController#news as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/news.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 81ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news?locale=ru" for 127.0.0.1 at Fri Jul 15 01:39:27 +0400 2011
+  Processing by SiteTopNavigationController#news as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/news.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 34ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:29 +0400 2011
+  Processing by SiteTopNavigationController#news as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/news.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:30 +0400 2011
+  Processing by SiteTopNavigationController#news as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/news.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gaming?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:31 +0400 2011
+  Processing by SiteTopNavigationController#gaming as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/gaming.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/betting?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:32 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/betting.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:33 +0400 2011
+  Processing by SiteTopNavigationController#free_bets as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/in_play?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:34 +0400 2011
+  Processing by SiteTopNavigationController#in_play as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/in_play.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 32ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipping?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:34 +0400 2011
+  Processing by SiteTopNavigationController#tipping as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/tipping.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gaming?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:35 +0400 2011
+  Processing by SiteTopNavigationController#gaming as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/gaming.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news?locale=en" for 127.0.0.1 at Fri Jul 15 01:39:36 +0400 2011
+  Processing by SiteTopNavigationController#news as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/news.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 30ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:03 +0400 2011
+  Processing by SiteTopNavigationController#free_bets as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/in_play?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:04 +0400 2011
+  Processing by SiteTopNavigationController#in_play as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/in_play.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 29ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipping?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:05 +0400 2011
+  Processing by SiteTopNavigationController#tipping as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/tipping.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gaming?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:05 +0400 2011
+  Processing by SiteTopNavigationController#gaming as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/gaming.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 31ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:06 +0400 2011
+  Processing by SiteTopNavigationController#news as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/news.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 34ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:07 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"en"}
+Rendered users/new.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 74ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/in_play?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:27 +0400 2011
+  Processing by SiteTopNavigationController#in_play as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/in_play.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipping?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:28 +0400 2011
+  Processing by SiteTopNavigationController#tipping as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/tipping.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gaming?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:28 +0400 2011
+  Processing by SiteTopNavigationController#gaming as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/gaming.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:28 +0400 2011
+  Processing by SiteTopNavigationController#news as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/news.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/betting?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:29 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/betting.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 27ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:32 +0400 2011
+  Processing by SiteTopNavigationController#free_bets as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/in_play?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:33 +0400 2011
+  Processing by SiteTopNavigationController#in_play as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/in_play.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipping?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:33 +0400 2011
+  Processing by SiteTopNavigationController#tipping as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/tipping.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 30ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:35 +0400 2011
+  Processing by SiteTopNavigationController#news as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/news.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 28ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news?locale=ru" for 127.0.0.1 at Fri Jul 15 01:40:35 +0400 2011
+  Processing by SiteTopNavigationController#news as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/news.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 30ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:36 +0400 2011
+  Processing by SiteTopNavigationController#news as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/news.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/in_play?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:37 +0400 2011
+  Processing by SiteTopNavigationController#in_play as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/in_play.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/free_bets?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:38 +0400 2011
+  Processing by SiteTopNavigationController#free_bets as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/free_bets.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 28ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/betting?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:38 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/betting.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tipping?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:39 +0400 2011
+  Processing by SiteTopNavigationController#tipping as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/tipping.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/gaming?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:39 +0400 2011
+  Processing by SiteTopNavigationController#gaming as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/gaming.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:40 +0400 2011
+  Processing by SiteTopNavigationController#news as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/news.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 28ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news?locale=ru" for 127.0.0.1 at Fri Jul 15 01:40:41 +0400 2011
+  Processing by SiteTopNavigationController#news as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/news.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news?locale=en" for 127.0.0.1 at Fri Jul 15 01:40:41 +0400 2011
+  Processing by SiteTopNavigationController#news as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/news.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 02:55:11 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 96ms (Views: 90.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=ru" for 127.0.0.1 at Fri Jul 15 02:55:21 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered users/new.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 69ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?locale=ru" for 127.0.0.1 at Fri Jul 15 02:55:23 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Создать учетную запись!", "authenticity_token"=>"rO6QYnkV7MyT7adToASk633OEPzfn8JV4rKvXF758Pg=", "utf8"=>"✓", "locale"=>"ru", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered users/new.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 118ms (Views: 86.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/news?locale=ru" for 127.0.0.1 at Fri Jul 15 02:55:25 +0400 2011
+  Processing by SiteTopNavigationController#news as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/news.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=ru" for 127.0.0.1 at Fri Jul 15 02:55:26 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered users/new.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 73ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=en" for 127.0.0.1 at Fri Jul 15 02:55:27 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"en"}
+Rendered users/new.html.erb within layouts/application (79.0ms)
+Completed 200 OK in 117ms (Views: 99.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?locale=en" for 127.0.0.1 at Fri Jul 15 02:55:28 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create  account!", "authenticity_token"=>"rO6QYnkV7MyT7adToASk633OEPzfn8JV4rKvXF758Pg=", "utf8"=>"✓", "locale"=>"en", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered users/new.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 82ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?locale=en" for 127.0.0.1 at Fri Jul 15 02:59:47 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create  account!", "authenticity_token"=>"rO6QYnkV7MyT7adToASk633OEPzfn8JV4rKvXF758Pg=", "utf8"=>"✓", "locale"=>"en", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered users/create.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 70ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=en" for 127.0.0.1 at Fri Jul 15 02:59:57 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"en"}
+Rendered users/new.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 65ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?locale=en" for 127.0.0.1 at Fri Jul 15 02:59:59 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create  account!", "authenticity_token"=>"rO6QYnkV7MyT7adToASk633OEPzfn8JV4rKvXF758Pg=", "utf8"=>"✓", "locale"=>"en", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered users/create.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 66ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 03:00:23 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=en" for 127.0.0.1 at Fri Jul 15 03:00:26 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"en"}
+Rendered users/new.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 108ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?locale=en" for 127.0.0.1 at Fri Jul 15 03:00:28 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create  account!", "authenticity_token"=>"rO6QYnkV7MyT7adToASk633OEPzfn8JV4rKvXF758Pg=", "utf8"=>"✓", "locale"=>"en", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered users/new.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 81ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 03:02:21 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=ru" for 127.0.0.1 at Fri Jul 15 03:02:22 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered users/new.html.erb within layouts/application (77.0ms)
+Completed 200 OK in 116ms (Views: 96.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?locale=ru" for 127.0.0.1 at Fri Jul 15 03:02:24 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Создать учетную запись!", "authenticity_token"=>"rO6QYnkV7MyT7adToASk633OEPzfn8JV4rKvXF758Pg=", "utf8"=>"✓", "locale"=>"ru", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Redirected to 
+Completed   in 35ms
+
+NoMethodError (undefined method `new_url' for #<UsersController:0x87c8868>):
+  app/controllers/users_controller.rb:20:in `create'
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.0ms)
+
+
+Started POST "/users?locale=ru" for 127.0.0.1 at Fri Jul 15 03:02:44 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Создать учетную запись!", "authenticity_token"=>"rO6QYnkV7MyT7adToASk633OEPzfn8JV4rKvXF758Pg=", "utf8"=>"✓", "locale"=>"ru", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered users/new.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 124ms (Views: 91.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?locale=ru" for 127.0.0.1 at Fri Jul 15 03:02:48 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Создать учетную запись!", "authenticity_token"=>"rO6QYnkV7MyT7adToASk633OEPzfn8JV4rKvXF758Pg=", "utf8"=>"✓", "locale"=>"ru", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered users/new.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 81ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?locale=ru" for 127.0.0.1 at Fri Jul 15 03:02:59 +0400 2011
+
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.0ms)
+
+
+Started POST "/users?locale=en" for 127.0.0.1 at Fri Jul 15 03:03:32 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create  account!", "authenticity_token"=>"rO6QYnkV7MyT7adToASk633OEPzfn8JV4rKvXF758Pg=", "utf8"=>"✓", "locale"=>"en", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered users/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 112ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?locale=en" for 127.0.0.1 at Fri Jul 15 03:03:33 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create  account!", "authenticity_token"=>"rO6QYnkV7MyT7adToASk633OEPzfn8JV4rKvXF758Pg=", "utf8"=>"✓", "locale"=>"en", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered users/new.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 79ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 03:04:52 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=ru" for 127.0.0.1 at Fri Jul 15 03:04:54 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered users/new.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 111ms (Views: 92.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?locale=ru" for 127.0.0.1 at Fri Jul 15 03:04:55 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Создать учетную запись!", "authenticity_token"=>"rO6QYnkV7MyT7adToASk633OEPzfn8JV4rKvXF758Pg=", "utf8"=>"✓", "locale"=>"ru", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered text template (0.0ms)
+Completed 200 OK in 41ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 03:06:20 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 32ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=ru" for 127.0.0.1 at Fri Jul 15 03:06:21 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered users/new.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 68ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?locale=ru" for 127.0.0.1 at Fri Jul 15 03:06:23 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Создать учетную запись!", "authenticity_token"=>"rO6QYnkV7MyT7adToASk633OEPzfn8JV4rKvXF758Pg=", "utf8"=>"✓", "locale"=>"ru", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered users/new.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 79ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?locale=ru" for 127.0.0.1 at Fri Jul 15 03:06:26 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Создать учетную запись!", "authenticity_token"=>"rO6QYnkV7MyT7adToASk633OEPzfn8JV4rKvXF758Pg=", "utf8"=>"✓", "locale"=>"ru", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered users/new.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 78ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?locale=ru" for 127.0.0.1 at Fri Jul 15 03:06:27 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Создать учетную запись!", "authenticity_token"=>"rO6QYnkV7MyT7adToASk633OEPzfn8JV4rKvXF758Pg=", "utf8"=>"✓", "locale"=>"ru", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered users/new.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 124ms (Views: 91.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?locale=ru" for 127.0.0.1 at Fri Jul 15 03:06:29 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Создать учетную запись!", "authenticity_token"=>"rO6QYnkV7MyT7adToASk633OEPzfn8JV4rKvXF758Pg=", "utf8"=>"✓", "locale"=>"ru", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered users/new.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 80ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users?locale=ru" for 127.0.0.1 at Fri Jul 15 03:06:31 +0400 2011
+
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.0ms)
+
+
+Started GET "/news?locale=ru" for 127.0.0.1 at Fri Jul 15 03:06:34 +0400 2011
+  Processing by SiteTopNavigationController#news as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/news.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=ru" for 127.0.0.1 at Fri Jul 15 03:06:36 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered users/new.html.erb within layouts/application (75.0ms)
+Completed 200 OK in 114ms (Views: 95.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?locale=ru" for 127.0.0.1 at Fri Jul 15 03:06:38 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Создать учетную запись!", "authenticity_token"=>"rO6QYnkV7MyT7adToASk633OEPzfn8JV4rKvXF758Pg=", "utf8"=>"✓", "locale"=>"ru", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered users/new.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 78ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=en" for 127.0.0.1 at Fri Jul 15 03:06:42 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"en"}
+Rendered users/new.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 74ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?locale=en" for 127.0.0.1 at Fri Jul 15 03:06:43 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create  account!", "authenticity_token"=>"rO6QYnkV7MyT7adToASk633OEPzfn8JV4rKvXF758Pg=", "utf8"=>"✓", "locale"=>"en", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered users/new.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 126ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=en" for 127.0.0.1 at Fri Jul 15 03:10:58 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"en"}
+Rendered users/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 54ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?locale=en" for 127.0.0.1 at Fri Jul 15 03:11:01 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create  account!", "authenticity_token"=>"rO6QYnkV7MyT7adToASk633OEPzfn8JV4rKvXF758Pg=", "utf8"=>"✓", "locale"=>"en", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered users/new.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 120ms (Views: 88.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 11:35:34 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 72ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=ru" for 127.0.0.1 at Fri Jul 15 11:35:36 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered users/new.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 146ms (Views: 103.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?locale=ru" for 127.0.0.1 at Fri Jul 15 11:35:47 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Создать учетную запись!", "authenticity_token"=>"rO6QYnkV7MyT7adToASk633OEPzfn8JV4rKvXF758Pg=", "utf8"=>"✓", "locale"=>"ru", "user"=>{"name"=>"vasya", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"asdasd@sds.ddd"}}
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (20.0ms)[0m  INSERT INTO "users" ("salt", "name", "updated_at", "created_at", "encrypted_password", "email") VALUES ('a5d6a35ee0bf382be6afd7db562f1e6fd7adfb7673d3e785faf42b64e6992a6d', 'vasya', '2011-07-15 07:35:47.843272', '2011-07-15 07:35:47.843272', '4f9dea4c065c04cc95646e7d50e61e570ede67fb59f1cef7e2041f5e9afe33a8', 'asdasd@sds.ddd')
+Redirected to http://localhost:3000/users/5?locale=ru
+Completed 302 Found in 534ms
+
+
+Started GET "/users/5?locale=ru" for 127.0.0.1 at Fri Jul 15 11:35:48 +0400 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5", "locale"=>"ru"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 126ms (Views: 83.0ms | ActiveRecord: 22.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 11:46:08 +0400 2011
+
+ActiveRecord::AdapterNotSpecified (development database is not configured):
+  
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (84.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (102.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 12:05:09 +0400 2011
+
+ActiveRecord::ConnectionNotEstablished (ActiveRecord::ConnectionNotEstablished):
+  
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (36.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 12:13:46 +0400 2011
+
+ActiveRecord::AdapterNotSpecified (development database is not configured):
+  
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 12:28:17 +0400 2011
+
+ActiveRecord::ConnectionNotEstablished (ActiveRecord::ConnectionNotEstablished):
+  
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (41.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 12:28:40 +0400 2011
+
+ActiveRecord::AdapterNotSpecified (development database is not configured):
+  
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (37.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 12:39:07 +0400 2011
+
+ActiveRecord::AdapterNotSpecified (development database is not configured):
+  
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 12:49:39 +0400 2011
+
+ActiveRecord::AdapterNotSpecified (development database is not configured):
+  
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (41.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 12:50:48 +0400 2011
+
+ActiveRecord::ConnectionNotEstablished (ActiveRecord::ConnectionNotEstablished):
+  
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 12:51:05 +0400 2011
+
+RuntimeError (Please install the mysql2 adapter: `gem install activerecord-mysql2-adapter` (no such file to load -- active_record/connection_adapters/mysql2_adapter)):
+  
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 12:53:13 +0400 2011
+
+RuntimeError (!!! Missing the mysql2 gem. Add it to your Gemfile: gem 'mysql2'):
+  
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (14.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (42.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 13:01:12 +0400 2011
+
+RuntimeError (Please install the mysql2 adapter: `gem install activerecord-mysql2-adapter` (no such file to load -- active_record/connection_adapters/mysql2_adapter)):
+  
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 13:38:58 +0400 2011
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 13:40:14 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (91.0ms)
+Completed 200 OK in 310ms (Views: 154.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=ru" for 127.0.0.1 at Fri Jul 15 13:44:03 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Completed   in 110ms
+
+Mysql::Error (Table 'users.users' doesn't exist):
+  app/controllers/users_controller.rb:5:in `new'
+  app/controllers/users_controller.rb:5:in `new'
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (51.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 13:47:26 +0400 2011
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 13:50:36 +0400 2011
+
+Mysql::Error (Unknown database 'users'):
+  
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 13:55:01 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 107ms (Views: 99.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=ru" for 127.0.0.1 at Fri Jul 15 13:55:04 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Completed   in 53ms
+
+Mysql::Error (Table 'users.users' doesn't exist):
+  app/controllers/users_controller.rb:5:in `new'
+  app/controllers/users_controller.rb:5:in `new'
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at Fri Jul 15 13:58:49 +0400 2011
+  Processing by UsersController#new as HTML
+Completed   in 117ms
+
+Mysql::Error (Table 'users.users' doesn't exist):
+  app/controllers/users_controller.rb:5:in `new'
+  app/controllers/users_controller.rb:5:in `new'
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (38.0ms)
+
+
+Started GET "/users/" for 127.0.0.1 at Fri Jul 15 13:58:51 +0400 2011
+
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 13:58:54 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 75ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=ru" for 127.0.0.1 at Fri Jul 15 13:58:56 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Completed   in 39ms
+
+Mysql::Error (Table 'users.users' doesn't exist):
+  app/controllers/users_controller.rb:5:in `new'
+  app/controllers/users_controller.rb:5:in `new'
+
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 13:59:31 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 117ms (Views: 107.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=ru" for 127.0.0.1 at Fri Jul 15 14:00:35 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Completed   in 97ms
+
+Mysql::Error (Table 'users.users' doesn't exist):
+  app/controllers/users_controller.rb:5:in `new'
+  app/controllers/users_controller.rb:5:in `new'
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 14:04:47 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 40ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=ru" for 127.0.0.1 at Fri Jul 15 14:04:49 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Completed   in 102ms
+
+Mysql::Error (Table 'users.users' doesn't exist):
+  app/controllers/users_controller.rb:5:in `new'
+  app/controllers/users_controller.rb:5:in `new'
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (38.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 14:07:20 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 83ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=ru" for 127.0.0.1 at Fri Jul 15 14:07:22 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Completed   in 57ms
+
+Mysql::Error (Table 'users.users' doesn't exist):
+  app/controllers/users_controller.rb:5:in `new'
+  app/controllers/users_controller.rb:5:in `new'
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (48.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW TABLES
+Mysql::Error: query: not connected: SHOW TABLES
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 14:19:12 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 72ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=ru" for 127.0.0.1 at Fri Jul 15 14:19:14 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Completed   in 43ms
+
+Mysql::Error (Table 'users.users' doesn't exist):
+  app/controllers/users_controller.rb:5:in `new'
+  app/controllers/users_controller.rb:5:in `new'
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+Mysql::Error: query: not connected: SHOW TABLES
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.0ms)[0m  SHOW TABLES
+Mysql::Error: query: not connected: SHOW TABLES
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 15:03:05 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 68ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=ru" for 127.0.0.1 at Fri Jul 15 15:03:07 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Completed   in 51ms
+
+Mysql::Error (Table 'users.users' doesn't exist):
+  app/controllers/users_controller.rb:5:in `new'
+  app/controllers/users_controller.rb:5:in `new'
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (55.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 15:18:01 +0400 2011
+
+RuntimeError (Please install the mysql2 adapter: `gem install activerecord-mysql2-adapter` (no such file to load -- active_record/connection_adapters/mysql2_adapter)):
+  
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (36.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 15 15:22:30 +0400 2011
+
+ActiveRecord::ConnectionNotEstablished (ActiveRecord::ConnectionNotEstablished):
+  
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (33.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jul 16 01:42:43 +0400 2011
+
+ArgumentError (syntax error on line 44, col 2: `  adapter: sqlite3'):
+  
+
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered C:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Sat Jul 16 01:44:19 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+Rendered site_top_navigation/betting.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 217ms (Views: 111.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?locale=ru" for 127.0.0.1 at Sat Jul 16 01:44:26 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/betting.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?locale=en" for 127.0.0.1 at Sat Jul 16 01:44:28 +0400 2011
+  Processing by SiteTopNavigationController#betting as HTML
+  Parameters: {"locale"=>"en"}
+Rendered site_top_navigation/betting.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=en" for 127.0.0.1 at Sat Jul 16 01:44:30 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"en"}
+Rendered users/new.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 270ms (Views: 249.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=ru" for 127.0.0.1 at Sat Jul 16 01:44:31 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered users/new.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 62ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users?locale=ru" for 127.0.0.1 at Sat Jul 16 01:44:42 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Создать учетную запись!", "authenticity_token"=>"cqp13F0k46Udxob2rhv94N8EtmNgvCkS6IOHbxU7FaE=", "utf8"=>"✓", "locale"=>"ru", "user"=>{"name"=>"vasya", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"asdasd@sds.ddd"}}
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mAREL (42.0ms)[0m  INSERT INTO "users" ("updated_at", "email", "created_at", "name", "salt", "encrypted_password") VALUES ('2011-07-15 21:44:42.675224', 'asdasd@sds.ddd', '2011-07-15 21:44:42.675224', 'vasya', '0e86bd6f92f8dc3da350019678ed9f71fed56c3351061ff059590b1726996cc9', '794c1ffd754dc480faf89e25886248f13c81ccce4c099f91ad6ccbc0206b2d7f')
+Redirected to http://127.0.0.1:3000/users/6?locale=ru
+Completed 302 Found in 399ms
+
+
+Started GET "/users/6?locale=ru" for 127.0.0.1 at Sat Jul 16 01:44:42 +0400 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6", "locale"=>"ru"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 55ms (Views: 35.0ms | ActiveRecord: 43.0ms)

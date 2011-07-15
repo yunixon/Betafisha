@@ -70,6 +70,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  annotate (= 2.4.0)
-  rails (= 3.0.7)
+  annotate
+  rails
+  rake (= 0.8.7)
   sqlite3
