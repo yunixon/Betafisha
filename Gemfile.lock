@@ -93,3 +93,4 @@ DEPENDENCIES
   rails (= 3.0.7)
   savon
   sqlite3
+  wasabi
