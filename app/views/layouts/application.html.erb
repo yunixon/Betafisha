@@ -40,19 +40,28 @@
       <li><%= link_to t(:top_menu_bookmakers), bookmakers_path %></li>
       <li><%= link_to t(:top_menu_statistics), statistics_path %></li>
       <li><%= link_to t(:top_menu_tools), tools_path %></li>
-
     </ul>
   </nav>
 
 </header>
 
 <section class="container_24">
-  <div id="content" class="grid_24">
+	<div id="left_nav" class="grid_4">
+		Спорт
+	</div>
+  <div id="content" class="grid_15">
     <% flash.each do |key, value| %>
         <div class="flash <%= key %>"><%= value %></div>
     <% end %>
     
     <%= yield %>
+  </div>
+  <div id="right_nav" class="grid_4">
+    	Моя карта
+  </div>
+  		
+  <div id="footer" class="grid_23">
+    <%= t(:footer_copyrights) %>
   </div>
 
   <div class="grid_24">

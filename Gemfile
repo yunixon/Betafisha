@@ -1,13 +1,16 @@
 source 'http://rubygems.org'
 
-gem 'rails'
-gem "rake"
-gem 'savon'   # wsdl soap client 
-gem 'nokogiri' # xml parser
+gem 'rails', '3.0.7'
+
+# Bundle edge Rails instead:
+# gem 'rails', :git => 'git://github.com/rails/rails.git'
+
 gem 'sqlite3'
 gem 'annotate'
+#gem 'wasabi'
+#gem 'savon'   # wsdl soap client 
+#gem 'nokogiri' # xml parser
 
-#gem 'activerecord-mysql2-adapter'
 # Use unicorn as the web server
 # gem 'unicorn'
 
