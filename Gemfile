@@ -8,8 +8,8 @@ gem 'rails', '3.0.7'
 gem 'sqlite3'
 gem 'annotate'
 #gem 'wasabi'
-#gem 'savon'   # wsdl soap client 
-#gem 'nokogiri' # xml parser
+gem 'savon'   
+gem 'nokogiri' 
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -31,6 +31,6 @@ gem 'nokogiri'
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 
-group :development, :test do
-  gem 'nokogiri'
-end
+# group :development, :test do
+  # gem 'nokogiri'
+# end
