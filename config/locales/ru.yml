@@ -1,16 +1,44 @@
 
 ru:
 
-  top_menu_bettings: "Ставки"
-  top_menu_free_bets: "Свободные ставки"
-  top_menu_in_play: "Сейчас в игре"
-  top_menu_tipping: "Советы"
-  top_menu_gaming: "Игры"
-  top_menu_news: "Новости"
+  top_menu_coefficients: "Коэффициенты"
+  
+  top_menu_home: "Главная"
+  top_menu_upcoming: "Ближайшие"
+  top_menu_live_bets: "Live ставки"
+  top_menu_dropping: "Dropping"
+  top_menu_filters: "Фильтры"
+           
+    
+  top_menu_bookmakers: "Букмекеры"
+  top_menu_statistics: "Статистика"
+  
+  top_menu_tools: "Инструменты"
+  
+  top_menu_calculator: "Калькулятор"
+  top_menu_dutching: "Dutching"
+  top_menu_hutching: "Hutching"
+  top_menu_Hedging: "Hedging"
+  
+  
   
   top_menu_sing_up: "Регистрация"
   top_menu_sing_in: "Войти"
   
+  left_nav_search: "Поиск"
+  left_nav_my_ligues: "Мои лиги"
+  left_nav_my_sport: "Спорт"
+  
+  right_nav_my_coupon: "Моя карточка"
+  
+  
+  footer_copyrights: "Copyright © 2011 BetAfisha.com"
+  footer_about: "О нас"
+  footer_contacts: "Контакты"
+  footer_faq: "FAQ"      
+  
+  
+
   sing_up_username: "Имя пользователя"
   sing_up_email: "Адрес электронной почты"
   sing_up_password: "Пароль" 

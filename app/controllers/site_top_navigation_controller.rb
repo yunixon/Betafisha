@@ -1,28 +1,22 @@
 # coding: utf-8
 class SiteTopNavigationController < ApplicationController
 
-  def betting
-    @title = I18n.t(:top_menu_bettings)
+  def coefficients
+    @title = I18n.t(:top_menu_coefficients)
   end
 
-  def free_bets
-    @title = I18n.t(:top_menu_free_bets)
+  def bookmakers
+    @title = I18n.t(:top_menu_bookmakers)
   end
 
-  def in_play
-    @title = I18n.t(:top_menu_in_play)
+  def statistics
+    @title = I18n.t(:top_menu_statistics)
   end
 
-  def tipping
-    @title = I18n.t(:top_menu_tipping)
+  def tools
+    @title = I18n.t(:top_menu_ools)
   end
 
-  def gaming
-   @title = I18n.t(:top_menu_gaming)
-  end
 
-  def news
-    @title = I18n.t(:top_menu_news)
-  end
 
 end

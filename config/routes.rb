@@ -1,7 +1,8 @@
 Oddschecker::Application.routes.draw do
 
   get "bets_loader/index"
-  match "/betsloader", :to =>  "bets_loader#index", :as => :betsloader
+  
+  match "/api_test", :to =>  "bets_loader#api_test", :as => :api_test
   #resources :users
   
   #scope "/:locale" do
@@ -11,18 +12,18 @@ Oddschecker::Application.routes.draw do
   get "users/new"
   match '/signup', :to => 'users#new', :as => :singup
 
-  get "site_top_navigation/betting"
-  match "/betting", :to =>  "site_top_navigation#betting", :as => :betting
-  get "site_top_navigation/free_bets"
-  match "/free_bets" , :to =>  "site_top_navigation#free_bets", :as => :free_bets
-  get "site_top_navigation/in_play"
-  match "/in_play" , :to =>  "site_top_navigation#in_play", :as => :in_play
-  get "site_top_navigation/tipping"
-  match "/tipping" , :to =>  "site_top_navigation#tipping", :as => :tipping
-  get "site_top_navigation/gaming"
-   match "/gaming" , :to =>  "site_top_navigation#gaming", :as => :gaming
-  get "site_top_navigation/news"
-  match "/news" , :to =>  "site_top_navigation#news", :as => :news
+   get "site_top_navigation/coefficients"
+   match "/coefficients", :to =>  "site_top_navigation#coefficients", :as => :coefficients
+   get "site_top_navigation/bookmakers"
+   match "/bookmakers" , :to =>  "site_top_navigation#bookmakers", :as => :bookmakers
+   get "site_top_navigation/statistics"
+   match "/statistics" , :to =>  "site_top_navigation#statistics", :as => :statistics
+   get "site_top_navigation/tools"
+   match "/tools" , :to =>  "site_top_navigation#tools", :as => :tools
+  # get "site_top_navigation/gaming"
+   # match "/gaming" , :to =>  "site_top_navigation#gaming", :as => :gaming
+  # get "site_top_navigation/news"
+  # match "/news" , :to =>  "site_top_navigation#news", :as => :news
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -73,7 +74,7 @@ Oddschecker::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "site_top_navigation#betting"
+  root :to => "site_top_navigation#coefficients"
 
   # See how all your routes lay out with "rake routes"
 

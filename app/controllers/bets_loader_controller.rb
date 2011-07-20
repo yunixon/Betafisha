@@ -7,7 +7,7 @@ class BetsLoaderController < ApplicationController
   require 'rubygems'
   require 'savon'
 
-  def index
+  def api_test
     
     # client = Savon::Client.new do
       # wsdl.document = "https://api.betfair.com/global/v3/BFGlobalService.wsdl"

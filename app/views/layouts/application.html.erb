@@ -27,7 +27,7 @@
     <ul>
       <li><%= link_to t(:top_menu_sing_up), new_user_path %></li>
       <li></li>
-      <li><%= link_to  "api_test", "betsloader" %></li>
+      <li><%= link_to  "api_test", api_test_path %></li>
       <li><%= link_to "ru", "#{request.path}?locale=ru" %></li>
       <li><%= link_to "en", "#{request.path}?locale=en" %></li>
     </ul>
@@ -36,12 +36,11 @@
 
   <nav class="grid_24">
     <ul>
-      <li><%= link_to t(:top_menu_bettings), betting_path %></li>
-      <li><%= link_to t(:top_menu_free_bets), free_bets_path %></li>
-      <li><%= link_to t(:top_menu_in_play), in_play_path %></li>
-      <li><%= link_to t(:top_menu_tipping), tipping_path %></li>
-      <li><%= link_to t(:top_menu_gaming), gaming_path %></li>
-      <li><%= link_to t(:top_menu_news), news_path %></li>
+      <li><%= link_to t(:top_menu_coefficients), coefficients_path %></li>
+      <li><%= link_to t(:top_menu_bookmakers), bookmakers_path %></li>
+      <li><%= link_to t(:top_menu_statistics), statistics_path %></li>
+      <li><%= link_to t(:top_menu_tools), tools_path %></li>
+
     </ul>
   </nav>
 
