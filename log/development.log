@@ -15482,3 +15482,20 @@ Started GET "/api_test?locale=ru" for 127.0.0.1 at Wed Jul 20 22:25:28 +0400 201
 DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_bets_loader_api_test_html_erb___1010190122_69631476_0 at c:/Sites/betschecker/app/views/bets_loader/api_test.html.erb:3)
 Rendered bets_loader/api_test.html.erb within layouts/application (24.0ms)
 Completed 200 OK in 2605ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from c:/Sites/Betafisha/vendor/plugins/dynamic_form/lib/dynamic_form.rb:3)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 20 22:49:36 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 110ms (Views: 66.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Wed Jul 20 22:49:43 +0400 2011
+
+LoadError (no such file to load -- nokogiri):
+  app/controllers/bets_loader_controller.rb:5
+
+Rendered c:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered c:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered c:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)

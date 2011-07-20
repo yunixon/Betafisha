@@ -2,8 +2,8 @@ source 'http://rubygems.org'
 
 gem 'rails'
 gem "rake"
-#gem 'savon'   # wsdl soap client 
-#gem 'nokogiri' # xml parser
+gem 'savon'   # wsdl soap client 
+gem 'nokogiri' # xml parser
 gem 'sqlite3'
 gem 'annotate'
 
