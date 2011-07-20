@@ -2,10 +2,8 @@ source 'http://rubygems.org'
 
 gem 'rails'
 gem "rake"
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-#gem 'mysql'
-#gem 'mysql2'
+gem 'savon'   # wsdl soap client 
+gem 'nokogiri' # xml parser
 gem 'sqlite3'
 gem 'annotate'
 
