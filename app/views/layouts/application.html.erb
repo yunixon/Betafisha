@@ -20,14 +20,14 @@
 <header class="container_24">
 
   <div id="logo" class="grid_12">
-    <%= link_to "BETSCHECKER.ru", root_path %>
+    <%= link_to "betafisha.ru", root_path %>
   </div>
 
   <div id="user_entrance" class="grid_12">
     <ul>
       <li><%= link_to t(:top_menu_sing_up), new_user_path %></li>
       <li></li>
-      <li></li>
+      <li><%= link_to  "api_test", "betsloader" %></li>
       <li><%= link_to "ru", "#{request.path}?locale=ru" %></li>
       <li><%= link_to "en", "#{request.path}?locale=en" %></li>
     </ul>
@@ -52,11 +52,11 @@
     <% flash.each do |key, value| %>
         <div class="flash <%= key %>"><%= value %></div>
     <% end %>
+    
     <%= yield %>
   </div>
 
   <div class="grid_24">
-
     <%= debug(params) if Rails.env.development? %>
     <%= debug(params) if Rails.env.production? %>
   </div>

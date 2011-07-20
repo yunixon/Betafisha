@@ -1,5 +1,7 @@
 Oddschecker::Application.routes.draw do
 
+  get "bets_loader/index"
+  match "/betsloader", :to =>  "bets_loader#index", :as => :betsloader
   #resources :users
   
   #scope "/:locale" do

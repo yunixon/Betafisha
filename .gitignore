@@ -1,5 +1,4 @@
 .idea
-.fuck/
 .bundle
 db/*.sqlite3*
 log/*.log
@@ -12,3 +11,4 @@ nbproject/
 .project
 .DS_Store 
 /nbproject/private/
+.project
