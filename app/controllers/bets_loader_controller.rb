@@ -6,8 +6,8 @@ class BetsLoaderController < ApplicationController
    require 'rubygems'
    require "net/http"
    require 'rexml/document'
-   require 'nokogiri'
-   require 'open-uri'
+  # require 'nokogiri'
+  # require 'open-uri'
     #require 'savon'
 
   def api_test
@@ -31,7 +31,7 @@ class BetsLoaderController < ApplicationController
     
       xmldoc = REXML::Document.new(res.body)
      
-      @doc = Nokogiri::XML(res.body)
+     # @doc = Nokogiri::XML(res.body)
       @events = Array.new
       @events = xmldoc.elements.each("//event") { |f| f }
 
