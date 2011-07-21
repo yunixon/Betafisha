@@ -15701,3 +15701,117 @@ Started GET "/bookmakers?locale=ru" for 127.0.0.1 at Thu Jul 21 00:57:50 +0400 2
   Parameters: {"locale"=>"ru"}
 Rendered site_top_navigation/bookmakers.html.erb within layouts/application (10.0ms)
 Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Jul 21 12:20:03 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (177.0ms)
+Completed 200 OK in 390ms (Views: 241.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Jul 21 12:20:39 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+Completed   in 1002ms
+
+NameError (uninitialized constant BetsLoaderController::Document):
+  app/controllers/bets_loader_controller.rb:30:in `api_test'
+
+Rendered c:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered c:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.0ms)
+Rendered c:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (63.0ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Jul 21 12:23:44 +0400 2011
+
+LoadError (no such file to load -- rexml):
+  app/controllers/bets_loader_controller.rb:9
+
+Rendered c:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered c:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered c:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (36.0ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Jul 21 12:24:09 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+Completed   in 2836ms
+
+NameError (uninitialized constant BetsLoaderController::XPath):
+  app/controllers/bets_loader_controller.rb:34:in `api_test'
+
+Rendered c:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered c:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.0ms)
+Rendered c:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Jul 21 12:24:12 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 107ms (Views: 104.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Jul 21 12:24:14 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+Completed   in 2580ms
+
+NameError (uninitialized constant BetsLoaderController::XPath):
+  app/controllers/bets_loader_controller.rb:34:in `api_test'
+
+Rendered c:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered c:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (101.0ms)
+Rendered c:/RailsInstaller/Ruby1.8.7/lib/ruby/gems/1.8/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (127.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Jul 21 12:25:33 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 60ms (Views: 58.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Jul 21 12:25:35 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered bets_loader/api_test.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 6270ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Jul 21 12:25:57 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered bets_loader/api_test.html.erb within layouts/application (200.0ms)
+Completed 200 OK in 6069ms (Views: 235.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Jul 21 12:34:21 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered bets_loader/api_test.html.erb within layouts/application (330.0ms)
+Completed 200 OK in 7566ms (Views: 364.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=ru" for 127.0.0.1 at Thu Jul 21 12:34:35 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered users/new.html.erb within layouts/application (53.0ms)
+Completed 200 OK in 198ms (Views: 107.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Jul 21 12:34:37 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered bets_loader/api_test.html.erb within layouts/application (315.0ms)
+Completed 200 OK in 6268ms (Views: 343.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Jul 21 12:39:55 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered bets_loader/api_test.html.erb within layouts/application (303.0ms)
+Completed 200 OK in 7388ms (Views: 337.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Jul 21 12:40:06 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+Rendered bets_loader/api_test.html.erb within layouts/application (333.0ms)
+Completed 200 OK in 9871ms (Views: 374.0ms | ActiveRecord: 0.0ms)

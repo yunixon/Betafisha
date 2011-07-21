@@ -89,7 +89,6 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
-  nokogiri
   rails (= 3.0.7)
   savon
   sqlite3

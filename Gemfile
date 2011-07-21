@@ -9,7 +9,7 @@ gem 'sqlite3'
 gem 'annotate'
 gem 'wasabi'
 gem 'savon'   
-gem 'nokogiri' 
+#gem 'nokogiri' 
 
 # Use unicorn as the web server
 # gem 'unicorn'
