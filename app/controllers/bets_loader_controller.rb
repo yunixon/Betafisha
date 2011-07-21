@@ -8,7 +8,7 @@ class BetsLoaderController < ApplicationController
    require 'rexml/document'
   # require 'nokogiri'
   # require 'open-uri'
-    #require 'savon'
+  # require 'savon'
 
   def api_test
     
