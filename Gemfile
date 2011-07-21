@@ -8,7 +8,10 @@ gem 'rails', '3.0.7'
 gem 'sqlite3'
 gem 'annotate'
 gem 'wasabi'
-gem 'savon'   
+gem 'savon' 
+gem 'bundler' 
+
+
 #gem 'nokogiri' 
 
 # Use unicorn as the web server
