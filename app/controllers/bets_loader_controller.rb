@@ -1,12 +1,14 @@
 # coding: utf-8
 class BetsLoaderController < ApplicationController
 
-  # require 'open-uri'
- #  require 'nokogiri'
-   require "net/http"
+
+
    require 'rubygems'
+   require "net/http"
    require 'rexml/document'
-  # require 'savon'
+   require 'nokogiri'
+   require 'open-uri'
+    #require 'savon'
 
   def api_test
     
@@ -29,7 +31,7 @@ class BetsLoaderController < ApplicationController
     
       xmldoc = REXML::Document.new(res.body)
      
-     # @doc = Nokogiri::XML(res.body)
+      @doc = Nokogiri::XML(res.body)
       @events = Array.new
       @events = xmldoc.elements.each("//event") { |f| f }
 
