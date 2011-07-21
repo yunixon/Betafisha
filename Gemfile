@@ -5,13 +5,15 @@ gem 'rails', '3.0.7'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'bundler' 
-gem 'nokogiri' 
 gem 'sqlite3'
 gem 'annotate'
+
+gem 'libxml-ruby', :require => 'libxml'
+gem 'libxslt-ruby', :require => 'libxslt'
+gem 'nokogiri', '=1.5.0', :platform => 'ruby'
+gem 'soap4r', '=1.5.8', :require => 'soap/wsdlDriver'
 gem 'wasabi'
 gem 'savon' 
-
-
 # Use unicorn as the web server
 # gem 'unicorn'
 
