@@ -8,8 +8,6 @@ gem 'bundler'
 gem 'sqlite3'
 gem 'annotate'
 
-gem 'libxml-ruby', :require => 'libxml'
-gem 'libxslt-ruby', :require => 'libxslt'
 gem 'nokogiri', '=1.5.0', :platform => 'ruby'
 gem 'soap4r', '=1.5.8', :require => 'soap/wsdlDriver'
 gem 'wasabi'
