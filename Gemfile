@@ -4,15 +4,12 @@ gem 'rails', '3.0.7'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'bundler' 
 gem 'sqlite3'
 gem 'annotate'
 gem 'wasabi'
 gem 'savon' 
-gem 'bundler' 
-
-
-#gem 'nokogiri' 
+gem 'nokogiri' 
 
 # Use unicorn as the web server
 # gem 'unicorn'
