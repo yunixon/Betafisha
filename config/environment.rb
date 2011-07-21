@@ -1,7 +1,4 @@
 # Load the rails application
-
-config.gem "nokogiri"
-
 require File.expand_path('../application', __FILE__)
 
 
