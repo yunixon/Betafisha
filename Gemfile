@@ -8,6 +8,7 @@ gem 'annotate'
 
 gem 'nokogiri'
 gem 'savon' 
+gem "mysql2"
 
 # group :development, :test do
 # 	gem 'nokogiri'
