@@ -15815,3 +15815,16 @@ Started GET "/api_test" for 127.0.0.1 at Thu Jul 21 12:40:06 +0400 2011
   Processing by BetsLoaderController#api_test as HTML
 Rendered bets_loader/api_test.html.erb within layouts/application (333.0ms)
 Completed 200 OK in 9871ms (Views: 374.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Jul 21 16:06:18 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (159.0ms)
+Completed 200 OK in 275ms (Views: 211.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Jul 21 16:06:34 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered bets_loader/api_test.html.erb within layouts/application (337.0ms)
+Completed 200 OK in 8096ms (Views: 370.0ms | ActiveRecord: 0.0ms)
