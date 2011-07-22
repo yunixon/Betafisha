@@ -1,14 +1,12 @@
 # coding: utf-8
 class BetsLoaderController < ApplicationController
 
-
-
    require 'rubygems'
    require "net/http"
    require 'rexml/document'
-  # require 'nokogiri'
-  # require 'open-uri'
-  # require 'savon'
+   require 'nokogiri'
+   require 'open-uri'
+   require 'savon'
 
   def api_test
     
@@ -26,14 +24,17 @@ class BetsLoaderController < ApplicationController
     #@doc = Nokogiri::XML(res.to_xml)
 
 
-     uri = URI.parse('http://xml.gamebookers.com/sports/basketball.xml');
-     res = Net::HTTP.get_response(uri);
+     #uri = URI.parse('http://xml.gamebookers.com/sports/basketball.xml');
+     #res = Net::HTTP.get_response(uri);
     
-      xmldoc = REXML::Document.new(res.body)
-     
-     # @doc = Nokogiri::XML(res.body)
+      #xmldoc = REXML::Document.new(res.body)
+
+
+      uri = 'http://xml.gamebookers.com/sports/basketball.xml'
+      doc = Nokogiri::XML( open( uri ) )
+
       @events = Array.new
-      @events = xmldoc.elements.each("//event") { |f| f }
+      @events = doc.xpath("//event")
 
   end
 end

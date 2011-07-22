@@ -15931,3 +15931,127 @@ Started GET "/bookmakers?locale=ru" for 127.0.0.1 at 2011-07-22 11:22:13 +0400
   Parameters: {"locale"=>"ru"}
 Rendered site_top_navigation/bookmakers.html.erb within layouts/application (5.2ms)
 Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 22 13:27:55 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 38ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Fri Jul 22 13:27:58 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+Completed   in 135995ms
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 22 13:31:52 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 26ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Fri Jul 22 13:31:54 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_bets_loader_api_test_html_erb__641302143__613209838_0 at /home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.html.erb:3)
+Rendered bets_loader/api_test.html.erb within layouts/application (79.1ms)
+Completed 200 OK in 6116ms (Views: 130.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 22 13:40:17 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 22 13:46:47 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (222.9ms)
+Completed 200 OK in 260ms (Views: 257.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 22 13:46:56 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Fri Jul 22 13:50:41 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 115ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Fri Jul 22 13:50:44 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_bets_loader_api_test_html_erb__641302143__612608978_0 at /home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.html.erb:3)
+Rendered bets_loader/api_test.html.erb within layouts/application (89.5ms)
+Completed 200 OK in 1067ms (Views: 94.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Fri Jul 22 13:53:14 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_bets_loader_api_test_html_erb__641302143__612557128_0 at /home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.html.erb:3)
+Rendered bets_loader/api_test.html.erb within layouts/application (84.0ms)
+Completed 200 OK in 993ms (Views: 88.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Fri Jul 22 13:53:42 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered bets_loader/api_test.html.erb within layouts/application (95.8ms)
+Completed   in 5164ms
+
+ActionView::Template::Error (undefined local variable or method `n' for #<#<Class:0xb6f1b9d4>:0xb6fb2c1c>):
+    1: <div class="grid_24">
+    2: 	<b>gamebookers basketball odds</b>
+    3: 	<!--% @events.each do |n| %>
+    4: 	<li> <%= n %> </li>
+    5: 	<% end %-->
+    6: </div>
+  app/views/bets_loader/api_test.html.erb:4:in `_app_views_bets_loader_api_test_html_erb__641302143__612528928_0'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (67.2ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (196.9ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Fri Jul 22 13:54:44 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+Rendered bets_loader/api_test.html.erb within layouts/application (99.4ms)
+Completed   in 1019ms
+
+ActionView::Template::Error (undefined local variable or method `n' for #<#<Class:0xb6f73454>:0xb6f72338>):
+    1: <div class="grid_24">
+    2: 	<b>gamebookers basketball odds</b>
+    3: 	<!--% @events.each do |n| %>
+    4: 	<li> <%= n %> </li>
+    5: 	<% end %-->
+    6: </div>
+  app/views/bets_loader/api_test.html.erb:4:in `_app_views_bets_loader_api_test_html_erb__641302143__612660888_0'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (79.0ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (184.3ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Fri Jul 22 13:55:09 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+Rendered bets_loader/api_test.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 756ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Fri Jul 22 13:56:03 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+Rendered bets_loader/api_test.html.erb within layouts/application (85.3ms)
+Completed 200 OK in 1123ms (Views: 91.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Fri Jul 22 13:56:12 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered bets_loader/api_test.html.erb within layouts/application (106.6ms)
+Completed 200 OK in 861ms (Views: 112.3ms | ActiveRecord: 0.0ms)
