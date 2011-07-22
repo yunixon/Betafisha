@@ -90,6 +90,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  bundler
   mysql2
   nokogiri
   rails (= 3.0.7)

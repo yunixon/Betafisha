@@ -15883,3 +15883,51 @@ Started POST "/users?locale=ru" for 127.0.0.1 at 2011-07-22 02:50:46 +0400
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZLeXId3XMj9je20v1G1SCC0pkK1CuAr5M4Krwpa0YK8=", "user"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Создать учетную запись!", "locale"=>"ru"}
 Rendered users/new.html.erb within layouts/application (17.8ms)
 Completed 200 OK in 86ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-07-22 11:21:07 +0400
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 79ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new?locale=ru" for 127.0.0.1 at 2011-07-22 11:21:11 +0400
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered users/new.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 38ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tools?locale=ru" for 127.0.0.1 at 2011-07-22 11:21:13 +0400
+  Processing by SiteTopNavigationController#tools as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/tools.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/statistics?locale=ru" for 127.0.0.1 at 2011-07-22 11:21:14 +0400
+  Processing by SiteTopNavigationController#statistics as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/statistics.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bookmakers?locale=ru" for 127.0.0.1 at 2011-07-22 11:21:14 +0400
+  Processing by SiteTopNavigationController#bookmakers as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/bookmakers.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coefficients?locale=ru" for 127.0.0.1 at 2011-07-22 11:21:16 +0400
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bookmakers?locale=ru" for 127.0.0.1 at 2011-07-22 11:22:13 +0400
+  Processing by SiteTopNavigationController#bookmakers as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/bookmakers.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)

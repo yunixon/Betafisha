@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.7'
 
-#gem 'bundler' 
+gem 'bundler' 
 gem 'sqlite3'
 gem 'annotate'
 
