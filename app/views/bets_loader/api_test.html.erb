@@ -1,6 +1,28 @@
 <div class="grid_24">
+	
+	<%= @doc_betfair %>
+	
+	<br/>
 	<b>gamebookers basketball odds</b>
-	<% @events.each do |n| %>
-	<li> <%= n %> </li>
+	
+	
+	
+	<br/>
+	<% @doc_gb.each do |node| %>
+	
+	<% if node.node_type ==  Nokogiri::XML::Reader::TYPE_ELEMENT %>
+			<%= node.name %> 
+	<%end%>
+	
+	<% if node.node_type ==  Nokogiri::XML::Reader::TYPE_TEXT %>
+		<% if node.value != nil %> 
+			<br/><%= "[" + node.value + "]" %> <br/>
+		<%end%>
+	<%end%>
+	
+	<% if node.node_type ==  Nokogiri::XML::Reader::TYPE_END_ELEMENT%>
+	<%end%>
+	
 	<% end %>
+	
 </div>

@@ -1,3 +1,4 @@
+
 /* HTML5*/
 
 section, header, footer, aside, article, nav {
@@ -13,6 +14,8 @@ body {
 a {
     color: #09f;
 }
+
+
 
 /* Logo */
 
@@ -61,7 +64,9 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+
 /* Registration */
+
 #user_entrance {
     margin-top: 10px;
     padding: 0;
@@ -88,6 +93,9 @@ nav ul li a:hover {
 #user_entrance ul li a:hover {
     text-decoration: underline;
 }
+
+
+
 
 /* Content */
 

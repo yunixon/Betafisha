@@ -17,6 +17,4 @@ class SiteTopNavigationController < ApplicationController
     @title = I18n.t(:top_menu_ools)
   end
 
-
-
 end

@@ -20,7 +20,7 @@
 <header class="container_24">
 
   <div id="logo" class="grid_12">
-    <%= link_to "betafisha.ru", root_path %>
+    <%= link_to "BetAfisha.ru", root_path %>
   </div>
 
   <div id="user_entrance" class="grid_12">
@@ -49,27 +49,24 @@
 	<div id="left_nav" class="grid_4">
 		Спорт
 	</div>
-  <div id="content" class="grid_15">
-    <% flash.each do |key, value| %>
-        <div class="flash <%= key %>"><%= value %></div>
-    <% end %>
-    
-    <%= yield %>
-  </div>
-  <div id="right_nav" class="grid_4">
+  	<div id="content" class="grid_15">
+	    <% flash.each do |key, value| %>
+	        <div class="flash <%= key %>"><%= value %></div>
+	    <% end %> 
+	    <%= yield %>
+  	</div>
+  	<div id="right_nav" class="grid_4">
     	Моя карта
-  </div>
+  	</div>
   		
-  <div id="footer" class="grid_23">
-    <%= t(:footer_copyrights) %>
-  </div>
+  	<div id="footer" class="grid_23">
+    	<%= t(:footer_copyrights) %>
+  	</div>
 
-  <div class="grid_24">
+  	<div class="grid_24">
     <!--%= debug(params) if Rails.env.development? %>
     <%= debug(params) if Rails.env.production? % -->
-  </div>
-
-  
+  </div> 
 </section>
 
 </body>
