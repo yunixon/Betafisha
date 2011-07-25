@@ -9,8 +9,6 @@ class BetsLoaderController < ApplicationController
    require 'open-uri'
    require 'savon'
 
-
-   
     def api_test
       client = Savon::Client.new do
       wsdl.document = "https://api.betfair.com/global/v3/BFGlobalService.wsdl"
@@ -23,14 +21,15 @@ class BetsLoaderController < ApplicationController
                                                             :product_id => 82,
                                                             :username => 'axgusev',
                                                             :vendor_softwareId => 0 } }
-     @doc_betfair = Nokogiri::XML(res.to_xml)
+     @doc_betfair = Nokogiri::XML( res.to_xml )
 
 
      #uri = URI.parse('http://xml.gamebookers.com/sports/basketball.xml');
      #res = Net::HTTP.get_response(uri);
     
-      #xmldoc = REXML::Document.new(res.body)
-
+     #xmldoc = REXML::Document.new(res.body)
+     
+ 
 
      uri = 'http://xml.gamebookers.com/sports/basketball.xml'
      @doc_gb = Nokogiri::XML::Reader( open( uri ) )

@@ -1,20 +1,22 @@
-# coding: utf-8
 # == Schema Information
 #
 # Table name: users
 #
-#  id         :integer         not null, primary key
-#  name       :string(255)
-#  email      :string(255)
-#  created_at :datetime
-#  updated_at :datetime
+#  id                 :integer(4)      not null, primary key
+#  name               :string(255)
+#  email              :string(255)
+#  created_at         :datetime
+#  updated_at         :datetime
+#  encrypted_password :string(255)
+#  salt               :string(255)
 #
 
+# coding: utf-8
 require "digest"
-
+ 
 class User < ActiveRecord::Base
   attr_accessor :password
-  attr_accessible :name, :email, :password, :password_confirmation
+  attr_accessible :id, :name, :email, :password, :password_confirmation  
 
 
   validates_size_of :name, :within => 2..15, :message => I18n.t(:sing_up_error_username_size)

@@ -6,17 +6,29 @@
 	Licensed under GPL and MIT.
 */
 
+/*
+  Forces backgrounds to span full width,
+  even if there is horizontal scrolling.
+  Increase this if your layout is wider.
+
+  Note: IE6 works fine without this fix.
+*/
+
+body {
+  min-width: 960px;
+}
 
 /* Containers
 ----------------------------------------------------------------------------------------------------*/
 .container_24 {
 	margin-left: auto;
 	margin-right: auto;
-	width: 972px;
+	width: 960px;
 }
 
 /* Grid >> Global
 ----------------------------------------------------------------------------------------------------*/
+
 
 .grid_1,
 .grid_2,
@@ -49,6 +61,36 @@
 	margin-right: 0px;
 }
 
+
+
+.push_1, .pull_1,
+.push_2, .pull_2,
+.push_3, .pull_3,
+.push_4, .pull_4,
+.push_5, .pull_5,
+.push_6, .pull_6,
+.push_7, .pull_7,
+.push_8, .pull_8,
+.push_9, .pull_9,
+.push_10, .pull_10,
+.push_11, .pull_11,
+.push_12, .pull_12,
+.push_13, .pull_13,
+.push_14, .pull_14,
+.push_15, .pull_15,
+.push_16, .pull_16,
+.push_17, .pull_17,
+.push_18, .pull_18,
+.push_19, .pull_19,
+.push_20, .pull_20,
+.push_21, .pull_21,
+.push_22, .pull_22,
+.push_23, .pull_23,
+.push_24, .pull_24 {
+	position:relative;
+}
+
+
 /* Grid >> Children (Alpha ~ First, Omega ~ Last)
 ----------------------------------------------------------------------------------------------------*/
 
@@ -63,300 +105,298 @@
 /* Grid >> 24 Columns
 ----------------------------------------------------------------------------------------------------*/
 
+
 .container_24 .grid_1 {
 	width:40px;
 }
 
 .container_24 .grid_2 {
-	width:81px;
+	width:80px;
 }
 
 .container_24 .grid_3 {
-	width:122px;
+	width:120px;
 }
 
 .container_24 .grid_4 {
-	width:163px;
+	width:160px;
 }
 
 .container_24 .grid_5 {
-	width:204px;
+	width:200px;
 }
 
 .container_24 .grid_6 {
-	width:245px;
+	width:240px;
 }
 
 .container_24 .grid_7 {
-	width:286px;
+	width:280px;
 }
 
 .container_24 .grid_8 {
-	width:327px;
+	width:320px;
 }
 
 .container_24 .grid_9 {
-	width:368px;
+	width:360px;
 }
 
 .container_24 .grid_10 {
-	width:409px;
+	width:400px;
 }
 
 .container_24 .grid_11 {
-	width:450px;
+	width:440px;
 }
 
-
-
 .container_24 .grid_12 {
-	width:484px;
-	/*width:491px;*/
+	width:480px;
 }
 
 .container_24 .grid_13 {
-	width:532px;
+	width:520px;
 }
 
 .container_24 .grid_14 {
-	width:573px;
+	width:560px;
 }
 
 .container_24 .grid_15 {
-	width:614px;
+	width:600px;
 }
 
 .container_24 .grid_16 {
-	width:655px;
+	width:640px;
 }
 
 .container_24 .grid_17 {
-	width:696px;
+	width:680px;
 }
 
 .container_24 .grid_18 {
-	width:737px;
+	width:720px;
 }
 
 .container_24 .grid_19 {
-	width:778px;
+	width:760px;
 }
 
 .container_24 .grid_20 {
-	width:819px;
+	width:800px;
 }
 
 .container_24 .grid_21 {
-	width:860px;
+	width:840px;
 }
 
 .container_24 .grid_22 {
-	width:901px;
+	width:880px;
 }
 
 .container_24 .grid_23 {
-	width:942px;
+	width:920px;
 }
 
 .container_24 .grid_24 {
-	width:983px;
+	width:960px;
 }
+
 
 
 
 /* Prefix Extra Space >> 24 Columns
 ----------------------------------------------------------------------------------------------------*/
 
+
 .container_24 .prefix_1 {
-	padding-left:41px;
+	padding-left:40px;
 }
 
 .container_24 .prefix_2 {
-	padding-left:82px;
+	padding-left:80px;
 }
 
 .container_24 .prefix_3 {
-	padding-left:123px;
+	padding-left:120px;
 }
 
 .container_24 .prefix_4 {
-	padding-left:164px;
+	padding-left:160px;
 }
 
 .container_24 .prefix_5 {
-	padding-left:205px;
+	padding-left:200px;
 }
 
 .container_24 .prefix_6 {
-	padding-left:246px;
+	padding-left:240px;
 }
 
 .container_24 .prefix_7 {
-	padding-left:287px;
+	padding-left:280px;
 }
 
 .container_24 .prefix_8 {
-	padding-left:328px;
+	padding-left:320px;
 }
 
 .container_24 .prefix_9 {
-	padding-left:369px;
+	padding-left:360px;
 }
 
 .container_24 .prefix_10 {
-	padding-left:410px;
+	padding-left:400px;
 }
 
 .container_24 .prefix_11 {
-	padding-left:451px;
+	padding-left:440px;
 }
 
 .container_24 .prefix_12 {
-	padding-left:492px;
+	padding-left:480px;
 }
 
 .container_24 .prefix_13 {
-	padding-left:533px;
+	padding-left:520px;
 }
 
 .container_24 .prefix_14 {
-	padding-left:574px;
+	padding-left:560px;
 }
 
 .container_24 .prefix_15 {
-	padding-left:615px;
+	padding-left:600px;
 }
 
 .container_24 .prefix_16 {
-	padding-left:656px;
+	padding-left:640px;
 }
 
 .container_24 .prefix_17 {
-	padding-left:697px;
+	padding-left:680px;
 }
 
 .container_24 .prefix_18 {
-	padding-left:738px;
+	padding-left:720px;
 }
 
 .container_24 .prefix_19 {
-	padding-left:779px;
+	padding-left:760px;
 }
 
 .container_24 .prefix_20 {
-	padding-left:820px;
+	padding-left:800px;
 }
 
 .container_24 .prefix_21 {
-	padding-left:861px;
+	padding-left:840px;
 }
 
 .container_24 .prefix_22 {
-	padding-left:902px;
+	padding-left:880px;
 }
 
 .container_24 .prefix_23 {
-	padding-left:943px;
+	padding-left:920px;
 }
 
 
 
 /* Suffix Extra Space >> 24 Columns
 ----------------------------------------------------------------------------------------------------*/
-.container_24 .suffix_1_a {
-	padding-right:38px;
-}
+
 
 .container_24 .suffix_1 {
-	padding-right:41px;
+	padding-right:40px;
 }
 
 .container_24 .suffix_2 {
-	padding-right:82px;
+	padding-right:80px;
 }
 
 .container_24 .suffix_3 {
-	padding-right:123px;
+	padding-right:120px;
 }
 
 .container_24 .suffix_4 {
-	padding-right:164px;
+	padding-right:160px;
 }
 
 .container_24 .suffix_5 {
-	padding-right:205px;
+	padding-right:200px;
 }
 
 .container_24 .suffix_6 {
-	padding-right:246px;
+	padding-right:240px;
 }
 
 .container_24 .suffix_7 {
-	padding-right:287px;
+	padding-right:280px;
 }
 
 .container_24 .suffix_8 {
-	padding-right:328px;
+	padding-right:320px;
 }
 
 .container_24 .suffix_9 {
-	padding-right:369px;
+	padding-right:360px;
 }
 
 .container_24 .suffix_10 {
-	padding-right:410px;
+	padding-right:400px;
 }
 
 .container_24 .suffix_11 {
-	padding-right:451px;
+	padding-right:440px;
 }
 
 .container_24 .suffix_12 {
-	padding-right:492px;
+	padding-right:480px;
 }
 
 .container_24 .suffix_13 {
-	padding-right:533px;
+	padding-right:520px;
 }
 
 .container_24 .suffix_14 {
-	padding-right:574px;
+	padding-right:560px;
 }
 
 .container_24 .suffix_15 {
-	padding-right:615px;
+	padding-right:600px;
 }
 
 .container_24 .suffix_16 {
-	padding-right:656px;
+	padding-right:640px;
 }
 
 .container_24 .suffix_17 {
-	padding-right:697px;
+	padding-right:680px;
 }
 
 .container_24 .suffix_18 {
-	padding-right:738px;
+	padding-right:720px;
 }
 
 .container_24 .suffix_19 {
-	padding-right:779px;
+	padding-right:760px;
 }
 
 .container_24 .suffix_20 {
-	padding-right:820px;
+	padding-right:800px;
 }
 
 .container_24 .suffix_21 {
-	padding-right:861px;
+	padding-right:840px;
 }
 
 .container_24 .suffix_22 {
-	padding-right:902px;
+	padding-right:880px;
 }
 
 .container_24 .suffix_23 {
-	padding-right:943px;
+	padding-right:920px;
 }
 
 
@@ -364,96 +404,97 @@
 /* Push Space >> 24 Columns
 ----------------------------------------------------------------------------------------------------*/
 
+
 .container_24 .push_1 {
-	left:41px;
+	left:40px;
 }
 
 .container_24 .push_2 {
-	left:82px;
+	left:80px;
 }
 
 .container_24 .push_3 {
-	left:123px;
+	left:120px;
 }
 
 .container_24 .push_4 {
-	left:164px;
+	left:160px;
 }
 
 .container_24 .push_5 {
-	left:205px;
+	left:200px;
 }
 
 .container_24 .push_6 {
-	left:246px;
+	left:240px;
 }
 
 .container_24 .push_7 {
-	left:287px;
+	left:280px;
 }
 
 .container_24 .push_8 {
-	left:328px;
+	left:320px;
 }
 
 .container_24 .push_9 {
-	left:369px;
+	left:360px;
 }
 
 .container_24 .push_10 {
-	left:410px;
+	left:400px;
 }
 
 .container_24 .push_11 {
-	left:451px;
+	left:440px;
 }
 
 .container_24 .push_12 {
-	left:492px;
+	left:480px;
 }
 
 .container_24 .push_13 {
-	left:533px;
+	left:520px;
 }
 
 .container_24 .push_14 {
-	left:574px;
+	left:560px;
 }
 
 .container_24 .push_15 {
-	left:615px;
+	left:600px;
 }
 
 .container_24 .push_16 {
-	left:656px;
+	left:640px;
 }
 
 .container_24 .push_17 {
-	left:697px;
+	left:680px;
 }
 
 .container_24 .push_18 {
-	left:738px;
+	left:720px;
 }
 
 .container_24 .push_19 {
-	left:779px;
+	left:760px;
 }
 
 .container_24 .push_20 {
-	left:820px;
+	left:800px;
 }
 
 .container_24 .push_21 {
-	left:861px;
+	left:840px;
 }
 
 .container_24 .push_22 {
-	left:902px;
+	left:880px;
 }
 
 .container_24 .push_23 {
-	left:943px;
+	left:920px;
 }
 
 
@@ -461,136 +502,137 @@
 /* Pull Space >> 24 Columns
 ----------------------------------------------------------------------------------------------------*/
 
+
 .container_24 .pull_1 {
-	left:-41px;
+	left:-40px;
 }
 
 .container_24 .pull_2 {
-	left:-82px;
+	left:-80px;
 }
 
 .container_24 .pull_3 {
-	left:-123px;
+	left:-120px;
 }
 
 .container_24 .pull_4 {
-	left:-164px;
+	left:-160px;
 }
 
 .container_24 .pull_5 {
-	left:-205px;
+	left:-200px;
 }
 
 .container_24 .pull_6 {
-	left:-246px;
+	left:-240px;
 }
 
 .container_24 .pull_7 {
-	left:-287px;
+	left:-280px;
 }
 
 .container_24 .pull_8 {
-	left:-328px;
+	left:-320px;
 }
 
 .container_24 .pull_9 {
-	left:-369px;
+	left:-360px;
 }
 
 .container_24 .pull_10 {
-	left:-410px;
+	left:-400px;
 }
 
 .container_24 .pull_11 {
-	left:-451px;
+	left:-440px;
 }
 
 .container_24 .pull_12 {
-	left:-492px;
+	left:-480px;
 }
 
 .container_24 .pull_13 {
-	left:-533px;
+	left:-520px;
 }
 
 .container_24 .pull_14 {
-	left:-574px;
+	left:-560px;
 }
 
 .container_24 .pull_15 {
-	left:-615px;
+	left:-600px;
 }
 
 .container_24 .pull_16 {
-	left:-656px;
+	left:-640px;
 }
 
 .container_24 .pull_17 {
-	left:-697px;
+	left:-680px;
 }
 
 .container_24 .pull_18 {
-	left:-738px;
+	left:-720px;
 }
 
 .container_24 .pull_19 {
-	left:-779px;
+	left:-760px;
 }
 
 .container_24 .pull_20 {
-	left:-820px;
+	left:-800px;
 }
 
 .container_24 .pull_21 {
-	left:-861px;
+	left:-840px;
 }
 
 .container_24 .pull_22 {
-	left:-902px;
+	left:-880px;
 }
 
 .container_24 .pull_23 {
-	left:-943px;
+	left:-920px;
 }
 
 
 
 
-/* Clear Floated Elements
+/* `Clear Floated Elements
 ----------------------------------------------------------------------------------------------------*/
 
 /* http://sonspring.com/journal/clearing-floats */
 
 .clear {
-	clear: both;
-	display: block;
-	overflow: hidden;
-	visibility: hidden;
-	width: 0;
-	height: 0;
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
 }
 
-/* http://perishablepress.com/press/2008/02/05/lessons-learned-concerning-the-clearfix-css-hack */
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+
+.clearfix:before,
+.clearfix:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
 
 .clearfix:after {
-	clear: both;
-	content: ' ';
-	display: block;
-	font-size: 0;
-	line-height: 0;
-	visibility: hidden;
-	width: 0;
-	height: 0;
+  clear: both;
 }
+
+/*
+  The following zoom:1 rule is specifically for IE6 + IE7.
+  Move to separate stylesheet if invalid CSS is a problem.
+*/
 
 .clearfix {
-	display: inline-block;
-}
-
-* html .clearfix {
-	height: 1%;
-}
-
-.clearfix {
-	display: block;
+  zoom: 1;
 }

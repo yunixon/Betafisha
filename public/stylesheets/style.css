@@ -1,9 +1,27 @@
+#debug {
+	background: #ccc;
+	margin-top: 20px;
+}
 
 /* HTML5*/
 
 section, header, footer, aside, article, nav {
     display: block;
 }
+
+
+section {
+	background: blue;
+}
+
+nav {
+	min-height: 70px;
+	margin-bottom: 10px;
+}
+
+
+
+
 
 /* Basic settings*/
 
@@ -34,6 +52,7 @@ a {
 nav {
     background-color: white;
     white-space: nowrap;
+    float: right;
 }
 
 nav ul {
@@ -46,7 +65,7 @@ nav ul li:first-child {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 0px;
     list-style-type: none;
     display: inline-block;
 }
@@ -62,6 +81,19 @@ nav ul li a:visited {
 
 nav ul li a:hover {
     text-decoration: underline;
+}
+
+
+#logo {
+	background: #eee;
+	color: #ccc;
+		min-height: 70px;
+}
+
+
+#user_entrance {
+	background: #bbb;
+	min-height: 70px;
 }
 
 
@@ -95,10 +127,40 @@ nav ul li a:hover {
 }
 
 
-
-
 /* Content */
 
 #content {
-    margin: 20px 0 0 0;
+    min-height: 400px;
+    background: #999999;
+    overflow: hidden;
+    float: left;
 }
+
+/* Left navigation */
+
+#left_nav {
+	background: #eee;
+	min-height: 400px;
+}
+
+#left_nav ul{
+	margin-top: 10px; 
+}
+
+/* Right navigation */
+
+#right_nav {
+	background: #eee;
+	min-height: 400px;
+	
+}
+
+/* Footer */
+
+#footer {
+	margin-top: 10px;
+	min-height: 30px;
+	background: #888;
+}
+
+

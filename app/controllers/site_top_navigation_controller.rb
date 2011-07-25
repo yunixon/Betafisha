@@ -3,6 +3,7 @@ class SiteTopNavigationController < ApplicationController
 
   def coefficients
     @title = I18n.t(:top_menu_coefficients)
+ 
   end
 
   def bookmakers

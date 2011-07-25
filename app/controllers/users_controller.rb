@@ -16,8 +16,7 @@ class UsersController < ApplicationController
       flash[:success] = I18n.t(:flash_sing_up_success)
       redirect_to @user
     else
-      #@title = I18n.t(:top_menu_sing_up)
-      render :action => "new"
+      render 'new'
     end
   end
 

@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: sports
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(255)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+football:
+  id: 1
+  name: "Футбол"
+
+basketball:
+  id: 2
+  name: "Баскетбол"
+  
+hockey:
+  id: 3 
+  name: "Хоккей"
+  
+formulaone:
+  id: 4
+  name: "Формула 1"
+ 
+horse:
+  id: 5
+  name: "Скачки"
+  
