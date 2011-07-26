@@ -19483,3 +19483,1640 @@ Started GET "/" for 127.0.0.1 at Tue Jul 26 15:13:31 +0400 2011
   [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
 Rendered site_top_navigation/coefficients.html.erb within layouts/application (18.6ms)
 Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/?locale=en" for 127.0.0.1 at Tue Jul 26 15:31:38 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/?locale=ru" for 127.0.0.1 at Tue Jul 26 15:31:39 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (75.2ms)
+Completed 200 OK in 81ms (Views: 80.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/?locale=ru" for 127.0.0.1 at Tue Jul 26 15:31:41 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/?locale=en" for 127.0.0.1 at Tue Jul 26 15:31:42 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tools?locale=en" for 127.0.0.1 at Tue Jul 26 15:31:44 +0400 2011
+  Processing by SiteTopNavigationController#tools as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/tools.html.erb within layouts/application (82.2ms)
+Completed 200 OK in 89ms (Views: 88.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new?locale=en" for 127.0.0.1 at Tue Jul 26 15:31:46 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered users/new.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 43ms (Views: 34.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api_test?locale=en" for 127.0.0.1 at Tue Jul 26 15:31:47 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (159.4ms)
+Completed 200 OK in 4060ms (Views: 165.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new?locale=en" for 127.0.0.1 at Tue Jul 26 15:31:52 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered users/new.html.erb within layouts/application (85.2ms)
+Completed 200 OK in 99ms (Views: 90.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users?locale=en" for 127.0.0.1 at Tue Jul 26 15:31:52 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create  account!", "authenticity_token"=>"TAz9cAA3ncY0U+bn2KmM6W5KWLcclHsu9Sgv+AX0PX4=", "utf8"=>"✓", "locale"=>"en", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+  [1m[36mSQL (13.8ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered users/new.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 67ms (Views: 34.8ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/bookmakers?locale=en" for 127.0.0.1 at Tue Jul 26 15:33:39 +0400 2011
+  Processing by SiteTopNavigationController#bookmakers as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/bookmakers.html.erb within layouts/application (79.4ms)
+Completed 200 OK in 86ms (Views: 84.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/statistics?locale=en" for 127.0.0.1 at Tue Jul 26 15:33:40 +0400 2011
+  Processing by SiteTopNavigationController#statistics as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/statistics.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 24ms (Views: 23.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tools?locale=en" for 127.0.0.1 at Tue Jul 26 15:33:41 +0400 2011
+  Processing by SiteTopNavigationController#tools as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/tools.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/coefficients?locale=en" for 127.0.0.1 at Tue Jul 26 15:33:42 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (73.0ms)
+Completed 200 OK in 79ms (Views: 78.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jul 26 15:37:41 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (4.2ms)
+Completed   in 12ms
+
+ActionView::Template::Error (No route matches {:action=>"new", :locale=>:ru, :controller=>"users"}):
+    25: 
+    26:   <div id="user_entrance" class="grid_12">
+    27:     <ul>
+    28:       <li><%= link_to t(:top_menu_sing_up), singup_path %></li>
+    29:       <li><%= link_to t(:top_menu_sing_in), singin_path  %></li>
+    30:       <li><%= link_to  "api_test", api_test_path %></li>
+    31:       <li><%= link_to "ru", "#{request.path}?locale=ru" %></li>
+  app/views/layouts/application.html.erb:28:in `_app_views_layouts_application_html_erb___386723279__613484008_0'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.9ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jul 26 15:39:17 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (78.6ms)
+Completed 200 OK in 89ms (Views: 84.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:18 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:20 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered users/new.html.erb within layouts/application (84.6ms)
+Completed 200 OK in 100ms (Views: 90.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:21 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:30 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:31 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered users/new.html.erb within layouts/application (87.8ms)
+Completed 200 OK in 102ms (Views: 93.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:32 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:33 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (206.4ms)
+Completed 200 OK in 3289ms (Views: 212.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:36 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:36 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered users/new.html.erb within layouts/application (90.2ms)
+Completed 200 OK in 106ms (Views: 96.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:37 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 31ms (Views: 30.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:37 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered users/new.html.erb within layouts/application (92.0ms)
+Completed 200 OK in 107ms (Views: 98.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:38 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:39 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (160.8ms)
+Completed 200 OK in 3912ms (Views: 166.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:43 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (74.3ms)
+Completed 200 OK in 80ms (Views: 79.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:43 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered users/new.html.erb within layouts/application (32.7ms)
+Completed 200 OK in 50ms (Views: 38.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:43 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (160.0ms)
+Completed 200 OK in 2736ms (Views: 166.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:46 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:46 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered users/new.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 46ms (Views: 37.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:47 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (22.5ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:48 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.2ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered users/new.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 46ms (Views: 37.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/statistics?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:50 +0400 2011
+  Processing by SiteTopNavigationController#statistics as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/statistics.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/bookmakers?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:52 +0400 2011
+  Processing by SiteTopNavigationController#bookmakers as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/bookmakers.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 24ms (Views: 23.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/coefficients?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:52 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tools?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:53 +0400 2011
+  Processing by SiteTopNavigationController#tools as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/tools.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/?locale=ru" for 127.0.0.1 at Tue Jul 26 15:39:54 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/?locale=ru" for 127.0.0.1 at Tue Jul 26 16:00:56 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (69.7ms)
+Completed 200 OK in 76ms (Views: 74.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jul 26 16:04:12 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Tue Jul 26 16:04:14 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions?locale=ru" for 127.0.0.1 at Tue Jul 26 16:04:16 +0400 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>""}, "authenticity_token"=>"TAz9cAA3ncY0U+bn2KmM6W5KWLcclHsu9Sgv+AX0PX4=", "utf8"=>"✓", "locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (77.7ms)
+Completed 200 OK in 84ms (Views: 83.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/sessions" for 127.0.0.1 at Tue Jul 26 16:12:09 +0400 2011
+
+ActionController::RoutingError (No route matches "/sessions"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jul 26 16:12:13 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 28ms (Views: 27.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Tue Jul 26 16:12:15 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions?locale=ru" for 127.0.0.1 at Tue Jul 26 16:12:16 +0400 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>""}, "authenticity_token"=>"TAz9cAA3ncY0U+bn2KmM6W5KWLcclHsu9Sgv+AX0PX4=", "utf8"=>"✓", "locale"=>"ru"}
+  [1m[36mSQL (34.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = '' LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 157ms (Views: 27.6ms | ActiveRecord: 34.8ms)
+
+
+Started GET "/user/1" for 127.0.0.1 at Tue Jul 26 16:12:30 +0400 2011
+
+ActionController::RoutingError (No route matches "/user/1"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at Tue Jul 26 16:12:34 +0400 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (7.3ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered users/show.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 48ms (Views: 30.0ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Tue Jul 26 16:12:44 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered sessions/new.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 28ms (Views: 27.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions?locale=ru" for 127.0.0.1 at Tue Jul 26 16:12:48 +0400 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"kolya@gmail.com"}, "authenticity_token"=>"TAz9cAA3ncY0U+bn2KmM6W5KWLcclHsu9Sgv+AX0PX4=", "utf8"=>"✓", "locale"=>"ru"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'kolya@gmail.com' LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 82ms (Views: 29.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions?locale=ru" for 127.0.0.1 at Tue Jul 26 16:12:55 +0400 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"kolya@gmail.com"}, "authenticity_token"=>"TAz9cAA3ncY0U+bn2KmM6W5KWLcclHsu9Sgv+AX0PX4=", "utf8"=>"✓", "locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'kolya@gmail.com' LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered sessions/new.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 101ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions?locale=ru" for 127.0.0.1 at Tue Jul 26 16:13:02 +0400 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"kolya@gmail.com"}, "authenticity_token"=>"TAz9cAA3ncY0U+bn2KmM6W5KWLcclHsu9Sgv+AX0PX4=", "utf8"=>"✓", "locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'kolya@gmail.com' LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 40ms (Views: 25.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Tue Jul 26 16:13:03 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions?locale=ru" for 127.0.0.1 at Tue Jul 26 16:13:07 +0400 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"kolya@gmail.com"}, "authenticity_token"=>"TAz9cAA3ncY0U+bn2KmM6W5KWLcclHsu9Sgv+AX0PX4=", "utf8"=>"✓", "locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'kolya@gmail.com' LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered sessions/new.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 46ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions?locale=ru" for 127.0.0.1 at Tue Jul 26 16:14:40 +0400 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"kolya@gmail.com"}, "authenticity_token"=>"TAz9cAA3ncY0U+bn2KmM6W5KWLcclHsu9Sgv+AX0PX4=", "utf8"=>"✓", "locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'kolya@gmail.com' LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 92ms (Views: 27.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Tue Jul 26 16:14:44 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 25ms (Views: 24.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Tue Jul 26 16:14:45 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered users/new.html.erb within layouts/application (84.3ms)
+Completed 200 OK in 98ms (Views: 89.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users?locale=ru" for 127.0.0.1 at Tue Jul 26 16:15:02 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Создать учетную запись!", "authenticity_token"=>"TAz9cAA3ncY0U+bn2KmM6W5KWLcclHsu9Sgv+AX0PX4=", "utf8"=>"✓", "locale"=>"ru", "user"=>{"name"=>"vasya", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"v@gmail.com"}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (20.4ms)[0m  describe `users`
+  [1m[36mAREL (37.6ms)[0m  [1mINSERT INTO `users` (`updated_at`, `encrypted_password`, `salt`, `created_at`, `name`, `email`) VALUES ('2011-07-26 12:15:02', 'a6afb1dad02027d9934955e48c828617a376ecf66552941f6518229333dc3b6e', 'ed8c7dc3218dfc7803bc2036b0a7430d4fd8c5bd5b14a9d561675a9f06c86532', '2011-07-26 12:15:02', 'vasya', 'v@gmail.com')[0m
+  [1m[35mSQL (42.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/users/3?locale=ru
+Completed 302 Found in 146ms
+
+
+Started GET "/users/3?locale=ru" for 127.0.0.1 at Tue Jul 26 16:15:02 +0400 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3", "locale"=>"ru"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered users/show.html.erb within layouts/application (90.1ms)
+Completed 200 OK in 105ms (Views: 95.7ms | ActiveRecord: 100.5ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Tue Jul 26 16:15:09 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered sessions/new.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions?locale=ru" for 127.0.0.1 at Tue Jul 26 16:15:12 +0400 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"v@gmail.com"}, "authenticity_token"=>"TAz9cAA3ncY0U+bn2KmM6W5KWLcclHsu9Sgv+AX0PX4=", "utf8"=>"✓", "locale"=>"ru"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'v@gmail.com' LIMIT 1
+Completed   in 20ms
+
+ActionView::MissingTemplate (Missing template sessions/create with {:handlers=>[:rjs, :erb, :builder, :rhtml, :rxml], :locale=>[:ru, :ru], :formats=>[:html]} in view paths "/home/dxkxzx/develop/git/Betafisha/app/views", "/home/dxkxzx/develop/git/Betafisha/vendor/plugins/dynamic_form/app/views"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jul 26 16:19:40 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (88.0ms)
+Completed 200 OK in 95ms (Views: 93.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Tue Jul 26 16:19:43 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered users/new.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 46ms (Views: 36.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Tue Jul 26 16:19:43 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (72.4ms)
+Completed 200 OK in 78ms (Views: 77.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions?locale=ru" for 127.0.0.1 at Tue Jul 26 16:19:49 +0400 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"v@gmail.com"}, "authenticity_token"=>"TAz9cAA3ncY0U+bn2KmM6W5KWLcclHsu9Sgv+AX0PX4=", "utf8"=>"✓", "locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'v@gmail.com' LIMIT 1[0m
+Completed   in 20ms
+
+ActionView::MissingTemplate (Missing template sessions/create with {:handlers=>[:rjs, :erb, :builder, :rhtml, :rxml], :locale=>[:ru, :ru], :formats=>[:html]} in view paths "/home/dxkxzx/develop/git/Betafisha/app/views", "/home/dxkxzx/develop/git/Betafisha/vendor/plugins/dynamic_form/app/views"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jul 26 17:18:28 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 26ms (Views: 25.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Tue Jul 26 17:18:32 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered sessions/new.html.erb within layouts/application (79.5ms)
+Completed 200 OK in 85ms (Views: 84.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions?locale=ru" for 127.0.0.1 at Tue Jul 26 17:18:40 +0400 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"v@gmail.com"}, "authenticity_token"=>"TAz9cAA3ncY0U+bn2KmM6W5KWLcclHsu9Sgv+AX0PX4=", "utf8"=>"✓", "locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`email` = 'v@gmail.com' LIMIT 1
+Redirected to http://localhost:3000/users/3?locale=ru
+Completed 302 Found in 16ms
+
+
+Started GET "/users/3?locale=ru" for 127.0.0.1 at Tue Jul 26 17:18:40 +0400 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3", "locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered users/show.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 39ms (Views: 29.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/?locale=ru" for 127.0.0.1 at Tue Jul 26 17:18:46 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Tue Jul 26 17:18:52 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered sessions/new.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Tue Jul 26 17:18:54 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered bets_loader/api_test.html.erb within layouts/application (162.5ms)
+Completed 200 OK in 3528ms (Views: 169.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Tue Jul 26 17:18:57 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered sessions/new.html.erb within layouts/application (82.7ms)
+Completed 200 OK in 89ms (Views: 87.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Tue Jul 26 17:18:57 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered users/new.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 46ms (Views: 37.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/?locale=ru" for 127.0.0.1 at Tue Jul 26 17:19:38 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (69.3ms)
+Completed 200 OK in 75ms (Views: 74.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jul 26 17:29:11 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+ERROR: compiling _app_views_layouts_application_html_erb___386723279__612260248_0 RAISED compile error
+/home/dxkxzx/develop/git/Betafisha/app/views/layouts/application.html.erb:90: syntax error, unexpected kENSURE, expecting kEND
+/home/dxkxzx/develop/git/Betafisha/app/views/layouts/application.html.erb:92: syntax error, unexpected $end, expecting kEND
+Function body:           def _app_views_layouts_application_html_erb___386723279__612260248_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+<head>
+  <title>');@output_buffer.append= ( title );@output_buffer.safe_concat('</title>
+
+  ');@output_buffer.append= ( csrf_meta_tag );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  ');@output_buffer.append= ( csrf_meta_tag );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+
+  ');@output_buffer.append= ( stylesheet_link_tag :all );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag :defaults );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+</head>
+<body>
+<header class="container_24">
+
+  <div id="logo" class="grid_12">
+    ');@output_buffer.append= ( link_to "BetAfisha.ru", root_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+
+  <div id="user_entrance" class="grid_12">
+    <ul>
+      <li>');@output_buffer.append= ( link_to t(:top_menu_sign_up), signup_path );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to t(:top_menu_sign_in), signin_path  );@output_buffer.safe_concat('</li>
+');       if signed_in? 
+@output_buffer.safe_concat('      	<li>');@output_buffer.append= ( link_to "Sign out", signout_path, :method => :delete );@output_buffer.safe_concat('</li>
+');       else 
+@output_buffer.safe_concat('      <li>');@output_buffer.append= ( link_to  "api_test", api_test_path );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to "ru", "#{request.path}?locale=ru" );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to "en", "#{request.path}?locale=en" );@output_buffer.safe_concat('</li>
+    </ul>
+
+  </div>
+
+  <nav class="grid_24">
+    <ul>
+      <li>');@output_buffer.append= ( link_to t(:top_menu_coefficients), coefficients_path );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to t(:top_menu_bookmakers), bookmakers_path );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to t(:top_menu_statistics), statistics_path );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to t(:top_menu_tools), tools_path );@output_buffer.safe_concat('</li>
+    </ul>
+  </nav>
+
+</header>
+
+<section class="container_24">
+	
+	<div id="left_nav" class="grid_4">
+		Спорт 
+		<ul>
+');			 sports = Sports.find(:all) 
+@output_buffer.append_if_string= 			 Sports.find(:all).each do |sport| 
+@output_buffer.safe_concat('			<li> ');@output_buffer.append= ( link_to  sport.name , coefficients_path );@output_buffer.safe_concat('</li>
+');			 end 	
+@output_buffer.safe_concat('		</ul>
+	</div>
+	
+  	<div id="content" class="grid_16">
+');@output_buffer.append_if_string= 	     flash.each do |key, value| 
+@output_buffer.safe_concat('	        <div class="flash ');@output_buffer.append= ( key );@output_buffer.safe_concat('">');@output_buffer.append= ( value );@output_buffer.safe_concat('</div>
+');	     end  
+@output_buffer.safe_concat('	    ');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  	</div>
+  	
+  	<div id="right_nav" class="grid_4">
+    	Моя карта
+  	</div>
+  		
+</section>
+
+<footer class="container_24">
+	
+	<div id="footer" class="grid_24">
+    	');@output_buffer.append= ( t(:footer_copyrights) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  	</div>
+
+  	<div id="debug" class="grid_24">
+    	');@output_buffer.append= ( debug(params) if Rails.env.development? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    	');@output_buffer.append= ( debug(params) if Rails.env.production? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  	</div> 
+</footer>
+
+</body>
+</html>');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/dxkxzx/develop/git/Betafisha/app/views/layouts/application.html.erb:92:in `compile'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/layouts.rb:80:in `_render_layout'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:62:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:6:in `send_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:441:in `_run__474415265__process_action__158111750__callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `synchronize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:77:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/handler/webrick.rb:13:in `run'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/server.rb:217:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands/server.rb:65:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:30
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:27:in `tap'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (12.8ms)
+Completed   in 22ms
+
+ActionView::Template::Error (compile error
+/home/dxkxzx/develop/git/Betafisha/app/views/layouts/application.html.erb:90: syntax error, unexpected kENSURE, expecting kEND
+/home/dxkxzx/develop/git/Betafisha/app/views/layouts/application.html.erb:92: syntax error, unexpected $end, expecting kEND):
+    87: 
+    88: </body>
+    89: </html>
+  app/views/layouts/application.html.erb:92:in `compile'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.2ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jul 26 17:29:59 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 50ms (Views: 49.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jul 26 17:30:37 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+ERROR: compiling _app_views_layouts_application_html_erb___386723279__613430838_0 RAISED compile error
+/home/dxkxzx/develop/git/Betafisha/app/views/layouts/application.html.erb:90: syntax error, unexpected kENSURE, expecting kEND
+/home/dxkxzx/develop/git/Betafisha/app/views/layouts/application.html.erb:92: syntax error, unexpected $end, expecting kEND
+Function body:           def _app_views_layouts_application_html_erb___386723279__613430838_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+<head>
+  <title>');@output_buffer.append= ( title );@output_buffer.safe_concat('</title>
+
+  ');@output_buffer.append= ( csrf_meta_tag );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  ');@output_buffer.append= ( csrf_meta_tag );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+
+  ');@output_buffer.append= ( stylesheet_link_tag :all );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag :defaults );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+</head>
+<body>
+<header class="container_24">
+
+  <div id="logo" class="grid_12">
+    ');@output_buffer.append= ( link_to "BetAfisha.ru", root_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+
+  <div id="user_entrance" class="grid_12">
+    <ul>
+      <li>');@output_buffer.append= ( link_to t(:top_menu_sign_up), signup_path );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to t(:top_menu_sign_in), signin_path  );@output_buffer.safe_concat('</li>
+');   if signed_in? 
+@output_buffer.safe_concat('      <li>');@output_buffer.append= ( link_to "Sign out", signout_path, :method => :delete );@output_buffer.safe_concat('</li>
+');    else 
+@output_buffer.safe_concat('      <li>');@output_buffer.append= ( link_to  "api_test", api_test_path );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to "ru", "#{request.path}?locale=ru" );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to "en", "#{request.path}?locale=en" );@output_buffer.safe_concat('</li>
+    </ul>
+
+  </div>
+
+  <nav class="grid_24">
+    <ul>
+      <li>');@output_buffer.append= ( link_to t(:top_menu_coefficients), coefficients_path );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to t(:top_menu_bookmakers), bookmakers_path );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to t(:top_menu_statistics), statistics_path );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to t(:top_menu_tools), tools_path );@output_buffer.safe_concat('</li>
+    </ul>
+  </nav>
+
+</header>
+
+<section class="container_24">
+	
+	<div id="left_nav" class="grid_4">
+		Спорт 
+		<ul>
+');			 sports = Sports.find(:all) 
+@output_buffer.append_if_string= 			 Sports.find(:all).each do |sport| 
+@output_buffer.safe_concat('			<li> ');@output_buffer.append= ( link_to  sport.name , coefficients_path );@output_buffer.safe_concat('</li>
+');			 end 	
+@output_buffer.safe_concat('		</ul>
+	</div>
+	
+  	<div id="content" class="grid_16">
+');@output_buffer.append_if_string= 	     flash.each do |key, value| 
+@output_buffer.safe_concat('	        <div class="flash ');@output_buffer.append= ( key );@output_buffer.safe_concat('">');@output_buffer.append= ( value );@output_buffer.safe_concat('</div>
+');	     end  
+@output_buffer.safe_concat('	    ');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  	</div>
+  	
+  	<div id="right_nav" class="grid_4">
+    	Моя карта
+  	</div>
+  		
+</section>
+
+<footer class="container_24">
+	
+	<div id="footer" class="grid_24">
+    	');@output_buffer.append= ( t(:footer_copyrights) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  	</div>
+
+  	<div id="debug" class="grid_24">
+    	');@output_buffer.append= ( debug(params) if Rails.env.development? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    	');@output_buffer.append= ( debug(params) if Rails.env.production? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  	</div> 
+</footer>
+
+</body>
+</html>');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/dxkxzx/develop/git/Betafisha/app/views/layouts/application.html.erb:92:in `compile'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/layouts.rb:80:in `_render_layout'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:62:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:6:in `send_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:441:in `_run__474415265__process_action__158111750__callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `synchronize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:77:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/handler/webrick.rb:13:in `run'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/server.rb:217:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands/server.rb:65:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:30
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:27:in `tap'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (49.0ms)
+Completed   in 57ms
+
+ActionView::Template::Error (compile error
+/home/dxkxzx/develop/git/Betafisha/app/views/layouts/application.html.erb:90: syntax error, unexpected kENSURE, expecting kEND
+/home/dxkxzx/develop/git/Betafisha/app/views/layouts/application.html.erb:92: syntax error, unexpected $end, expecting kEND):
+    87: 
+    88: </body>
+    89: </html>
+  app/views/layouts/application.html.erb:92:in `compile'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.8ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jul 26 17:31:55 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+ERROR: compiling _app_views_layouts_application_html_erb___386723279__612609258_0 RAISED compile error
+/home/dxkxzx/develop/git/Betafisha/app/views/layouts/application.html.erb:90: syntax error, unexpected kENSURE, expecting kEND
+/home/dxkxzx/develop/git/Betafisha/app/views/layouts/application.html.erb:92: syntax error, unexpected $end, expecting kEND
+Function body:           def _app_views_layouts_application_html_erb___386723279__612609258_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+<head>
+  <title>');@output_buffer.append= ( title );@output_buffer.safe_concat('</title>
+
+  ');@output_buffer.append= ( csrf_meta_tag );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  ');@output_buffer.append= ( csrf_meta_tag );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+
+  ');@output_buffer.append= ( stylesheet_link_tag :all );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( javascript_include_tag :defaults );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+</head>
+<body>
+<header class="container_24">
+
+  <div id="logo" class="grid_12">
+    ');@output_buffer.append= ( link_to "BetAfisha.ru", root_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+
+  <div id="user_entrance" class="grid_12">
+    <ul>
+      <li>');@output_buffer.append= ( link_to t(:top_menu_sign_up), signup_path );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to t(:top_menu_sign_in), signin_path  );@output_buffer.safe_concat('</li>
+');   if signed_in? 
+@output_buffer.safe_concat('      
+');    else 
+@output_buffer.safe_concat('      <li>');@output_buffer.append= ( link_to  "api_test", api_test_path );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to "ru", "#{request.path}?locale=ru" );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to "en", "#{request.path}?locale=en" );@output_buffer.safe_concat('</li>
+    </ul>
+
+  </div>
+
+  <nav class="grid_24">
+    <ul>
+      <li>');@output_buffer.append= ( link_to t(:top_menu_coefficients), coefficients_path );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to t(:top_menu_bookmakers), bookmakers_path );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to t(:top_menu_statistics), statistics_path );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to t(:top_menu_tools), tools_path );@output_buffer.safe_concat('</li>
+    </ul>
+  </nav>
+
+</header>
+
+<section class="container_24">
+	
+	<div id="left_nav" class="grid_4">
+		Спорт 
+		<ul>
+');			 sports = Sports.find(:all) 
+@output_buffer.append_if_string= 			 Sports.find(:all).each do |sport| 
+@output_buffer.safe_concat('			<li> ');@output_buffer.append= ( link_to  sport.name , coefficients_path );@output_buffer.safe_concat('</li>
+');			 end 	
+@output_buffer.safe_concat('		</ul>
+	</div>
+	
+  	<div id="content" class="grid_16">
+');@output_buffer.append_if_string= 	     flash.each do |key, value| 
+@output_buffer.safe_concat('	        <div class="flash ');@output_buffer.append= ( key );@output_buffer.safe_concat('">');@output_buffer.append= ( value );@output_buffer.safe_concat('</div>
+');	     end  
+@output_buffer.safe_concat('	    ');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  	</div>
+  	
+  	<div id="right_nav" class="grid_4">
+    	Моя карта
+  	</div>
+  		
+</section>
+
+<footer class="container_24">
+	
+	<div id="footer" class="grid_24">
+    	');@output_buffer.append= ( t(:footer_copyrights) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  	</div>
+
+  	<div id="debug" class="grid_24">
+    	');@output_buffer.append= ( debug(params) if Rails.env.development? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    	');@output_buffer.append= ( debug(params) if Rails.env.production? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  	</div> 
+</footer>
+
+</body>
+</html>');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/dxkxzx/develop/git/Betafisha/app/views/layouts/application.html.erb:92:in `compile'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/layouts.rb:80:in `_render_layout'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:62:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:6:in `send_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:441:in `_run__474415265__process_action__158111750__callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `synchronize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:77:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/handler/webrick.rb:13:in `run'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/server.rb:217:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands/server.rb:65:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:30
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:27:in `tap'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (2.4ms)
+Completed   in 10ms
+
+ActionView::Template::Error (compile error
+/home/dxkxzx/develop/git/Betafisha/app/views/layouts/application.html.erb:90: syntax error, unexpected kENSURE, expecting kEND
+/home/dxkxzx/develop/git/Betafisha/app/views/layouts/application.html.erb:92: syntax error, unexpected $end, expecting kEND):
+    87: 
+    88: </body>
+    89: </html>
+  app/views/layouts/application.html.erb:92:in `compile'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.1ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jul 26 17:32:44 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (101.6ms)
+Completed 200 OK in 108ms (Views: 106.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/signout?locale=ru" for 127.0.0.1 at Tue Jul 26 17:32:49 +0400 2011
+  Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TAz9cAA3ncY0U+bn2KmM6W5KWLcclHsu9Sgv+AX0PX4=", "locale"=>"ru"}
+Redirected to http://localhost:3000/?locale=ru
+Completed 302 Found in 1ms
+
+
+Started GET "/?locale=ru" for 127.0.0.1 at Tue Jul 26 17:32:49 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Tue Jul 26 17:32:50 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (92.6ms)
+Completed 200 OK in 99ms (Views: 97.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions?locale=ru" for 127.0.0.1 at Tue Jul 26 17:33:01 +0400 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"v@gmail.com"}, "authenticity_token"=>"TAz9cAA3ncY0U+bn2KmM6W5KWLcclHsu9Sgv+AX0PX4=", "utf8"=>"✓", "locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'v@gmail.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users/3?locale=ru
+Completed 302 Found in 22ms
+
+
+Started GET "/users/3?locale=ru" for 127.0.0.1 at Tue Jul 26 17:33:01 +0400 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3", "locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered users/show.html.erb within layouts/application (78.0ms)
+Completed 200 OK in 93ms (Views: 83.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/signout?locale=ru" for 127.0.0.1 at Tue Jul 26 17:33:09 +0400 2011
+  Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TAz9cAA3ncY0U+bn2KmM6W5KWLcclHsu9Sgv+AX0PX4=", "locale"=>"ru"}
+Redirected to http://localhost:3000/?locale=ru
+Completed 302 Found in 1ms
+
+
+Started GET "/?locale=ru" for 127.0.0.1 at Tue Jul 26 17:33:09 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coefficients?locale=ru" for 127.0.0.1 at Tue Jul 26 17:33:46 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (84.1ms)
+Completed 200 OK in 90ms (Views: 89.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bookmakers?locale=ru" for 127.0.0.1 at Tue Jul 26 17:33:47 +0400 2011
+  Processing by SiteTopNavigationController#bookmakers as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/bookmakers.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 36ms (Views: 35.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/statistics?locale=ru" for 127.0.0.1 at Tue Jul 26 17:33:47 +0400 2011
+  Processing by SiteTopNavigationController#statistics as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered site_top_navigation/statistics.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 38ms (Views: 37.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tools?locale=ru" for 127.0.0.1 at Tue Jul 26 17:33:48 +0400 2011
+  Processing by SiteTopNavigationController#tools as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/tools.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/statistics?locale=ru" for 127.0.0.1 at Tue Jul 26 17:33:49 +0400 2011
+  Processing by SiteTopNavigationController#statistics as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered site_top_navigation/statistics.html.erb within layouts/application (28.3ms)
+Completed 200 OK in 34ms (Views: 33.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/bookmakers?locale=ru" for 127.0.0.1 at Tue Jul 26 17:33:50 +0400 2011
+  Processing by SiteTopNavigationController#bookmakers as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/bookmakers.html.erb within layouts/application (91.4ms)
+Completed 200 OK in 97ms (Views: 96.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coefficients?locale=ru" for 127.0.0.1 at Tue Jul 26 17:33:50 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (31.6ms)
+Completed 200 OK in 38ms (Views: 37.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Tue Jul 26 17:33:58 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (83.7ms)
+Completed 200 OK in 89ms (Views: 88.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions?locale=ru" for 127.0.0.1 at Tue Jul 26 17:34:01 +0400 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"kolya@gmail.com"}, "authenticity_token"=>"TAz9cAA3ncY0U+bn2KmM6W5KWLcclHsu9Sgv+AX0PX4=", "utf8"=>"✓", "locale"=>"ru"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'kolya@gmail.com' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.2ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 49ms (Views: 31.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/sessions?locale=ru" for 127.0.0.1 at Tue Jul 26 17:34:06 +0400 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "session"=>{"password"=>"[FILTERED]", "email"=>"v@gmail.com"}, "authenticity_token"=>"TAz9cAA3ncY0U+bn2KmM6W5KWLcclHsu9Sgv+AX0PX4=", "utf8"=>"✓", "locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`email` = 'v@gmail.com' LIMIT 1[0m
+Redirected to http://localhost:3000/users/3?locale=ru
+Completed 302 Found in 17ms
+
+
+Started GET "/users/3?locale=ru" for 127.0.0.1 at Tue Jul 26 17:34:06 +0400 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3", "locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered users/show.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 50ms (Views: 38.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/coefficients?locale=ru" for 127.0.0.1 at Tue Jul 26 17:34:09 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 39ms (Views: 38.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/coefficients?locale=ru" for 127.0.0.1 at Tue Jul 26 17:34:10 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (35.6ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coefficients?locale=ru" for 127.0.0.1 at Tue Jul 26 17:34:10 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (87.2ms)
+Completed 200 OK in 93ms (Views: 92.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coefficients?locale=ru" for 127.0.0.1 at Tue Jul 26 17:34:11 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Tue Jul 26 17:34:13 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (218.7ms)
+Completed 200 OK in 38918ms (Views: 224.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Tue Jul 26 17:34:52 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered bets_loader/api_test.html.erb within layouts/application (214.1ms)
+Completed 200 OK in 5045ms (Views: 220.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Tue Jul 26 17:34:57 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 3 LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (205.6ms)
+Completed 200 OK in 3635ms (Views: 216.0ms | ActiveRecord: 0.2ms)

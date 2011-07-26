@@ -25,8 +25,13 @@
 
   <div id="user_entrance" class="grid_12">
     <ul>
-      <li><%= link_to t(:top_menu_sing_up), new_user_path %></li>
-      <li></li>
+      <li><%= link_to t(:top_menu_sign_up), signup_path %></li>
+   <% if signed_in? %>
+      <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+   <% else %>
+      <li><%= link_to t(:top_menu_sign_in), signin_path  %></li>
+   <% end %>   
+
       <li><%= link_to  "api_test", api_test_path %></li>
       <li><%= link_to "ru", "#{request.path}?locale=ru" %></li>
       <li><%= link_to "en", "#{request.path}?locale=en" %></li>

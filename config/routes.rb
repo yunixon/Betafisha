@@ -6,9 +6,9 @@ Oddschecker::Application.routes.draw do
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
 
-  match "signup" => "users#new" #, :as => :signup
-  match "signin" => "sessions#new" #, :as => :signin
-  match "signout" => "sessions#destroy" #, :as => :signout 
+  match "signup" => "users#new", :as => :signup
+  match "signin" => "sessions#new", :as => :signin
+  match "signout" => "sessions#destroy", :as => :signout 
 
   ###########################
   # Навигация
