@@ -131,7 +131,7 @@ nav ul li a:hover {
 
 #content {
     min-height: 400px;
-    background: #999999;
+    background: #999;
     overflow: hidden;
     float: left;
 }
@@ -143,7 +143,7 @@ nav ul li a:hover {
 	min-height: 400px;
 }
 
-#left_nav ul{
+#left_nav ul {
 	margin-top: 10px; 
 }
 
@@ -152,7 +152,6 @@ nav ul li a:hover {
 #right_nav {
 	background: #eee;
 	min-height: 400px;
-	
 }
 
 /* Footer */

@@ -1,27 +1,33 @@
 Oddschecker::Application.routes.draw do
 
-  get "bets_loader/index"
+  ###########################
+  # Регистрация и авторизация
+  ###########################
+  resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
+
+  match "signup" => "users#new" #, :as => :signup
+  match "signin" => "sessions#new" #, :as => :signin
+  match "signout" => "sessions#destroy" #, :as => :signout 
+
+  ###########################
+  # Навигация
+  ########################### 
+  get "site_top_navigation/coefficients"
+  match "coefficients" =>  "site_top_navigation#coefficients", :as => :coefficients
+  get "site_top_navigation/bookmakers"
+  match "bookmakers"  =>  "site_top_navigation#bookmakers", :as => :bookmakers
+  get "site_top_navigation/statistics"
+  match "statistics" =>  "site_top_navigation#statistics", :as => :statistics
+  get "site_top_navigation/tools"
+  match "tools" =>  "site_top_navigation#tools", :as => :tools
+  
   
   match "/api_test", :to =>  "bets_loader#api_test", :as => :api_test
-  #resources :users
   
-  #scope "/:locale" do
-  resources :users
-  #end
   
-  get "users/new"
-  match '/signup', :to => 'users#new', :as => :singup
-
-   get "site_top_navigation/coefficients"
-   match "/coefficients", :to =>  "site_top_navigation#coefficients", :as => :coefficients
-   get "site_top_navigation/bookmakers"
-   match "/bookmakers" , :to =>  "site_top_navigation#bookmakers", :as => :bookmakers
-   get "site_top_navigation/statistics"
-   match "/statistics" , :to =>  "site_top_navigation#statistics", :as => :statistics
-   get "site_top_navigation/tools"
-   match "/tools" , :to =>  "site_top_navigation#tools", :as => :tools
   # get "site_top_navigation/gaming"
-   # match "/gaming" , :to =>  "site_top_navigation#gaming", :as => :gaming
+  # match "/gaming" , :to =>  "site_top_navigation#gaming", :as => :gaming
   # get "site_top_navigation/news"
   # match "/news" , :to =>  "site_top_navigation#news", :as => :news
 
@@ -76,9 +82,9 @@ Oddschecker::Application.routes.draw do
   # just remember to delete public/index.html.
   root :to => "site_top_navigation#coefficients"
 
-  # See how all your routes lay out with "rake routes"
+# See how all your routes lay out with "rake routes"
 
-  # This is a legacy wild controller route that's not recommended for RESTful applications.
-  # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
+# This is a legacy wild controller route that's not recommended for RESTful applications.
+# Note: This route will make all actions in every controller accessible via GET requests.
+# match ':controller(/:action(/:id(.:format)))'
 end

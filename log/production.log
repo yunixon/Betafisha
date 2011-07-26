@@ -947,3 +947,160 @@ ActionController::RoutingError (No route matches "/javascripts/application.js"):
   
 
 Rendered C:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at Tue Jul 26 14:45:05 +0400 2011
+
+ActionController::RoutingError (No route matches "/singin"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jul 26 14:45:07 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (43.9ms)
+Completed 200 OK in 50ms (Views: 49.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/singup" for 127.0.0.1 at Tue Jul 26 14:45:14 +0400 2011
+
+ActionController::RoutingError (No route matches "/singup"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/singup" for 127.0.0.1 at Tue Jul 26 14:46:40 +0400 2011
+
+ActionController::RoutingError (No route matches "/singup"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/singin" for 127.0.0.1 at Tue Jul 26 14:46:43 +0400 2011
+
+ActionController::RoutingError (No route matches "/singin"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/singin" for 127.0.0.1 at Tue Jul 26 14:48:00 +0400 2011
+
+ActionController::RoutingError (No route matches "/singin"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jul 26 14:49:28 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/bookmakers?locale=ru" for 127.0.0.1 at Tue Jul 26 14:49:29 +0400 2011
+  Processing by SiteTopNavigationController#bookmakers as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/bookmakers.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/statistics?locale=ru" for 127.0.0.1 at Tue Jul 26 14:49:30 +0400 2011
+  Processing by SiteTopNavigationController#statistics as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/statistics.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tools?locale=ru" for 127.0.0.1 at Tue Jul 26 14:49:31 +0400 2011
+  Processing by SiteTopNavigationController#tools as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/tools.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/coefficients?locale=ru" for 127.0.0.1 at Tue Jul 26 14:49:32 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 7ms (Views: 7.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/bookmakers?locale=ru" for 127.0.0.1 at Tue Jul 26 14:49:32 +0400 2011
+  Processing by SiteTopNavigationController#bookmakers as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/bookmakers.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/statistics?locale=ru" for 127.0.0.1 at Tue Jul 26 14:49:33 +0400 2011
+  Processing by SiteTopNavigationController#statistics as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/statistics.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tools?locale=ru" for 127.0.0.1 at Tue Jul 26 14:49:33 +0400 2011
+  Processing by SiteTopNavigationController#tools as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/tools.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/coefficients?locale=ru" for 127.0.0.1 at Tue Jul 26 14:49:37 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/coefficients" for 127.0.0.1 at Tue Jul 26 14:49:39 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/bookmakers?locale=ru" for 127.0.0.1 at Tue Jul 26 14:49:40 +0400 2011
+  Processing by SiteTopNavigationController#bookmakers as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/bookmakers.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/statistics?locale=ru" for 127.0.0.1 at Tue Jul 26 14:49:41 +0400 2011
+  Processing by SiteTopNavigationController#statistics as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/statistics.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tools?locale=ru" for 127.0.0.1 at Tue Jul 26 14:49:41 +0400 2011
+  Processing by SiteTopNavigationController#tools as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/tools.html.erb within layouts/application (74.7ms)
+Completed 200 OK in 76ms (Views: 74.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/singup" for 127.0.0.1 at Tue Jul 26 14:52:11 +0400 2011
+
+ActionController::RoutingError (No route matches "/singup"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/singin" for 127.0.0.1 at Tue Jul 26 14:52:17 +0400 2011
+
+ActionController::RoutingError (No route matches "/singin"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Jul 26 14:52:30 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.1ms)
