@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
   validates_size_of :password, :within => 6..40, :message => I18n.t(:sing_up_error_password_size)
   validates_confirmation_of :password, :message => I18n.t(:sing_up_error_password_confirmation) 
 
-  validates_format_of :email, :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i, :message => I18n.t(:sing_up_error_email_format)
+  validates_format_of :email, :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,3})$/i, :message => I18n.t(:sing_up_error_email_format)
 
   before_save :encrypt_password
 

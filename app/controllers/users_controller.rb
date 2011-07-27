@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     
     @user = User.find(params[:id])
     if signed_in?
-      @title = I18n.t(:top_menu_profile) + ":" + @user.name
+      @title = I18n.t(:top_menu_profile) + ": " + @user.name
     end
   end
 

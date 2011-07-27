@@ -89,7 +89,7 @@ nav ul li a:hover {
 
 
 #user_entrance {
-	background: #bbb;
+	background: #e0e1e1;
 	min-height: 70px;
 }
 
@@ -129,9 +129,18 @@ nav ul li a:hover {
 
 #content {
     min-height: 400px;
-    background: #999;
+    background: #E3E5E5;
     overflow: hidden;
     float: left;
+}
+#content h1 {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+#content form#new_user {
+	margin-top: 10px;
+	margin-left: 10px;
 }
 
 /* Left navigation */
@@ -157,7 +166,7 @@ nav ul li a:hover {
 #footer {
 	margin-top: 10px;
 	min-height: 30px;
-	background: #888;
+	background: #c3c6c6;
 }
 
 

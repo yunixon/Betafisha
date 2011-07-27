@@ -1,5 +1,10 @@
+
 <% if signed_in? %>
-<%= @user.name %>, 
-<%= @user.email %>
+<ul>
+	<li><b><%= t(:sing_up_username) %>: </b><%= @user.name %></li>
+	<li><b><%= t(:sing_up_email) %>: </b><%= @user.email %></li>
+</ul>
+
+
 <% else %>
 <% end %>
