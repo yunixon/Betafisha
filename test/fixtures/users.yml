@@ -15,10 +15,8 @@
 
 one: 
   id: 1
-  name: kolya
-  email: kolya@gmail.com
+  name: admin
+  email: dxkxzx@gmail.com
+  password: qwerty
 
-two:
-  id: 2
-  name: vasya
-  email: vasya@gmail.com
+
