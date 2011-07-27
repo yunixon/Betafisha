@@ -47,7 +47,7 @@ en:
   sing_up_password_confirmation: "Confirm password"
   sing_up_submit: "Create  account!"
   
-  sing_up_error_username_size: "Password must be from 2 to 15 characters long."
+  sing_up_error_username_size: "Username must be from 2 to 15 characters long."
   sing_up_error_password_size: "Password must be from 2 to 40 characters long. No whitespace."
   sing_up_error_password_confirmation: "Need a new password confirmation!"
   sing_up_error_email_format: "It doesn't look like a valid email format."

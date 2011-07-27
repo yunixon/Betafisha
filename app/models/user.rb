@@ -19,11 +19,23 @@ class User < ActiveRecord::Base
   attr_accessible :id, :name, :email, :password, :password_confirmation  
 
 
-  validates_size_of :name, :within => 2..15, :message => I18n.t(:sing_up_error_username_size)
-  validates_size_of :password, :within => 6..40, :message => I18n.t(:sing_up_error_password_size)
-  validates_confirmation_of :password, :message => I18n.t(:sing_up_error_password_confirmation) 
 
-  validates_format_of :email, :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,3})$/i, :message => I18n.t(:sing_up_error_email_format)
+  #validates :name,  :presence => { :message => "Story title is required" }
+  #validates :name, :length   => { :maximum => 50 }
+  #validates :name, :length   => { :maximum => 50 }
+  
+  email_regex = /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,3})$/i
+
+  validates :name,  :presence => { :message => "" },
+                    :length   => { :within => 2..15, :message => I18n.t(:sing_up_error_username_size) }
+  
+  validates :email, :presence => { :message => "" },
+                    :format   => { :with => email_regex, :message => I18n.t(:sing_up_error_email_format)  }
+                    
+  validates :password, :presence     => {  :message => "" },
+                       :confirmation => {  :message => I18n.t(:sing_up_error_password_confirmation) },
+                       :length       => { :within => 6..40,  :message => I18n.t(:sing_up_error_password_size) }
+                    
 
   before_save :encrypt_password
 
