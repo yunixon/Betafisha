@@ -48,6 +48,8 @@ ru:
   sing_up_submit: "Создать учетную запись!"
   
  
+ 
+ 
   activerecord:
     errors:
       models:
@@ -61,8 +63,8 @@ ru:
               blank: ""
             password:
               too_short: "Пароль должен содержать не менее 6 и не более 40 знаков. Без пробелов."
-              blank: "" 
               confirmation: "Необходимо подтвердить пароль!"
+              blank: "" 
   
   
   

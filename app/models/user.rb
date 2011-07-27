@@ -18,12 +18,6 @@ class User < ActiveRecord::Base
   attr_accessor :password
   attr_accessible :id, :name, :email, :password, :password_confirmation  
 
-
-
-  #validates :name,  :presence => { :message => "Story title is required" }
-  #validates :name, :length   => { :maximum => 50 }
-  #validates :name, :length   => { :maximum => 50 }
-  
   email_regex = /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,3})$/i
 
   validates :name,  :presence => true,

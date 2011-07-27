@@ -4,14 +4,6 @@
 
     <% if @user.errors.any? %>
         <div id="errorExplanation">
-          <h2>Необходимо исправить <%= @user.errors.count %>
-            <% if @user.errors.count == 1 %>
-                <%= "ошибку" %>
-            <% elsif @user.errors.count <= 4 %>
-                <%= "ошибки" %>
-            <% else %>
-                <%= "ошибок" %>
-            <% end %>  :</h2>
           <ul>
             <% @user.errors.each do |attr, msg| %>
                 <li><%= msg %></li>
