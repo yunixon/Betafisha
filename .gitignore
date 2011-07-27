@@ -17,6 +17,7 @@ nbproject/
 .DS_Store 
 /nbproject/private/
 .project
+.settings/
 log/development.log
 log/
 

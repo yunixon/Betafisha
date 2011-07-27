@@ -1,1 +1,5 @@
-<%= @user.name %>, <%= @user.email %>
+<% if signed_in? %>
+<%= @user.name %>, 
+<%= @user.email %>
+<% else %>
+<% end %>

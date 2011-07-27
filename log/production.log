@@ -1346,3 +1346,1121 @@ Started GET "/?locale=ru" for 127.0.0.1 at Wed Jul 27 15:10:40 +0400 2011
   Parameters: {"locale"=>"ru"}
 Rendered site_top_navigation/coefficients.html.erb within layouts/application (8.9ms)
 Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 15:52:40 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/signout?locale=ru" for 127.0.0.1 at Wed Jul 27 15:52:49 +0400 2011
+  Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2cGPP8Rd4f96VpOVykpnSzyycjIqY8siTedUDvOz16I=", "locale"=>"ru"}
+Redirected to http://localhost:3000/?locale=ru
+Completed 302 Found in 1ms
+
+
+Started GET "/?locale=ru" for 127.0.0.1 at Wed Jul 27 15:52:49 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 34ms (Views: 10.7ms | ActiveRecord: 22.9ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Wed Jul 27 15:52:50 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered sessions/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions?locale=ru" for 127.0.0.1 at Wed Jul 27 15:52:56 +0400 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Войти", "session"=>{"password"=>"[FILTERED]", "email"=>"dxkxzx@gmail.com"}, "authenticity_token"=>"2cGPP8Rd4f96VpOVykpnSzyycjIqY8siTedUDvOz16I=", "utf8"=>"✓", "locale"=>"ru"}
+Redirected to http://localhost:3000/users/4?locale=ru
+Completed 302 Found in 34ms
+
+
+Started GET "/users/4?locale=ru" for 127.0.0.1 at Wed Jul 27 15:52:56 +0400 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4", "locale"=>"ru"}
+Rendered users/show.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 30.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 15:54:31 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (118.1ms)
+Completed 200 OK in 124ms (Views: 122.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/signout?locale=ru" for 127.0.0.1 at Wed Jul 27 15:54:34 +0400 2011
+  Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2cGPP8Rd4f96VpOVykpnSzyycjIqY8siTedUDvOz16I=", "locale"=>"ru"}
+Redirected to http://localhost:3000/?locale=ru
+Completed 302 Found in 1ms
+
+
+Started GET "/?locale=ru" for 127.0.0.1 at Wed Jul 27 15:54:34 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Wed Jul 27 15:54:36 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered sessions/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Wed Jul 27 15:54:44 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered users/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Wed Jul 27 15:54:46 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered sessions/new.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions?locale=ru" for 127.0.0.1 at Wed Jul 27 15:54:52 +0400 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Войти", "session"=>{"password"=>"[FILTERED]", "email"=>"dxkxzx@gmail.com"}, "authenticity_token"=>"2cGPP8Rd4f96VpOVykpnSzyycjIqY8siTedUDvOz16I=", "utf8"=>"✓", "locale"=>"ru"}
+Redirected to http://localhost:3000/users/4?locale=ru
+Completed 302 Found in 7ms
+
+
+Started GET "/users/4?locale=ru" for 127.0.0.1 at Wed Jul 27 15:54:52 +0400 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4", "locale"=>"ru"}
+Rendered users/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/4?locale=ru" for 127.0.0.1 at Wed Jul 27 15:55:06 +0400 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4", "locale"=>"ru"}
+Rendered users/show.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 72ms (Views: 71.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coefficients?locale=ru" for 127.0.0.1 at Wed Jul 27 15:55:09 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4?locale=ru" for 127.0.0.1 at Wed Jul 27 15:55:11 +0400 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4", "locale"=>"ru"}
+Rendered users/show.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/?locale=ru" for 127.0.0.1 at Wed Jul 27 15:57:55 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stylesheets/style.css?1311679086" for 127.0.0.1 at Wed Jul 27 15:57:55 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/?locale=ru" for 127.0.0.1 at Wed Jul 27 15:57:56 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stylesheets/style.css?1311679086" for 127.0.0.1 at Wed Jul 27 15:57:56 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 15:58:00 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stylesheets/style.css?1311679086" for 127.0.0.1 at Wed Jul 27 15:58:00 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/statistics?locale=ru" for 127.0.0.1 at Wed Jul 27 15:58:02 +0400 2011
+  Processing by SiteTopNavigationController#statistics as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/statistics.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/style.css?1311679086" for 127.0.0.1 at Wed Jul 27 15:58:02 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/bookmakers?locale=ru" for 127.0.0.1 at Wed Jul 27 15:58:02 +0400 2011
+  Processing by SiteTopNavigationController#bookmakers as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/bookmakers.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stylesheets/style.css?1311679086" for 127.0.0.1 at Wed Jul 27 15:58:02 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/coefficients?locale=ru" for 127.0.0.1 at Wed Jul 27 15:58:03 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stylesheets/style.css?1311679086" for 127.0.0.1 at Wed Jul 27 15:58:03 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Wed Jul 27 15:58:04 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered bets_loader/api_test.html.erb within layouts/application (174.1ms)
+Completed 200 OK in 5414ms (Views: 190.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/4?locale=ru" for 127.0.0.1 at Wed Jul 27 15:58:10 +0400 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4", "locale"=>"ru"}
+Rendered users/show.html.erb within layouts/application (73.9ms)
+Completed 200 OK in 76ms (Views: 10.9ms | ActiveRecord: 63.9ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Wed Jul 27 15:58:10 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered users/new.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/signout?locale=ru" for 127.0.0.1 at Wed Jul 27 15:58:10 +0400 2011
+  Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2cGPP8Rd4f96VpOVykpnSzyycjIqY8siTedUDvOz16I=", "locale"=>"ru"}
+Redirected to http://localhost:3000/?locale=ru
+Completed 302 Found in 1ms
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Wed Jul 27 15:58:10 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered bets_loader/api_test.html.erb within layouts/application (165.8ms)
+Completed 200 OK in 3944ms (Views: 166.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stylesheets/style.css?1311679086" for 127.0.0.1 at Wed Jul 27 15:58:14 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/users/4?locale=ru" for 127.0.0.1 at Wed Jul 27 15:58:14 +0400 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4", "locale"=>"ru"}
+Rendered users/show.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stylesheets/style.css?1311679086" for 127.0.0.1 at Wed Jul 27 15:58:14 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 15:59:26 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (118.6ms)
+Completed 200 OK in 125ms (Views: 123.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stylesheets/style.css?1311679086" for 127.0.0.1 at Wed Jul 27 15:59:26 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 15:59:37 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stylesheets/style.css?1311679086" for 127.0.0.1 at Wed Jul 27 15:59:37 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 15:59:44 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stylesheets/style.css?1311679086" for 127.0.0.1 at Wed Jul 27 15:59:44 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 16:00:21 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 22ms (Views: 17.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/stylesheets/style.css?1311679086" for 127.0.0.1 at Wed Jul 27 16:00:21 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 16:00:39 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/grid.css?1311613420" for 127.0.0.1 at Wed Jul 27 16:00:39 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/grid.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/stylesheets/reset.css?1311285491" for 127.0.0.1 at Wed Jul 27 16:00:39 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/reset.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/stylesheets/style.css?1311679086" for 127.0.0.1 at Wed Jul 27 16:00:39 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (66.9ms)
+
+
+Started GET "/javascripts/prototype.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:00:39 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/javascripts/effects.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:00:39 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/dragdrop.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:00:39 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/controls.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:00:39 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/rails.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:00:39 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/rails.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/application.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:00:39 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/application.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/effects.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:00:40 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/dragdrop.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:00:40 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/controls.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:00:40 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/rails.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:00:40 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/rails.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/application.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:00:40 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/application.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 16:02:33 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/style.css?1311679086" for 127.0.0.1 at Wed Jul 27 16:02:33 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 16:02:34 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stylesheets/style.css?1311679086" for 127.0.0.1 at Wed Jul 27 16:02:34 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 16:04:16 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (33.8ms)
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/stylesheets/style.css?1311768187" for 127.0.0.1 at Wed Jul 27 16:04:17 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 16:05:46 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (29.7ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/style.css?1311768187" for 127.0.0.1 at Wed Jul 27 16:05:47 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 16:05:49 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/javascripts/prototype.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:05:49 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/stylesheets/reset.css?1311285491" for 127.0.0.1 at Wed Jul 27 16:05:49 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/reset.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/stylesheets/grid.css?1311613420" for 127.0.0.1 at Wed Jul 27 16:05:49 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/grid.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/stylesheets/style.css?1311768187" for 127.0.0.1 at Wed Jul 27 16:05:49 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/effects.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:05:49 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/dragdrop.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:05:49 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/controls.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:05:49 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.4ms)
+
+
+Started GET "/javascripts/rails.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:05:49 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/rails.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/application.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:05:49 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/application.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 16:05:59 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/reset.css?1311285491" for 127.0.0.1 at Wed Jul 27 16:05:59 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/reset.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/dragdrop.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:05:59 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/javascripts/prototype.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:05:59 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/stylesheets/style.css?1311768187" for 127.0.0.1 at Wed Jul 27 16:05:59 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/stylesheets/grid.css?1311613420" for 127.0.0.1 at Wed Jul 27 16:05:59 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/grid.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/effects.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:05:59 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/controls.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:05:59 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/javascripts/rails.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:05:59 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/rails.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/application.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:05:59 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/application.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 16:26:41 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (131.3ms)
+Completed 200 OK in 137ms (Views: 135.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stylesheets/grid.css?1311613420" for 127.0.0.1 at Wed Jul 27 16:26:41 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/grid.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/stylesheets/reset.css?1311285491" for 127.0.0.1 at Wed Jul 27 16:26:41 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/reset.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/stylesheets/style.css?1311768187" for 127.0.0.1 at Wed Jul 27 16:26:41 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/prototype.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:26:41 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/javascripts/effects.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:26:41 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/dragdrop.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:26:41 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/controls.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:26:41 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/rails.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:26:41 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/rails.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/application.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:26:41 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/application.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 16:27:54 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stylesheets/grid.css?1311613420" for 127.0.0.1 at Wed Jul 27 16:27:54 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/grid.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/stylesheets/reset.css?1311285491" for 127.0.0.1 at Wed Jul 27 16:27:54 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/reset.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/stylesheets/style.css?1311768187" for 127.0.0.1 at Wed Jul 27 16:27:54 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/dragdrop.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:27:54 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/effects.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:27:54 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (66.1ms)
+
+
+Started GET "/javascripts/prototype.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:27:54 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/controls.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:27:54 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/rails.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:27:54 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/rails.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/application.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:27:54 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/application.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 16:27:55 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stylesheets/grid.css?1311613420" for 127.0.0.1 at Wed Jul 27 16:27:55 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/grid.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/stylesheets/reset.css?1311285491" for 127.0.0.1 at Wed Jul 27 16:27:55 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/reset.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/stylesheets/style.css?1311768187" for 127.0.0.1 at Wed Jul 27 16:27:55 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/dragdrop.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:27:55 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/javascripts/effects.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:27:55 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/prototype.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:27:55 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/controls.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:27:55 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/rails.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:27:55 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/rails.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/application.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:27:55 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/application.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 16:27:57 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 13ms (Views: 8.6ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/stylesheets/grid.css?1311613420" for 127.0.0.1 at Wed Jul 27 16:27:57 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/grid.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/stylesheets/reset.css?1311285491" for 127.0.0.1 at Wed Jul 27 16:27:57 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/reset.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/stylesheets/style.css?1311768187" for 127.0.0.1 at Wed Jul 27 16:27:57 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/prototype.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:27:57 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/dragdrop.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:27:57 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/effects.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:27:57 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/controls.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:27:57 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/rails.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:27:57 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/rails.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/application.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:27:57 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/application.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 16:35:47 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (185.1ms)
+Completed 200 OK in 190ms (Views: 188.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/stylesheets/reset.css?1311285491" for 127.0.0.1 at Wed Jul 27 16:35:48 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/reset.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/stylesheets/grid.css?1311613420" for 127.0.0.1 at Wed Jul 27 16:35:48 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/grid.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/stylesheets/style.css?1311768187" for 127.0.0.1 at Wed Jul 27 16:35:48 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/dragdrop.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:35:48 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/effects.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:35:48 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/prototype.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:35:48 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/controls.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:35:48 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/rails.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:35:48 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/rails.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/application.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:35:48 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/application.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 16:35:52 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stylesheets/grid.css?1311613420" for 127.0.0.1 at Wed Jul 27 16:35:52 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/grid.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/stylesheets/reset.css?1311285491" for 127.0.0.1 at Wed Jul 27 16:35:52 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/reset.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/stylesheets/style.css?1311768187" for 127.0.0.1 at Wed Jul 27 16:35:52 +0400 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/style.css"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/dragdrop.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:35:52 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/effects.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:35:52 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (69.9ms)
+
+
+Started GET "/javascripts/prototype.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:35:52 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/prototype.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/controls.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:35:52 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/javascripts/rails.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:35:52 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/rails.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/application.js?1311285491" for 127.0.0.1 at Wed Jul 27 16:35:52 +0400 2011
+
+ActionController::RoutingError (No route matches "/javascripts/application.js"):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
