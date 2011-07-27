@@ -52,6 +52,17 @@ ru:
   sing_up_error_password_confirmation: "Необходимо подтвердить пароль!"
   sing_up_error_email_format: "Не верный формат адреса электронной почты!"
   
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "Имя пользователя должно содержать не менее 2 и не более 15 знаков."
+  
+  
+  
+  
   flash_sing_up_success: "Добро пожаловать в ваш личный кабинет!"
   flash_sing_up_failed: "Не верный адрес электроннной почты или пароль." 
   

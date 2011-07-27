@@ -52,6 +52,14 @@ en:
   sing_up_error_password_confirmation: "Need a new password confirmation!"
   sing_up_error_email_format: "It doesn't look like a valid email format."
   
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "Username must be from 2 to 15 characters long."
+  
   flash_sing_up_success: "Welcome to your profile!"
   flash_sing_up_failed: "Invalid email or password." 
   

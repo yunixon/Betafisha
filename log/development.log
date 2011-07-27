@@ -23217,3 +23217,122 @@ Started GET "/signup?locale=ru" for 127.0.0.1 at Wed Jul 27 23:55:20 +0400 2011
   [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
 Rendered users/new.html.erb within layouts/application (31.8ms)
 Completed 200 OK in 48ms (Views: 37.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Jul 28 00:01:00 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Completed   in 5ms
+
+ArgumentError (syntax error on line 54, col 4: `    activerecord:'):
+  app/controllers/site_top_navigation_controller.rb:5:in `coefficients'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.9ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Jul 28 00:08:02 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (129.3ms)
+Completed 200 OK in 138ms (Views: 134.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Thu Jul 28 00:08:04 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered users/new.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 50ms (Views: 38.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users?locale=ru" for 127.0.0.1 at Thu Jul 28 00:08:06 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Создать учетную запись!", "authenticity_token"=>"exacCpXmXNjpbJwHWMxH45hu5ZDzd8L+FJAY9ijYJO0=", "utf8"=>"✓", "locale"=>"ru", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered users/new.html.erb within layouts/application (39.4ms)
+Completed 200 OK in 124ms (Views: 45.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users?locale=en" for 127.0.0.1 at Thu Jul 28 00:08:10 +0400 2011
+
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Jul 28 00:08:13 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (106.7ms)
+Completed 200 OK in 113ms (Views: 112.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/?locale=en" for 127.0.0.1 at Thu Jul 28 00:08:15 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 73ms (Views: 72.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/?locale=en" for 127.0.0.1 at Thu Jul 28 00:08:27 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 39ms (Views: 38.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signup?locale=en" for 127.0.0.1 at Thu Jul 28 00:08:30 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.2ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered users/new.html.erb within layouts/application (40.0ms)
+Completed 200 OK in 60ms (Views: 46.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users?locale=en" for 127.0.0.1 at Thu Jul 28 00:08:32 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Create  account!", "authenticity_token"=>"exacCpXmXNjpbJwHWMxH45hu5ZDzd8L+FJAY9ijYJO0=", "utf8"=>"✓", "locale"=>"en", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered users/new.html.erb within layouts/application (101.1ms)
+Completed 200 OK in 132ms (Views: 107.3ms | ActiveRecord: 0.3ms)
