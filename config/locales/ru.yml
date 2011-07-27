@@ -47,18 +47,22 @@ ru:
   sing_up_password_confirmation: "Подтверждение пароля"
   sing_up_submit: "Создать учетную запись!"
   
-  sing_up_error_username_size: "Имя пользователя должно содержать не менее 2 и не более 15 знаков."
-  sing_up_error_password_size: "Пароль должен содержать не менее 6 и не более 40 знаков. Без пробелов."
-  sing_up_error_password_confirmation: "Необходимо подтвердить пароль!"
-  sing_up_error_email_format: "Не верный формат адреса электронной почты!"
-  
+ 
   activerecord:
     errors:
       models:
         user:
           attributes:
             name:
-              blank: "Имя пользователя должно содержать не менее 2 и не более 15 знаков."
+              too_short: "Имя пользователя должно содержать не менее 2 и не более 15 знаков."
+              blank: ""
+            email:
+              invalid: "Не верный формат адреса электронной почты!"
+              blank: ""
+            password:
+              too_short: "Пароль должен содержать не менее 6 и не более 40 знаков. Без пробелов."
+              blank: "" 
+              confirmation: "Необходимо подтвердить пароль!"
   
   
   

@@ -27,14 +27,14 @@ class User < ActiveRecord::Base
   email_regex = /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,3})$/i
 
   validates :name,  :presence => true,
-                    :length   => { :within => 2..15, :message => I18n.t(:sing_up_error_username_size) }
+                    :length   => { :within => 2..15}
   
-  validates :email, :presence => { :message => "" },
-                    :format   => { :with => email_regex, :message => I18n.t(:sing_up_error_email_format)  }
+  validates :email, :presence => true,
+                    :format   => { :with => email_regex }
                     
-  validates :password, :presence     => {  :message => "" },
-                       :confirmation => {  :message => I18n.t(:sing_up_error_password_confirmation) },
-                       :length       => { :within => 6..40,  :message => I18n.t(:sing_up_error_password_size) }
+  validates :password, :presence     => true,
+                       :confirmation => true,
+                       :length       => { :within => 6..40 }
                     
 
   before_save :encrypt_password

@@ -47,18 +47,23 @@ en:
   sing_up_password_confirmation: "Confirm password"
   sing_up_submit: "Create  account!"
   
-  sing_up_error_username_size: "Username must be from 2 to 15 characters long."
-  sing_up_error_password_size: "Password must be from 2 to 40 characters long. No whitespace."
-  sing_up_error_password_confirmation: "Need a new password confirmation!"
-  sing_up_error_email_format: "It doesn't look like a valid email format."
-  
+
   activerecord:
     errors:
       models:
         user:
           attributes:
             name:
-              blank: "Username must be from 2 to 15 characters long."
+              too_short: "Username must be from 2 to 15 characters long."
+              blank: ""
+            email:
+              invalid: "It doesn't look like a valid email format."
+              blank: ""
+            password:
+              too_short: "Password must be from 2 to 40 characters long. No whitespace."
+              blank: ""
+              confirmation: "Need a new password confirmation!"
+                   
   
   flash_sing_up_success: "Welcome to your profile!"
   flash_sing_up_failed: "Invalid email or password." 
