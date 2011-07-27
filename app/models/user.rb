@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
   
   email_regex = /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,3})$/i
 
-  validates :name,  :presence => { :message => "" },
+  validates :name,  :presence => true,
                     :length   => { :within => 2..15, :message => I18n.t(:sing_up_error_username_size) }
   
   validates :email, :presence => { :message => "" },
