@@ -1104,3 +1104,245 @@ Started GET "/" for 127.0.0.1 at Tue Jul 26 14:52:30 +0400 2011
   Processing by SiteTopNavigationController#coefficients as HTML
 Rendered site_top_navigation/coefficients.html.erb within layouts/application (11.3ms)
 Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 14:24:32 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (144.7ms)
+Completed 200 OK in 151ms (Views: 149.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Wed Jul 27 14:24:34 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered users/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users?locale=ru" for 127.0.0.1 at Wed Jul 27 14:24:43 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Создать учетную запись!", "authenticity_token"=>"dq9nZZiStG8s9jzzRl2dPI/xPMop9qBJCB9YjXMOZNs=", "utf8"=>"✓", "locale"=>"ru", "user"=>{"name"=>"vasya", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"dxkxzx@gmail.com"}}
+
+Sent mail to dxkxzx@gmail.com (602ms)
+Completed   in 829ms
+
+Net::SMTPAuthenticationError (535-5.7.1 Username and Password not accepted. Learn more at                   
+):
+  app/controllers/users_controller.rb:18:in `create'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.0ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 14:31:41 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (144.8ms)
+Completed 200 OK in 152ms (Views: 150.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Wed Jul 27 14:31:44 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered users/new.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users?locale=ru" for 127.0.0.1 at Wed Jul 27 14:31:51 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Создать учетную запись!", "authenticity_token"=>"dq9nZZiStG8s9jzzRl2dPI/xPMop9qBJCB9YjXMOZNs=", "utf8"=>"✓", "locale"=>"ru", "user"=>{"name"=>"vasya", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"dxkxzx@gmail.com"}}
+
+Sent mail to dxkxzx@gmail.com (2974ms)
+Completed   in 3073ms
+
+Net::SMTPAuthenticationError (535-5.7.1 Username and Password not accepted. Learn more at                   
+):
+  app/controllers/users_controller.rb:18:in `create'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.7ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.1ms)
+
+
+Started GET "/users/" for 127.0.0.1 at Wed Jul 27 14:34:49 +0400 2011
+
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 14:34:50 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Wed Jul 27 14:34:54 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered users/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users?locale=ru" for 127.0.0.1 at Wed Jul 27 14:35:02 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Создать учетную запись!", "authenticity_token"=>"dq9nZZiStG8s9jzzRl2dPI/xPMop9qBJCB9YjXMOZNs=", "utf8"=>"✓", "locale"=>"ru", "user"=>{"name"=>"vasya", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"dxkxzx@gmail.com"}}
+
+Sent mail to dxkxzx@gmail.com (800ms)
+Completed   in 894ms
+
+Net::SMTPAuthenticationError (535-5.7.1 Username and Password not accepted. Learn more at                   
+):
+  app/controllers/users_controller.rb:18:in `create'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.3ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 14:36:38 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (115.2ms)
+Completed 200 OK in 121ms (Views: 119.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Wed Jul 27 14:36:39 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered users/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users?locale=ru" for 127.0.0.1 at Wed Jul 27 14:36:47 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Создать учетную запись!", "authenticity_token"=>"dq9nZZiStG8s9jzzRl2dPI/xPMop9qBJCB9YjXMOZNs=", "utf8"=>"✓", "locale"=>"ru", "user"=>{"name"=>"vasya", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"dxkxzx@gmail.com"}}
+
+Sent mail to dxkxzx@gmail.com (2825ms)
+Redirected to http://localhost:3000/users/13?locale=ru
+Completed 302 Found in 3078ms
+
+
+Started GET "/users/13?locale=ru" for 127.0.0.1 at Wed Jul 27 14:36:50 +0400 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"13", "locale"=>"ru"}
+Rendered users/show.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 223.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at Wed Jul 27 14:37:18 +0400 2011
+
+AbstractController::ActionNotFound (The action 'index' could not be found for UsersController):
+  
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 14:37:20 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 14:48:23 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (75.7ms)
+Completed 200 OK in 77ms (Views: 76.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Wed Jul 27 14:48:25 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered users/new.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 25ms (Views: 18.4ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/users?locale=ru" for 127.0.0.1 at Wed Jul 27 14:48:37 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Создать учетную запись!", "authenticity_token"=>"dq9nZZiStG8s9jzzRl2dPI/xPMop9qBJCB9YjXMOZNs=", "utf8"=>"✓", "locale"=>"ru", "user"=>{"name"=>"vasya", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"dxkxzx@gmail.com"}}
+
+Sent mail to dxkxzx@gmail.com (2075ms)
+Redirected to http://localhost:3000/users/14?locale=ru
+Completed 302 Found in 2158ms
+
+
+Started GET "/users/14?locale=ru" for 127.0.0.1 at Wed Jul 27 14:48:39 +0400 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"14", "locale"=>"ru"}
+Rendered users/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 69.0ms)
+
+
+Started GET "/?locale=ru" for 127.0.0.1 at Wed Jul 27 14:59:11 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 15:07:33 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (121.1ms)
+Completed 200 OK in 132ms (Views: 122.2ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Wed Jul 27 15:07:35 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered users/new.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users?locale=ru" for 127.0.0.1 at Wed Jul 27 15:07:48 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Создать учетную запись!", "authenticity_token"=>"dq9nZZiStG8s9jzzRl2dPI/xPMop9qBJCB9YjXMOZNs=", "utf8"=>"✓", "locale"=>"ru", "user"=>{"name"=>"vasya", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"dxkxzx@gmail.com"}}
+Rendered user_mailer/registration_confirmation.text.erb (18.2ms)
+Completed   in 125ms
+
+ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0xb6d04d08>:0xb6d039e4>):
+    1: <%= user.name %>, 
+    2: Thank you for registering! 
+  app/views/user_mailer/registration_confirmation.text.erb:1:in `_app_views_user_mailer_registration_confirmation_text_erb__282991699__613923208_0'
+  app/mailers/user_mailer.rb:7:in `registration_confirmation'
+  app/controllers/users_controller.rb:18:in `create'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.7ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352@global/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (18.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Jul 27 15:08:45 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (117.1ms)
+Completed 200 OK in 123ms (Views: 121.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Wed Jul 27 15:08:47 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered users/new.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users?locale=ru" for 127.0.0.1 at Wed Jul 27 15:08:56 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Создать учетную запись!", "authenticity_token"=>"dq9nZZiStG8s9jzzRl2dPI/xPMop9qBJCB9YjXMOZNs=", "utf8"=>"✓", "locale"=>"ru", "user"=>{"name"=>"vasya", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"dxkxzx@gmail.com"}}
+Rendered user_mailer/registration_confirmation.text.erb (0.3ms)
+
+Sent mail to dxkxzx@gmail.com (2116ms)
+Redirected to http://localhost:3000/users/16?locale=ru
+Completed 302 Found in 2226ms
+
+
+Started GET "/users/16?locale=ru" for 127.0.0.1 at Wed Jul 27 15:08:59 +0400 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"16", "locale"=>"ru"}
+Rendered users/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 76.9ms)
+
+
+Started GET "/?locale=ru" for 127.0.0.1 at Wed Jul 27 15:10:40 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.2ms)

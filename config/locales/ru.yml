@@ -24,6 +24,7 @@ ru:
   
   top_menu_sign_up: "Регистрация"
   top_menu_sign_in: "Войти"
+  top_menu_sign_out: "Выйти"
   
   left_nav_search: "Поиск"
   left_nav_my_ligues: "Мои лиги"
@@ -51,7 +52,9 @@ ru:
   sing_up_error_email_format: "Не верный формат адреса электронной почты!"
   
   flash_sing_up_success: "Добро пожаловать в ваш личный кабинет!"
-  flash_sing_up_failed: "" 
+  flash_sing_up_failed: "Не верный адрес электроннной почты или пароль." 
+  
+  sign_in_submit: "Войти"
   
     
             

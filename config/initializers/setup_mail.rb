@@ -1,0 +1,9 @@
+ActionMailer::Base.delivery_method = :smtp
+ActionMailer::Base.smtp_settings = {
+  :address              => "smtp.gmail.com",
+  :port                 => 587,
+  :domain               => 'betafisha.com',
+  :user_name            => 'admin@betafisha.com',
+  :password             => 'm0sc0wafisha',
+  :authentication       => 'plain',
+  :enable_starttls_auto => true  } 

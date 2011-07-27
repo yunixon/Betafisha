@@ -24,6 +24,7 @@ en:
   
   top_menu_sign_up: "Sing up"
   top_menu_sign_in: "Sing in"
+  top_menu_sign_out: "Sing out"
   
   left_nav_search: "Search"
   left_nav_my_ligues: "My ligues"
@@ -51,4 +52,6 @@ en:
   sing_up_error_email_format: "It doesn't look like a valid email format."
   
   flash_sing_up_success: "Welcome to your profile!"
-  flash_sing_up_failed: "" 
+  flash_sing_up_failed: "Invalid email or password." 
+  
+  sign_in_submit: "Sing in"
