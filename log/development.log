@@ -23770,3 +23770,125 @@ Started POST "/users?locale=ru" for 127.0.0.1 at Thu Jul 28 00:30:35 +0400 2011
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
 Rendered users/new.html.erb within layouts/application (26.4ms)
 Completed 200 OK in 53ms (Views: 31.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Jul 28 22:41:10 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.4ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Mysql2::Error: Table 'test.sports' doesn't exist: SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (129.0ms)
+Completed   in 138ms
+
+ActionView::Template::Error (Mysql2::Error: Table 'test.sports' doesn't exist: SELECT `sports`.* FROM `sports`):
+    57: 	<div id="left_nav" class="grid_4">
+    58: 		Спорт 
+    59: 		<ul>
+    60: 			<% sports = Sports.find(:all) %>
+    61: 			<% Sports.find(:all).each do |sport| %>
+    62: 			<li> <%= link_to  sport.name , coefficients_path %></li>
+    63: 			<% end %>	
+  app/views/layouts/application.html.erb:60:in `_app_views_layouts_application_html_erb___386723279__613495498_0'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.4ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.1ms)
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110712204319)
+  [1m[35mSQL (0.2ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+Mysql2::Error: Table 'users' already exists: CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (229.8ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (169.2ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110712204319)
+  [1m[35mSQL (71.9ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `email` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (32.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110712204319')[0m
+Migrating to AddPasswordToUsers (20110713100747)
+  [1m[35mSQL (141.6ms)[0m  ALTER TABLE `users` ADD `encrypted_password` varchar(255)
+  [1m[36mSQL (32.5ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110713100747')[0m
+Migrating to AddSaltToUsers (20110713122631)
+  [1m[35mSQL (117.0ms)[0m  ALTER TABLE `users` ADD `salt` varchar(255)
+  [1m[36mSQL (42.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110713122631')[0m
+Migrating to CreateSports (20110725123634)
+  [1m[35mSQL (65.4ms)[0m  CREATE TABLE `sports` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (24.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110725123634')[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `sports`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `sports`
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `users`
+
+
+Started GET "/" for 127.0.0.1 at Thu Jul 28 22:42:56 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.4ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (127.0ms)
+Completed 200 OK in 138ms (Views: 132.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Thu Jul 28 22:42:59 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered users/new.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 46ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users?locale=ru" for 127.0.0.1 at Thu Jul 28 22:43:07 +0400 2011
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Создать учетную запись!", "authenticity_token"=>"Bnq/LKD1+bJbR6Xa1OUG+QgA6o525JrXx9JUA5w5szg=", "utf8"=>"✓", "locale"=>"ru", "user"=>{"name"=>"vasya", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"dxkxzx@gmail.com"}}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `users` (`salt`, `updated_at`, `encrypted_password`, `email`, `created_at`, `name`) VALUES ('e0a9d024706db3dc5f96531dd4c6cc14d1e77ef0e63d13df4f48452d12662a4e', '2011-07-28 18:43:08', '7d825253dcbba6d0eb2d204aa4ddd44e65ba91f89022ada9c5f0bd5e25e97c78', 'dxkxzx@gmail.com', '2011-07-28 18:43:08', 'vasya')
+  [1m[36mSQL (26.5ms)[0m  [1mCOMMIT[0m
+Rendered user_mailer/registration_confirmation.text.erb (0.3ms)
+
+Sent mail to dxkxzx@gmail.com (4146ms)
+Date: Thu, 28 Jul 2011 22:43:08 +0400
+From: admin@betafisha.com
+To: dxkxzx@gmail.com
+Message-ID: <4e31adbc1f405_2a12247f2f94390d5@dxkxzx-P5K-E.mail>
+Subject: [NO REPLY] Account has been registred!
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+vasya, 
+
+Thank you for registering! 
+
+BetAfisha.com
+Redirected to http://localhost:3000/users/1?locale=ru
+Completed 302 Found in 4306ms
+
+
+Started GET "/users/1?locale=ru" for 127.0.0.1 at Thu Jul 28 22:43:12 +0400 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1", "locale"=>"ru"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered users/show.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 37ms (Views: 20.3ms | ActiveRecord: 27.9ms)
