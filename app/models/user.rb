@@ -15,6 +15,10 @@
 require "digest"
  
 class User < ActiveRecord::Base
+  
+  cattr_reader :per_page
+  @@per_page = 1
+  
   attr_accessor :password
   attr_accessible :id, :name, :email, :password, :password_confirmation  
 

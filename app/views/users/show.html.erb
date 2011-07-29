@@ -1,13 +1,15 @@
 
 <% if signed_in? %>
+
+
+	<ul>
+		<li><b><%= t(:sing_up_username) %>: </b><%= @user.name %></li>
+		<li><b><%= t(:sing_up_email) %>: </b><%= @user.email %></li>
+	</ul>
+	
 	<% if current_user.admin? %>
 		<%= link_to "Управление пользователями" , users_path %> 
 	<% end %>
-
-<ul>
-	<li><b><%= t(:sing_up_username) %>: </b><%= @user.name %></li>
-	<li><b><%= t(:sing_up_email) %>: </b><%= @user.email %></li>
-</ul>
 
 <% else %>
 

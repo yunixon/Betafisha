@@ -15,7 +15,7 @@ class BetsLoaderController < ApplicationController
       wsdl.namespace = "http://www.betfair.com/publicapi/v3/BFGlobalService/"
     end
 
-    res = client.request :login, :body => {  :request => {  :ip_address => 0,
+    res = client.request :login,  :body => {  :request => {  :ip_address => 0,
                                                             :location_id => 0,
                                                             :password => 'vistadog123',
                                                             :product_id => 82,
