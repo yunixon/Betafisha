@@ -1,6 +1,10 @@
 # coding: utf-8
 class UsersController < ApplicationController
 
+  def index
+    @users = User.all
+  end
+
   def new
     @user = User.new
     @title = I18n.t(:top_menu_sing_up)
@@ -26,6 +30,10 @@ class UsersController < ApplicationController
     else
       render 'new'
     end
+    
+  end
+  
+  def edit
     
   end
 
