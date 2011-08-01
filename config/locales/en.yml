@@ -45,7 +45,7 @@ en:
   sing_up_email: "E-mail"
   sing_up_password: "Password" 
   sing_up_password_confirmation: "Confirm password"
-  sing_up_submit: "Create  account!"
+  sing_up_submit: "Create  account"
   
 
   activerecord:
@@ -59,13 +59,26 @@ en:
             email:
               invalid: "It doesn't look like a valid email format."
               blank: ""
+              taken: "Current email has already been taken."
             password:
               too_short: "Password must be from 2 to 40 characters long. No whitespace."
-              confirmation: "Need a new password confirmation!"
+              confirmation: "Need a new password confirmation."
               blank: ""
                    
   
   flash_sing_up_success: "Welcome to your profile!"
   flash_sing_up_failed: "Invalid email or password." 
   
+  
   sign_in_submit: "Sing in"
+  remember_me: "Remember me"
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -17,7 +17,7 @@ require "digest"
 class User < ActiveRecord::Base
   
   cattr_reader :per_page
-  @@per_page = 1
+  @@per_page = 5
   
   attr_accessor :password
   attr_accessible :id, :name, :email, :password, :password_confirmation  
@@ -28,7 +28,8 @@ class User < ActiveRecord::Base
                     :length   => { :within => 2..15}
   
   validates :email, :presence => true,
-                    :format   => { :with => email_regex }
+                    :format   => { :with => email_regex },
+                    :uniqueness => true
                     
   validates :password, :presence     => true,
                        :confirmation => true,

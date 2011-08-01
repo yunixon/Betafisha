@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Oddschecker::Application.load_tasks
+Betafisha::Application.load_tasks

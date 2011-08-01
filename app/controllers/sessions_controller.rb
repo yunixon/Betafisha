@@ -5,7 +5,6 @@ class SessionsController < ApplicationController
   end
 
   def create
-     
      user = User.authenticate(params[:session][:email],
                              params[:session][:password])
     if user.nil?
@@ -15,8 +14,7 @@ class SessionsController < ApplicationController
     else
       sign_in user
       redirect_to user
-    end
-    
+    end 
   end
 
   def destroy

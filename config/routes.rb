@@ -1,4 +1,6 @@
-Oddschecker::Application.routes.draw do
+Betafisha::Application.routes.draw do
+
+  get "password_resets/new"
 
   ###########################
   # Регистрация и авторизация
