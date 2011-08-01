@@ -34184,3 +34184,130 @@ Migrating to AddPasswordResetToUsers (20110731151716)
   [1m[35mSQL (0.1ms)[0m  BEGIN
   [1m[36mAREL (0.2ms)[0m  [1mUPDATE `users` SET `updated_at` = '2011-07-31 15:28:37', `admin` = 1 WHERE `users`.`id` = 1[0m
   [1m[35mSQL (23.1ms)[0m  COMMIT
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 01 12:13:45 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  [1m[36mSQL (31.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (41.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSports Load (0.3ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (235.6ms)
+Completed 200 OK in 285ms (Views: 191.1ms | ActiveRecord: 72.8ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Mon Aug 01 12:13:49 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+Rendered sessions/new.html.erb within layouts/application (28.5ms)
+Completed   in 43ms
+
+ActionView::Template::Error (undefined local variable or method `new_password_reset_path' for #<#<Class:0xb6e1bd7c>:0xb6e19af4>):
+    19:   <br/>
+    20:   
+    21:   <div class="field">
+    22:  	<%= link_to "forgotten password?", new_password_reset_path %>
+    23:   </div>
+    24:   <br/>
+    25:   
+  app/views/sessions/new.html.erb:22:in `_app_views_sessions_new_html_erb___194462090__613376488_0'
+  app/views/sessions/new.html.erb:3:in `_app_views_sessions_new_html_erb___194462090__613376488_0'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.2ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (30.4ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Mon Aug 01 12:14:05 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered sessions/new.html.erb within layouts/application (98.7ms)
+Completed 200 OK in 105ms (Views: 104.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Aug 01 12:14:41 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 42ms (Views: 41.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Mon Aug 01 12:31:13 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSports Load (0.2ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered sessions/new.html.erb within layouts/application (46.1ms)
+Completed 200 OK in 53ms (Views: 52.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Mon Aug 01 12:34:18 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (109.7ms)
+Completed 200 OK in 116ms (Views: 115.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Mon Aug 01 12:34:43 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered sessions/new.html.erb within layouts/application (109.7ms)
+Completed 200 OK in 117ms (Views: 115.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/?locale=ru" for 127.0.0.1 at Mon Aug 01 12:34:48 +0400 2011
+  Processing by SiteTopNavigationController#coefficients as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered site_top_navigation/coefficients.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Mon Aug 01 12:34:50 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered users/new.html.erb within layouts/admin (24.0ms)
+Completed 200 OK in 51ms (Views: 38.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Mon Aug 01 12:34:51 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (91.7ms)
+Completed 200 OK in 98ms (Views: 96.8ms | ActiveRecord: 0.2ms)

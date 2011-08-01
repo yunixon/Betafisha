@@ -1,13 +1,12 @@
 Betafisha::Application.routes.draw do
 
-  get "password_resets/new"
-
   ###########################
   # Регистрация и авторизация
   ###########################
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
-
+  resources :password_resets
+  
   match "signup" => "users#new", :as => :signup
   match "users" => "users#index", :as => :users
   match "signin" => "sessions#new", :as => :signin
