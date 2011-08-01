@@ -37,7 +37,7 @@ Betafisha::Application.configure do
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
 
-  # Enable threaded mode
+  # Enable threaded mode  config.action_mailer.default_url_options = { :host => "localhost:3000" }
   # config.threadsafe!
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
@@ -46,5 +46,7 @@ Betafisha::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  
+    config.action_mailer.default_url_options = { :host => "betafisha.com" }
    
 end
