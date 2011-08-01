@@ -7,5 +7,12 @@ namespace :db do
                          :password => "qwerty",
                          :password_confirmation => "qwerty")
     admin.toggle!(:admin)
+    
+    user = User.create!( :name => "kirillivanov",
+                         :email => "dxkxzx@gmail.com",
+                         :password => "111111",
+                         :password_confirmation => "111111")
+    
   end 
 end
+
