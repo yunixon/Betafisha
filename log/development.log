@@ -38808,3 +38808,23 @@ Started GET "/?locale=ru" for 127.0.0.1 at Mon Aug 01 19:31:23 +0400 2011
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
 Rendered site_top_navigation/coefficients.html.erb within layouts/application (100.3ms)
 Completed 200 OK in 107ms (Views: 106.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at Tue Aug 02 19:08:19 +0400 2011
+  Processing by UsersController#index as HTML
+  [1m[36mSQL (32.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (39.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Redirected to http://localhost:3000/signin?locale=ru
+Completed 302 Found in 88ms
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Tue Aug 02 19:08:20 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (14.4ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered sessions/new.html.erb within layouts/application (54.2ms)
+Completed 200 OK in 105ms (Views: 45.4ms | ActiveRecord: 86.1ms)
