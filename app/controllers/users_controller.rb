@@ -39,8 +39,15 @@ class UsersController < ApplicationController
     
   end
   
-  def edit
-    
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(params[:user])
+      flash[:success] = "Profile updated."
+      redirect_to @user
+    else
+      @title = "Edit user"
+      render 'edit'
+    end  
   end
   
   def destroy
@@ -63,9 +70,9 @@ class UsersController < ApplicationController
 
     def correct_user
       @user = User.find(params[:id])
-      redirect_to(root_path) unless current_user?(@user)
+      redirect_to(root_path) unless current_user?(@user) 
     end
-    
+     
     def admin_user
       redirect_to(root_path) unless current_user.admin?
     end
