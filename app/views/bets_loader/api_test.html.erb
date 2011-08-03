@@ -1,29 +1,24 @@
 <div class="grid_24">
-	<b>betfair login</b> <br />
-	
-	<%= BetFair.query( RequestTypes::ALL_LIGUES_FOOTBALL_ODDS_TO_WIN ) %> <br />
 
-	<%= @doc_betfair %>
-	
 	<br/>
-	<b>gamebookers basketball odds</b>
-	
-	<br/>
-	<% @doc_gb.each do |node| %>
-	
-	<% if node.node_type ==  Nokogiri::XML::Reader::TYPE_ELEMENT %>
-			<%= node.name %> 
-	<%end%>
-	
-	<% if node.node_type ==  Nokogiri::XML::Reader::TYPE_TEXT %>
-		<% if node.value != nil %> 
-			<br/><%= "[" + node.value + "]" %> <br/>
-		<%end%>
-	<%end%>
-	
-	<% if node.node_type ==  Nokogiri::XML::Reader::TYPE_END_ELEMENT%>
-	<%end%>
-	
-	<% end %>
-	
+	<b>gamebookers basketball odds</b> <br/> 
+		
+		<%= link_to "refresh", "#" ,  :id => 'refresh' %>		
+		
+		<% @doc_gb.each do |node| %>
+		
+			<% if node.node_type ==  Nokogiri::XML::Reader::TYPE_ELEMENT %>
+					<%= node.name %> 
+			<%end%>
+			
+			<% if node.node_type ==  Nokogiri::XML::Reader::TYPE_TEXT %>
+				<% if node.value != nil %> 
+					<br/><%= "[" + node.value + "]" %> <br/>
+				<%end%>
+			<%end%>
+			
+			<% if node.node_type ==  Nokogiri::XML::Reader::TYPE_END_ELEMENT%>
+			<%end%>
+		
+		<% end %>
 </div>

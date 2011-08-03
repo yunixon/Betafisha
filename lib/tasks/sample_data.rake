@@ -11,8 +11,7 @@ namespace :db do
     user = User.create!( :name => "kirillivanov",
                          :email => "dxkxzx@gmail.com",
                          :password => "111111",
-                         :password_confirmation => "111111")
-    
+                         :password_confirmation => "111111") 
   end 
 end
 
