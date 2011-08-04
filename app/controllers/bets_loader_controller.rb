@@ -14,16 +14,13 @@ class BetsLoaderController < ApplicationController
     
     
     def api_test
-      
-    
-      
-      #set_data     
-   
-    respond_to do |format|
-      format.html { @doc_gb = Array.new }
-      format.js  {
-          system "rake get_api_response &"
-      }
+      respond_to do |format|
+        format.html { @doc_gb = Array.new }
+        format.js {
+           #system "rake get_api_response &"
+           uri = 'http://xml.gamebookers.com/sports/basketball.xml'
+           @doc_gb = Nokogiri::XML::Reader( open( uri ) )    
+         }
     end
 
       

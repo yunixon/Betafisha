@@ -9,8 +9,8 @@ module BetsLoaderHelper
   
   def set_data
       ActiveRecord::Base.logger.info "!!!!!!"
-      uri = 'http://xml.gamebookers.com/sports/basketball.xml'
-      @doc_gb = Nokogiri::XML::Reader( open( uri ) )
+     # uri = 'http://xml.gamebookers.com/sports/basketball.xml'
+     # @doc_gb = Nokogiri::XML::Reader( open( uri ) )
   end
 
 end

@@ -68,7 +68,7 @@ GEM
       activesupport (= 3.0.7)
       rake (>= 0.8.7)
       thor (~> 0.14.4)
-    rake (0.8.7)
+    rake (0.9.2)
     savon (0.9.6)
       akami (~> 1.0)
       builder (>= 2.1.2)
@@ -96,7 +96,7 @@ DEPENDENCIES
   mysql2 (= 0.2.7)
   nokogiri
   rails (= 3.0.7)
-  rake (= 0.8.7)
+  rake
   savon
   sqlite3
   will_paginate

@@ -46501,3 +46501,2662 @@ Started GET "/signin?locale=ru" for 127.0.0.1 at Thu Aug 04 00:23:46 +0400 2011
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
 Rendered sessions/new.html.erb within layouts/application (34.8ms)
 Completed 200 OK in 41ms (Views: 40.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Aug 04 00:48:45 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (34.4ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312404526807" for 127.0.0.1 at Thu Aug 04 00:48:46 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404526807"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 75ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312404528279" for 127.0.0.1 at Thu Aug 04 00:48:48 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404528279"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 83ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312404528767" for 127.0.0.1 at Thu Aug 04 00:48:48 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404528767"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 91ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312404528959" for 127.0.0.1 at Thu Aug 04 00:48:48 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404528959"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 102ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Aug 04 00:48:50 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered bets_loader/api_test.html.erb within layouts/application (142.7ms)
+Completed 200 OK in 224ms (Views: 177.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api_test?_=1312404532023" for 127.0.0.1 at Thu Aug 04 00:48:52 +0400 2011
+!!!!!!
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404532023"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 94ms (Views: 30.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312404532271" for 127.0.0.1 at Thu Aug 04 00:48:52 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404532271"}
+Rendered bets_loader/api_test.js.erb (12.0ms)
+Completed 200 OK in 96ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312404532455" for 127.0.0.1 at Thu Aug 04 00:48:52 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404532455"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 88ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312404532639" for 127.0.0.1 at Thu Aug 04 00:48:53 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404532639"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 102ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Aug 04 00:50:02 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (34.7ms)
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312404604511" for 127.0.0.1 at Thu Aug 04 00:50:04 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404604511"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 81ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?_=1312404639919" for 127.0.0.1 at Thu Aug 04 00:50:39 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404639919"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 74ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312404641535" for 127.0.0.1 at Thu Aug 04 00:50:41 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404641535"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 81ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?_=1312404643335" for 127.0.0.1 at Thu Aug 04 00:50:43 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404643335"}
+Rendered bets_loader/api_test.js.erb (0.5ms)
+Completed 200 OK in 88ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?_=1312404646287" for 127.0.0.1 at Thu Aug 04 00:50:46 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404646287"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 78ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?_=1312404648911" for 127.0.0.1 at Thu Aug 04 00:50:48 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404648911"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 81ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+!!!!!!
+!!!!!!
+
+
+Started GET "/api_test?_=1312404662319" for 127.0.0.1 at Thu Aug 04 00:51:02 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404662319"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 73ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?_=1312404666063" for 127.0.0.1 at Thu Aug 04 00:51:06 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404666063"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 76ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312404668511" for 127.0.0.1 at Thu Aug 04 00:51:08 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404668511"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 85ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?_=1312404670623" for 127.0.0.1 at Thu Aug 04 00:51:10 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404670623"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 81ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?_=1312404673519" for 127.0.0.1 at Thu Aug 04 00:51:13 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404673519"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 77ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?_=1312404674839" for 127.0.0.1 at Thu Aug 04 00:51:14 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404674839"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 73ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312404675927" for 127.0.0.1 at Thu Aug 04 00:51:15 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404675927"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 92ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?_=1312404677327" for 127.0.0.1 at Thu Aug 04 00:51:17 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404677327"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 77ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+!!!!!!
+!!!!!!
+!!!!!!
+
+
+Started GET "/api_test?_=1312404681718" for 127.0.0.1 at Thu Aug 04 00:51:21 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404681718"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 73ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?_=1312404687150" for 127.0.0.1 at Thu Aug 04 00:51:27 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312404687150"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 73ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Aug 04 00:59:07 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered bets_loader/api_test.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 124ms (Views: 123.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312405150921" for 127.0.0.1 at Thu Aug 04 00:59:10 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312405150921"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 74ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Aug 04 01:12:50 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (147.1ms)
+Completed 200 OK in 154ms (Views: 152.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Aug 04 01:13:46 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered bets_loader/api_test.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312406028920" for 127.0.0.1 at Thu Aug 04 01:13:48 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406028920"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 77ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312406031272" for 127.0.0.1 at Thu Aug 04 01:13:51 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406031272"}
+Rendered bets_loader/api_test.js.erb (0.5ms)
+Completed 200 OK in 81ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?_=1312406032759" for 127.0.0.1 at Thu Aug 04 01:13:52 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406032759"}
+Rendered bets_loader/api_test.js.erb (0.5ms)
+Completed 200 OK in 83ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?_=1312406034903" for 127.0.0.1 at Thu Aug 04 01:13:54 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406034903"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 89ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?_=1312406036744" for 127.0.0.1 at Thu Aug 04 01:13:56 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406036744"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 80ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?_=1312406038559" for 127.0.0.1 at Thu Aug 04 01:13:58 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406038559"}
+Rendered bets_loader/api_test.js.erb (4.6ms)
+Completed 200 OK in 89ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?_=1312406040199" for 127.0.0.1 at Thu Aug 04 01:14:00 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406040199"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 78ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?_=1312406042183" for 127.0.0.1 at Thu Aug 04 01:14:02 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406042183"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 78ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?_=1312406043544" for 127.0.0.1 at Thu Aug 04 01:14:03 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406043544"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 82ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312406044919" for 127.0.0.1 at Thu Aug 04 01:14:04 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406044919"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 85ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312406046128" for 127.0.0.1 at Thu Aug 04 01:14:06 +0400 2011
+!!!!!!
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406046128"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 79ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+!!!!!!
+!!!!!!
+!!!!!!
+
+
+Started GET "/api_test?_=1312406052623" for 127.0.0.1 at Thu Aug 04 01:14:12 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406052623"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 74ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?_=1312406088951" for 127.0.0.1 at Thu Aug 04 01:14:48 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406088951"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 73ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312406096383" for 127.0.0.1 at Thu Aug 04 01:14:56 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406096383"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 72ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+!!!!!!
+!!!!!!
+
+
+Started GET "/api_test?_=1312406107079" for 127.0.0.1 at Thu Aug 04 01:15:07 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406107079"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 77ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312406112631" for 127.0.0.1 at Thu Aug 04 01:15:12 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406112631"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 73ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?_=1312406116447" for 127.0.0.1 at Thu Aug 04 01:15:16 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406116447"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 73ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312406118783" for 127.0.0.1 at Thu Aug 04 01:15:18 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406118783"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 80ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?_=1312406121447" for 127.0.0.1 at Thu Aug 04 01:15:21 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406121447"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 80ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+!!!!!!
+!!!!!!
+!!!!!!
+
+
+Started GET "/api_test?_=1312406135399" for 127.0.0.1 at Thu Aug 04 01:15:35 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406135399"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 77ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312406136488" for 127.0.0.1 at Thu Aug 04 01:15:36 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406136488"}
+Rendered bets_loader/api_test.js.erb (6.8ms)
+Completed 200 OK in 85ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312406137584" for 127.0.0.1 at Thu Aug 04 01:15:37 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406137584"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 80ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312406138463" for 127.0.0.1 at Thu Aug 04 01:15:38 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406138463"}
+Rendered bets_loader/api_test.js.erb (0.5ms)
+Completed 200 OK in 82ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312406139151" for 127.0.0.1 at Thu Aug 04 01:15:39 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406139151"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 94ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312406139887" for 127.0.0.1 at Thu Aug 04 01:15:39 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406139887"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 80ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312406140660" for 127.0.0.1 at Thu Aug 04 01:15:40 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406140660"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 101ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312406143799" for 127.0.0.1 at Thu Aug 04 01:15:43 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406143799"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 86ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312406144783" for 127.0.0.1 at Thu Aug 04 01:15:44 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406144783"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 91ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312406145791" for 127.0.0.1 at Thu Aug 04 01:15:46 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406145791"}
+Rendered bets_loader/api_test.js.erb (10.6ms)
+Completed 200 OK in 117ms (Views: 54.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312406147367" for 127.0.0.1 at Thu Aug 04 01:15:47 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406147367"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 105ms (Views: 31.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312406148407" for 127.0.0.1 at Thu Aug 04 01:15:48 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406148407"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 104ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?_=1312406149479" for 127.0.0.1 at Thu Aug 04 01:15:49 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406149479"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 85ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312406150729" for 127.0.0.1 at Thu Aug 04 01:15:50 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406150729"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 119ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312406152088" for 127.0.0.1 at Thu Aug 04 01:15:52 +0400 2011
+!!!!!!
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406152088"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 107ms (Views: 37.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312406153903" for 127.0.0.1 at Thu Aug 04 01:15:53 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406153903"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 128ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312406154920" for 127.0.0.1 at Thu Aug 04 01:15:54 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406154920"}
+!!!!!!
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 110ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312406156095" for 127.0.0.1 at Thu Aug 04 01:15:56 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406156095"}
+Rendered bets_loader/api_test.js.erb (5.5ms)
+Completed 200 OK in 90ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?_=1312406157047" for 127.0.0.1 at Thu Aug 04 01:15:57 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312406157047"}
+Rendered bets_loader/api_test.js.erb (0.5ms)
+Completed 200 OK in 124ms (Views: 60.6ms | ActiveRecord: 0.0ms)
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (66.4ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110712204319)
+Migrating to AddPasswordToUsers (20110713100747)
+Migrating to AddSaltToUsers (20110713122631)
+Migrating to CreateSports (20110725123634)
+Migrating to AddAdminToUsers (20110728213916)
+Migrating to AddEmailUniquenessIndex (20110731150653)
+Migrating to AddPasswordResetToUsers (20110731151716)
+Migrating to CreateBookmakerCoefficients (20110803195820)
+  [1m[35mSQL (260.7ms)[0m  CREATE TABLE `bookmaker_coefficients` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `bookmaker` varchar(255), `sport` varchar(255), `ligue` varchar(255), `team_one` varchar(255), `team_two` varchar(255), `sportsmen` varchar(255), `bet_type` varchar(255), `team_one_coef` varchar(255), `team_two_coef` varchar(255), `sportsmen_coef` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (87.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110803195820')[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (2.4ms)[0m  [1mdescribe `bookmaker_coefficients`[0m
+  [1m[35mSQL (23.8ms)[0m  SHOW KEYS FROM `bookmaker_coefficients`
+  [1m[36mSQL (0.3ms)[0m  [1mdescribe `sports`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `sports`
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `users`
+  [1m[36mSQL (0.2ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateUsers (20110712204319)
+Migrating to AddPasswordToUsers (20110713100747)
+Migrating to AddSaltToUsers (20110713122631)
+Migrating to CreateSports (20110725123634)
+Migrating to AddAdminToUsers (20110728213916)
+Migrating to AddEmailUniquenessIndex (20110731150653)
+Migrating to AddPasswordResetToUsers (20110731151716)
+Migrating to CreateBookmakerCoefficients (20110803195820)
+  [1m[35mSQL (0.3ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.5ms)[0m  [1mdescribe `bookmaker_coefficients`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `bookmaker_coefficients`
+  [1m[36mSQL (0.3ms)[0m  [1mdescribe `sports`[0m
+  [1m[35mSQL (0.1ms)[0m  SHOW KEYS FROM `sports`
+  [1m[36mSQL (0.4ms)[0m  [1mdescribe `users`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `users`
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Aug 04 12:38:16 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (77.2ms)
+Completed 200 OK in 84ms (Views: 83.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api_test?_=1312447101296" for 127.0.0.1 at Thu Aug 04 12:38:21 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312447101296"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 83ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312447101896" for 127.0.0.1 at Thu Aug 04 12:38:21 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312447101896"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 81ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312447102096" for 127.0.0.1 at Thu Aug 04 12:38:22 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312447102096"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 89ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312447102287" for 127.0.0.1 at Thu Aug 04 12:38:22 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312447102287"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 84ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Aug 04 12:40:28 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered bets_loader/api_test.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312447229495" for 127.0.0.1 at Thu Aug 04 12:40:29 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312447229495"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 922ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312447232144" for 127.0.0.1 at Thu Aug 04 12:40:32 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312447232144"}
+Rendered bets_loader/api_test.js.erb (0.5ms)
+Completed 200 OK in 780ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+!!!!!!
+!!!!!!
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Aug 04 12:45:36 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312447538376" for 127.0.0.1 at Thu Aug 04 12:45:38 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312447538376"}
+Rendered bets_loader/api_test.js.erb (0.7ms)
+Completed   in 792ms
+
+ActionView::Template::Error (uninitialized class variable @@doc_gb in ActionView::CompiledTemplates):
+    1: alert('ajax works!');
+    2: 
+    3: $('refresh').after(<div> <% if @@doc_gb != nil %> <%= "xml received!"%> <% end %> </div>)
+  app/views/bets_loader/api_test.js.erb:3:in `_app_views_bets_loader_api_test_js_erb__868530043__613552618_0'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.5ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.5ms)
+
+
+Started GET "/api_test?_=1312447541896" for 127.0.0.1 at Thu Aug 04 12:45:41 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312447541896"}
+Rendered bets_loader/api_test.js.erb (0.6ms)
+Completed   in 694ms
+
+ActionView::Template::Error (uninitialized class variable @@doc_gb in ActionView::CompiledTemplates):
+    1: alert('ajax works!');
+    2: 
+    3: $('refresh').after(<div> <% if @@doc_gb != nil %> <%= "xml received!"%> <% end %> </div>)
+  app/views/bets_loader/api_test.js.erb:3:in `_app_views_bets_loader_api_test_js_erb__868530043__612859158_0'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.3ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.9ms)
+
+
+Started GET "/api_test?_=1312447543896" for 127.0.0.1 at Thu Aug 04 12:45:43 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312447543896"}
+Rendered bets_loader/api_test.js.erb (0.7ms)
+Completed   in 659ms
+
+ActionView::Template::Error (uninitialized class variable @@doc_gb in ActionView::CompiledTemplates):
+    1: alert('ajax works!');
+    2: 
+    3: $('refresh').after(<div> <% if @@doc_gb != nil %> <%= "xml received!"%> <% end %> </div>)
+  app/views/bets_loader/api_test.js.erb:3:in `_app_views_bets_loader_api_test_js_erb__868530043__614200328_0'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.4ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (13.7ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (31.9ms)
+
+
+Started GET "/api_test?_=1312447547111" for 127.0.0.1 at Thu Aug 04 12:45:47 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312447547111"}
+Rendered bets_loader/api_test.js.erb (0.8ms)
+Completed   in 766ms
+
+ActionView::Template::Error (uninitialized class variable @@doc_gb in ActionView::CompiledTemplates):
+    1: alert('ajax works!');
+    2: 
+    3: $('refresh').after(<div> <% if @@doc_gb != nil %> <%= "xml received!"%> <% end %> </div>)
+  app/views/bets_loader/api_test.js.erb:3:in `_app_views_bets_loader_api_test_js_erb__868530043__612874708_0'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.8ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.2ms)
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Aug 04 12:46:11 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (1.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered bets_loader/api_test.html.erb within layouts/application (67.5ms)
+Completed 200 OK in 79ms (Views: 76.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api_test?_=1312447573297" for 127.0.0.1 at Thu Aug 04 12:46:13 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312447573297"}
+Rendered bets_loader/api_test.js.erb (0.5ms)
+Completed 200 OK in 670ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+!!!!!!
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Aug 04 12:47:55 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 41ms (Views: 40.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312447676808" for 127.0.0.1 at Thu Aug 04 12:47:56 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312447676808"}
+Rendered bets_loader/api_test.js.erb (0.5ms)
+Completed 200 OK in 763ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312447678224" for 127.0.0.1 at Thu Aug 04 12:47:58 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312447678224"}
+Rendered bets_loader/api_test.js.erb (0.6ms)
+Completed 200 OK in 787ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312447678426" for 127.0.0.1 at Thu Aug 04 12:47:59 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312447678426"}
+Rendered bets_loader/api_test.js.erb (2.1ms)
+Completed 200 OK in 736ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312447678616" for 127.0.0.1 at Thu Aug 04 12:48:00 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312447678616"}
+Rendered bets_loader/api_test.js.erb (1.2ms)
+Completed 200 OK in 887ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312447678808" for 127.0.0.1 at Thu Aug 04 12:48:01 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312447678808"}
+Rendered bets_loader/api_test.js.erb (0.5ms)
+Completed 200 OK in 720ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Aug 04 12:48:01 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (3.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (1.6ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered bets_loader/api_test.html.erb within layouts/application (98.9ms)
+Completed 200 OK in 107ms (Views: 101.4ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/api_test?_=1312447684760" for 127.0.0.1 at Thu Aug 04 12:48:04 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312447684760"}
+Rendered bets_loader/api_test.js.erb (0.5ms)
+Completed 200 OK in 713ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+!!!!!!
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Aug 04 12:52:39 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Aug 04 12:54:42 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered bets_loader/api_test.html.erb within layouts/application (34.5ms)
+Completed 200 OK in 42ms (Views: 40.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312448084897" for 127.0.0.1 at Thu Aug 04 12:54:44 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312448084897"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Aug 04 12:55:04 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (39.1ms)
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312448106768" for 127.0.0.1 at Thu Aug 04 12:55:06 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312448106768"}
+Rendered bets_loader/api_test.js.erb (0.5ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312448107712" for 127.0.0.1 at Thu Aug 04 12:55:07 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312448107712"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312448109848" for 127.0.0.1 at Thu Aug 04 12:55:09 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312448109848"}
+Rendered bets_loader/api_test.js.erb (0.5ms)
+Completed 200 OK in 78ms (Views: 77.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312448110048" for 127.0.0.1 at Thu Aug 04 12:55:10 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312448110048"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312448110240" for 127.0.0.1 at Thu Aug 04 12:55:10 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312448110240"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Aug 04 12:55:40 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered bets_loader/api_test.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 39ms (Views: 38.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312448141377" for 127.0.0.1 at Thu Aug 04 12:55:41 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312448141377"}
+Rendered bets_loader/api_test.js.erb (0.5ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312448142376" for 127.0.0.1 at Thu Aug 04 12:55:42 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312448142376"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312448142575" for 127.0.0.1 at Thu Aug 04 12:55:42 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312448142575"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312448142776" for 127.0.0.1 at Thu Aug 04 12:55:42 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312448142776"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312448142983" for 127.0.0.1 at Thu Aug 04 12:55:42 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312448142983"}
+Rendered bets_loader/api_test.js.erb (0.6ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312448144743" for 127.0.0.1 at Thu Aug 04 12:55:44 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312448144743"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Aug 04 12:56:31 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+Rendered bets_loader/api_test.html.erb within layouts/application (1.1ms)
+Completed   in 8ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    5: 		
+    6: 		<%= link_to "refresh", "#" ,  :id => 'refresh' %>		
+    7: 		
+    8: 		<% @doc_gb.each do |node| %>
+    9: 		
+    10: 			<% if node.node_type ==  Nokogiri::XML::Reader::TYPE_ELEMENT %>
+    11: 					<%= node.name %> 
+  app/views/bets_loader/api_test.html.erb:8:in `_app_views_bets_loader_api_test_html_erb__641302143__614336838_0'
+  app/controllers/bets_loader_controller.rb:22:in `api_test'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.5ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Aug 04 12:57:12 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.2ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (110.1ms)
+Completed 200 OK in 118ms (Views: 117.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api_test?_=1312448233880" for 127.0.0.1 at Thu Aug 04 12:57:13 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312448233880"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312448406864" for 127.0.0.1 at Thu Aug 04 13:00:06 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312448406864"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Aug 04 13:04:28 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered bets_loader/api_test.html.erb within layouts/application (109.7ms)
+Completed 200 OK in 117ms (Views: 116.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312448669410" for 127.0.0.1 at Thu Aug 04 13:04:29 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312448669410"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Aug 04 13:05:04 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (105.5ms)
+Completed 200 OK in 112ms (Views: 111.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312448706345" for 127.0.0.1 at Thu Aug 04 13:05:06 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312448706345"}
+ERROR: compiling _app_views_bets_loader_api_test_js_erb__868530043__613841088_0 RAISED compile error
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected ')', expecting kTHEN or ':' or '\n' or ';'
+..._javascript(if @doc_gb != nil) ;@output_buffer.safe_concat('...
+                              ^
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected kEND, expecting ')'
+...at(' '); escape_javascript(end) ;@output_buffer.safe_concat(...
+                              ^
+Function body:           def _app_views_bets_loader_api_test_js_erb__868530043__613841088_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "bets_loader/api_test";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('alert(\'ajax works!\');
+
+$("#refresh").after(\'<div> '); escape_javascript(if @doc_gb != nil) ;@output_buffer.safe_concat(' ');@output_buffer.append= ( escape_javascript("xml received!") );@output_buffer.safe_concat(' '); escape_javascript(end) ;@output_buffer.safe_concat(' </div>\');
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:8:in `compile'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:59:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:261:in `retrieve_response_from_mimes'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/home/dxkxzx/develop/git/Betafisha/app/controllers/bets_loader_controller.rb:22:in `api_test'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:441:in `_run__141883087__process_action__288560240__callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `synchronize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:77:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/handler/webrick.rb:13:in `run'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/server.rb:217:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands/server.rb:65:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:30
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:27:in `tap'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered bets_loader/api_test.js.erb (5.5ms)
+Completed   in 16ms
+
+ActionView::Template::Error (compile error
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected ')', expecting kTHEN or ':' or '\n' or ';'
+..._javascript(if @doc_gb != nil) ;@output_buffer.safe_concat('...
+                              ^
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected kEND, expecting ')'
+...at(' '); escape_javascript(end) ;@output_buffer.safe_concat(...
+                              ^):
+    1: alert('ajax works!');
+    2: 
+    3: $("#refresh").after('<div> <% escape_javascript(if @doc_gb != nil) %> <%= escape_javascript("xml received!") %> <% escape_javascript(end) %> </div>');
+  app/views/bets_loader/api_test.js.erb:8:in `compile'
+  app/controllers/bets_loader_controller.rb:22:in `api_test'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/api_test?_=1312448707944" for 127.0.0.1 at Thu Aug 04 13:05:07 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312448707944"}
+ERROR: compiling _app_views_bets_loader_api_test_js_erb__868530043__615429818_0 RAISED compile error
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected ')', expecting kTHEN or ':' or '\n' or ';'
+..._javascript(if @doc_gb != nil) ;@output_buffer.safe_concat('...
+                              ^
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected kEND, expecting ')'
+...at(' '); escape_javascript(end) ;@output_buffer.safe_concat(...
+                              ^
+Function body:           def _app_views_bets_loader_api_test_js_erb__868530043__615429818_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "bets_loader/api_test";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('alert(\'ajax works!\');
+
+$("#refresh").after(\'<div> '); escape_javascript(if @doc_gb != nil) ;@output_buffer.safe_concat(' ');@output_buffer.append= ( escape_javascript("xml received!") );@output_buffer.safe_concat(' '); escape_javascript(end) ;@output_buffer.safe_concat(' </div>\');
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:8:in `compile'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:59:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:261:in `retrieve_response_from_mimes'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/home/dxkxzx/develop/git/Betafisha/app/controllers/bets_loader_controller.rb:22:in `api_test'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:441:in `_run__141883087__process_action__288560240__callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `synchronize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:77:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/handler/webrick.rb:13:in `run'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/server.rb:217:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands/server.rb:65:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:30
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:27:in `tap'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered bets_loader/api_test.js.erb (0.8ms)
+Completed   in 11ms
+
+ActionView::Template::Error (compile error
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected ')', expecting kTHEN or ':' or '\n' or ';'
+..._javascript(if @doc_gb != nil) ;@output_buffer.safe_concat('...
+                              ^
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected kEND, expecting ')'
+...at(' '); escape_javascript(end) ;@output_buffer.safe_concat(...
+                              ^):
+    1: alert('ajax works!');
+    2: 
+    3: $("#refresh").after('<div> <% escape_javascript(if @doc_gb != nil) %> <%= escape_javascript("xml received!") %> <% escape_javascript(end) %> </div>');
+  app/views/bets_loader/api_test.js.erb:8:in `compile'
+  app/controllers/bets_loader_controller.rb:22:in `api_test'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.5ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.4ms)
+
+
+Started GET "/api_test?_=1312448708128" for 127.0.0.1 at Thu Aug 04 13:05:08 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312448708128"}
+ERROR: compiling _app_views_bets_loader_api_test_js_erb__868530043__613814348_0 RAISED compile error
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected ')', expecting kTHEN or ':' or '\n' or ';'
+..._javascript(if @doc_gb != nil) ;@output_buffer.safe_concat('...
+                              ^
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected kEND, expecting ')'
+...at(' '); escape_javascript(end) ;@output_buffer.safe_concat(...
+                              ^
+Function body:           def _app_views_bets_loader_api_test_js_erb__868530043__613814348_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "bets_loader/api_test";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('alert(\'ajax works!\');
+
+$("#refresh").after(\'<div> '); escape_javascript(if @doc_gb != nil) ;@output_buffer.safe_concat(' ');@output_buffer.append= ( escape_javascript("xml received!") );@output_buffer.safe_concat(' '); escape_javascript(end) ;@output_buffer.safe_concat(' </div>\');
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:8:in `compile'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:59:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:261:in `retrieve_response_from_mimes'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/home/dxkxzx/develop/git/Betafisha/app/controllers/bets_loader_controller.rb:22:in `api_test'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:441:in `_run__141883087__process_action__288560240__callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `synchronize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:77:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/handler/webrick.rb:13:in `run'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/server.rb:217:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands/server.rb:65:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:30
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:27:in `tap'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered bets_loader/api_test.js.erb (1.5ms)
+Completed   in 13ms
+
+ActionView::Template::Error (compile error
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected ')', expecting kTHEN or ':' or '\n' or ';'
+..._javascript(if @doc_gb != nil) ;@output_buffer.safe_concat('...
+                              ^
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected kEND, expecting ')'
+...at(' '); escape_javascript(end) ;@output_buffer.safe_concat(...
+                              ^):
+    1: alert('ajax works!');
+    2: 
+    3: $("#refresh").after('<div> <% escape_javascript(if @doc_gb != nil) %> <%= escape_javascript("xml received!") %> <% escape_javascript(end) %> </div>');
+  app/views/bets_loader/api_test.js.erb:8:in `compile'
+  app/controllers/bets_loader_controller.rb:22:in `api_test'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.9ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Aug 04 13:07:56 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered bets_loader/api_test.html.erb within layouts/application (32.4ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312448877520" for 127.0.0.1 at Thu Aug 04 13:07:57 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312448877520"}
+Rendered bets_loader/api_test.js.erb (0.5ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Aug 04 13:09:12 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (34.6ms)
+Completed 200 OK in 41ms (Views: 40.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312448953690" for 127.0.0.1 at Thu Aug 04 13:09:13 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312448953690"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Aug 04 13:09:28 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered bets_loader/api_test.html.erb within layouts/application (37.2ms)
+Completed 200 OK in 44ms (Views: 43.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312448970113" for 127.0.0.1 at Thu Aug 04 13:09:30 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312448970113"}
+Rendered bets_loader/api_test.js.erb (0.3ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Aug 04 13:13:02 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (107.3ms)
+Completed 200 OK in 114ms (Views: 112.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312449183801" for 127.0.0.1 at Thu Aug 04 13:13:03 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312449183801"}
+ERROR: compiling _app_views_bets_loader_api_test_js_erb__868530043__613701918_0 RAISED compile error
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected ')', expecting kTHEN or ':' or '\n' or ';'
+..._javascript(if @doc_gb != nil) ;@output_buffer.safe_concat('...
+                              ^
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected kEND, expecting ')'
+...at(' '); escape_javascript(end) ;@output_buffer.safe_concat(...
+                              ^
+Function body:           def _app_views_bets_loader_api_test_js_erb__868530043__613701918_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "bets_loader/api_test";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('alert(\'ajax works!\');
+
+$("#refresh").before("<div> '); escape_javascript(if @doc_gb != nil) ;@output_buffer.safe_concat(' ');@output_buffer.append= ( escape_javascript("xml received!") );@output_buffer.safe_concat(' '); escape_javascript(end) ;@output_buffer.safe_concat(' </div>");
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:8:in `compile'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:59:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:261:in `retrieve_response_from_mimes'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/home/dxkxzx/develop/git/Betafisha/app/controllers/bets_loader_controller.rb:22:in `api_test'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:441:in `_run__141883087__process_action__288560240__callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `synchronize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:77:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/handler/webrick.rb:13:in `run'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/server.rb:217:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands/server.rb:65:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:30
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:27:in `tap'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered bets_loader/api_test.js.erb (1.1ms)
+Completed   in 12ms
+
+ActionView::Template::Error (compile error
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected ')', expecting kTHEN or ':' or '\n' or ';'
+..._javascript(if @doc_gb != nil) ;@output_buffer.safe_concat('...
+                              ^
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected kEND, expecting ')'
+...at(' '); escape_javascript(end) ;@output_buffer.safe_concat(...
+                              ^):
+    1: alert('ajax works!');
+    2: 
+    3: $("#refresh").before("<div> <% escape_javascript(if @doc_gb != nil) %> <%= escape_javascript("xml received!") %> <% escape_javascript(end) %> </div>");
+  app/views/bets_loader/api_test.js.erb:8:in `compile'
+  app/controllers/bets_loader_controller.rb:22:in `api_test'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/api_test?_=1312449184561" for 127.0.0.1 at Thu Aug 04 13:13:04 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312449184561"}
+ERROR: compiling _app_views_bets_loader_api_test_js_erb__868530043__615092798_0 RAISED compile error
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected ')', expecting kTHEN or ':' or '\n' or ';'
+..._javascript(if @doc_gb != nil) ;@output_buffer.safe_concat('...
+                              ^
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected kEND, expecting ')'
+...at(' '); escape_javascript(end) ;@output_buffer.safe_concat(...
+                              ^
+Function body:           def _app_views_bets_loader_api_test_js_erb__868530043__615092798_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "bets_loader/api_test";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('alert(\'ajax works!\');
+
+$("#refresh").before("<div> '); escape_javascript(if @doc_gb != nil) ;@output_buffer.safe_concat(' ');@output_buffer.append= ( escape_javascript("xml received!") );@output_buffer.safe_concat(' '); escape_javascript(end) ;@output_buffer.safe_concat(' </div>");
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:8:in `compile'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:59:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:261:in `retrieve_response_from_mimes'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/home/dxkxzx/develop/git/Betafisha/app/controllers/bets_loader_controller.rb:22:in `api_test'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:441:in `_run__141883087__process_action__288560240__callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `synchronize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:77:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/handler/webrick.rb:13:in `run'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/server.rb:217:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands/server.rb:65:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:30
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:27:in `tap'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered bets_loader/api_test.js.erb (0.8ms)
+Completed   in 11ms
+
+ActionView::Template::Error (compile error
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected ')', expecting kTHEN or ':' or '\n' or ';'
+..._javascript(if @doc_gb != nil) ;@output_buffer.safe_concat('...
+                              ^
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected kEND, expecting ')'
+...at(' '); escape_javascript(end) ;@output_buffer.safe_concat(...
+                              ^):
+    1: alert('ajax works!');
+    2: 
+    3: $("#refresh").before("<div> <% escape_javascript(if @doc_gb != nil) %> <%= escape_javascript("xml received!") %> <% escape_javascript(end) %> </div>");
+  app/views/bets_loader/api_test.js.erb:8:in `compile'
+  app/controllers/bets_loader_controller.rb:22:in `api_test'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/api_test?_=1312449184792" for 127.0.0.1 at Thu Aug 04 13:13:04 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312449184792"}
+ERROR: compiling _app_views_bets_loader_api_test_js_erb__868530043__613260938_0 RAISED compile error
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected ')', expecting kTHEN or ':' or '\n' or ';'
+..._javascript(if @doc_gb != nil) ;@output_buffer.safe_concat('...
+                              ^
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected kEND, expecting ')'
+...at(' '); escape_javascript(end) ;@output_buffer.safe_concat(...
+                              ^
+Function body:           def _app_views_bets_loader_api_test_js_erb__868530043__613260938_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "bets_loader/api_test";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('alert(\'ajax works!\');
+
+$("#refresh").before("<div> '); escape_javascript(if @doc_gb != nil) ;@output_buffer.safe_concat(' ');@output_buffer.append= ( escape_javascript("xml received!") );@output_buffer.safe_concat(' '); escape_javascript(end) ;@output_buffer.safe_concat(' </div>");
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:8:in `compile'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:59:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:261:in `retrieve_response_from_mimes'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/home/dxkxzx/develop/git/Betafisha/app/controllers/bets_loader_controller.rb:22:in `api_test'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:441:in `_run__141883087__process_action__288560240__callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `synchronize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:77:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/handler/webrick.rb:13:in `run'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/server.rb:217:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands/server.rb:65:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:30
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:27:in `tap'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered bets_loader/api_test.js.erb (0.9ms)
+Completed   in 12ms
+
+ActionView::Template::Error (compile error
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected ')', expecting kTHEN or ':' or '\n' or ';'
+..._javascript(if @doc_gb != nil) ;@output_buffer.safe_concat('...
+                              ^
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected kEND, expecting ')'
+...at(' '); escape_javascript(end) ;@output_buffer.safe_concat(...
+                              ^):
+    1: alert('ajax works!');
+    2: 
+    3: $("#refresh").before("<div> <% escape_javascript(if @doc_gb != nil) %> <%= escape_javascript("xml received!") %> <% escape_javascript(end) %> </div>");
+  app/views/bets_loader/api_test.js.erb:8:in `compile'
+  app/controllers/bets_loader_controller.rb:22:in `api_test'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.7ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.5ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Aug 04 13:13:25 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered bets_loader/api_test.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 40ms (Views: 38.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312449207137" for 127.0.0.1 at Thu Aug 04 13:13:27 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312449207137"}
+ERROR: compiling _app_views_bets_loader_api_test_js_erb__868530043__613552918_0 RAISED compile error
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected ')', expecting kTHEN or ':' or '\n' or ';'
+..._javascript(if @doc_gb != nil) ;@output_buffer.safe_concat('...
+                              ^
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected kEND, expecting ')'
+...at(' '); escape_javascript(end) ;@output_buffer.safe_concat(...
+                              ^
+Function body:           def _app_views_bets_loader_api_test_js_erb__868530043__613552918_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "bets_loader/api_test";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('alert(\'ajax works!\');
+
+$("#refresh").before("<div> '); escape_javascript(if @doc_gb != nil) ;@output_buffer.safe_concat(' ');@output_buffer.append= ( "xml received!" );@output_buffer.safe_concat(' '); escape_javascript(end) ;@output_buffer.safe_concat(' </div>");
+
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:8:in `compile'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/template.rb:134:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:54:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/template.rb:127:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:59:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:56:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_view/render/rendering.rb:26:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:93:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:17:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:14:in `default_render'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:261:in `retrieve_response_from_mimes'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+/home/dxkxzx/develop/git/Betafisha/app/controllers/bets_loader_controller.rb:22:in `api_test'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:150:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:441:in `_run__141883087__process_action__288560240__callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:410:in `_run_process_action_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:94:in `run_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/notifications.rb:52:in `instrument'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/base.rb:119:in `process'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/abstract_controller/rendering.rb:41:in `process'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal.rb:138:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_controller/metal.rb:178:in `action'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:148:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:93:in `recognize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/code_generation.rb:92:in `recognize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-mount-0.6.14/lib/rack/mount/route_set.rb:139:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/routing/route_set.rb:493:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/methodoverride.rb:24:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:32:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:12:in `cache'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/query_cache.rb:31:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activerecord-3.0.7/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/callbacks.rb:416:in `_run_call_callbacks'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/sendfile.rb:107:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/rack/logger.rb:13:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/runtime.rb:17:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/activesupport-3.0.7/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `synchronize'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/lock.rb:11:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/static.rb:30:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:168:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:77:in `send'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/application.rb:77:in `method_missing'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/rack/log_tailer.rb:14:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/content_length.rb:13:in `call'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/handler/webrick.rb:52:in `service'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/home/dxkxzx/.rvm/rubies/ruby-1.8.7-p352/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/handler/webrick.rb:13:in `run'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/rack-1.2.3/lib/rack/server.rb:217:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands/server.rb:65:in `start'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:30
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:27:in `tap'
+/home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/railties-3.0.7/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered bets_loader/api_test.js.erb (0.9ms)
+Completed   in 12ms
+
+ActionView::Template::Error (compile error
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected ')', expecting kTHEN or ':' or '\n' or ';'
+..._javascript(if @doc_gb != nil) ;@output_buffer.safe_concat('...
+                              ^
+/home/dxkxzx/develop/git/Betafisha/app/views/bets_loader/api_test.js.erb:3: syntax error, unexpected kEND, expecting ')'
+...at(' '); escape_javascript(end) ;@output_buffer.safe_concat(...
+                              ^):
+    1: alert('ajax works!');
+    2: 
+    3: $("#refresh").before("<div> <% escape_javascript(if @doc_gb != nil) %> <%= "xml received!" %> <% escape_javascript(end) %> </div>");
+  app/views/bets_loader/api_test.js.erb:8:in `compile'
+  app/controllers/bets_loader_controller.rb:22:in `api_test'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Aug 04 13:18:06 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.2ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (35.2ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api_test?_=1312449487777" for 127.0.0.1 at Thu Aug 04 13:18:07 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312449487777"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Aug 04 13:18:41 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered bets_loader/api_test.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312449523281" for 127.0.0.1 at Thu Aug 04 13:18:43 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312449523281"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Aug 04 13:19:13 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (33.5ms)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312449554345" for 127.0.0.1 at Thu Aug 04 13:19:14 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312449554345"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312449697288" for 127.0.0.1 at Thu Aug 04 13:21:37 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312449697288"}
+Rendered bets_loader/api_test.js.erb (0.4ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Aug 04 13:31:57 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered bets_loader/api_test.html.erb within layouts/application (93.3ms)
+Completed 200 OK in 101ms (Views: 99.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312450320234" for 127.0.0.1 at Thu Aug 04 13:32:00 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312450320234"}
+Rendered bets_loader/api_test.js.erb (0.6ms)
+Completed   in 11ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: alert('ajax works!');
+    2: 
+    3: $("#refresh").before("<div> <%= escape_javascript(render(:partial => @api_test_data)) %> </div>");
+  app/views/bets_loader/api_test.js.erb:3:in `_app_views_bets_loader_api_test_js_erb__868530043__613830958_0'
+  app/controllers/bets_loader_controller.rb:22:in `api_test'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.6ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Aug 04 13:32:31 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (103.2ms)
+Completed 200 OK in 110ms (Views: 109.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312450353217" for 127.0.0.1 at Thu Aug 04 13:32:33 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312450353217"}
+Rendered bets_loader/api_test.js.erb (0.6ms)
+Completed   in 11ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: alert('ajax works!');
+    2: 
+    3: $("#refresh").before('<%= escape_javascript(render(:partial => @api_test_data)) %> ');
+  app/views/bets_loader/api_test.js.erb:3:in `_app_views_bets_loader_api_test_js_erb__868530043__614022668_0'
+  app/controllers/bets_loader_controller.rb:22:in `api_test'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.9ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.2ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Aug 04 13:34:16 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered bets_loader/api_test.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312450458305" for 127.0.0.1 at Thu Aug 04 13:34:18 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312450458305"}
+Rendered bets_loader/api_test.js.erb (0.6ms)
+Completed   in 11ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: alert('ajax works!');
+    2: 
+    3: $("#refresh").before(' <%= escape_javascript( render(:partial => @api_test_data) ) %> ');
+  app/views/bets_loader/api_test.js.erb:3:in `_app_views_bets_loader_api_test_js_erb__868530043__614254618_0'
+  app/controllers/bets_loader_controller.rb:22:in `api_test'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/api_test?_=1312450460056" for 127.0.0.1 at Thu Aug 04 13:34:20 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312450460056"}
+Rendered bets_loader/api_test.js.erb (0.5ms)
+Completed   in 11ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: alert('ajax works!');
+    2: 
+    3: $("#refresh").before(' <%= escape_javascript( render(:partial => @api_test_data) ) %> ');
+  app/views/bets_loader/api_test.js.erb:3:in `_app_views_bets_loader_api_test_js_erb__868530043__615776968_0'
+  app/controllers/bets_loader_controller.rb:22:in `api_test'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (66.9ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (72.2ms)
+
+
+Started GET "/api_test?_=1312450460251" for 127.0.0.1 at Thu Aug 04 13:34:20 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312450460251"}
+Rendered bets_loader/api_test.js.erb (0.6ms)
+Completed   in 12ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: alert('ajax works!');
+    2: 
+    3: $("#refresh").before(' <%= escape_javascript( render(:partial => @api_test_data) ) %> ');
+  app/views/bets_loader/api_test.js.erb:3:in `_app_views_bets_loader_api_test_js_erb__868530043__613678638_0'
+  app/controllers/bets_loader_controller.rb:22:in `api_test'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.5ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.7ms)
+
+
+Started GET "/api_test?_=1312450460425" for 127.0.0.1 at Thu Aug 04 13:34:20 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312450460425"}
+Rendered bets_loader/api_test.js.erb (0.6ms)
+Completed   in 12ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: alert('ajax works!');
+    2: 
+    3: $("#refresh").before(' <%= escape_javascript( render(:partial => @api_test_data) ) %> ');
+  app/views/bets_loader/api_test.js.erb:3:in `_app_views_bets_loader_api_test_js_erb__868530043__615082698_0'
+  app/controllers/bets_loader_controller.rb:22:in `api_test'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.3ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.3ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Aug 04 13:36:25 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  [1m[36mSQL (37.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (193.3ms)
+Completed 200 OK in 202ms (Views: 163.8ms | ActiveRecord: 37.5ms)
+
+
+Started GET "/api_test?_=1312450586835" for 127.0.0.1 at Thu Aug 04 13:36:26 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312450586835"}
+Rendered bets_loader/api_test.js.erb (58.7ms)
+Completed   in 1084ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: alert('ajax works!');
+    2: 
+    3: $("#refresh").before(' <%= escape_javascript( render(:partial => @api_test_data) ) %> ');
+  app/views/bets_loader/api_test.js.erb:3:in `_app_views_bets_loader_api_test_js_erb__868530043__614639088_0'
+
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.9ms)
+Rendered /home/dxkxzx/.rvm/gems/ruby-1.8.7-p352/gems/actionpack-3.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.6ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Aug 04 13:37:54 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered bets_loader/api_test.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 40ms (Views: 39.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api_test?_=1312450676195" for 127.0.0.1 at Thu Aug 04 13:37:56 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312450676195"}
+Rendered bets_loader/_api_test_data.html.erb (91.9ms)
+Rendered bets_loader/api_test.js.erb (197.9ms)
+Completed 200 OK in 973ms (Views: 209.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test" for 127.0.0.1 at Thu Aug 04 13:39:26 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 44ms (Views: 42.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312450768426" for 127.0.0.1 at Thu Aug 04 13:39:28 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312450768426"}
+Rendered bets_loader/_api_test_data.html.erb (148.2ms)
+Rendered bets_loader/api_test.js.erb (255.8ms)
+Completed 200 OK in 2890ms (Views: 267.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Aug 04 14:05:19 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered bets_loader/api_test.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 39ms (Views: 38.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312452321555" for 127.0.0.1 at Thu Aug 04 14:05:21 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312452321555"}
+Rendered bets_loader/_api_test_data.html.erb (92.4ms)
+Rendered bets_loader/api_test.js.erb (199.5ms)
+Completed 200 OK in 4099ms (Views: 211.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?_=1312452887049" for 127.0.0.1 at Thu Aug 04 14:14:47 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312452887049"}
+Rendered bets_loader/_api_test_data.html.erb (99.6ms)
+Rendered bets_loader/api_test.js.erb (296.9ms)
+Completed 200 OK in 1214ms (Views: 308.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Aug 04 14:28:27 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (75.3ms)
+Completed 200 OK in 83ms (Views: 81.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api_test?_=1312453709541" for 127.0.0.1 at Thu Aug 04 14:28:29 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312453709541"}
+Rendered bets_loader/_api_test_data.html.erb (91.9ms)
+Rendered bets_loader/api_test.js.erb (217.0ms)
+Completed 200 OK in 947ms (Views: 232.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Aug 04 14:28:35 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered bets_loader/api_test.html.erb within layouts/application (37.5ms)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312453717866" for 127.0.0.1 at Thu Aug 04 14:28:37 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312453717866"}
+Rendered bets_loader/_api_test_data.html.erb (151.3ms)
+Rendered bets_loader/api_test.js.erb (274.7ms)
+Completed 200 OK in 931ms (Views: 286.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Aug 04 14:28:46 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered bets_loader/api_test.html.erb within layouts/application (30.3ms)
+Completed 200 OK in 36ms (Views: 35.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312453728242" for 127.0.0.1 at Thu Aug 04 14:28:48 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312453728242"}
+Rendered bets_loader/_api_test_data.html.erb (92.7ms)
+Rendered bets_loader/api_test.js.erb (196.3ms)
+Completed 200 OK in 845ms (Views: 207.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Aug 04 14:29:18 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered bets_loader/api_test.html.erb within layouts/application (38.2ms)
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api_test?_=1312453762852" for 127.0.0.1 at Thu Aug 04 14:29:22 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312453762852"}
+Rendered bets_loader/_api_test_data.html.erb (151.1ms)
+Rendered bets_loader/api_test.js.erb (257.1ms)
+Completed 200 OK in 946ms (Views: 268.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin?locale=ru" for 127.0.0.1 at Thu Aug 04 14:29:31 +0400 2011
+  Processing by SessionsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mSports Load (0.1ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `sports`.* FROM `sports`
+Rendered sessions/new.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 37ms (Views: 36.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/password_resets/new?locale=ru" for 127.0.0.1 at Thu Aug 04 14:29:33 +0400 2011
+  Processing by PasswordResetsController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered password_resets/new.html.erb within layouts/application (38.9ms)
+Completed 200 OK in 46ms (Views: 45.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signup?locale=ru" for 127.0.0.1 at Thu Aug 04 14:29:35 +0400 2011
+  Processing by UsersController#new as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+Rendered users/new.html.erb within layouts/admin (23.6ms)
+Completed 200 OK in 60ms (Views: 48.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/api_test?locale=ru" for 127.0.0.1 at Thu Aug 04 14:29:36 +0400 2011
+  Processing by BetsLoaderController#api_test as HTML
+  Parameters: {"locale"=>"ru"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` IS NULL LIMIT 1[0m
+  [1m[35mSports Load (0.1ms)[0m  SELECT `sports`.* FROM `sports`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `sports`.* FROM `sports`[0m
+Rendered bets_loader/api_test.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api_test?_=1312453778186" for 127.0.0.1 at Thu Aug 04 14:29:38 +0400 2011
+  Processing by BetsLoaderController#api_test as JS
+  Parameters: {"_"=>"1312453778186"}
+Rendered bets_loader/_api_test_data.html.erb (152.6ms)
+Rendered bets_loader/api_test.js.erb (260.6ms)
+Completed 200 OK in 933ms (Views: 271.9ms | ActiveRecord: 0.0ms)

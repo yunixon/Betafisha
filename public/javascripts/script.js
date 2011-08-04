@@ -10,7 +10,7 @@ jQuery.ajaxSetup({
 $(document).ready(function() {
 	
   $("#refresh").click(function() {
-  	
+
    $.ajax({ 
    		type: 'GET',
    		url: '/api_test', 
