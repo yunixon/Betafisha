@@ -9,7 +9,7 @@ gem 'annotate'
 gem 'nokogiri'
 gem 'savon' 
 gem 'mysql2', '0.2.7'
-gem 'will_paginate'
+gem 'will_paginate', '3.0.pre2'
 
 #gem 'redis'
 #gem 'resque', :require => "resque/server"

@@ -85,7 +85,7 @@ GEM
     tzinfo (0.3.29)
     wasabi (2.0.0)
       nokogiri (>= 1.4.0)
-    will_paginate (2.3.15)
+    will_paginate (3.0.pre2)
 
 PLATFORMS
   ruby
@@ -99,4 +99,4 @@ DEPENDENCIES
   rake
   savon
   sqlite3
-  will_paginate
+  will_paginate (= 3.0.pre2)
