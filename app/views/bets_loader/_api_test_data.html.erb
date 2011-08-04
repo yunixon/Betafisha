@@ -1,18 +1,3 @@
 <div>
-	<% @doc_gb.each do |node| %>
-	
-		<% if node.node_type ==  Nokogiri::XML::Reader::TYPE_ELEMENT %>
-				<%= node.name %> 
-		<%end%>
-		
-		<% if node.node_type ==  Nokogiri::XML::Reader::TYPE_TEXT %>
-			<% if node.value != nil %> 
-				<br/><%= "[" + node.value + "]" %> <br/>
-			<%end%>
-		<%end%>
-		
-		<% if node.node_type ==  Nokogiri::XML::Reader::TYPE_END_ELEMENT%>
-		<%end%>
-	
-	<% end %>
+
 </div>

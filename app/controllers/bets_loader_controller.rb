@@ -10,16 +10,13 @@ class BetsLoaderController < ApplicationController
    require 'open-uri'
    require 'savon'
    
-   include BetsLoaderHelper
-    
-    
     def api_test
+      @coefficients_info = BookmakerCoefficients.all
+      
       respond_to do |format|
-        format.html { @doc_gb = Array.new }
+        format.html {  }
         format.js {
-           #system "rake get_api_response &"
-           uri = 'http://xml.gamebookers.com/sports/basketball.xml'
-           @doc_gb = Nokogiri::XML::Reader( open( uri ) )    
+           system "rake get_api_response &"
          }
     end
 

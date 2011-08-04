@@ -3,6 +3,10 @@
 	<br/>
 	<b>gamebookers basketball odds</b> <br/> 
 		
-		<%= link_to "refresh", "#" ,  :id => 'refresh' %>		
+		<%= link_to "refresh", "#" ,  :id => 'refresh' %>	<br />
+		
+	<% @coefficients_info.each do |coefficient| %>
+		<%= coefficient.id.to_s + " | " + coefficient.bookmaker_id.to_s %>	<br />
+	<% end %>	
 		
 </div>
