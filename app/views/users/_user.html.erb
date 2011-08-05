@@ -1,7 +1,7 @@
 <li>
   <%= link_to user.name, user %>
   <% if current_user.admin? %>
-  | <%= link_to "Удалить", user, :method => :delete, :confirm => "Вы уверены?",
+  | <%= link_to "Удалить", user, :method => :delete, :remote => true, :confirm => "Вы уверены?",
                                 :title => "Удалить #{user.name}" %>                
   <% end %>
 </li> 

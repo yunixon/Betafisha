@@ -8,10 +8,17 @@ namespace :db do
                          :password_confirmation => "qwerty")
     admin.toggle!(:admin)
     
-    user = User.create!( :name => "kirillivanov",
-                         :email => "dxkxzx@gmail.com",
-                         :password => "111111",
-                         :password_confirmation => "111111") 
+    User.create!( :name => "kirillivanov",
+                  :email => "dxkxzx@gmail.com",
+                  :password => "111111",
+                  :password_confirmation => "111111") 
+                         
+     Sports.create!( :name => "basketball")
+     Sports.create!( :name => "football") 
+     Sports.create!( :name => "formula_one") 
+     Sports.create!( :name => "horse")
+                               
   end 
+  
 end
 

@@ -1,6 +1,8 @@
 # coding: utf-8
 class UsersController < ApplicationController
   
+  require 'will_paginate'
+  
   before_filter :authenticate, :only => [:index, :edit, :update, :destroy]
   before_filter :correct_user, :only => [:edit, :update]
   before_filter :admin_user,   :only => :destroy
@@ -8,7 +10,7 @@ class UsersController < ApplicationController
   layout 'admin'
   def index
     @users = User.all
-    @users = User.paginate(:page => params[:page]) 
+    @users = User.paginate :page => params[:page]
   end
   
   def new

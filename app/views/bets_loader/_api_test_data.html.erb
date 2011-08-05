@@ -1,3 +1,16 @@
-<div>
-
-</div>
+<ul>	
+	<% @coefficients_info.each do |coefficient| %>
+	
+		<li><b> <%= coefficient.id.to_s  %></b> <%= coefficient.bookmaker_id.to_s  %> </li>
+		<li>  <%= coefficient.bet_type_id.to_s 	 %> </li>	
+		<li>  <%= coefficient.sport_id.to_s 	 %> </li>
+		<li>  <%= coefficient.ligue_id.to_s 	 %> </li>
+		<li>  <%= coefficient.team_one_id.to_s 	 %> </li>
+		<li>  <%= coefficient.team_one_coef.to_s %> </li>
+		<li>  <%= coefficient.team_two_id.to_s 	 %> </li>	
+		<li>  <%= coefficient.team_two_coef.to_s %> </li>	
+		<br />
+		<br />
+	<% end %>	
+</ul>
+	

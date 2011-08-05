@@ -11,13 +11,12 @@ class BetsLoaderController < ApplicationController
    require 'savon'
    
     def api_test
-      @coefficients_info = BookmakerCoefficients.all
+      
+      
       
       respond_to do |format|
-        format.html {  }
-        format.js {
-           system "rake get_api_response &"
-         }
+        format.html 
+        format.js { @coefficients_info = BookmakerCoefficients.find(:all, :order => "id desc", :limit => 10) }
     end
 
       

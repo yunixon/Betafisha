@@ -10,16 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110803221919) do
+ActiveRecord::Schema.define(:version => 20110805143223) do
 
   create_table "bookmaker_coefficients", :force => true do |t|
-    t.integer  "bookmaker_id"
-    t.integer  "sport_id"
-    t.integer  "ligue_id"
-    t.integer  "team_one_id"
-    t.integer  "team_two_id"
-    t.integer  "sportsmen_id"
-    t.integer  "bet_type_id"
+    t.string   "bookmaker_id"
+    t.string   "sport_id"
+    t.string   "ligue_id"
+    t.string   "team_one_id"
+    t.string   "team_two_id"
+    t.string   "sportsmen_id"
+    t.string   "bet_type_id"
     t.string   "team_one_coef"
     t.string   "team_two_coef"
     t.string   "sportsmen_coef"
@@ -36,6 +36,18 @@ ActiveRecord::Schema.define(:version => 20110803221919) do
   add_index "bookmaker_coefficients", ["team_one_id"], :name => "index_bookmaker_coefficients_on_team_one_id"
   add_index "bookmaker_coefficients", ["team_two_coef"], :name => "index_bookmaker_coefficients_on_team_two_coef"
   add_index "bookmaker_coefficients", ["team_two_id"], :name => "index_bookmaker_coefficients_on_team_two_id"
+
+  create_table "countries", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ligues", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "sports", :force => true do |t|
     t.string   "name"

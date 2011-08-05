@@ -1,6 +1,6 @@
 <h1>Edit user</h1>
 
-<%= form_for(@user) do |f| %>
+<%= form_for(@user, :remote=>true) do |f| %>
     
 	<% if @user.errors.any? %>
 	    <div id="errorExplanation">

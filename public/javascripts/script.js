@@ -9,16 +9,17 @@ jQuery.ajaxSetup({
 
 $(document).ready(function() {
 	
-  $("#refresh").click(function() {
+	
+	setInterval( function() { 
+		$.ajax({ 
+	   		type: 'GET',
+	   		url: '/api_test', 
+	   		dataType:'script' 
+	   	});
+	   	
+		}, 5000 );
+		
 
-   $.ajax({ 
-   		type: 'GET',
-   		url: '/api_test', 
-   		dataType:'script' 
-   	});
-
-  	return false;
-  });
-   
+		
 })
 

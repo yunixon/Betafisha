@@ -6,7 +6,7 @@ class BookmakerCoefficients < ActiveRecord::Base
                     :team_one_id, 
                     :team_two_id, 
                     :sportsmen_id, 
-                    :coef_type, 
+                    :bet_type_id, 
                     :team_one_coef, 
                     :team_two_coef, 
                     :sportsmen_coef

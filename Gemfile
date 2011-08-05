@@ -10,7 +10,7 @@ gem 'nokogiri'
 gem 'savon' 
 gem 'mysql2', '0.2.7'
 gem 'will_paginate', '3.0.pre2'
-
+gem 'daemons'
 #gem 'redis'
 #gem 'resque', :require => "resque/server"
 #gem "yajl-ruby"
