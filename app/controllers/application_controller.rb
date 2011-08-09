@@ -4,8 +4,6 @@ class ApplicationController < ActionController::Base
 
   include SessionsHelper
   
-
-  
   before_filter :set_locale
   def set_locale
     

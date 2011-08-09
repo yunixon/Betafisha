@@ -7,10 +7,14 @@ class UsersController < ApplicationController
   before_filter :correct_user, :only => [:edit, :update]
   before_filter :admin_user,   :only => :destroy
 
+
+
+
   layout 'admin'
   def index
     @users = User.all
     @users = User.paginate :page => params[:page]
+    
   end
   
   def new
@@ -19,12 +23,20 @@ class UsersController < ApplicationController
   end
 
   def show
-    
     @user = User.find(params[:id])
     if signed_in?
       @title = I18n.t(:top_menu_profile) + ": " + @user.name
     end
   end
+  
+  layout 'admin'
+  def show_admin
+    @user = User.find(1)
+    if signed_in?
+      @title = I18n.t(:top_menu_profile) + ": " + @user.name
+    end
+  end
+  
 
   def create
     @user = User.new(params[:user])

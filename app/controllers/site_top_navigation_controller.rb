@@ -1,5 +1,10 @@
 # coding: utf-8
 class SiteTopNavigationController < ApplicationController
+  
+  layout 'dev_stub'
+  def stub
+      
+  end
 
   def coefficients
     @title = I18n.t(:top_menu_coefficients)

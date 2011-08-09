@@ -11,7 +11,7 @@ Betafisha::Application.routes.draw do
   resources :sports
   
   match "signup" => "users#new", :as => :signup
-  match "users" => "users#index", :as => :users
+  #match "users" => "users#index", :as => :users 
   match "signin" => "sessions#new", :as => :signin
   match "signout" => "sessions#destroy", :as => :signout 
 
@@ -31,8 +31,28 @@ Betafisha::Application.routes.draw do
   match "tools" =>  "site_top_navigation#tools", :as => :tools
   
   
-  match "/api_test", :to =>  "bets_loader#api_test", :as => :api_test
+  match "/api_test", :to =>  "bets_loader#api_test", :as => :api_test 
   
+  
+  ###########################
+  # Админ панель
+  ########################### 
+  
+  get "admin/index"
+  match "admin" =>  "admin#index", :as => :admin
+  match "admin/navigation" =>  "admin#navigation_manager", :as => :admin_navigation_manager
+  
+  match "admin/users" =>  "users#index", :as => :admin_users
+  match "admin/users:page" =>  "users#index"
+  
+  match "admin/profile" =>  "users#show_admin", :as => :admin_profile 
+  
+
+  
+  #map.with_options(:controller => "users", 
+  #               :action => "index") do |c|
+  #c.connect "admin/users/:page", :type => "users_page"
+  #end
   
   # get "site_top_navigation/gaming"
   # match "/gaming" , :to =>  "site_top_navigation#gaming", :as => :gaming
@@ -89,7 +109,7 @@ Betafisha::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
 
-  root :to => "site_top_navigation#coefficients"
+  root :to => "site_top_navigation#stub"
 
 # See how all your routes lay out with "rake routes"
 

@@ -12,6 +12,10 @@
 	<% if current_user.admin? %>
 		<%= link_to "Управление пользователями" , users_path %> 
 	<% end %>
+	
+	<% if current_user.admin? %>
+		<%= link_to "Управление контентом" , ""%> 
+	<% end %>
 
 <% else %>
 

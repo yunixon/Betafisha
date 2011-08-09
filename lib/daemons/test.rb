@@ -61,7 +61,13 @@ while $running do
                                     :team_one_coef => event.search(".//odd1").text, 
                                     :team_two_coef => odd2, 
                                     :sportsmen_coef => ""  
-                                   )    
+                                  )    
   end
+  
   sleep 60
+  
 end 
+
+
+
+

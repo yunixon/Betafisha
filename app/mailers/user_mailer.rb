@@ -1,6 +1,6 @@
 class UserMailer < ActionMailer::Base
   
-  default :from => "admin@betafisha.com"
+  default :from => "no_reply@betafisha.com"
   
   def registration_confirmation ( user )
       @user = user

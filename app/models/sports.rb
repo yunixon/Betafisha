@@ -9,7 +9,8 @@
 #
 
 class Sports < ActiveRecord::Base
-  attr_accessible :id, :name
   
-  belongs_to :bookmaker_coefficients
+  attr_accessible :id, :name, :priority
+  has_many :countries, :dependent => :destroy 
+  
 end
