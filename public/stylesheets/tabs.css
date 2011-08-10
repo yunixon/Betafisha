@@ -1,0 +1,105 @@
+ul.tabs {
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+	height: 32px; /*--Set height of tabs--*/
+	/*border-bottom: 1px solid #eee;
+	border-left: 1px solid #eee;*/
+	width: 100%;
+	
+}
+ul.tabs:first-child {
+	margin-left: 25px;
+}
+
+
+ul.tabs li {
+	float: left;
+	margin-right: 2px;
+	padding: 0;
+	height: 32px; /*--Subtract 1px from the height of the unordered list--*/
+	line-height: 31px; /*--Vertically aligns the text within the tab--*/
+	border-bottom: 1px solid #ccc;
+	/*border-right: 1px solid #ccc;*/
+	/*margin-bottom: -2px;*/ /*--Pull the list item down 1px--*/
+	overflow: hidden;
+	position: relative;
+	background: #eee;
+	border-top-right-radius: 7px;
+	border-top-left-radius: 7px;
+	
+}
+
+ul.tabs li{
+	border-top-right-radius: 7px;
+	border-top-left-radius: 7px;
+}
+ul.tabs li a {
+	text-decoration: none;
+	color: #222;
+	display: block;
+	font-size: 1.0em;
+	padding: 0 25px;
+	/*border: 1px solid #fff;*/ /*--Gives the bevel look with a 1px white border inside the list item--*/
+	outline: none;
+	display: block;
+
+	border-top-right-radius: 7px;
+	border-top-left-radius: 7px;
+}
+
+ul.tabs li a:hover {
+	/*background: #ccc;*/
+}
+ul.tabs li.active {
+	/*color: #eee;*/
+    font-weight: bold;
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	border-bottom: none;
+}
+html ul.tabs li.active, html ul.tabs li.active a:hover  { /*--Makes sure that the active tab does not listen to the hover properties--*/
+	/*background: #222;*/
+	/*border-bottom: 1px solid #fff;*/ /*--Makes the active tab look like it's connected with its content--*/
+	/*border-top: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	
+	border-top-right-radius: 7px;
+	border-top-left-radius: 7px;*/
+}
+
+.tab_container {
+	border: 1px solid #ccc;
+	/*border-top: none;
+	border-bottom: none;*/
+	overflow: hidden;
+	clear: both;
+	float: left; width: 100%;
+	background: #eee;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	/*min-height: 500px;*/
+}
+.tab_content {
+	padding: 20px;
+	font-size: 1.0em;
+}
+
+
+.admin_profile_tab {
+	background: url('../images/user_edit.png') no-repeat  5px 7px;
+
+}
+.user_managment_tab {
+	background: url('../images/group_edit.png') no-repeat  5px 7px;
+}
+.content_manegment_tab {
+	background: url('../images/table_edit.png') no-repeat  5px 7px;
+}
+
+.add_sport_form {
+	margin-left: 100px;
+}
+

@@ -1,27 +1,27 @@
-
 Спорт 
-<ul>
+
+<div id="sports-accordion" class="sports-accordion-scope">
+	
 	<% @sports.each do |sport| %>
-	<li> <%= link_to  sport.name , sport %></li>
+		<div class="sports-accordion-toggle"> <%= sport.name %></div>
+		<div class="sports-accordion-content">
+		
+			<ul class="countries">
+				<% sport.countries.each do |country| %>
+				<li class="country"><%= link_to country.name , ""  %></li>
+				
+				<ul class="ligues">
+					<% country.ligues.each do |ligue| %>
+					<li><%= ligue.name %></li>
+					<% end %>	
+				</ul>
+				
+				<% end %>
+			</ul>
+			
+		</div>
 	<% end %>	
-</ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
+</div>
 
 <%= link_to "Назад", admin_path %> 

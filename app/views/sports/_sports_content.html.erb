@@ -1,0 +1,32 @@
+<% @sports.each do |sport| %>
+
+<h2 class="acc_trigger"> <%= link_to sport.name, "#" %> <%= link_to "Удалить", sport, :confirm => "Вы уверены?", :title => "Удалить #{sport.name}", :class => 'delete_item' %>  <%= link_to "Редактировать", sport, :class => 'edit_item' %> </h2> 
+
+
+
+<div class="acc_container">
+    <div class="block">
+		<ul class="countries">
+			<% sport.countries.each do |country| %>
+			<li class="country"><%= link_to country.name , "#"  %></li>
+			<ul class="ligues">
+				<% country.ligues.each do |ligue| %>
+				<li class='ligue'><%= ligue.name %></li>
+				<% end %>	
+				<li> <%= link_to "Добавить", "#", :class => 'add_item' %> </li>
+			</ul>				
+			<% end %>
+			<li> <%= link_to "Добавить", "#", :class => 'add_item'%> </li>
+		</ul>
+    </div>
+    
+</div>
+	
+<% end %>
+<h2 class="acc_trigger last-child">  <%= link_to "Добавить", "#"%> </h2>
+<div class="acc_container ">
+	<div class="block"></div>
+</div>
+
+<%= javascript_include_tag 'accordian.js' %>
+<%= javascript_include_tag :defaults %>

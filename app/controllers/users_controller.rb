@@ -7,9 +7,6 @@ class UsersController < ApplicationController
   before_filter :correct_user, :only => [:edit, :update]
   before_filter :admin_user,   :only => :destroy
 
-
-
-
   layout 'admin'
   def index
     @users = User.all
@@ -39,7 +36,7 @@ class UsersController < ApplicationController
   
 
   def create
-    @user = User.new(params[:user])
+    @user = User.create!(params[:user])
     if @user.save
       sign_in @user
       

@@ -10,14 +10,18 @@ jQuery.ajaxSetup({
 $(document).ready(function() {
 	
 	
-	setInterval( function() { 
+	/*setInterval( function() { 
 		$.ajax({ 
 	   		type: 'GET',
 	   		url: '/api_test', 
 	   		dataType:'script' 
 	   	});
 	   	
-		}, 5000 );
+		}, 5000 );*/
+		
+		
+		
+
 		
 
 		
