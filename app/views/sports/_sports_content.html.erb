@@ -1,8 +1,8 @@
 <% @sports.each do |sport| %>
 
-<h2 class="acc_trigger"> <%= link_to sport.name, "#" %> <%= link_to "Удалить", sport, :confirm => "Вы уверены?", :title => "Удалить #{sport.name}", :class => 'delete_item' %>  <%= link_to "Редактировать", sport, :class => 'edit_item' %> </h2> 
-
-
+<h2 class="acc_trigger"> <%= link_to sport.name, "#" %> 
+						<%= link_to "Удалить", sport, :confirm => "Вы уверены?", :title => "Удалить #{sport.name}", :class => 'delete_item' %>  
+						<%= link_to "Редактировать", sport, :class => 'edit_item', :id => sport.id %> </h2> 
 
 <div class="acc_container">
     <div class="block">
@@ -29,4 +29,3 @@
 </div>
 
 <%= javascript_include_tag 'accordian.js' %>
-<%= javascript_include_tag :defaults %>

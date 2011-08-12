@@ -1,1 +1,20 @@
- <li><%= link_to "Назад", admin_path %>   </li> 
+<% if signed_in? %>	
+	<% if current_user.admin? %>
+	
+	<ul class="tabs">
+		<li><%= link_to "Профиль админа", admin_path , :class => 'admin_profile_tab' %></li>
+		<li class="active"><%= link_to "Управление пользователями", admin_users_manager_path, :class => 'users_manager_tab' %></li> 
+		<li><%= link_to "Управление контентом", admin_sports_manager_path, :class => 'sports_manager_tab' %></li>  
+	</ul>
+	
+
+	    
+	<div class="tab_container" style=" width: 958px;">
+	 	<% flash.each do |key, value| %>
+	        <div class="flash <%= key %>"><%= value %></div>
+		<% end %> 
+	    <%= render 'users/user_manager' %> 		  
+
+	</div>		
+	<% end %>
+<% end %>

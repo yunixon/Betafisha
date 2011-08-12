@@ -16,8 +16,6 @@ Betafisha::Application.routes.draw do
   match "signout" => "sessions#destroy", :as => :signout 
 
 
-
-
   ###########################
   # Навигация
   ########################### 
@@ -38,14 +36,28 @@ Betafisha::Application.routes.draw do
   # Админ панель
   ########################### 
   
-  get "admin/index"
-  match "admin" =>  "admin#index", :as => :admin
-  match "admin/navigation" =>  "admin#navigation_manager", :as => :admin_navigation_manager
+  get "admin/users_manager"
+  match "admin" =>  "admin#users_manager", :as => :admin
   
-  match "admin/users" =>  "users#index", :as => :admin_users
-  match "admin/users:page" =>  "users#index"
+  get "admin/sports_manager"
+  match "sports" =>  "admin#sports_manager", :as => :sports
   
-  match "admin/profile" =>  "users#show_admin", :as => :admin_profile 
+  get "admin/users_manager"
+  match "users" =>  "admin#users_manager", :as => :users
+  
+  
+  
+  post "admin/sport_edit"
+  post "admin/sport_new"
+  
+  #match "admin" =>  "admin#index", :as => :admin
+  
+  #match "admin/navigation" =>  "admin#navigation_manager", :as => :admin_navigation_manager
+  
+  #match "admin/users" =>  "users#index", :as => :admin_users
+  #match "admin/users:page" =>  "users#index"
+  
+  #match "admin/profile" =>  "users#show_admin", :as => :admin_profile 
   
 
   

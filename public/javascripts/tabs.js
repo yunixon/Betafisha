@@ -1,18 +1,16 @@
-
 jQuery.ajaxSetup({ 
   'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
 })
+
 var $j = jQuery.noConflict();
 
 $j(document).ready(function() {
 
 	//When page loads...
-	$j(".tab_content").hide(); //Hide all content
+	/*$j(".tab_content").hide(); //Hide all content
+	$j("ul.tabs li:first").addClass("active").show(); //Activate first tab
+	$j(".tab_content:first").show(); //Show first tab content
 
-	
-	$j("ul.tabs li::nth-child(3)").addClass("active").show(); //Activate first tab
-	$j(".tab_content:first:nth-child(3)").show(); //Show first tab content
-	
 	//On Click Event
 	$j("ul.tabs li").click(function() {
 
@@ -21,13 +19,35 @@ $j(document).ready(function() {
 		$j(".tab_content").hide(); //Hide all tab content
 
 		var activeTab = $j(this).find("a").attr("href"); //Find the href attribute value to identify the active tab + content
-		$j(activeTab).show(); //Fade in the active ID content
+		$j(activeTab).fadeIn(); //Fade in the active ID content
 		return false;
-	});
+	});*/
 	
-	$j('#new_sport').submit( function() {
-		$j.post(this.action, $j(this).serialize(), null, "script");
+
+	
+	/*$j('.pagination a').live('click', function() {
+		
+		$j.getScript(this.href);//, null, null, 'script');
 		return false;
 	});
+	*/
+	//$j('a.delete_user').live('click', function() {
+		//alert(this.href);
+		//var results = new RegExp('[\\?&]' + 'page'+ '=([^&#]*)').exec(this.href);
+		//results = results[1] || 0;
+		//alert(results);
+		//if(confirm(this.getAttribute("data-confirm"), this.getAttribute("title") )) {
+	    //   ('#my_pagination').html('<%= will_paginate @users  %>');
+	    //   return false;
+	   // } else {
+	   //return false;
+	  // }
+	//})
+	
+
+
 	
 });
+	
+	
+	

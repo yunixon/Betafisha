@@ -51,7 +51,7 @@ h2.acc_trigger:hover {
 	background: #555;
 }
 
-h2.active {
+h2.active, h2.active:hover {
 	background: #222;
 }
 
@@ -76,15 +76,11 @@ h2.active {
 	/*padding: 20px;*/
 }
 
-
-
-
 .countries li {
 	margin-left: 20px;
 	padding: 5px 0 3px 0;
 	border-bottom: 1px solid #ccc;
-	/*border-left: 1px solid #aaa;
-	padding-left: 5px;*/
+
 }
 .countries li a:hover {
  	#color:#0099CC;
@@ -125,12 +121,15 @@ h2.active {
 	font-size: 0.85em;
 	
 }
+
 h2.last-child {
 	border-top: 1px #eee solid;
 }
+
 h2.last-child:hover {
 	background: #ccc;
 }
+
 h2.last-child:hover a {
 	color: #222;
 	text-decoration: underline;

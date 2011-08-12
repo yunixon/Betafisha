@@ -1,0 +1,23 @@
+<% if signed_in? %>	
+	<% if current_user.admin? %>
+	
+	<ul class="tabs">
+		<li><%= link_to "Профиль админа", admin_path , :class => 'admin_profile_tab' %></li>
+		<li><%= link_to "Управление пользователями", admin_users_manager_path, :class => 'users_manager_tab' %></li> 
+		<li class="active"><%= link_to "Управление контентом", admin_sports_manager_path, :class => 'sports_manager_tab' %></li>  
+	</ul>
+	<div class="tab_container" style=" width: 958px;">
+		
+
+	    <div id="tab3" class="tab_content">
+	      	<div class="accordian grid_5">
+	 			<%= render 'sports/sports_content' %> 
+			</div>
+			<div class="add_edit_form grid_10">
+			</div> 
+			
+	    </div>
+	    
+	</div>	
+	<% end %>
+<% end %>

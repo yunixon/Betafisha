@@ -187,7 +187,9 @@ nav ul li a:hover {
 	height: 30px;
 	width: 250px;
 }
-
+input[type="checkbox"] { 
+	width: 20px;
+}
 .actions input {
 	margin-top: 10px;
 	border: 1px solid #ccc;
@@ -197,4 +199,38 @@ nav ul li a:hover {
 }
 .actions input:hover {
 	background: #ccc;
+}
+
+#content form {
+	margin-left: 10px;
+}
+
+.notice {
+	border: 1px solid orange;
+	padding: 10px;
+	background: #ffa;
+	margin-top: 10px;
+	margin-left: 120px;
+	width: 320px;
+	text-align: center; 
+}
+
+.success {
+	border: 1px solid green;
+	padding: 10px;
+	background: #cec;
+	margin-top: 10px;
+	margin-left: 120px;
+	width: 320px;
+	text-align: center;
+}
+
+.warning {
+	border: 1px solid red;
+	padding: 10px;
+	background: #faa;
+	margin-top: 10px;
+	margin-left: 120px;
+	width: 320px;
+	text-align: center;
 }

@@ -1,6 +1,3 @@
-//Set default open/close settings
-
-//var $j = jQuery.noConflict();
 
 $j(document).ready(function() {
 	
@@ -16,7 +13,7 @@ $j(document).ready(function() {
 		$j("a.delete_item").hide();
 		$j(this).find('a.delete_item').show();
 		$j(this).find('a.edit_item').show();
-		return false; 
+		//return false; 
 	});
 	
 	$j('.acc_trigger').mouseout( function() {
@@ -33,6 +30,25 @@ $j(document).ready(function() {
             return false;
         }
 	});
+	
+	$j("a.edit_item").click( function() {
+        $j.ajax({ 
+	   		type: 'POST',
+	   		url: "sport_edit",
+	   		data: { id : this.getAttribute('id') }, 
+	   		dataType:'script' 
+	   	});
+        return false;
+	});
+	
+	$j('h2.last-child a').click( function() {
+		$j.ajax({ 
+	   		type: 'POST',
+	   		url: "sport_new",
+	   		dataType:'script' 
+	   	});
+		return false;
+	});	
 	
 
 	
@@ -64,10 +80,7 @@ $j(document).ready(function() {
 		return false;
 	});
 	
-	$j('h2.last-child').click( function() {
-		$j.get("/admin", null, "script");
-		return false;
-	});	
+
 
 });
 

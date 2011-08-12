@@ -13,7 +13,12 @@ class SessionsController < ApplicationController
       render 'new'
     else
       sign_in user
-      redirect_to user
+      if user.admin?  
+        redirect_to admin_path 
+      else
+        redirect_to user
+      end
+      
     end 
   end
 

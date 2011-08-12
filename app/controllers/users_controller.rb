@@ -62,15 +62,18 @@ class UsersController < ApplicationController
   end
   
   def destroy
+    
     user = User.find(params[:id])
+
     if user.admin? && params[:id] == '1' 
-      flash[:success] = "You cant delete root admin."
-      redirect_to users_path
+       flash[:warning] = "You cant delete root admin."
+        redirect_to :controller=>"admin", :action => "users_manager"#, :page => params[:page]
     else 
       user.destroy
-      flash[:success] = "User has been successfully deleted."
-      redirect_to users_path
+      flash[:success] = "User [" + user.name + "] has been successfully deleted."
+      redirect_to :controller=>"admin", :action => "users_manager"#, :page => params[:page]
     end
+     
   end
   
    private

@@ -16,7 +16,7 @@ ul.tabs:first-child {
 
 ul.tabs li {
 	float: left;
-	margin-right: 2px;
+	margin: 0;
 	padding: 0;
 	height: 32px; /*--Subtract 1px from the height of the unordered list--*/
 	line-height: 31px; /*--Vertically aligns the text within the tab--*/
@@ -92,14 +92,43 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  { /*--Makes sure that th
 	background: url('../images/user_edit.png') no-repeat  5px 7px;
 
 }
-.user_managment_tab {
+.users_manager_tab {
 	background: url('../images/group_edit.png') no-repeat  5px 7px;
 }
-.content_manegment_tab {
+.sports_manager_tab {
 	background: url('../images/table_edit.png') no-repeat  5px 7px;
 }
 
-.add_sport_form {
+.add_edit_form {
 	margin-left: 100px;
 }
+
+.pagination {
+	margin-left: 170px;
+	margin-bottom: 50px;
+}
+
+.users li{
+	list-style: none;
+}
+
+.pagination a, .pagination span, .pagination em {
+	font-size: 12px;
+	
+	
+}
+
+.users {
+	margin-left: 100px;
+	width: 200px;
+}
+.users h2 {
+	
+	font-size: 1.1em;
+}
+
+.delete-user-span {
+	float: right;
+}
+
 

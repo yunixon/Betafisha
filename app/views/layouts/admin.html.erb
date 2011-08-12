@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
+	
 <head>
   <title><%= title %></title>
   
-
-
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -15,10 +14,12 @@
    <%= stylesheet_link_tag "admin_style.css" %>
   
 
-
-  
+	<%= javascript_include_tag :defaults %>
+	<%= javascript_include_tag 'jquery.js' %>
+	<%= javascript_include_tag 'tabs.js' %>
 
 </head>
+
 <body>
 <header class="container_24">
 
@@ -26,7 +27,7 @@
     <%= link_to "Bet Afisha logo", root_path %>
   </div >
 
-  <!-- div id="user_entrance" class="grid_12">
+  <div id="user_entrance" class="grid_24">
     <ul>
        <% if !signed_in? %>
       	  <li><%= link_to t(:top_menu_sign_up), signup_path %></li>
@@ -42,21 +43,17 @@
 
       <li><%= link_to "api_test", api_test_path %></li>
       <li><%= link_to "ru", "#{request.path}?locale=ru" %></li>
-      <li><%= link_to "en", "#{request.path}?locale=en" %></li>
-      
+      <li><%= link_to "en", "#{request.path}?locale=en" %></li> 
     </ul>
 
-  </div -->
-
+  </div>
 
 </header>
 
 <section class="container_24">
 	
   	<div id="content" class="grid_24">
-	    <% flash.each do |key, value| %>
-	        <div class="flash <%= key %>"><%= value %></div>
-	    <% end %> 
+
 	    <%= yield %>
   	</div>
   		
@@ -64,14 +61,14 @@
 
 <footer class="container_24">
 	
-	<!-- div id="footer" class="grid_24">
+	<div id="footer" class="grid_24">
     	<%= t(:footer_copyrights) %>
   	</div>
 
   	<div id="debug" class="grid_24">
     	<%= debug(params) if Rails.env.development? %>
     	<%= debug(params) if Rails.env.production? %>
-  	</div --> 
+  	</div > 
 </footer>
 
 </body>

@@ -1,3 +1,5 @@
+<b> Редактировать вид спорта</b>
+
 <%= form_for @sport do |f| %>
 
   <div class="field">
@@ -7,12 +9,13 @@
   
   <div class="field">
   	<%= f.label :priority, "Приоритет" %> <br/>
-    <%= f.select :priority, options_for_select(@priorities), :multiple => false, :size => 3 %>
+    <%= f.select :priority, options_for_select({'Низкий' => 1, 'Средний' => 2, 'Высокий' => 3},  @sport.priority.to_i), :multiple => false, :size => 3 %>
   </div>
   
   <div class="actions">
-  	<%= f.submit "Обновить", :id => "update_sport_btn" %>
+  	<%= f.submit "Изменить" %>
   </div>
   
 <% end %>
 
+<%= javascript_include_tag 'forms.js' %>

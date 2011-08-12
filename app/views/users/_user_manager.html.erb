@@ -1,0 +1,13 @@
+<% if signed_in? && current_user.admin? %>
+		
+				
+		<ul class="users">
+		 <h2>Имя пользователя:</h2>
+		  <%= render @users %>
+		</ul>
+		
+		<div id="my_pagination">
+		  <%= will_paginate  @users%>
+		</div>
+		
+<% end %>
