@@ -1,7 +1,7 @@
 # coding: utf-8
 class UsersController < ApplicationController
   
-  require 'will_paginate'
+  #require 'will_paginate'
   
   before_filter :authenticate, :only => [:index, :edit, :update, :destroy]
   before_filter :correct_user, :only => [:edit, :update]
@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   layout 'admin'
   def index
     @users = User.all
-    @users = User.paginate :page => params[:page]
+    @users = User.order(:name).page params[:page]#.paginate :page => params[:page]
     
   end
   
@@ -64,16 +64,19 @@ class UsersController < ApplicationController
   def destroy
     
     user = User.find(params[:id])
-
+    
     if user.admin? && params[:id] == '1' 
-       flash[:warning] = "You cant delete root admin."
-        redirect_to :controller=>"admin", :action => "users_manager"#, :page => params[:page]
+      flash[:warning] = "You cant delete root admin."
+      redirect_to :controller=>"admin", :action => "users_manager", :page => params[:page]
+      
     else 
       user.destroy
-      flash[:success] = "User [" + user.name + "] has been successfully deleted."
-      redirect_to :controller=>"admin", :action => "users_manager"#, :page => params[:page]
-    end
-     
+     #@users = User.all
+      #@users = User.order(:name).page params[:page]
+     flash[:success] = "User [" + user.name + "] has been successfully deleted."
+     redirect_to :controller=>"admin", :action => "users_manager", :page => params[:page]
+     ActiveRecord::Base.logger.info params[:page]
+     end 
   end
   
    private

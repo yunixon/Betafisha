@@ -120,15 +120,55 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  { /*--Makes sure that th
 
 .users {
 	margin-left: 100px;
-	width: 200px;
+	width: 300px;
 }
 .users h2 {
 	
 	font-size: 1.1em;
 }
-
+.user-name-span {
+	width: 150px;
+}
 .delete-user-span {
 	float: right;
+	margin-right: 5px;
 }
 
+.user-email-span {
+	float: right;
+	margin-right: 30px;
+	text-align: center;
+}
+
+.users li {
+	margin-top: 5px;
+	background: #ccc;
+	height: 32px;
+	width: 300px;
+}
+
+
+
+.users li:hover {
+	background: #ddd;
+}
+
+.users li a {
+	display: block;
+	padding: 0;
+	margin: 7px 0 3px 10px;
+	float: left;
+	font-size: 0.95em;
+	text-decoration: none;
+	color: #222;
+	font-weight: bold;
+}
+
+.delete_user {
+	width: 16px;
+	text-indent: -9999px;
+	background: url('../images/delete.png') no-repeat 0 0;
+	/*float:right;*/
+
+}
 

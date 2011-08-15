@@ -1,7 +1,6 @@
 class AdminController < ApplicationController
   
   
-  require 'will_paginate'
   
   layout 'admin'
   def index
@@ -14,7 +13,7 @@ class AdminController < ApplicationController
       @sports = Sport.all 
        
       @users = User.all
-      @users = User.paginate :page => params[:page]
+      @users = User.order(:name).page params[:page] # .paginate :page => params[:page]
       
       
     else 

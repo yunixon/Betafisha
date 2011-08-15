@@ -1,3 +1,1 @@
-$j('ul.users').html('<%= escape_javascript ( render @users ) %>');
-
-$j('#my_pagination').html('<%= escape_javascript (  will_paginate  @users , :remote => true ) %>');
+$j('.tab_container').html('<%= escape_javascript ( render 'user_manager' ) %>');
