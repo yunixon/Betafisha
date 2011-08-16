@@ -41,38 +41,38 @@
 
   </div>
 
-  <nav class="grid_24">
+  <div id="navigation" class="grid_24">
     <ul>
       <li><%= link_to t(:top_menu_coefficients), coefficients_path %></li>
       <li><%= link_to t(:top_menu_bookmakers), bookmakers_path %></li>
       <li><%= link_to t(:top_menu_statistics), statistics_path %></li>
       <li><%= link_to t(:top_menu_tools), tools_path %></li>
     </ul>
-  </nav>
+  </div>
 
 </header>
 
 <section class="container_24">
 	
-	<div id="left_nav" class="grid_4">
+	<!--div id="left_nav" class="grid_4">
 		Спорт 
 		<ul>
 			<% Sport.find(:all).each do |sport| %>
 			<li> <%= link_to  sport.name , coefficients_path %></li>
 			<% end %>	
 		</ul>
-	</div>
+	</div-->
 	
-  	<div id="content" class="grid_16">
+  	<div id="content" class="grid_24">
 	    <% flash.each do |key, value| %>
 	        <div class="flash <%= key %>"><%= value %></div>
 	    <% end %> 
 	    <%= yield %>
   	</div>
   	
-  	<div id="right_nav" class="grid_4">
+  	<!--div id="right_nav" class="grid_4">
     	Моя карта
-  	</div>
+  	</div-->
   		
 </section>
 

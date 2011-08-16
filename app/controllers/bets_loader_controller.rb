@@ -3,17 +3,15 @@
 class BetsLoaderController < ApplicationController
 
 
-   require 'rubygems'
-   require "net/http"
-   require 'rexml/document'
-   require 'nokogiri'
-   require 'open-uri'
-   require 'savon'
+  # require 'rubygems'
+  # require "net/http"
+  # require 'rexml/document'
+  ##require 'savon'
    
     def api_test
       respond_to do |format|
-        format.html 
-        format.js { @coefficients_info = BookmakerCoefficients.find(:all, :order => "id desc", :limit => 10) }
+        format.html { @coefficients_info = BookmakerCoefficients.find(:all, :order => "id desc", :limit => 250) }
+        format.js { @coefficients_info = BookmakerCoefficients.find(:all, :order => "id desc", :limit => 250) }
     end
 
       

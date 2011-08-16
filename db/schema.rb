@@ -12,6 +12,31 @@
 
 ActiveRecord::Schema.define(:version => 20110809192435) do
 
+  create_table "bookmaker_coefficients", :force => true do |t|
+    t.string   "bookmaker_id"
+    t.string   "sport_id"
+    t.string   "ligue_id"
+    t.string   "team_one_id"
+    t.string   "team_two_id"
+    t.string   "sportsmen_id"
+    t.string   "bet_type_id"
+    t.string   "team_one_coef"
+    t.string   "team_two_coef"
+    t.string   "sportsmen_coef"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "bookmaker_coefficients", ["bet_type_id"], :name => "index_bookmaker_coefficients_on_bet_type_id"
+  add_index "bookmaker_coefficients", ["bookmaker_id"], :name => "index_bookmaker_coefficients_on_bookmaker_id"
+  add_index "bookmaker_coefficients", ["ligue_id"], :name => "index_bookmaker_coefficients_on_ligue_id"
+  add_index "bookmaker_coefficients", ["sport_id"], :name => "index_bookmaker_coefficients_on_sport_id"
+  add_index "bookmaker_coefficients", ["sportsmen_coef"], :name => "index_bookmaker_coefficients_on_sportsmen_coef"
+  add_index "bookmaker_coefficients", ["team_one_coef"], :name => "index_bookmaker_coefficients_on_team_one_coef"
+  add_index "bookmaker_coefficients", ["team_one_id"], :name => "index_bookmaker_coefficients_on_team_one_id"
+  add_index "bookmaker_coefficients", ["team_two_coef"], :name => "index_bookmaker_coefficients_on_team_two_coef"
+  add_index "bookmaker_coefficients", ["team_two_id"], :name => "index_bookmaker_coefficients_on_team_two_id"
+
   create_table "countries", :force => true do |t|
     t.string   "name"
     t.integer  "priority"

@@ -26,7 +26,7 @@ end
   
 while $running do
 
-  uri = 'http://xml.gamebookers.com/sports/basketball.xml'
+  uri = 'http://xml.gamebookers.com/activeodds.xml'
   document = Nokogiri::XML ( open( uri ) ) 
  
   events = document.search("//event")
@@ -62,12 +62,10 @@ while $running do
                                     :team_one_coef => event.search(".//odd1").text, 
                                     :team_two_coef => odd2, 
                                     :sportsmen_coef => "" 
-                                     
                                   )    
   end
 
-
-  sleep 60
+  sleep 20
   
 end 
 

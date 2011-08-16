@@ -2,28 +2,26 @@
  * @author dxkxzx
  */
 
-jQuery.ajaxSetup({ 
+
+var $j = jQuery.noConflict();
+
+$j.ajaxSetup({ 
   'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
 })
 
+$j(document).ready(function() {
+	console.log('a');
+	
+	setInterval( function() { 
 
-$(document).ready(function() {
-	
-	
-	/*setInterval( function() { 
-		$.ajax({ 
+		$j.ajax({ 
 	   		type: 'GET',
-	   		url: '/api_test', 
+	   		url: 'api_test', 
 	   		dataType:'script' 
 	   	});
 	   	
-		}, 5000 );*/
+		}, 5000 );
 		
-		
-		
-
-		
-
 		
 })
 

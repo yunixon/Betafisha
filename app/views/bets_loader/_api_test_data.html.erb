@@ -1,16 +1,22 @@
-<ul>	
-	<% @coefficients_info.each do |coefficient| %>
 	
-		<li><b> <%= coefficient.id.to_s  %></b> <%= coefficient.bookmaker_id.to_s  %> </li>
-		<li>  <%= coefficient.bet_type_id.to_s 	 %> </li>	
-		<li>  <%= coefficient.sport_id.to_s 	 %> </li>
-		<li>  <%= coefficient.ligue_id.to_s 	 %> </li>
-		<li>  <%= coefficient.team_one_id.to_s 	 %> </li>
-		<li>  <%= coefficient.team_one_coef.to_s %> </li>
-		<li>  <%= coefficient.team_two_id.to_s 	 %> </li>	
-		<li>  <%= coefficient.team_two_coef.to_s %> </li>	
-		<br />
-		<br />
+	
+	<TABLE style= border: "1px solid black">
+		<TR><TD>id</TD> <TD>odd type</TD>  <TD>sport</TD>  <TD>ligue</TD> <TD>team1</TD> <TD>team2</TD> <TD>odd1</TD> <TD>odd2</TD>  </TR>
+		
+	
+	
+	<% @coefficients_info.each do |coefficient| %>
+	<TR><TD><%= coefficient.id.to_s  %></TD>
+		<TD><%= coefficient.bet_type_id.to_s 	 %></TD>  
+		<TD><%= coefficient.sport_id.to_s 	 %></TD> 
+		<TD><%= coefficient.ligue_id.to_s 	 %></TD> 
+		<TD><%= coefficient.team_one_id.to_s 	 %> </TD> 
+		<TD><%= coefficient.team_two_id.to_s 	 %></TD> 
+		<TD><%= coefficient.team_one_coef.to_s %></TD> 
+		<TD><%= coefficient.team_two_coef.to_s %></TD> 
+	</TR>
+		
+		
 	<% end %>	
-</ul>
+</TABLE
 	

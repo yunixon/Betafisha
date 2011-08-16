@@ -14,10 +14,37 @@ section {
 	background: blue;
 }
 
-nav {
-	min-height: 70px;
-	margin-bottom: 10px;
+#navigation {
+	/*min-height: 70px;
+	margin-bottom: 10px;*/
+	background: red;
 }
+
+#navigation ul li {
+
+	width:238px;
+	background: #80131f;
+	margin: 0;
+	padding: 0;
+	height: 70px;
+	float: left;
+	border: 1px #222 solid;
+		text-align: center;
+		
+	
+}
+
+#navigation ul li a{
+	color: #eee;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 25px;
+	display: block;
+
+	
+	
+	} 
 
 
 /* Basic settings*/
@@ -45,15 +72,15 @@ a {
 }
 
 /* Navigation */
-
+/*
 nav {
-    background-color: white;
+    background-color: #008000;
     white-space: nowrap;
     float: right;
 }
-
-nav ul {
-    margin-top: 10px;
+*/
+/*nav ul {
+   /*margin-top: 10px;
     padding: 0;
 }
 
@@ -63,8 +90,6 @@ nav ul li:first-child {
 
 nav ul li {
     list-style-type: none;
-    display: inline-block;
-    margin-left: 10px;
 }
 
 nav ul li a {
@@ -79,7 +104,7 @@ nav ul li a:visited {
 nav ul li a:hover {
     text-decoration: underline;
 }
-
+*/
 
 #logo {
 	background: #eee;
@@ -170,3 +195,15 @@ nav ul li a:hover {
 }
 
 
+table {
+	border: 1px solid black;
+	margin-left: 50px;
+	margin-top: 10px;
+	
+}
+td, th {
+	border: 1px solid black;
+	padding: 5px;
+	text-align: center;
+	
+}
