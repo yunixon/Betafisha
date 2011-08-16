@@ -52,7 +52,7 @@ while $running do
       odd2 = event.search(".//odd3").text
     end
                             
-    BookmakerCoefficients.create!(  :bookmaker_id => "gamebookers", 
+    GameBookersOdd.create!(         :bookmaker_id => "gamebookers", 
                                     :sport_id => event.search(".//sportname").text,
                                     :ligue_id => event.search(".//league").text, 
                                     :team_one_id => event.search(".//team1").text, 
