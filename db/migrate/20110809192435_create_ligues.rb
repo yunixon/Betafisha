@@ -4,7 +4,9 @@ class CreateLigues < ActiveRecord::Migration
       
       t.string  :name
       t.integer :priority
+      
       t.integer :country_id
+      t.integer :sport_id
       
       t.timestamps
     end

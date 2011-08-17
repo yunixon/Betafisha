@@ -1,8 +1,9 @@
 class Country < ActiveRecord::Base
   
-  attr_accessible :name, :priority
-  belongs_to :sport
+  attr_accessible :name, :priority, :flag_image
   
   has_many :ligues, :dependent => :destroy 
+  
+
   
 end

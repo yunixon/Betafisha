@@ -7,14 +7,25 @@
 <div class="acc_container">
     <div class="block">
 		<ul class="countries">
-			<% sport.countries.each do |country| %>
-			<li class="country"><%= link_to country.name , "#"  %></li>
+			<% 
+				countries_names_arr = Array.new
+				countries_ids_arr = Array.new
+					sport.ligues.each  do |i|
+					 countries_names_arr.push i.country.name
+					 countries_ids_arr.push i.country.id 
+					end
+				countries_names_arr = countries_names_arr.uniq
+				countries_ids_arr =  countries_ids_arr.uniq
+			%>
+
+			<% countries_names_arr.each_with_index do |ligue, index| %>
+			<li class="country"><%= link_to countries_names_arr[index] , "#"  %></li>
 			<ul class="ligues">
-				<% country.ligues.each do |ligue| %>
-				<li class='ligue'><%= ligue.name %></li>
+				<% Ligue.where(:sport_id => sport.id, :country_id => countries_ids_arr[index] ).each do |l| %>
+					<li class='ligue'><%= l.name %></li>
 				<% end %>	
-				<li> <%= link_to "Добавить", "#", :class => 'add_item' %> </li>
-			</ul>				
+				<li> 	<%= link_to "Добавить", "#", :class => 'add_item' %> </li>
+			</ul>			
 			<% end %>
 			<li> <%= link_to "Добавить", "#", :class => 'add_item'%> </li>
 		</ul>

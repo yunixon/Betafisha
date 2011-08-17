@@ -3,8 +3,8 @@ class CreateCountries < ActiveRecord::Migration
     create_table :countries do |t|
       
       t.string  :name
+      t.string  :flag_image
       t.integer :priority
-      t.integer :sport_id
       
       t.timestamps
     end

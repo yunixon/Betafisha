@@ -3,6 +3,7 @@ class CreateSports < ActiveRecord::Migration
     create_table :sports do |t|
 
       t.string :name
+      t.string :logo_image
       t.integer :priority
 
       t.timestamps
