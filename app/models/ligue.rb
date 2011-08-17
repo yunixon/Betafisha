@@ -5,4 +5,6 @@ class Ligue < ActiveRecord::Base
   belongs_to :sport
   belongs_to :country
   
+  has_many :events, :dependent => :destroy 
+  
 end

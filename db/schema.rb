@@ -10,12 +10,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110816145709) do
+ActiveRecord::Schema.define(:version => 20110817165919) do
+
+  create_table "bookmakers", :force => true do |t|
+    t.string   "name"
+    t.integer  "priority"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "countries", :force => true do |t|
     t.string   "name"
     t.string   "flag_image"
     t.integer  "priority"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "events", :force => true do |t|
+    t.string   "name"
+    t.integer  "priority"
+    t.integer  "ligue_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -44,9 +59,35 @@ ActiveRecord::Schema.define(:version => 20110816145709) do
     t.datetime "updated_at"
   end
 
+  create_table "odd_types", :force => true do |t|
+    t.string   "name"
+    t.integer  "priority"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "odds", :force => true do |t|
+    t.string   "name"
+    t.string   "value"
+    t.integer  "priority"
+    t.integer  "odd_type_id"
+    t.integer  "team_id"
+    t.integer  "event_id"
+    t.integer  "bookmaker_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "sports", :force => true do |t|
     t.string   "name"
     t.string   "logo_image"
+    t.integer  "priority"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "teams", :force => true do |t|
+    t.string   "name"
     t.integer  "priority"
     t.datetime "created_at"
     t.datetime "updated_at"

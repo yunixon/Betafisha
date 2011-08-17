@@ -1,7 +1,10 @@
 class CreateOddTypes < ActiveRecord::Migration
   def self.up
     create_table :odd_types do |t|
-
+      
+      t.string  :name
+      t.integer :priority
+      
       t.timestamps
     end
   end

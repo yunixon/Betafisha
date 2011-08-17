@@ -4,6 +4,4 @@ class Country < ActiveRecord::Base
   
   has_many :ligues, :dependent => :destroy 
   
-
-  
 end
