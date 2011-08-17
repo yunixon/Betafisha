@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110809192435) do
+ActiveRecord::Schema.define(:version => 20110816145709) do
 
   create_table "bookmaker_coefficients", :force => true do |t|
     t.string   "bookmaker_id"
@@ -41,6 +41,21 @@ ActiveRecord::Schema.define(:version => 20110809192435) do
     t.string   "name"
     t.integer  "priority"
     t.integer  "sport_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "game_bookers_odds", :force => true do |t|
+    t.string   "bookmaker_id"
+    t.string   "sport_id"
+    t.string   "ligue_id"
+    t.string   "team_one_id"
+    t.string   "team_two_id"
+    t.string   "sportsmen_id"
+    t.string   "bet_type_id"
+    t.string   "team_one_coef"
+    t.string   "team_two_coef"
+    t.string   "sportsmen_coef"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
