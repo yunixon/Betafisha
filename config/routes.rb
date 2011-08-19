@@ -7,8 +7,10 @@ Betafisha::Application.routes.draw do
   resources :sessions, :only => [:new, :create, :destroy]
   resources :password_resets
   
-  resources :bookmaker_coefficients
   resources :sports
+  resources :countries
+  resources :ligues
+  resources :teams
   
   match "signup" => "users#new", :as => :signup
   #match "users" => "users#index", :as => :users 
@@ -36,30 +38,25 @@ Betafisha::Application.routes.draw do
   # Админ панель
   ########################### 
   
-  get "admin/users_manager"
-  match "admin" =>  "admin#users_manager", :as => :admin
+  get "admin/index"
+  match "admin" =>  "admin#index", :as => :admin
   
   get "admin/sports_manager"
-  match "sports" =>  "admin#sports_manager", :as => :sports
+  match "admin/sports_manager" =>  "admin#sports_manager", :as => :sports_manager
   
   get "admin/users_manager"
-  match "users" =>  "admin#users_manager", :as => :users
+  match "admin/users_manager" =>  "admin#users_manager", :as => :users_manager
   
-  
+  post "admin/ligue_edit"
+  post "admin/ligue_new"   
   
   post "admin/sport_edit"
   post "admin/sport_new"
   
-  #match "admin" =>  "admin#index", :as => :admin
+  post "admin/country_edit"
+  post "admin/country_new"
   
-  #match "admin/navigation" =>  "admin#navigation_manager", :as => :admin_navigation_manager
   
-  #match "admin/users" =>  "users#index", :as => :admin_users
-  #match "admin/users:page" =>  "users#index"
-  
-  #match "admin/profile" =>  "users#show_admin", :as => :admin_profile 
-  
-
   
   #map.with_options(:controller => "users", 
   #               :action => "index") do |c|

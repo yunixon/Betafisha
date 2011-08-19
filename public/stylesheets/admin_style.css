@@ -23,15 +23,13 @@ nav {
 /* Basic settings*/
 
 body {
-    font: 14px Arial, Helvetica, sans-serif;
+    font: normal 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: #eee;
 }
 
 a {
     color: #09f;
 }
-
-
 
 /* Logo */
 
@@ -88,7 +86,7 @@ nav ul li a:hover {
 
 
 #user_entrance {
-	/*background: #e0e1e1;*/
+
 	min-height: 70px;
 }
 
@@ -156,7 +154,6 @@ nav ul li a:hover {
 
 /* Right navigation */
 #right_nav {
-/*	background: #eee;*/
 	min-height: 400px;
 }
 
@@ -165,11 +162,11 @@ nav ul li a:hover {
 #footer {
 	margin-top: 10px;
 	min-height: 30px;
-	/*background: #c3c6c6;*/
+
 }
 
 .field  {
-	margin-top: 5px;
+	margin-top: 15px;
 	margin-bottom: 5px;
 	color: #222;
 	font-weight: bold;
@@ -190,8 +187,12 @@ nav ul li a:hover {
 input[type="checkbox"] { 
 	width: 20px;
 }
+
+.actions {
+ 	margin-top: 15px;
+}
 .actions input {
-	margin-top: 10px;
+
 	border: 1px solid #ccc;
 	height: 30px;
 	width: 100px;
@@ -201,8 +202,21 @@ input[type="checkbox"] {
 	background: #ccc;
 }
 
-#content form {
-	margin-left: 10px;
+input[type="submit"] {
+	width: 150px;
+	height: 30px;
+	font-size: 14px;
+	color: #446629;
+	background: #8DCD5B;
+	text-align: center;
+	padding: 0;
+	font-weight: bold;
+	margin: 0;
+
+}
+
+input[type="submit"]:hover {
+	background: #64A72F;
 }
 
 .notice {
@@ -219,8 +233,7 @@ input[type="checkbox"] {
 	border: 1px solid green;
 	padding: 10px;
 	background: #cec;
-	margin-top: 10px;
-	margin-left: 120px;
+	margin: 10px 0 10px 100px;
 	width: 320px;
 	text-align: center;
 }

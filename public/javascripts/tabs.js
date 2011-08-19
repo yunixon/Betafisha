@@ -6,6 +6,16 @@ var $j = jQuery.noConflict();
 
 $j(document).ready(function() {
 
+	$j('.add_ligue_item').click( function() {
+		$j.ajax({ 
+	   		type: 'POST',
+	   		url: "ligue_new",
+	   		dataType:'script' 
+	   	});
+		return false;
+	});
+		
+
 	//When page loads...
 	/*$j(".tab_content").hide(); //Hide all content
 	$j("ul.tabs li:first").addClass("active").show(); //Activate first tab

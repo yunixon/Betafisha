@@ -1,13 +1,13 @@
 <% if signed_in? %>	
 	<% if current_user.admin? %>
-	
+	 
 	<ul class="tabs">
-		<li class="active"><%= link_to "Профиль админа", admin_path , :class => 'admin_profile_tab' %></li>
+		<li class="active"><%= link_to "Настройки приложения", admin_path , :class => 'admin_profile_tab' %></li>
 		<li><%= link_to "Управление пользователями", admin_users_manager_path, :class => 'users_manager_tab' %></li> 
-		<li><%= link_to "Управление контентом", admin_sports_manager_path, :class => 'sports_manager_tab' %></li>  
+		<li><%= link_to "Управление лигами", admin_sports_manager_path, :class => 'sports_manager_tab' %></li>  
 	</ul>
 
-	<div class="tab_container" style=" width: 958px;">
+	<div class="tab_container">
 		Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
 		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 

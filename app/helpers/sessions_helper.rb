@@ -22,6 +22,15 @@ module SessionsHelper
     @current_user ||= user_from_remember_token
   end
    
+   
+  def authenticate
+    deny_access unless signed_in?
+  end
+
+  def admin_user
+    redirect_to(root_path) unless current_user.admin?
+  end   
+   
   def deny_access
     redirect_to signin_path, :notice => "Please sign in to access this page."
   end

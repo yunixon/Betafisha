@@ -1,6 +1,6 @@
 class Ligue < ActiveRecord::Base
   
-  attr_accessible :name, :priority
+  attr_accessible :name, :priority, :sport_id, :country_id
   
   belongs_to :sport
   belongs_to :country

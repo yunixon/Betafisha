@@ -1,6 +1,7 @@
-<b> Добавить вид спорта</b>
 <%= form_for @sport do |f| %>
-
+  <div class="form_name">
+  	Новый вид спорта
+  </div>
   <div class="field">
   	<%= f.label :name, "Название" %> <br/>
     <%= f.text_field :name %>
@@ -8,7 +9,11 @@
   
   <div class="field">
   	<%= f.label :priority, "Приоритет" %> <br/>
-    <%= f.select :priority, options_for_select({'Низкий' => 1, 'Средний' => 2, 'Высокий' => 3}), :multiple => false, :size => 3 %>
+  	<%= f.text_field :priority, :class => 'priority' %>
+    <!--%= f.select :priority, 
+    	options_for_select({'Низкий' => 1, 'Средний' => 2, 'Высокий' => 3}), 
+    	:multiple => false, :size => 3 
+    %-->
   </div>
   
   <div class="actions">

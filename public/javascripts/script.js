@@ -10,7 +10,7 @@ $j.ajaxSetup({
 })
 
 $j(document).ready(function() {
-	console.log('a');
+	/*console.log('a');
 	
 	setInterval( function() { 
 
@@ -21,7 +21,7 @@ $j(document).ready(function() {
 	   	});
 	   	
 		}, 5000 );
-		
+		*/
 		
 })
 

@@ -71,7 +71,7 @@ ru:
   
   
   flash_sing_up_success: "Добро пожаловать в ваш личный кабинет!"
-  flash_sing_up_failed: "Не верный адрес электроннной почты или пароль." 
+  flash_sing_up_failed: "Неверный адрес электроннной почты или пароль." 
   
   sign_in_submit: "Войти"
   remember_me: "Запомнить"

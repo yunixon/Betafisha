@@ -1,0 +1,46 @@
+<%= form_for @ligue do |f| %>
+
+
+  <div class="form_name">
+    Новая лига
+  </div> 
+  
+  <div class="field">
+  	<%= f.label :sport_id, "Вид спорта" %> <br/>
+    <%= f.select :sport_id, 
+    	options_for_select( Sport.all.collect { |p| [p.name, p.id] }), 
+    	:multiple => false, :size => 3 
+    %> <%= link_to "Добавить", "#", :class => 'new_item', :id => 'new_sport_item' %>
+  </div>
+
+  <div class="field">
+  	<%= f.label :country_id, "Страна" %> <br/>
+    <%= f.select :country_id, 
+    	options_for_select( Country.all.collect { |p| [p.name, p.id] }), 
+    	:multiple => false, :size => 3 
+    %> <%= link_to "Добавить", "#", :class => 'new_item', :id => 'new_country_item'  %>
+  </div>
+
+
+  <div class="field">
+  	<%= f.label :name, "Название" %> <br/>
+    <%= f.text_field :name %>
+  </div>
+  
+  <div class="field">
+  	<%= f.label :priority, "Приоритет" %> <br/>
+  	<%= f.text_field :priority, :class => 'priority' %>
+    <!--%= f.select :priority, 
+    	options_for_select({'Низкий' => 1, 'Средний' => 2, 'Высокий' => 3}), 
+    	:multiple => false, :size => 3 
+    %-->
+  </div>
+  
+
+  <div class="actions">
+  	<%= f.submit "Добавить" %>
+  </div>
+  
+<% end %>
+
+<%= javascript_include_tag 'forms.js' %>

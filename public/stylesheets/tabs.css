@@ -3,32 +3,27 @@ ul.tabs {
 	padding: 0;
 	float: left;
 	list-style: none;
-	height: 32px; /*--Set height of tabs--*/
-	/*border-bottom: 1px solid #eee;
-	border-left: 1px solid #eee;*/
+	height: 32px; 
 	width: 100%;
 	
 }
+
 ul.tabs:first-child {
 	margin-left: 25px;
 }
-
 
 ul.tabs li {
 	float: left;
 	margin: 0;
 	padding: 0;
-	height: 32px; /*--Subtract 1px from the height of the unordered list--*/
-	line-height: 31px; /*--Vertically aligns the text within the tab--*/
+	height: 32px; 
+	line-height: 31px; 
 	border-bottom: 1px solid #ccc;
-	/*border-right: 1px solid #ccc;*/
-	/*margin-bottom: -2px;*/ /*--Pull the list item down 1px--*/
 	overflow: hidden;
 	position: relative;
 	background: #eee;
 	border-top-right-radius: 7px;
 	border-top-left-radius: 7px;
-	
 }
 
 ul.tabs li{
@@ -41,7 +36,6 @@ ul.tabs li a {
 	display: block;
 	font-size: 1.0em;
 	padding: 0 25px;
-	/*border: 1px solid #fff;*/ /*--Gives the bevel look with a 1px white border inside the list item--*/
 	outline: none;
 	display: block;
 
@@ -49,41 +43,30 @@ ul.tabs li a {
 	border-top-left-radius: 7px;
 }
 
-ul.tabs li a:hover {
-	/*background: #ccc;*/
-}
+
 ul.tabs li.active {
-	/*color: #eee;*/
     font-weight: bold;
 	border-top: 1px solid #ccc;
 	border-right: 1px solid #ccc;
 	border-left: 1px solid #ccc;
 	border-bottom: none;
 }
-html ul.tabs li.active, html ul.tabs li.active a:hover  { /*--Makes sure that the active tab does not listen to the hover properties--*/
-	/*background: #222;*/
-	/*border-bottom: 1px solid #fff;*/ /*--Makes the active tab look like it's connected with its content--*/
-	/*border-top: 1px solid #ccc;
-	border-right: 1px solid #ccc;
-	
-	border-top-right-radius: 7px;
-	border-top-left-radius: 7px;*/
-}
+
 
 .tab_container {
+	width: 930px;
 	border: 1px solid #ccc;
-	/*border-top: none;
-	border-bottom: none;*/
 	overflow: hidden;
 	clear: both;
-	float: left; width: 100%;
+	float: left;
+	padding: 10px;
 	background: #eee;
 	border-top-right-radius: 5px;
 	border-top-left-radius: 5px;
-	/*min-height: 500px;*/
 }
 .tab_content {
-	padding: 20px;
+	padding: 0;
+	margin: 0;
 	font-size: 1.0em;
 }
 
@@ -100,7 +83,8 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  { /*--Makes sure that th
 }
 
 .add_edit_form {
-	margin-left: 100px;
+	margin: 0;
+	padding: 0;
 }
 
 .pagination {
@@ -168,7 +152,19 @@ html ul.tabs li.active, html ul.tabs li.active a:hover  { /*--Makes sure that th
 	width: 16px;
 	text-indent: -9999px;
 	background: url('../images/delete.png') no-repeat 0 0;
-	/*float:right;*/
-
 }
 
+
+.new_ligue, .new_sport, .new_country, .edit_sport, .edit_country, .edit_ligue {
+	margin: 0 0 0 125px;
+	width: 270px
+}
+.form_name {
+	text-align: center;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: bold;
+	border-bottom: 1px #ccc solid;
+	margin-bottom: 20px;
+	
+}

@@ -1,0 +1,11 @@
+$j("div.accordian").html(' <%= escape_javascript ( render ( :partial => 'sports/sports_content')  ) %>  ');
+
+
+var active_sport_item = $j('h2#sport_' + '<%= escape_javascript ( @ligue.sport.id.to_s ) %>');
+
+
+$j('.acc_trigger').removeClass('active').next().hide();
+
+if (active_sport_item !== null) {
+	active_sport_item.toggleClass('active').next().show();
+}
