@@ -21,18 +21,21 @@ Signal.trap("TERM") do
 end
 
 
+def show_time
  ActiveRecord::Base.logger.auto_flushing = true
  ActiveRecord::Base.logger.info "$$$ GameBookers log: Update started at #{ Time.now } \n"
-  
-while $running do
+end
 
+
+
+while $running do
+  ActiveRecord::Base.logger.auto_flushing = true
+  ActiveRecord::Base.logger.info "!!! #{ Time.now } \n"
   uri = 'http://xml.gamebookers.com/activeodds.xml'
   document = Nokogiri::XML ( open( uri ) ) 
- 
   events = document.search("//event")
-  
   events.each do |event| 
-
+  
    team2 = ""
    odd2 = ""
 
@@ -47,19 +50,20 @@ while $running do
     else
       odd2 = event.search(".//odd3").text
     end
-                            
-    GameBookersOdd.create!( :bookmaker_id => "gamebookers",
-                            :sport_id => event.search(".//sportname").text,
-                            :ligue_id => event.search(".//league").text, 
-                            :team_one_id => event.search(".//team1").text, 
-                            :team_two_id => team2,
-                            :sportsmen_id => "", 
-                            :bet_type_id => event.search(".//type").text, 
-                            :team_one_coef => event.search(".//odd1").text, 
-                            :team_two_coef => odd2, 
-                            :sportsmen_coef => ""             
+                  
+    BetafishaTable.create! ( :bookmaker_id => "gamebookers",
+                             :sport_id => event.search(".//sportname").text,
+                             :ligue_id => event.search(".//league").text, 
+                             :team_one_id => event.search(".//team1").text, 
+                             :team_two_id => team2,
+                             :sportsmen_id => "", 
+                             :bet_type_id => event.search(".//type").text, 
+                             :team_one_coef => event.search(".//odd1").text, 
+                             :team_two_coef => odd2, 
+                             :sportsmen_coef => ""             
                            )    
   end
+  
   sleep 60
 end 
 

@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
   paginates_per 5
   
   attr_accessor :password
-  attr_accessible :id, :name, :email, :password, :password_confirmation  
+  attr_accessible :name, :email, :password, :password_confirmation # :id,  
 
   email_regex = /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,3})$/i
 

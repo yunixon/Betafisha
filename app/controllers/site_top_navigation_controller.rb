@@ -4,6 +4,7 @@ class SiteTopNavigationController < ApplicationController
   
   def coefficients
     @title = I18n.t(:top_menu_coefficients)
+    redirect_to api_test_path
   end
 
   def bookmakers

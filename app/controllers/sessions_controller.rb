@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   
+  layout 'admin'
   def new
     @title = I18n.t(:top_menu_sign_in)
   end

@@ -10,7 +10,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110817165919) do
+ActiveRecord::Schema.define(:version => 20110821085602) do
+
+  create_table "betafisha_tables", :force => true do |t|
+    t.string   "bookmaker_id"
+    t.string   "sport_id"
+    t.string   "ligue_id"
+    t.string   "team_one_id"
+    t.string   "team_two_id"
+    t.string   "sportsmen_id"
+    t.string   "bet_type_id"
+    t.string   "team_one_coef"
+    t.string   "team_two_coef"
+    t.string   "sportsmen_coef"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "bookmakers", :force => true do |t|
     t.string   "name"
@@ -36,16 +51,10 @@ ActiveRecord::Schema.define(:version => 20110817165919) do
   end
 
   create_table "game_bookers_odds", :force => true do |t|
-    t.string   "bookmaker_id"
-    t.string   "sport_id"
-    t.string   "ligue_id"
-    t.string   "team_one_id"
-    t.string   "team_two_id"
-    t.string   "sportsmen_id"
-    t.string   "bet_type_id"
-    t.string   "team_one_coef"
-    t.string   "team_two_coef"
-    t.string   "sportsmen_coef"
+    t.string   "table_name"
+    t.integer  "betafisha_id"
+    t.integer  "gamebookers_id"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

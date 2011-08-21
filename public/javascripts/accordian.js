@@ -4,7 +4,7 @@ $j(document).ready(function() {
 	$j('.ligues').hide();
 	$j("a.delete_sport_item").hide();
 	$j("a.edit_sport_item").hide();
-	$j('.acc_trigger:first').addClass('active').next().show(); 
+	//$j('.acc_trigger:first').addClass('active').next().show(); 
 	
 	
 	$j('.acc_trigger').mouseover( function(){
@@ -62,6 +62,12 @@ $j(document).ready(function() {
 		if( $j(this).next().is(':hidden') ) { 
 			$j('.acc_trigger').removeClass('active').next().hide(); 
 			$j(this).toggleClass('active').next().show(); 
+		$j.ajax({ 
+	   		type: 'GET',
+	   		data: { sport_name : this.getAttribute('name') }, 
+	   		url: 'api_test', 
+	   		dataType:'script' 
+	   	});
 
 		}
 	

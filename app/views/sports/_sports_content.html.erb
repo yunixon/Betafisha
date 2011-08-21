@@ -1,7 +1,9 @@
-<% @sports.each do |sport| %>
-<h2 class="acc_trigger" id="sport_<%=sport.id %>"> <%= link_to sport.name, "#" %> 
-						<%= link_to "Удалить", sport, :confirm => "Вы уверены?", :title => "Удалить #{sport.name}", :class => 'delete_sport_item' %>  
-						<%= link_to "Редактировать", sport, :class => 'edit_sport_item', :id => sport.id %> </h2> 
+<% Sport.all.each do |sport| %>
+<h2 class="acc_trigger" name = "<%=sport.name %>" id="sport_<%=sport.id %>"> 
+	<%= link_to sport.name, "#" %> 
+	<% if signed_in? && current_user.admin? %>
+	<%= link_to "Удалить", sport, :confirm => "Вы уверены?",  :title => "Удалить #{sport.name}", :class => 'delete_sport_item' %>  
+	<%= link_to "Редактировать", sport, :class => 'edit_sport_item', :id => sport.id %>	<% end %>  </h2> 
 
 <div class="acc_container">
     <div class="block">
@@ -20,15 +22,23 @@
 			<% countries_names_arr.each_with_index do |ligue, index| %>
 			<li class="country" id='sport_<%= sport.id %>_country_<%=countries_ids_arr[index] %>'> 
 				<%= link_to countries_names_arr[index] , "#", :id => countries_ids_arr[index]  %>
-				<%= link_to "Удалить",  Country.find_by_id(countries_ids_arr[index]), :class => 'delete_country_item' %>  
-				<%= link_to "Редактировать", Country.find_by_id(countries_ids_arr[index]), :class => 'edit_country_item', :id => countries_ids_arr[index] %>
+				
+				<% if signed_in? && current_user.admin?%>
+					<%= link_to "Удалить",  Country.find_by_id(countries_ids_arr[index]), :class => 'delete_country_item' %>  
+					<%= link_to "Редактировать", Country.find_by_id(countries_ids_arr[index]), :class => 'edit_country_item', :id => countries_ids_arr[index] %>
+				<% end %>
+				
 			</li>
 			<ul class="ligues">
 				<% Ligue.where(:sport_id => sport.id, :country_id => countries_ids_arr[index] ).each do |l| %>
 					<li class='ligue' id="ligue_<%= l.id %>"   >
-						<%= l.name %>
-						<%= link_to "Удалить", l, :confirm => "Вы уверены?", :title => "Удалить #{l.name}", :class => 'delete_ligue_item' %>  
-						<%= link_to "Редактировать", l , :class => 'edit_ligue_item', :id => l.id %>
+						<%= link_to l.name, "#" %>
+						
+						<% if signed_in? && current_user.admin? %>
+							<%= link_to "Удалить", l, :confirm => "Вы уверены?", :title => "Удалить #{l.name}", :class => 'delete_ligue_item' %>  
+							<%= link_to "Редактировать", l , :class => 'edit_ligue_item', :id => l.id %>
+						<% end %>
+						
 						</li>
 				<% end %>	
 			</ul>			

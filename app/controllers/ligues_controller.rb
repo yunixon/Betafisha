@@ -12,12 +12,20 @@ class LiguesController < ApplicationController
 
   def create
     @ligue = Ligue.create!(params[:ligue])
-    if @ligue.save
+      @success = false
       respond_to do |format|
         format.html
-        format.js { @sports = Sport.find(:all) }
-      end
-    end
+        format.js { 
+          if @ligue.save  
+            @success = true
+            @sports = Sport.find(:all) 
+          else 
+            @success = false  
+            @sports = Sport.find(:all) 
+          end 
+        }
+      end  
+
   end
 
   def show

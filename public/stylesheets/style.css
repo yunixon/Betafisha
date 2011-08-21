@@ -22,14 +22,15 @@ section {
 
 #navigation ul li {
 
-	width:238px;
-	background: #80131f;
+	width:240px;
+	background: #B32A19;
 	margin: 0;
 	padding: 0;
 	height: 70px;
 	float: left;
-	border: 1px #222 solid;
-		text-align: center;
+
+	text-align: center;
+	list-style: none;
 		
 	
 }
@@ -50,7 +51,7 @@ section {
 /* Basic settings*/
 
 body {
-    font: 14px Arial, Helvetica, sans-serif;
+        font: normal 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -176,7 +177,8 @@ nav ul li a:hover {
 }
 
 #left_nav ul {
-	margin-top: 10px; 
+	margin: 0; 
+	padding: 0;
 }
 
 
@@ -196,13 +198,12 @@ nav ul li a:hover {
 
 
 table {
-	border: 1px solid black;
-	margin-left: 50px;
+	margin-left: 10px;
 	margin-top: 10px;
 	
 }
 td, th {
-	border: 1px solid black;
+	border: 1px solid #ccc;
 	padding: 5px;
 	text-align: center;
 	

@@ -1,6 +1,5 @@
 <%= form_for @ligue do |f| %>
 
-
   <div class="form_name">
     Новая лига
   </div> 
@@ -30,15 +29,11 @@
   <div class="field">
   	<%= f.label :priority, "Приоритет" %> <br/>
   	<%= f.text_field :priority, :class => 'priority' %>
-    <!--%= f.select :priority, 
-    	options_for_select({'Низкий' => 1, 'Средний' => 2, 'Высокий' => 3}), 
-    	:multiple => false, :size => 3 
-    %-->
   </div>
   
 
   <div class="actions">
-  	<%= f.submit "Добавить" %>
+  	<%= f.submit "Добавить" %> 
   </div>
   
 <% end %>
