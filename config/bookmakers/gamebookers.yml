@@ -1,0 +1,11 @@
+active_odds:
+  'http://xml.gamebookers.com/activeodds.xml'
+
+odds_by_sport:
+- 'http://xml.gamebookers.com/sports/football.xml'
+- 'http://xml.gamebookers.com/sports/basketball.xml' 
+- 'http://xml.gamebookers.com/sports/american_football.xml'
+- 'http://xml.gamebookers.com/sports/ice_hockey.xml'
+- 'http://xml.gamebookers.com/sports/baseball.xml'
+
+

@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-  attr_accessible :name, :priority
+  attr_accessible :name, :priority #, :date, :time
   
   belongs_to :ligue
   

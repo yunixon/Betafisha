@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 # core
 gem 'rails', '3.0.7'
-gem "rake"
+gem 'rake'
 gem 'bundler' 
 
 # annotate model.rb files
@@ -24,6 +24,12 @@ gem 'kaminari'
 
 #run daemons
 gem 'daemons'
+
+
+
+group :development do
+  gem 'rails-erd'
+end
 
 
 

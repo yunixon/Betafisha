@@ -2,12 +2,13 @@ class LiguesController < ApplicationController
 
   before_filter :authenticate
   before_filter :admin_user
+
   def index
-    @ligues = Ligue.find(:all)
+    @ligues = Ligue.all
   end
   
   def new
-    @ligues = Ligue.find(:all)
+    @ligues = Ligue.all
   end
 
   def create
@@ -18,10 +19,10 @@ class LiguesController < ApplicationController
         format.js { 
           if @ligue.save  
             @success = true
-            @sports = Sport.find(:all) 
+            @sports = Sport.all
           else 
             @success = false  
-            @sports = Sport.find(:all) 
+            @sports = Sport.all
           end 
         }
       end  
@@ -43,7 +44,7 @@ class LiguesController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.js { @sports = Sport.find(:all) }
+      format.js { @sports = Sport.all }
     end
   end
 
@@ -55,7 +56,7 @@ class LiguesController < ApplicationController
     
     ligue.destroy
     respond_to do |format|
-      format.js { @sports = Sport.find(:all) }
+      format.js { @sports = Sport.all }
     end
   end
 
