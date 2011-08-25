@@ -11,11 +11,11 @@ class Ligue < ActiveRecord::Base
   numbers_regex = /[0-9]/
   
   validates :name,  :presence => true,
-                    :length   => { :within => 2..64},
+                    :length   => { :within => 2..128},
                     :format   => { :with => letters_regex }
                     
   validates :priority, :presence => true,
-                       :length   => { :within => 1..64},
+                       :length   => { :within => 1..128},
                        :format   => { :with => numbers_regex }
                        
                        

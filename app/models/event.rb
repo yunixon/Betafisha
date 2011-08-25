@@ -1,8 +1,9 @@
 class Event < ActiveRecord::Base
-  attr_accessible :name, :priority #, :date, :time
+
+  attr_accessible :name, :priority
   
   belongs_to :ligue
   
-  has_many :odds, :dependent => :destroy 
+  has_many :bets, :dependent => :destroy 
   
 end

@@ -4,8 +4,8 @@ class CreateEvents < ActiveRecord::Migration
       
       t.string   :name
       t.integer  :priority
-     # t.datetime :date
-     # t.time  :time
+      t.string   :date
+      t.string   :time
       
       t.integer :ligue_id
       

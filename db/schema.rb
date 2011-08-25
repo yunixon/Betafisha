@@ -10,7 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110821085602) do
+ActiveRecord::Schema.define(:version => 20110825054939) do
+
+  create_table "bet_types", :force => true do |t|
+    t.string   "name"
+    t.integer  "priority"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "betafisha_tables", :force => true do |t|
     t.string   "bookmaker_id"
@@ -23,6 +30,18 @@ ActiveRecord::Schema.define(:version => 20110821085602) do
     t.string   "team_one_coef"
     t.string   "team_two_coef"
     t.string   "sportsmen_coef"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bets", :force => true do |t|
+    t.string   "name"
+    t.string   "odd"
+    t.integer  "priority"
+    t.integer  "bet_type_id"
+    t.integer  "team_id"
+    t.integer  "event_id"
+    t.integer  "bookmaker_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -45,6 +64,8 @@ ActiveRecord::Schema.define(:version => 20110821085602) do
   create_table "events", :force => true do |t|
     t.string   "name"
     t.integer  "priority"
+    t.string   "date"
+    t.string   "time"
     t.integer  "ligue_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -64,25 +85,6 @@ ActiveRecord::Schema.define(:version => 20110821085602) do
     t.integer  "priority"
     t.integer  "country_id"
     t.integer  "sport_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "odd_types", :force => true do |t|
-    t.string   "name"
-    t.integer  "priority"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "odds", :force => true do |t|
-    t.string   "name"
-    t.string   "value"
-    t.integer  "priority"
-    t.integer  "odd_type_id"
-    t.integer  "team_id"
-    t.integer  "event_id"
-    t.integer  "bookmaker_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -10,23 +10,23 @@ class GamebookersParser
   def self.parse
 
     settings = YAML.load_file("#{ Rails.root.join('config','bookmakers') }/gamebookers.yml")
-    
-    #if settings == nil 
+
+    #if settings == nil
       # ...
     #end
-    
+
     settings["odds_by_sport"].each do |url|
-      
-      self.print_log( url )
-      
+
+      BetafishaLogger.print_log( url )
+
       document = Nokogiri::XML( open( url ) )
       events = document.search( "//event" )
-      
+
       events.each do |event|
-        
+
         current_sport_id = event.search( ".//sportID" ).text.to_i
         current_sport_name = event.search( ".//sportname" ).text
-        
+
         current_ligue_id = event.search(".//leagueID").text.to_i
         current_ligue_name = event.search(".//league").text
 
@@ -40,24 +40,24 @@ class GamebookersParser
 
         betafisha_sport = Sport.find( :first, :conditions => { :name => current_sport_name } )
 
-        if betafisha_sport != nil 
-          
+        if betafisha_sport != nil
+
           gamebookers_sport =  GameBookersOdd.find( :first, :conditions => { :gamebookers_id => current_sport_id } )
-          
-          if gamebookers_sport == nil          
-            GameBookersOdd.create!( :betafisha_id => betafisha_sport.id, 
-                                    :gamebookers_id =>  current_sport_id, 
-                                    :name => current_sport_name, 
-                                    :table_name => 'sports' )                
+
+          if gamebookers_sport == nil
+            GameBookersOdd.create!( :betafisha_id => betafisha_sport.id,
+                                    :gamebookers_id =>  current_sport_id,
+                                    :name => current_sport_name,
+                                    :table_name => 'sports' )
           end  # if
-          
+
           gamebookers_ligue =  GameBookersOdd.find( :first, :conditions => { :gamebookers_id => current_ligue_id } )
-          
-          
-          if gamebookers_ligue == nil 
-            GameBookersOdd.create!( :gamebookers_id =>  current_ligue_id, 
-                                    :name => current_ligue_name, 
-                                    :table_name => 'ligues' )                
+
+
+          if gamebookers_ligue == nil
+            GameBookersOdd.create!( :gamebookers_id =>  current_ligue_id,
+                                    :name => current_ligue_name,
+                                    :table_name => 'ligues' )
           end  # if
 
           gamebookers_team1 =  GameBookersOdd.find( :first, :conditions => { :gamebookers_id => current_team1_id } )
@@ -78,21 +78,12 @@ class GamebookersParser
 
           end # if
 
-          
+
         end # if
-         
-      end # do   
+
+      end # do
     end # do
 
-  end
-
-  def self.print_log ( word )
-    ActiveRecord::Base.logger.auto_flushing = true
-    if word == 'time_now'
-      ActiveRecord::Base.logger.info "[ " + Time.now.to_s + " ] \n"
-    else
-      ActiveRecord::Base.logger.info  word.to_s + "\n"
-    end
   end
 
 end
