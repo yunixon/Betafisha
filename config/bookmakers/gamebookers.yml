@@ -21,7 +21,3 @@ bets_by_sport:
 bets_by_sport_attr:
 - 'http://xml.gamebookers.com/sports/ice_hockey.xml_attr.xml'
 - 'http://xml.gamebookers.com/sports/basketball.xml_attr.xml'
-
-
-
-

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110825054939) do
+ActiveRecord::Schema.define(:version => 20110825202710) do
 
   create_table "bet_types", :force => true do |t|
     t.string   "name"
@@ -85,6 +85,14 @@ ActiveRecord::Schema.define(:version => 20110825054939) do
     t.integer  "priority"
     t.integer  "country_id"
     t.integer  "sport_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pages", :force => true do |t|
+    t.string   "name"
+    t.string   "permalink"
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

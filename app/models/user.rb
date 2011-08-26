@@ -1,30 +1,11 @@
-# == Schema Information
-#
-# Table name: users
-#
-#  id                     :integer(4)      not null, primary key
-#  name                   :string(255)
-#  email                  :string(255)
-#  created_at             :datetime
-#  updated_at             :datetime
-#  encrypted_password     :string(255)
-#  salt                   :string(255)
-#  admin                  :boolean(1)      default(FALSE)
-#  password_reset_token   :string(255)
-#  password_reset_sent_at :datetime
-#
-
-# coding: utf-8
 require "digest"
 class User < ActiveRecord::Base
   
-  #will paginate
-  #cattr_reader :per_page
-  #@@per_page = 10
+
   paginates_per 5
   
   attr_accessor :password
-  attr_accessible :name, :email, :password, :password_confirmation # :id,  
+  attr_accessible :name, :email, :password, :password_confirmation  
 
   email_regex = /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,3})$/i
 
@@ -65,8 +46,6 @@ class User < ActiveRecord::Base
     save! false
     UserMailer.reset_password(self).deliver
   end
-
-
 
 
   private

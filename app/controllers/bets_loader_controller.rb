@@ -7,6 +7,7 @@ class BetsLoaderController < ApplicationController
       
       ActiveRecord::Base.logger.auto_flushing = true
       ActiveRecord::Base.logger.info  params[:sport_name]
+     
       param = ''
       if params[:sport_name] == 'Баскетбол' 
           param = 'Basketball'      

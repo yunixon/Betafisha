@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   include SessionsHelper
+  include SiteNavigationHelper
   
   before_filter :set_locale
   def set_locale

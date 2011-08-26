@@ -26,10 +26,21 @@ gem 'kaminari'
 gem 'daemons'
 
 
-
-group :development do
+group :development, :test do
   gem 'rails-erd'
+  gem 'nifty-generators'
+  gem 'webrat'
+  gem 'ruby-debug'
 end
+
+#for nifty_generator
+gem "mocha"
+
+# Use unicorn as the web server
+# gem 'unicorn'
+
+# Deploy with Capistrano
+# gem 'capistrano'
 
 
 

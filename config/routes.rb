@@ -1,5 +1,7 @@
 Betafisha::Application.routes.draw do
 
+  resources :pages
+
   ###########################
   # Регистрация и авторизация
   ###########################
@@ -56,7 +58,7 @@ Betafisha::Application.routes.draw do
   post "admin/country_edit"
   post "admin/country_new"
   
-  
+ 
   
   #map.with_options(:controller => "users", 
   #               :action => "index") do |c|
