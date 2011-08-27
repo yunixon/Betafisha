@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   include SiteNavigationHelper
   
   before_filter :set_locale
+  
   def set_locale
     I18n.locale = params[:locale]
   end

@@ -4,7 +4,10 @@ class AdminController < ApplicationController
   before_filter :admin_user
 
   layout 'admin'
-
+  
+  def index 
+  end
+  
   def users_manager
     if signed_in? && current_user.admin?
       @sports = Sport.all

@@ -42,6 +42,8 @@ gem "mocha"
 # Deploy with Capistrano
  gem 'capistrano'
 
+# rich text editor
+gem 'tiny_mce'
 
 
 

@@ -14,7 +14,7 @@
 	<%= javascript_include_tag 'jquery.js' %>
 	<%= javascript_include_tag 'textinputfilter.js' %>
 	<%= javascript_include_tag 'script.js' %>
-	
+	<%= include_tiny_mce_if_needed %>
 
 </head>
 <body>
@@ -46,12 +46,7 @@
   </div>
 
   <div id="navigation" class="grid_24">
-    <ul>
-      <li><%= link_to t(:top_menu_coefficients), coefficients_path %></li>
-      <li><%= link_to t(:top_menu_bookmakers), bookmakers_path %></li>
-      <li><%= link_to t(:top_menu_statistics), statistics_path %></li>
-      <li><%= link_to t(:top_menu_tools), tools_path %></li>
-    </ul>
+
   </div>
 
 </header>

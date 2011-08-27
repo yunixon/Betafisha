@@ -32,13 +32,14 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create!(params[:user])
+    @user = User.create(params[:user])
     if @user.save
       sign_in @user
       UserMailer.registration_confirmation(@user).deliver
       flash[:success] = I18n.t(:flash_sing_up_success)
       redirect_to @user
     else
+      @title = "New user"
       render 'new'
     end
 

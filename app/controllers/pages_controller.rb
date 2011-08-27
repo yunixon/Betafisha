@@ -1,10 +1,19 @@
 class PagesController < ApplicationController
+
+  before_filter :authenticate
+  before_filter :admin_user
+  uses_tiny_mce
+  
   def index
     @pages = Page.all
   end
 
   def show
-    @page = Page.find(params[:id])
+  	if params[:permalink]
+    	@page = Page.find_by_permalink(params[:permalink])
+  	else 
+    	@page = Page.find(params[:id])
+    end
   end
 
   def new

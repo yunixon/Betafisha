@@ -8,7 +8,7 @@
   <%= @page.permalink %>
 </p -->
 <p>
-  <%= @page.content %>
+  <%= raw  @page.content %>
 </p>
 
 	<% if signed_in? && current_user.admin? %>
@@ -19,4 +19,4 @@
 	</p>
 
 	<% end %>
-<% end %>
+<% end %> 

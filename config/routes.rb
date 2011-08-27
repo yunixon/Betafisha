@@ -1,4 +1,4 @@
-Betafisha::Application.routes.draw do
+Betafisha::Application.routes.draw do |map|
 
   resources :pages
 
@@ -15,7 +15,7 @@ Betafisha::Application.routes.draw do
   resources :teams
   
   match "signup" => "users#new", :as => :signup
-  #match "users" => "users#index", :as => :users 
+  match "users" => "users#index", :as => :users 
   match "signin" => "sessions#new", :as => :signin
   match "signout" => "sessions#destroy", :as => :signout 
 
@@ -23,16 +23,19 @@ Betafisha::Application.routes.draw do
   ###########################
   # Навигация
   ########################### 
+  
   get "site_top_navigation/coefficients"
-  match "coefficients" =>  "site_top_navigation#coefficients", :as => :coefficients
-  get "site_top_navigation/bookmakers"
-  match "bookmakers"  =>  "site_top_navigation#bookmakers", :as => :bookmakers
+ # match "coefficients" =>  "site_top_navigation#coefficients", :as => :coefficients
+ get "site_top_navigation/bookmakers"
+ # match "bookmakers"  =>  "site_top_navigation#bookmakers", :as => :bookmakers
   get "site_top_navigation/statistics"
-  match "statistics" =>  "site_top_navigation#statistics", :as => :statistics
+ # match "statistics" =>  "site_top_navigation#statistics", :as => :statistics
   get "site_top_navigation/tools"
-  match "tools" =>  "site_top_navigation#tools", :as => :tools
-  
-  
+ # match "tools" =>  "site_top_navigation#tools", :as => :tools
+
+ 
+  map.static '/nav/:permalink', :controller => 'pages', :action => 'show' 
+
   match "/api_test", :to =>  "bets_loader#api_test", :as => :api_test 
   
   
