@@ -40,7 +40,7 @@ gem "mocha"
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+ gem 'capistrano'
 
 
 
