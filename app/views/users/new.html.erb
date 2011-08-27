@@ -11,32 +11,26 @@
           </ul>
         </div>
     <% end %>
-
-    <br/>
     <div class="field">
       <%= f.label :name, t(:sing_up_username) %>
       <br/>
       <%= f.text_field :name %>
     </div>
-    <br/>
     <div class="field">
       <%= f.label :email, t(:sing_up_email) %>
       <br/>
       <%= f.text_field :email %>
     </div>
-    <br/>
     <div class="field">
       <%= f.label :password, t(:sing_up_password) %>
       <br/>
       <%= f.password_field :password %>
     </div>
-    <br/>
     <div class="field">
       <%= f.label :password_confirmation, t(:sing_up_password_confirmation) %>
       <br/>
       <%= f.password_field :password_confirmation %>
     </div>
-    <br/>
     <div class="actions">
       <%= f.submit t(:sing_up_submit) %>
     </div>
