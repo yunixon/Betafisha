@@ -1,6 +1,11 @@
-set :application, "Betafisha"
+require 'bundler/capistrano'
 
-set :user, "root"
+set :application, "Betafisha"
+set :rails_env, "production"
+default_run_options[:pty] = true
+
+
+set :user, "axgusev"
 set :use_sudo, false
 set	:deploy_to, "/var/www/#{application}"
 
@@ -11,21 +16,20 @@ set :repository,  "git@github.com:axgusev/Betafisha.git"
 set :branch, "master"
 set :ssh_options, { :forward_agent => true }
 
-default_run_options[:pty] = true 
 
-role :web, "188.127.231.233"
+role :web, "root@188.127.231.233"
                           # Your HTTP server, Apache/etc
-role :app, "188.127.231.233"                          # This may be the same as your `Web` server
-role :db,  "188.127.231.233", :primary => true # This is where Rails migrations will run
+role :app, "root@188.127.231.233"                          # This may be the same as your `Web` server
+role :db,  "root@188.127.231.233", :primary => true # This is where Rails migrations will run
 
 
-after "deploy", "deploy:bundle_gems"
-after "deploy:bundle_gems", "deploy:restart" 
+#after "deploy", "deploy:bundle_gems"
+#after "deploy:bundle_gems", "deploy:restart" 
 
 namespace :deploy do
-   task :bundle_gems do 
-   	run "cd #{deploy_to}/current && bundle install vendor/gems"
-   end
+   #task :bundle_gems do 
+   #	run "cd #{deploy_to}/current && bundle install vendor/gems"
+   #end
    task :start do ; end
    task :stop do ; end
    task :restart, :roles => :app, :except => { :no_release => true } do
