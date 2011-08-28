@@ -1,11 +1,8 @@
-Gemfile.lock
-Gemfile
 log/
-.log
 .idea
 .bundle
 db/*.sqlite3*
-log/*.log
+log/*.log*
 *.log
 /tmp/
 doc/
@@ -18,6 +15,6 @@ nbproject/
 /nbproject/private/
 .project
 .settings/
-log/development.log
-log/
+
+
 
