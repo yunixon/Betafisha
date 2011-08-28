@@ -5,7 +5,6 @@ log/*.log
 tmp/**/*
 config/database.yml
 doc/
-config/database.yml
 nbproject/
 *.swp
 .pydevproject
