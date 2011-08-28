@@ -40,7 +40,7 @@ task :get_api_response => :environment do
             ActiveRecord::Base.logger.info "!!! Time now #{ Time.now }\n"
          end
          if node.name == "eventName"
-            bookmaker = BookmakerCoefficients.create! (:bookmaker_id => 1)       
+            bookmaker = BookmakerCoefficients.create!(:bookmaker_id => 1)
         end
       end
     end
