@@ -15,7 +15,7 @@ require 'open-uri'
 Rails.application.require_environment!
 
 $running = true
-Signal.trap("TERM") do 
+Signal.trap("TERM") do
   $running = false
 end
 
@@ -43,13 +43,15 @@ while $running do
                 case element.name
                   when 'participants' then
                     element.children.each do |participant|
-                      Team.create(:name => participant['name'], :priority => 1)
+                      _team = Team.new(:name => participant['name'], :priority => 1)
+                      _team.event_id = _event.id
+                      _team.save
                     end
                   when 'matchodds' then
                     element.children.each do |type|
                       _type = BetType.create :name => type['type'], :priority => 1
                       type.children.each do |odd|
-                        _bet = Bet.create :priority => 1
+                        _bet = Bet.new :priority => 1
                         _bet.name = type['scope']
                         _bet.bet_type_id = _type.id
                         _bet.event_id = _event.id
@@ -69,7 +71,7 @@ while $running do
 
   #One time per day
   sleep 86400
-end 
+end
 
 end
 
