@@ -6,46 +6,37 @@
 	<%= link_to "Редактировать", sport, :class => 'edit_sport_item', :id => sport.id %>	<% end %>  </h2> 
 
 <div class="acc_container">
-    <div class="block">
-		<ul class="countries">
-			<% 
-				countries_names_arr = Array.new
-				countries_ids_arr = Array.new
-					sport.ligues.each  do |i|
-					 countries_names_arr.push i.country.name
-					 countries_ids_arr.push i.country.id 
-					end
-				countries_names_arr = countries_names_arr.uniq
-				countries_ids_arr =  countries_ids_arr.uniq
-			%>
+	<div class="block">
+			<ul class="countries">
+				<% sport.ligues.find( :all,
+									  :select     => "country_id, COUNT(country_id) AS duplicate_count",
+									  :conditions => "country_id IS NOT NULL",
+									  :group      => "country_id HAVING duplicate_count >= 1").each do |countries|   %>	
+									  
+				  <li class="country" id='sport_<%= sport.id %>_country_<%= countries.country.id %>'> 
+				  	  <%= link_to countries.country.name , "#", :id => countries.country.id  %> 
+					  <% if signed_in? && current_user.admin? %>
+						<%= link_to "Удалить",  countries.country, :class => 'delete_country_item' %>  
+						<%= link_to "Редактировать", countries.country , :class => 'edit_country_item', :id => countries.country.id %>
+					  <% end %>
+				  </li>
+				  
+				  <ul class="ligues">
+					<% Ligue.where(:sport_id => sport.id, :country_id => countries.country.id ).each do |ligue| %>
+						<li class='ligue' id="ligue_<%= ligue.id %>"   >
+							<%= link_to ligue.name, "#" %>
 
-			<% countries_names_arr.each_with_index do |ligue, index| %>
-			<li class="country" id='sport_<%= sport.id %>_country_<%=countries_ids_arr[index] %>'> 
-				<%= link_to countries_names_arr[index] , "#", :id => countries_ids_arr[index]  %>
-				
-				<% if signed_in? && current_user.admin?%>
-					<%= link_to "Удалить",  Country.find_by_id(countries_ids_arr[index]), :class => 'delete_country_item' %>  
-					<%= link_to "Редактировать", Country.find_by_id(countries_ids_arr[index]), :class => 'edit_country_item', :id => countries_ids_arr[index] %>
-				<% end %>
-				
-			</li>
-			<ul class="ligues">
-				<% Ligue.where(:sport_id => sport.id, :country_id => countries_ids_arr[index] ).each do |l| %>
-					<li class='ligue' id="ligue_<%= l.id %>"   >
-						<%= link_to l.name, "#" %>
-						
-						<% if signed_in? && current_user.admin? %>
-							<%= link_to "Удалить", l, :confirm => "Вы уверены?", :title => "Удалить #{l.name}", :class => 'delete_ligue_item' %>  
-							<%= link_to "Редактировать", l , :class => 'edit_ligue_item', :id => l.id %>
-						<% end %>
-						
+							<% if signed_in? && current_user.admin? %>
+								<%= link_to "Удалить", ligue, :confirm => "Вы уверены?", :title => "Удалить #{ligue.name}", :class => 'delete_ligue_item' %>  
+								<%= link_to "Редактировать", ligue , :class => 'edit_ligue_item', :id => ligue.id %>
+							<% end %>
+
 						</li>
-				<% end %>	
-			</ul>			
-			<% end %>
-		</ul>
+					<% end %>	
+				  </ul>	
+				 <% end %>
+			</ul>
     </div>
-    
 </div>
 	
 <% end %>
