@@ -1,22 +1,7 @@
-<TABLE>
-	<TR><TD>id</TD>    
-		<TD>лига</TD> 
-		<TD>команда 1 </TD> 
-		<TD>команда 2</TD> 
-		
-		<TD>
-			<img src="/images/gamebookerslogo.gif"/> <br />
-		</TD> 
-		 
-	</TR>
-	
-	<% @coefficients_info.each do |coefficient| %>
-	<TR><TD><%= coefficient.id.to_s  %></TD>
-		<TD><%= coefficient.ligue_id.to_s 	 %></TD> 
-		<TD><%= coefficient.team_one_id.to_s 	 %> </TD> 
-		<TD><%= coefficient.team_two_id.to_s 	 %></TD> 
-		<TD><%= coefficient.team_one_coef.to_s %> / <%= coefficient.team_two_coef.to_s %></TD> 
-	</TR>
-	<% end %>	
-	
-</TABLE
+<b><%= @ligue.name %></b>
+<br />
+<ul>
+<% @ligue.events.each do |e| %>
+	<li><%= e.name %></li>
+<% end %>
+</ul>

@@ -62,13 +62,6 @@ $j(document).ready(function() {
 		if( $j(this).next().is(':hidden') ) { 
 			$j('.acc_trigger').removeClass('active').next().hide(); 
 			$j(this).toggleClass('active').next().show(); 
-		$j.ajax({ 
-	   		type: 'GET',
-	   		data: { sport_name : this.getAttribute('name') }, 
-	   		url: 'api_test', 
-	   		dataType:'script' 
-	   	});
-
 		}
 	
 		return false; 
@@ -84,8 +77,14 @@ $j(document).ready(function() {
 		return false; 
 	});
 	
-	$j('.ligues li.ligue a').click( function() {
-		return false;
+	$j('.ligues li.ligue').click( function() {
+		$j.ajax({ 
+	   		type: 'GET',
+	   		data: { sport_id :  this.getAttribute('id')  }, 
+	   		url: 'api_test', 
+	   		dataType:'script' 
+	   	});
+		return false; 
 	});
 	
 	
