@@ -32,8 +32,8 @@ while $running do
     doc.xpath('//sport').each do |sport|
       _sport = Sport.find_or_create_by_name sport['name']
       sport.children.each do |group|
-        _country_name = group['name'][0] != '~' ? group['name'].split(' - ').first : 'World'
-        _league_name = group['name'][0] != '~' ? group['name'].split(' - ').last : group['name'].gsub('~','')
+        _country_name = group['name'].include?('~') ? 'World' : group['name'].split(' - ').first
+        _league_name = group['name'].include?('~') ? group['name'].gsub('~','') : group['name'].split(' - ').last
         _country = Country.find_or_create_by_name _country_name
         _league = Ligue.new :name => _league_name, :priority => 1
         _league.sport_id = _sport.id
