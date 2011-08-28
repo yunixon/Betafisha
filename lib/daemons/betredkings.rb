@@ -19,16 +19,16 @@ Signal.trap("TERM") do
   $running = false
 end
 
-_bookmaker = Bookmaker.create :name => BOOKMAKER
+_bookmaker = Bookmaker.find_or_create_by_name BOOKMAKER
 
 while $running do
     SPORTS.each do |style|
     doc = Nokogiri::HTML(open("http://aws2.betredkings.com/feed/#{style}.xml"))
 
     doc.xpath('//sport').each do |sport|
-      _sport = Sport.create :name => sport['name'], :priority => 1
+      _sport = Sport.find_or_create_by_name sport['name']
       sport.children.each do |country|
-        _country = Country.create :name => country['name'], :priority => 1
+        _country = Country.find_or_create_by_name country['name']
         country.children.each do |tournament|
           _ligue = Ligue.create :name => tournament['name'], :priority => 1,
             :sport_id => _sport.id, :country_id => _country.id
