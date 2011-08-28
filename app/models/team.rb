@@ -3,6 +3,7 @@ class Team < ActiveRecord::Base
   attr_accessible :name, :priority
   
   belongs_to :event, :dependent => :destroy
+  has_many :bets, :dependent => :destroy
   
   letters_regex = /[\w\s]+/i 
   numbers_regex = /[0-9]/
