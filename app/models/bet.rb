@@ -4,7 +4,6 @@ class Bet < ActiveRecord::Base
   
   belongs_to :bet_type 
   belongs_to :bookmaker 
-  belongs_to :team 
   belongs_to :event
 
 end
