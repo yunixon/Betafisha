@@ -10,13 +10,9 @@ section, header, footer, aside, article, nav {
 }
 
 
-section {
-	background: blue;
-}
+section {}
 
 #navigation {
-	/*min-height: 70px;
-	margin-bottom: 10px;*/
 	background: red;
 }
 
@@ -28,7 +24,6 @@ section {
 	padding: 0;
 	height: 70px;
 	float: left;
-
 	text-align: center;
 	list-style: none;
 		
@@ -154,8 +149,6 @@ nav ul li a:hover {
 /* Content */
 
 #content {
-    min-height: 400px;
-    background: #E3E5E5;
     overflow: hidden;
     float: left;
 }
@@ -171,8 +164,7 @@ nav ul li a:hover {
 
 /* Left navigation */
 
-#left_nav {
-	background: #eee;
+#left_nav  {
 	min-height: 400px;
 }
 

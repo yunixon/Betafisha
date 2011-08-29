@@ -2,55 +2,12 @@
 
 class BetsLoaderController < ApplicationController
 
-
     def api_test
-      
-      ActiveRecord::Base.logger.auto_flushing = true
-      ActiveRecord::Base.logger.info  params[:sport_name]
-     
-      param = ''
-      if params[:sport_name] == 'Баскетбол' 
-          param = 'Basketball'      
-      end
-      
-      if params[:sport_name] == 'Футбол'
-          param = 'Football' 
-      end
-     
-      if params[:sport_name] == 'Хоккей'
-          param = 'Ice Hockey' 
-      end
-      
-       if params[:sport_name] == 'Бейсбол'
-          param = 'Baseball' 
-      end
-      
-       if params[:sport_name] == 'Регби'
-          param = 'Rugby' 
-      end
-      
-       if params[:sport_name] == 'Американский футбол'
-          param = 'American football' 
-      end
-      
       respond_to do |format|
-        format.html { 
-          
-            if param == ''
-              @coefficients_info = BetafishaTable.find(:all, :order => "id desc")
-            else
-              @coefficients_info = BetafishaTable.where(:sport_id => param ) 
-            end
-          
+        format.html {  
           }
         format.js { 
-          
-            if param == ''
-              @coefficients_info = BetafishaTable.find(:all, :order => "id desc")
-            else
-              @coefficients_info = BetafishaTable.where(:sport_id => param ) 
-            end
-          
+          @ligue = Ligue.find_by_id( params[:sport_id].gsub("ligue_", "").to_i )
           }
       end
     end
