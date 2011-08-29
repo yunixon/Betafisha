@@ -11,8 +11,7 @@ class Ligue < ActiveRecord::Base
   numbers_regex = /[0-9]/
 
   validates :name,  :presence => true,
-                    :length   => { :within => 2..128},
-                    :format   => { :with => letters_regex }
+                    :length   => { :within => 2..128}
 
   default_scope :order => 'ligues.priority DESC'
 

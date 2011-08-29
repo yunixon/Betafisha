@@ -40,7 +40,9 @@ while $running do
         _league.country_id = _country.id
         _league.save
         group.children.each do |event|
-          _event = Event.create :name => event['name'], :ligue_id => _league.id, :priority => 1
+          _event = Event.new :name => event['name'], :priority => 1
+          _event.ligue_id = _league.id
+          _event.save
           event.children.each do |bettype|
             if AVAILABLE_BETTYPES.include?(bettype['name'])
               _bet_type = BetType.create :name => bettype['name'], :priority => 1
