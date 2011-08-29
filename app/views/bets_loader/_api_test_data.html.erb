@@ -1,7 +1,28 @@
-<b><%= @ligue.name %></b>
-<br />
-<ul>
+  <table>
+   
+   
+   
+   <tr>
+   <td>	<b> <%= @ligue.name %> </b> </td>
+   </tr>
+   
 <% @ligue.events.each do |e| %>
-	<li><%= e.name %></li>
+	<tr>
+		<td><b> ставки на </b> <%= e.name %></td>
+	</tr>
+	<% e.bets.each do |b| %>
+	<tr>
+    	<td> <%= b.name %> - <%= b.odd %> ( <% if !b.team.nil? %> <%= b.team.name %> <% end %> )
+    	<td><% if b.bookmaker.name == 'Gamebookers' %> 
+    		<img src="http://inforumer.com/Top/Sports/Soccer/UEFA/England/Clubs/A/Arsenal/Fan_Pages/094032/P11.JPG"/> 
+    	<% else %> 
+    		<img src="http://www.tvoibukmeker.com/sites/default/files/imagecache/bookmaker_search_logo/bookmaker_baner/small/gamebookers/gamebookerslogo.gif"/>
+    	<% end %> </td> 
+    	</td>
+    </tr>
+	<% end %>
+	
 <% end %>
-</ul>
+
+
+</table>
