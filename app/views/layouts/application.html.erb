@@ -7,8 +7,10 @@
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
    
-   <%= stylesheet_link_tag :all %>
-
+   <%= stylesheet_link_tag 'reset.css' %>
+   <%= stylesheet_link_tag 'grid.css' %>
+   <%= stylesheet_link_tag 'accordian.css' %>
+   <%= stylesheet_link_tag 'style.css' %>
    
   	<%= javascript_include_tag :defaults %>
 	<%= javascript_include_tag 'jquery.js' %>
@@ -18,6 +20,8 @@
 
 </head>
 <body>
+<div id="wrapper" class="container_24">
+
 <header class="container_24">  
 
   <div id="logo" class="grid_12">
@@ -46,13 +50,18 @@
   </div>
 
   <div id="navigation" class="grid_24">
-
+	<ul>
+	<% Page.joins(:page_subject).where('page_subjects.name = ?', 'nav').all.each do |page| %>
+		<li> <%= link_to page.name, page %> </li>
+	<% end%>
+	</ul>
+	
   </div>
 
 </header>
 
 <section class="container_24">
-	
+	<div style="background: red;">
 	<div id="left_nav" class="grid_5">
 		Спорт 
 		<%= render 'sports/sports_content'%>
@@ -63,6 +72,7 @@
 	        <div class="flash <%= key %>"><%= value %></div>
 	    <% end %> 
 	    <%= yield %>
+  	</div>
   	</div>
   	
  
@@ -80,6 +90,6 @@
     	<%= debug(params) if Rails.env.production? %>
   	</div> 
 </footer>
-
+</div>
 </body>
 </html>

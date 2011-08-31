@@ -18,14 +18,15 @@ h2.acc_trigger {
 h2.acc_trigger:first-child { 
 	border-top: none;	
 }
+
 h2.acc_trigger a {
-	color: #fff;
+	color: #333;
 	text-decoration: none;
 	display: block;
 	padding: 0;
 
 	margin: 7px 0 3px 10px;
-	float:left;
+	float:left; 
 }
 
 h2.acc_trigger a.delete_sport_item {
@@ -64,11 +65,11 @@ li a.edit_country_item, li a.edit_ligue_item {
 }
 
 h2.acc_trigger:hover {
-	background: #555;
+	background: #eee;
 }
 
 h2.active, h2.active:hover {
-	background: #222;
+	background: #eee;
 }
 
 .acc_container {

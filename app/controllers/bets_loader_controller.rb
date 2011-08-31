@@ -1,5 +1,3 @@
-# coding: utf-8
-
 class BetsLoaderController < ApplicationController
 
     def api_test

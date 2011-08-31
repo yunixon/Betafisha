@@ -1,5 +1,7 @@
 Betafisha::Application.routes.draw do 
 
+  resources :page_subjects
+
   # user auth & reg
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
@@ -33,14 +35,20 @@ Betafisha::Application.routes.draw do
   get "admin/index"
   match "admin" =>  "admin#index", :as => :admin
   
-  get "admin/sports_manager"
-  match "admin/sports_manager" =>  "admin#sports_manager", :as => :sports_manager
+  get "admin/leagues_manager"
+  match "admin/leagues_manager" =>  "admin#leagues_manager", :as => :leagues_manager
   
   get "admin/users_manager"
   match "admin/users_manager" =>  "admin#users_manager", :as => :users_manager
   
-  post "admin/ligue_edit"
-  post "admin/ligue_new"   
+  get "admin/pages_manager"
+  match "admin/pages_manager" =>  "admin#pages_manager", :as => :pages_manager
+ 
+  get "admin/news_manager"
+  match "admin/news_manager" =>  "admin#news_manager", :as => :news_manager
+  
+  post "admin/league_edit"
+  post "admin/league_new"   
   
   post "admin/sport_edit"
   post "admin/sport_new"

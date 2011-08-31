@@ -1,0 +1,2 @@
+module PageSubjectsHelper
+end

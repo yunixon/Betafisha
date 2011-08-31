@@ -22,10 +22,13 @@ class PagesController < ApplicationController
 
   def create
     @page = Page.new(params[:page])
+    @page.page_subject_id = params[:page][:page_subject_id]
+    
     if @page.save
-      redirect_to @page, :notice => "Successfully created page."
-    else
-      render :action => 'new'
+    	redirect_to admin_pages_manager_path, :notice => "Successfully created page."
+  #    redirect_to @page, :notice => "Successfully created page."
+ #   else
+  #    render :action => 'new'
     end
   end
 
@@ -36,15 +39,15 @@ class PagesController < ApplicationController
   def update
     @page = Page.find(params[:id])
     if @page.update_attributes(params[:page])
-      redirect_to @page, :notice  => "Successfully updated page."
-    else
-      render :action => 'edit'
+      redirect_to admin_pages_manager_path, :notice  => "Successfully updated page."
+   # else
+   #   render :action => 'edit'
     end
   end
 
   def destroy
     @page = Page.find(params[:id])
     @page.destroy
-    redirect_to pages_url, :notice => "Successfully destroyed page."
+    redirect_to admin_pages_manager_path, :notice => "Successfully destroyed page."
   end
 end

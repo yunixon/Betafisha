@@ -10,6 +10,8 @@ $j.ajaxSetup({
 })
 
 $j(document).ready(function() {
+
+	$j('wrapper').css('height', $j('#left_nav').css('height') );
 	/*console.log('a');
 	
 	setInterval( function() { 

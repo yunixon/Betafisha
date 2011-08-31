@@ -1,0 +1,9 @@
+<% if signed_in? && current_user.admin? %>
+		<ul class="pages">
+		 <h2>Заголовок</h2>
+		  <%= render @pages %>
+		</ul>
+		<div id="my_pagination">
+		  <%= paginate @pages, :remote => true %>
+		</div>
+<% end %>

@@ -4,6 +4,7 @@ class CreatePages < ActiveRecord::Migration
       t.string :name
       t.string :permalink
       t.text :content
+      t.integer :page_subject_id
       t.timestamps
     end
   end

@@ -1,0 +1,23 @@
+<h1>Listing page_subjects</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @page_subjects.each do |page_subject| %>
+  <tr>
+    <td><%= page_subject.name %></td>
+    <td><%= link_to 'Show', page_subject %></td>
+    <td><%= link_to 'Edit', edit_page_subject_path(page_subject) %></td>
+    <td><%= link_to 'Destroy', page_subject, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Page subject', new_page_subject_path %>

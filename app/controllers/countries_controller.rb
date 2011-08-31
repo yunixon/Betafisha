@@ -10,10 +10,6 @@ class CountriesController < ApplicationController
   def create
     @country = Country.create!(params[:country])
     if @country.save
-    #respond_to do |format|
-    #   format.html
-    #   format.js { @countries = Country.find(:all) } 
-    # end
      flash[:success] = "Страна [" + @country.name +  "] была успешно добавлена."
      redirect_to sports_manager_path  
     end 
@@ -24,21 +20,18 @@ class CountriesController < ApplicationController
   end
   
   def edit
-    @country = Country.find(params[:id])
-    
+    @country = Country.find(params[:id]) 
   end
   
   def update 
     @country = Country.find(params[:id])
     @country.update_attributes(params[:country])
-    
     @ligue = Ligue.find_by_country_id(@country.id)
     
     respond_to do |format|
       format.html 
       format.js { @sports = Sport.find(:all) }
     end
-    
   end
   
   def destroy

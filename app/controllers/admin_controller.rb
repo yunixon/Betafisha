@@ -2,7 +2,7 @@ class AdminController < ApplicationController
 
   before_filter :authenticate
   before_filter :admin_user
-
+  uses_tiny_mce
   layout 'admin'
   
   def index 
@@ -10,15 +10,13 @@ class AdminController < ApplicationController
   
   def users_manager
     if signed_in? && current_user.admin?
-      @sports = Sport.all
       @users = User.all
       @users = User.order(:name).page params[:page]
     end
   end
 
-  def sports_manager
+  def leagues_manager
     if signed_in? && current_user.admin?
-      @sports = Sport.all
       @ligue = Ligue.new
       respond_to do |format|
         format.html
@@ -26,7 +24,24 @@ class AdminController < ApplicationController
       end
     end
   end
-
+  
+  def pages_manager
+    if signed_in? && current_user.admin?
+      @page = Page.new
+      @pages = Page.all
+      @pages = Page.order(:name).page params[:page]
+      #respond_to do |format|
+      #  format.html
+      #  format.js
+      #end
+    end
+  end
+  
+  def news_manager
+  
+  end
+  
+  # creation and edition
   def sport_new
     if signed_in? && current_user.admin?
       @sport = Sport.new

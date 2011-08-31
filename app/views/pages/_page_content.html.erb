@@ -1,15 +1,19 @@
-<% title "Page" %>
 <% if !@page.nil? %>
+
+<% title @page.name %>
+<% if @page.permalink == 'bookmakers'%>
+	<ul>
+		<li>aaa</li>
+		<li>bbb</li>
+	</ul>
+<% end %>
 <p>
   <b><%= @page.name %></b>
 </p>
-<!-- p>
-  <strong>Permalink:</strong>
-  <%= @page.permalink %>
-</p -->
-<p>
-  <%= raw  @page.content %>
-</p>
+
+	<p>
+	  <%= raw  @page.content %>
+	</p>
 
 	<% if signed_in? && current_user.admin? %>
 	<p>
@@ -19,4 +23,5 @@
 	</p>
 
 	<% end %>
+	
 <% end %> 

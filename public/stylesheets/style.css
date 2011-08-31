@@ -7,17 +7,15 @@
 
 section, header, footer, aside, article, nav {
     display: block;
+ 
+
 }
 
-
-section {}
-
-#navigation {
-	background: red;
+#wrapper {
+    background: #eee;
 }
 
 #navigation ul li {
-
 	width:240px;
 	background: #B32A19;
 	margin: 0;
@@ -26,8 +24,11 @@ section {}
 	float: left;
 	text-align: center;
 	list-style: none;
-		
-	
+}
+
+#navigation ul li:hover {
+	background: #B31119;
+
 }
 
 #navigation ul li a{
@@ -37,22 +38,24 @@ section {}
 	font-weight: bold;
 	margin-top: 25px;
 	display: block;
-
-	
-	
-	} 
+} 
 
 
 /* Basic settings*/
 
-body {
-        font: normal 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+html, body {
+  font: normal 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #111;
+   height: 100%; 
 }
 
 a {
     color: #09f;
 }
 
+div#content, div#left_nav {
+ 	background: #eee;
+}
 
 
 /* Logo */

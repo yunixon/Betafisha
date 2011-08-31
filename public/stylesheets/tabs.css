@@ -30,6 +30,7 @@ ul.tabs li{
 	border-top-right-radius: 7px;
 	border-top-left-radius: 7px;
 }
+
 ul.tabs li a {
 	text-decoration: none;
 	color: #222;
@@ -64,21 +65,24 @@ ul.tabs li.active {
 	border-top-right-radius: 5px;
 	border-top-left-radius: 5px;
 }
+
 .tab_content {
 	padding: 0;
 	margin: 0;
 	font-size: 1.0em;
 }
 
-
-.admin_profile_tab {
+/* !!!!!!!!!!   */
+.app_settings_tab {
 	background: url('../images/user_edit.png') no-repeat  5px 7px;
 
 }
+
 .users_manager_tab {
 	background: url('../images/group_edit.png') no-repeat  5px 7px;
 }
-.sports_manager_tab {
+/* !!!!!!!!!!   */
+.leagues_manager_tab {
 	background: url('../images/table_edit.png') no-repeat  5px 7px;
 }
 
@@ -92,28 +96,22 @@ ul.tabs li.active {
 	margin-bottom: 50px;
 }
 
-.users li{
-	list-style: none;
-}
 
 .pagination a, .pagination span, .pagination em {
 	font-size: 12px;
-	
-	
 }
 
-.users {
+.users, .pages {
 	margin-left: 100px;
 	width: 300px;
 }
-.users h2 {
-	
+.users h2, .pages h2 {
 	font-size: 1.1em;
 }
-.user-name-span {
+.user-name-span, .page-name-span {
 	width: 150px;
 }
-.delete-user-span {
+.delete-user-span, .delete-page-span {
 	float: right;
 	margin-right: 5px;
 }
@@ -124,20 +122,19 @@ ul.tabs li.active {
 	text-align: center;
 }
 
-.users li {
+.users li, .pages li {
+    list-style: none;
 	margin-top: 5px;
 	background: #ccc;
 	height: 32px;
 	width: 300px;
 }
 
-
-
-.users li:hover {
+.users li:hover, .pages li:hover {
 	background: #ddd;
 }
 
-.users li a {
+.users li a, .pages li a {
 	display: block;
 	padding: 0;
 	margin: 7px 0 3px 10px;
@@ -148,17 +145,17 @@ ul.tabs li.active {
 	font-weight: bold;
 }
 
-.delete_user {
+.delete_user, .delete_page {
 	width: 16px;
 	text-indent: -9999px;
 	background: url('../images/delete.png') no-repeat 0 0;
 }
 
-
 .new_ligue, .new_sport, .new_country, .edit_sport, .edit_country, .edit_ligue {
 	margin: 0 0 0 125px;
 	width: 270px
 }
+
 .form_name {
 	text-align: center;
 	font-size: 14px;
@@ -166,5 +163,4 @@ ul.tabs li.active {
 	font-weight: bold;
 	border-bottom: 1px #ccc solid;
 	margin-bottom: 20px;
-	
 }
