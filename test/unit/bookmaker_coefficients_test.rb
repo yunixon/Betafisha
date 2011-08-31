@@ -6,12 +6,12 @@
 #  bookmaker_id   :string(255)
 #  sport_id       :string(255)
 #  league_id       :string(255)
-#  team_one_id    :string(255)
-#  team_two_id    :string(255)
+#  participant_one_id    :string(255)
+#  participant_two_id    :string(255)
 #  sportsmen_id   :string(255)
 #  bet_type_id    :string(255)
-#  team_one_coef  :string(255)
-#  team_two_coef  :string(255)
+#  participant_one_coef  :string(255)
+#  participant_two_coef  :string(255)
 #  sportsmen_coef :string(255)
 #  created_at     :datetime
 #  updated_at     :datetime

@@ -9,7 +9,7 @@
 	</tr>
 	<% e.bets.each do |b| %>
 	<tr>
-    	<td> <%= b.name %> - <%= b.odd %> ( <% if !b.team.nil? %> <%= b.team.name %> <% end %> )
+    	<td> <%= b.name %> - <%= b.odd %> ( <% if !b.participant.nil? %> <%= b.participant.name %> <% end %> )
     	<td><% if b.bookmaker.name == 'Gamebookers' %> 
     		<img src="http://inforumer.com/Top/Sports/Soccer/UEFA/England/Clubs/A/Arsenal/Fan_Pages/094032/P11.JPG"/> 
     	<% else %> 

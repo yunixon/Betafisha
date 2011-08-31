@@ -10,7 +10,7 @@ Betafisha::Application.routes.draw do
   resources :sports
   resources :countries
   resources :leagues
-  resources :teams
+  resources :participants
   
   match "signup" => "users#new", :as => :signup
   match "users" => "users#index", :as => :users 

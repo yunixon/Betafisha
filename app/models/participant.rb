@@ -1,4 +1,4 @@
-class Team < ActiveRecord::Base
+class Participant < ActiveRecord::Base
 
   attr_accessible :name, :priority
 

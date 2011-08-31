@@ -43,7 +43,7 @@ while $running do
                 case element.name
                   when 'participants' then
                     element.children.each do |participant|
-                      _team = Team.new(:name => participant['name'], :priority => 1)
+                      _team = Participant.new(:name => participant['name'], :priority => 1)
                       _team.event_id = _event.id
                       _team.save
                     end

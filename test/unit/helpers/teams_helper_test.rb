@@ -1,4 +1,4 @@
 require 'test_helper'
 
-class TeamsHelperTest < ActionView::TestCase
+class ParticipantsHelperTest < ActionView::TestCase
 end

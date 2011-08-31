@@ -47,13 +47,13 @@ while $running do
             if AVAILABLE_BETTYPES.include?(bettype['name'])
               _bet_type = BetType.create :name => bettype['name'], :priority => 1
               bettype.children.each do |bet|
-                _team = Team.new
+                _team = Participant.new
                 _team.name = bet['outcome_name'] == 'X' ? 'Draw' : bet['outcome_name']
                 _team.event_id = _event.id
                 _team.save
                 _bet = Bet.new :priority => 1
                 _bet.event_id = _event.id
-                _bet.team_id = _team.id
+                _bet.participant_id = _participant.id
                 _bet.bet_type_id = _bet_type.id
                 _bet.bookmaker_id = _bookmaker.id
                 _bet.name = bet['outcome_name'] == 'X' ? 'Draw' : bet['outcome_name']
