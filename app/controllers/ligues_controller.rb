@@ -1,23 +1,23 @@
-class LiguesController < ApplicationController
+class LeaguesController < ApplicationController
 
   before_filter :authenticate
   before_filter :admin_user
 
   def index
-    @ligues = Ligue.all
+    @leagues = League.all
   end
   
   def new
-    @ligues = Ligue.all
+    @leagues = League.all
   end
 
   def create
-    @ligue = Ligue.create!(params[:ligue])
+    @league = League.create!(params[:league])
       @success = false
       respond_to do |format|
         format.html
         format.js { 
-          if @ligue.save  
+          if @league.save  
             @success = true
             @sports = Sport.all
           else 
@@ -30,17 +30,17 @@ class LiguesController < ApplicationController
   end
 
   def show
-    @ligue = Ligue.find(params[:id])
+    @league = League.find(params[:id])
   end
 
   def edit
-    @ligue = Ligue.find(params[:id])
+    @league = League.find(params[:id])
 
   end
 
   def update
-    @ligue = Ligue.find(params[:id])
-    @ligue.update_attributes(params[:ligue])
+    @league = League.find(params[:id])
+    @league.update_attributes(params[:league])
 
     respond_to do |format|
       format.html
@@ -49,12 +49,12 @@ class LiguesController < ApplicationController
   end
 
   def destroy
-    ligue = Ligue.find(params[:id])
+    league = League.find(params[:id])
     
-    @sport_id = ligue.sport.id
-    @country_id = ligue.country.id
+    @sport_id = league.sport.id
+    @country_id = league.country.id
     
-    ligue.destroy
+    league.destroy
     respond_to do |format|
       format.js { @sports = Sport.all }
     end

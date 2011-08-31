@@ -5,7 +5,7 @@ class BetsLoaderController < ApplicationController
         format.html {  
           }
         format.js { 
-          @ligue = Ligue.find_by_id( params[:sport_id].gsub("ligue_", "").to_i )
+          @ligue = League.find_by_id( params[:sport_id].gsub("league_", "").to_i )
           }
       end
     end

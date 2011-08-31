@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: ligues
+# Table name: leagues
 #
 #  id         :integer(4)      not null, primary key
 #  name       :string(255)
@@ -10,7 +10,7 @@
 
 require 'test_helper'
 
-class LiguesTest < ActiveSupport::TestCase
+class LeaguesTest < ActiveSupport::TestCase
   # Replace this with your real tests.
   test "the truth" do
     assert true

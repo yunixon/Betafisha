@@ -1,4 +1,4 @@
-class Ligue < ActiveRecord::Base
+class League < ActiveRecord::Base
 
   attr_accessible :name, :priority, :sport_id, :country_id
 
@@ -13,6 +13,6 @@ class Ligue < ActiveRecord::Base
   validates :name,  :presence => true,
                     :length   => { :within => 2..128}
 
-  default_scope :order => 'ligues.priority DESC'
+  default_scope :order => 'leagues.priority DESC'
 
 end

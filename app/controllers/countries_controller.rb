@@ -26,7 +26,7 @@ class CountriesController < ApplicationController
   def update 
     @country = Country.find(params[:id])
     @country.update_attributes(params[:country])
-    @ligue = Ligue.find_by_country_id(@country.id)
+    @league = League.find_by_country_id(@country.id)
     
     respond_to do |format|
       format.html 
@@ -36,7 +36,7 @@ class CountriesController < ApplicationController
   
   def destroy
     country = Country.find(params[:id])
-    @ligue = Ligue.find_by_country_id(@country.id)
+    @league = League.find_by_country_id(@country.id)
     country.destroy
     respond_to do |format|
       format.js { @sports = Sport.find(:all) }

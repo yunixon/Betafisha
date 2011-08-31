@@ -1,2 +1,2 @@
-module LiguesHelper
+module LeaguesHelper
 end

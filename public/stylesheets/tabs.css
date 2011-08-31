@@ -151,7 +151,7 @@ ul.tabs li.active {
 	background: url('../images/delete.png') no-repeat 0 0;
 }
 
-.new_ligue, .new_sport, .new_country, .edit_sport, .edit_country, .edit_ligue {
+.new_league, .new_sport, .new_country, .edit_sport, .edit_country, .edit_league {
 	margin: 0 0 0 125px;
 	width: 270px
 }

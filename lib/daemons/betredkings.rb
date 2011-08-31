@@ -30,14 +30,14 @@ while $running do
       sport.children.each do |country|
         _country = Country.find_or_create_by_name country['name']
         country.children.each do |tournament|
-          _ligue = Ligue.create :name => tournament['name'], :priority => 1,
+          _league = League.create :name => tournament['name'], :priority => 1,
             :sport_id => _sport.id, :country_id => _country.id
           tournament.children.each do |match|
             if match.name == 'match'
               _match_name = ''
               _match_name << match.children.children[0]['name'] << ' - ' << match.children.children[1]['name']
               _event = Event.new :name => _match_name, :priority => 1
-              _event.ligue_id = _ligue.id
+              _event.league_id = _league.id
               _event.save
               match.children.each do |element|
                 case element.name

@@ -6,12 +6,12 @@ var $j = jQuery.noConflict();
 
 $j(document).ready(function() {
 
-	$j('.new_sport, .new_ligue, .new_country').submit( function() {
+	$j('.new_sport, .new_league, .new_country').submit( function() {
 		$j.post(this.action, $j(this).serialize(), null, "script");
 		return false;
 	});
 	
-	$j('.edit_sport, .edit_ligue, .edit_country').submit( function() {
+	$j('.edit_sport, .edit_league, .edit_country').submit( function() {
 		$j.post(this.action, $j(this).serialize(), null, "script");
 		return false;
 	});

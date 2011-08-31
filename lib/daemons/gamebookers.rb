@@ -35,13 +35,13 @@ while $running do
         _country_name = group['name'].include?('~') ? 'World' : group['name'].split(' - ').first
         _league_name = group['name'].include?('~') ? group['name'].gsub('~','') : group['name'].split(' - ').last
         _country = Country.find_or_create_by_name _country_name
-        _league = Ligue.new :name => _league_name, :priority => 1
+        _league = League.new :name => _league_name, :priority => 1
         _league.sport_id = _sport.id
         _league.country_id = _country.id
         _league.save
         group.children.each do |event|
           _event = Event.new :name => event['name'], :priority => 1
-          _event.ligue_id = _league.id
+          _event.league_id = _league.id
           _event.save
           event.children.each do |bettype|
             if AVAILABLE_BETTYPES.include?(bettype['name'])

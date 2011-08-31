@@ -1,7 +1,7 @@
 $j("div.accordian").html(' <%= escape_javascript ( render ( :partial => 'sports/sports_content')  ) %>  ');
 
 $j('.acc_trigger').removeClass('active').next().hide();
-$j('h2#sport_' + '<%= escape_javascript ( @ligue.sport.id.to_s ) %>').toggleClass('active').next().show();
+$j('h2#sport_' + '<%= escape_javascript ( @league.sport.id.to_s ) %>').toggleClass('active').next().show();
 
 
 

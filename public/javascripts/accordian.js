@@ -1,7 +1,7 @@
 $j(document).ready(function() {
 	
 	$j('.acc_container').hide(); 
-	$j('.ligues').hide();
+	$j('.leagues').hide();
 	$j("a.delete_sport_item").hide();
 	$j("a.edit_sport_item").hide();
 	//$j('.acc_trigger:first').addClass('active').next().show(); 
@@ -18,7 +18,7 @@ $j(document).ready(function() {
 		$j("a.edit_sport_item").hide();
 	});
 	
-	$j("a.delete_sport_item, a.delete_ligue_item, a.delete_country_item").click( function() {			
+	$j("a.delete_sport_item, a.delete_league_item, a.delete_country_item").click( function() {			
         if(confirm(this.getAttribute("data-confirm"), this.getAttribute("title") )) {
             $j.post(this.href, {_method:'delete'}, null, "script");
             return false;
@@ -47,10 +47,10 @@ $j(document).ready(function() {
         return false;
 	});
 	
-	$j("a.edit_ligue_item").click( function() {
+	$j("a.edit_league_item").click( function() {
         $j.ajax({ 
 	   		type: 'POST',
-	   		url: "ligue_edit",
+	   		url: "league_edit",
 	   		data: { id : this.getAttribute('id') }, 
 	   		dataType:'script' 
 	   	});
@@ -77,7 +77,7 @@ $j(document).ready(function() {
 		return false; 
 	});
 	
-	$j('.ligues li.ligue').click( function() {
+	$j('.leagues li.league').click( function() {
 		$j.ajax({ 
 	   		type: 'GET',
 	   		data: { sport_id :  this.getAttribute('id')  }, 

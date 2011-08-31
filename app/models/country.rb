@@ -2,7 +2,7 @@ class Country < ActiveRecord::Base
   
   attr_accessible :name, :priority, :flag_image
   
-  has_many :ligues, :dependent => :destroy 
+  has_many :leagues, :dependent => :destroy 
   
   letters_regex = /[\w\s]+/i 
   numbers_regex = /[0-9]/

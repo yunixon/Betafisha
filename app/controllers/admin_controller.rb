@@ -17,7 +17,7 @@ class AdminController < ApplicationController
 
   def leagues_manager
     if signed_in? && current_user.admin?
-      @ligue = Ligue.new
+      @league = League.new
       respond_to do |format|
         format.html
         format.js
@@ -82,9 +82,9 @@ class AdminController < ApplicationController
     end
    end 
    
-  def ligue_new
+  def league_new
     if signed_in? && current_user.admin?
-      @ligue = Ligue.new
+      @league = League.new
       respond_to do |format|
         format.html
         format.js
@@ -92,9 +92,9 @@ class AdminController < ApplicationController
     end
    end 
  
-   def ligue_edit
+   def league_edit
     if signed_in? && current_user.admin?
-      @ligue = Ligue.find(params[:id])
+      @league = League.find(params[:id])
       respond_to do |format|
         format.html
         format.js
