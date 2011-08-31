@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 # core
-gem 'rails', '3.1'
+gem 'rails', '3.0.7'
 gem 'rake'
 gem 'bundler' 
 
