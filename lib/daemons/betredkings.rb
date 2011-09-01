@@ -1,5 +1,9 @@
 begin
 #!/usr/bin/env ruby
+require File.dirname(__FILE__) + "/../../config/application"
+require 'open-uri'
+
+Rails.application.require_environment!
 
 ENV["RAILS_ENV"] ||= "development"
 BOOKMAKER = "Betredkings"
@@ -8,11 +12,6 @@ BOOKMAKER = "Betredkings"
 SPORTS = ["AFL", "Baseball", "Cycling", "Fighting", "Football", "GaelicFootball", "Handball", "Hurling",
   "MotorRacing", "RugbyUnion", "Tennis", "Am.Football", "Basketball", "Darts", "Floorball",
   "Futsal", "Golf", "HorseRacing", "IceHockey", "RugbyLeague", "Snooker", "Volleyball"]
-
-require File.dirname(__FILE__) + "/../../config/application"
-require 'open-uri'
-
-Rails.application.require_environment!
 
 $running = true
 Signal.trap("TERM") do
@@ -26,7 +25,19 @@ while $running do
     doc = Nokogiri::HTML(open("http://aws2.betredkings.com/feed/#{style}.xml"))
 
     doc.xpath('//sport').each do |sport|
-      _sport = Sport.find_or_create_by_name sport['name']
+      if temp = Betredking.find(:first, :conditions => {:element_name => sport['name']}).present?
+        _sport_name = temp.gamebooker.element_name
+      elsif temp = Gamebooker.sports.find(:first, :conditions => ["element_name like ?", "%#{sport['name']}%"]).present?
+        Betredking.create(:table_name => 'sport', :element_name => sport['name'], :gamebooker_id => temp.id)
+        _sport_name = temp.element_name
+      else
+        Gamebooker.sports.each do |s|
+          _sport_name = s.element_name if sport['name'].include? s.element_name
+        end
+        _sport_name = sport['name'] unless _sport_name
+      end
+        
+      _sport = Sport.find_or_create_by_name _sport_name
       sport.children.each do |country|
         _country = Country.find_or_create_by_name country['name']
         country.children.each do |tournament|
