@@ -1,0 +1,5 @@
+urls:
+- 'http://aws2.betredkings.com/feed/Football.xml'
+- 'http://aws2.betredkings.com/feed/Basketball.xml'
+- 'http://aws2.betredkings.com/feed/IceHockey.xml'
+- 'http://aws2.betredkings.com/feed/Tennis.xml'
