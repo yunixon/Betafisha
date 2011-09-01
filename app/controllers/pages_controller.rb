@@ -1,7 +1,6 @@
 class PagesController < ApplicationController
 
-  before_filter :authenticate
-  before_filter :admin_user
+  before_filter :admin_user, :only => [:index, :edit, :update, :destroy]
   uses_tiny_mce
   
   def index
@@ -14,6 +13,7 @@ class PagesController < ApplicationController
   	else 
     	@page = Page.find(params[:id])
     end
+     @sports = Sport.all
   end
 
   def new
@@ -26,9 +26,9 @@ class PagesController < ApplicationController
     
     if @page.save
     	redirect_to admin_pages_manager_path, :notice => "Successfully created page."
-  #    redirect_to @page, :notice => "Successfully created page."
- #   else
-  #    render :action => 'new'
+  		#    redirect_to @page, :notice => "Successfully created page."
+ 		#   else
+  		#    render :action => 'new'
     end
   end
 
