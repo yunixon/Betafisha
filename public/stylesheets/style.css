@@ -179,7 +179,7 @@ input[type="submit"]:hover {
 }
 
 #content form {
-	margin: 10px;
+	margin: 10px 20px 10px 30px;
 	width: 400px;
 }
 
@@ -211,21 +211,16 @@ input[type="submit"]:hover {
 	text-align: center;
 }
 
-.warning {
+.warning, .errorExplanation {
 	border: 1px solid red;
 	padding: 10px;
 	background: #faa;
 	margin-top: 10px;
 	margin-left: 120px;
-	width: 320px;
 	text-align: center;
 }
 
-
-#errorExplanation {
-	background: #faa;
-}
-#errorExplanation ul li {
-	list-style: none;
+.errorExplanation ul li {
+	list-style: list;
 }
 

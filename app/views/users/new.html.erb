@@ -3,7 +3,7 @@
 <%= form_for @user do |f| %>
 
     <% if @user.errors.any? %>
-        <div id="errorExplanation">
+        <div class="errorExplanation">
           <ul>
             <% @user.errors.each do |attr, msg| %>
                 <li><%= msg %></li>

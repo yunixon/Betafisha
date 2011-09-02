@@ -45,7 +45,7 @@ en:
   sing_up_email: "E-mail"
   sing_up_password: "Password" 
   sing_up_password_confirmation: "Confirm password"
-  sing_up_submit: "Create  account"
+  sing_up_submit: "Create"
   
 
   activerecord:

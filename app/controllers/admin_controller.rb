@@ -4,6 +4,7 @@ class AdminController < ApplicationController
   before_filter :admin_user
   
   uses_tiny_mce
+  
   layout 'admin'
   
   def index 
@@ -32,10 +33,6 @@ class AdminController < ApplicationController
       @page = Page.new
       @pages = Page.all
       @pages = Page.order(:name).page params[:page]
-      #respond_to do |format|
-      #  format.html
-      #  format.js
-      #end
     end
   end
   

@@ -33,36 +33,21 @@
 
   <div id="user_entrance" class="grid_12">
     <ul>
-       <% if !signed_in? %>
-      	  <li><%= link_to t(:top_menu_sign_up), signup_path %></li>
-       <% end %>
 	   <% if signed_in? %>
 	      <li><%= link_to t(:top_menu_sign_out), signout_path, :method => :delete %></li>
-	   <% else %>
-	      <li><%= link_to t(:top_menu_sign_in), signin_path  %></li>
 	   <% end %>   
-	   <% if signed_in? %>
-      	  <li><%= link_to t(:top_menu_profile), current_user %></li>
-       <% end %>
-       
-       <li> <%= link_to "en", "#{request.path}?locale=en" %> </li>
-       <li> <%= link_to "ru", "#{request.path}?locale=ru" %> </li>
     </ul>
 
   </div>
 
-  <div id="navigation" class="grid_24">
-	<ul>
-	<% Page.joins(:page_subject).where('page_subjects.name = ?', 'nav').all.each do |page| %>
-		<li> <%= link_to page.name, page %> </li>
-	<% end%>
-	</ul>
-  </div>
 
 </header>
 
 <section class="container_24">
   	<div id="content" class="grid_24">
+		<% flash.each do |key, value| %>
+		    <div class="flash <%= key %>"> <%= value %> </div>
+		<% end %> 
 	    <%= yield %>
   	</div>
 </section>

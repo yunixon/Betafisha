@@ -1,0 +1,6 @@
+#content { border-radius: 5px; }
+
+.warning, .notice, .success, .errorExplanation { text-align: left;  margin: 5px 0px 10px 5px;} 
+
+.field { width: 400px;}
+

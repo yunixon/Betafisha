@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
   
-  layout 'admin'
+  layout 'sign'
   def new
     @title = I18n.t(:top_menu_sign_in)
   end
@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
      user = User.authenticate(params[:session][:email],
                              params[:session][:password])
     if user.nil?
-      flash.now[:warning ] = I18n.t(:flash_sing_up_failed)
+      flash.now[ :warning ] = I18n.t(:flash_sing_up_failed)
       @title = I18n.t(:top_menu_sign_in)
       render 'new'
     else
@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
       if user.admin?  
         redirect_to admin_path 
       else
-        redirect_to user
+        redirect_to root_path
       end
       
     end 
