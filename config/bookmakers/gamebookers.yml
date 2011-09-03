@@ -1,23 +1,5 @@
-active_odds:
-  'http://xml.gamebookers.com/activeodds.xml'
-
-bets_by_sport:
-- 'http://xml.gamebookers.com/sports/football.xml'
-- 'http://xml.gamebookers.com/sports/basketball.xml'
-- 'http://xml.gamebookers.com/sports/american_football.xml'
-- 'http://xml.gamebookers.com/sports/ice_hockey.xml'
-- 'http://xml.gamebookers.com/sports/baseball.xml'
-- 'http://xml.gamebookers.com/sports/cricket.xml'
-- 'http://xml.gamebookers.com/sports/athletics.xml'
-- 'http://xml.gamebookers.com/sports/boxing__and__mma.xml'
-- 'http://xml.gamebookers.com/sports/horse_racing.xml'
-- 'http://xml.gamebookers.com/sports/darts.xml'
-- 'http://xml.gamebookers.com/sports/darts.xml'
-- 'http://xml.gamebookers.com/sports/volleyball.xml'
-- 'http://xml.gamebookers.com/sports/tennis.xml'
-- 'http://xml.gamebookers.com/sports/rugby.xml'
-- 'http://xml.gamebookers.com/sports/motor_sports.xml'
-
-bets_by_sport_attr:
-- 'http://xml.gamebookers.com/sports/ice_hockey.xml_attr.xml'
+urls:
+- 'http://xml.gamebookers.com/sports/football.xml_attr.xml'
 - 'http://xml.gamebookers.com/sports/basketball.xml_attr.xml'
+- 'http://xml.gamebookers.com/sports/tennis.xml_attr.xml'
+- 'http://xml.gamebookers.com/sports/ice_hockey.xml_attr.xml'
