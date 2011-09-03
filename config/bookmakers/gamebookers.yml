@@ -3,5 +3,3 @@ urls:
 - 'http://xml.gamebookers.com/sports/basketball.xml_attr.xml'
 - 'http://xml.gamebookers.com/sports/tennis.xml_attr.xml'
 - 'http://xml.gamebookers.com/sports/ice_hockey.xml_attr.xml'
-sport:
-- sport['name']
