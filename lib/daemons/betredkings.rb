@@ -12,6 +12,7 @@ BOOKMAKER = "Betredkings"
 SPORTS = ["AFL", "Baseball", "Cycling", "Fighting", "Football", "GaelicFootball", "Handball", "Hurling",
   "MotorRacing", "RugbyUnion", "Tennis", "Am.Football", "Basketball", "Darts", "Floorball",
   "Futsal", "Golf", "HorseRacing", "IceHockey", "RugbyLeague", "Snooker", "Volleyball"]
+COMMON_SPORTS = ['Basketball', 'Football', 'IceHockey', 'Tennis']
 
 $running = true
 Signal.trap("TERM") do
@@ -21,22 +22,22 @@ end
 _bookmaker = Bookmaker.find_or_create_by_name BOOKMAKER
 
 while $running do
-    SPORTS.each do |style|
+    COMMON_SPORTS.each do |style|
     doc = Nokogiri::HTML(open("http://aws2.betredkings.com/feed/#{style}.xml"))
 
     doc.xpath('//sport').each do |sport|
-      if temp = Betredking.find(:first, :conditions => {:element_name => sport['name']}).present?
+      if temp = Betredking.find(:first, :conditions => {:element_name => sport['name']})
         _sport_name = temp.gamebooker.element_name
-      elsif temp = Gamebooker.sports.find(:first, :conditions => ["element_name like ?", "%#{sport['name']}%"]).present?
+      elsif temp = Gamebooker.sports.find(:first, :conditions => ["element_name like ?", "%#{sport['name']}%"])
         Betredking.create(:table_name => 'sport', :element_name => sport['name'], :gamebooker_id => temp.id)
         _sport_name = temp.element_name
       else
         Gamebooker.sports.each do |s|
-          _sport_name = s.element_name if sport['name'].include? s.element_name
+          _sport_name = s.element_name if sport['name'].downcase.include? s.element_name.downcase
         end
         _sport_name = sport['name'] unless _sport_name
       end
-        
+
       _sport = Sport.find_or_create_by_name _sport_name
       sport.children.each do |country|
         _country = Country.find_or_create_by_name country['name']
