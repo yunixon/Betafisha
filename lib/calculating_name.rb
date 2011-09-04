@@ -6,7 +6,7 @@ module CalculatingName
   def calculate_name(model, element, type)
     if temp = model.find(:first, :conditions => {:element_name => element})
       _name = temp.gamebooker ? temp.gamebooker.element_name : temp.element_name
-    elsif temp = Gamebooker.find(:first, :conditions => ["element_name like ?", "%#{element}%"])
+    elsif temp = Gamebooker.find(:first, :conditions => ["element_name like :e and table_name = :t", {:e => "%#{element}%", :t => type}])
       model.create(:table_name => type, :element_name => element, :gamebooker_id => temp.id)
       _name = temp.element_name
     else
