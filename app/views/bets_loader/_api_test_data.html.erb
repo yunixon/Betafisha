@@ -9,11 +9,11 @@
 	</tr>
 	<% e.bets.each do |b| %>
 	<tr>
-    	<td> <%= b.name %> - <%= b.odd %> ( <% if !b.participant.nil? %> <%= b.participant.name %> <% end %> )
+    	<td> <%= b.name %> - <%= b.odd %> ( <% if !b.participant.nil? %> <%= b.participant.name %> <% end %> ) - ( <% if !b.bet_type.nil? %> <%= b.bet_type.name %> <% end %> )
     	<td><% if b.bookmaker.name == 'Gamebookers' %> 
-    		<img src="http://inforumer.com/Top/Sports/Soccer/UEFA/England/Clubs/A/Arsenal/Fan_Pages/094032/P11.JPG"/> 
+    		<img src="./images/gb.gif" width="100" height="20"/> 
     	<% else %> 
-    		<img src="http://www.tvoibukmeker.com/sites/default/files/imagecache/bookmaker_search_logo/bookmaker_baner/small/gamebookers/gamebookerslogo.gif"/>
+    		<img src="./images/brk.gif" width="100" height="20"/>
     	<% end %> </td> 
     	</td>
     </tr>

@@ -53,6 +53,7 @@
 
   <div id="navigation" class="grid_24">
 	<ul>
+	<!-- Hide dat shit in to controller -->
 	<% Page.joins(:page_subject).where('page_subjects.name = ?', 'nav').all.each do |page| %>
 		<li> <%= link_to page.name, page %> </li>
 	<% end%>

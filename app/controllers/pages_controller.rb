@@ -3,6 +3,12 @@ class PagesController < ApplicationController
   before_filter :admin_user, :only => [:index, :edit, :update, :destroy]
   uses_tiny_mce
   
+  
+  def coefficients
+  
+  end
+  
+  
   def index
     @pages = Page.all
   end
@@ -13,7 +19,9 @@ class PagesController < ApplicationController
   	else 
     	@page = Page.find(params[:id])
     end
+    # !!!
      @sports = Sport.all
+     
   end
 
   def new
@@ -33,6 +41,7 @@ class PagesController < ApplicationController
   end
 
   def edit
+  @sports = Sport.all
     @page = Page.find(params[:id])
   end
 

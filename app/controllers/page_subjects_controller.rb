@@ -1,5 +1,7 @@
 class PageSubjectsController < ApplicationController
-
+ 
+ 
+  layout 'admin'
   def index
     @page_subjects = PageSubject.all
 
