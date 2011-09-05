@@ -1,0 +1,21 @@
+
+<% title "News Block" %>
+
+<p>
+  <strong>Title:</strong>
+  <%= @news_block.title %>
+</p>
+<p>
+  <strong>Content:</strong>
+  <%= @news_block.content %>
+</p>
+<p>
+  <strong>Image:</strong>
+  <%= @news_block.image %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_news_block_path(@news_block) %> |
+  <%= link_to "Destroy", @news_block, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", news_blocks_path %>
+</p>

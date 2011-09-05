@@ -25,7 +25,6 @@ gem 'kaminari'
 #run daemons
 gem 'daemons'
 
-
 group :development, :test do
   gem 'rails-erd'
   gem 'nifty-generators'
@@ -45,5 +44,8 @@ gem "mocha"
 # rich text editor
 gem 'tiny_mce'
 
+# image uploader
+gem 'carrierwave'
+gem 'rmagick'
 
 

@@ -12,7 +12,8 @@
 	<%= stylesheet_link_tag 'accordian' %>
 	<%= stylesheet_link_tag 'style' %>
 	<%= stylesheet_link_tag 'popup' %>
-   
+    <%= stylesheet_link_tag 'news_block' %>
+    
 	<%= javascript_include_tag :defaults %>
 	<%= javascript_include_tag 'jquery' %>
 	<%= javascript_include_tag 'textinputfilter' %>
@@ -54,9 +55,10 @@
   <div id="navigation" class="grid_24">
 	<ul>
 	<!-- Hide dat shit in to controller -->
-	<% Page.joins(:page_subject).where('page_subjects.name = ?', 'nav').all.each do |page| %>
-		<li> <%= link_to page.name, page %> </li>
-	<% end%>
+	  <li><%= link_to t(:top_menu_coefficients), coefficients_path %></li>
+      <li><%= link_to t(:top_menu_bookmakers), bookmakers_path %></li>
+      <li><%= link_to t(:top_menu_statistics), statistics_path %></li>
+      <li><%= link_to t(:top_menu_tools), tools_path %></li>
 	</ul>
   </div>
 

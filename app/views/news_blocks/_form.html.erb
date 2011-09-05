@@ -1,0 +1,22 @@
+<%= form_for @news_block, :html => {:multipart => true}  do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </p>
+  <p>
+    <%= f.label :image %><br />
+    <%= f.file_field :image %>
+  </p>
+  
+   <p>
+    <%= f.label :remote_image_url, 'or via url' %><br />
+    <%= f.text_field :remote_image_url %>
+  </p>
+  
+  <p><%= f.submit %></p>
+<% end %>

@@ -1,0 +1,30 @@
+<% title "News Blocks" %>
+<h1>Новости (<%= @counter %>) </h1>	
+<div class="news grid_14">
+	
+	<% for news_block in @news_blocks %>
+	<div class="news-block">
+		<div class="news-block-header">
+		 <%= news_block.title %>  
+	
+		</div>
+		<div class="news-block-image grid_3"><%= image_tag news_block.image_url(:thumb).to_s %> <br /></div>
+		<div class="news-block-content">
+		 
+			<%= news_block.content.first(140)  %>... (<%= link_to "Read More", news_block %>) 
+		
+		</div>	
+		<div class="news-block-timestamp"> <p> <%=  time_ago_in_words( news_block.created_at ) %> </p> </div>
+		<div class="news-block-controls">
+			
+			<ul>
+				<li><%= link_to "Edit", edit_news_block_path(news_block) %></li>
+				<li><%= link_to "Destroy", news_block, :confirm => 'Are you sure?', :method => :delete %></li>
+			</ul>
+		</div>
+		
+		<br />
+	</div>
+	<% end %>
+	<div class="create_news_block"> <%= link_to "New News Block", new_news_block_path %> </div>
+</div>

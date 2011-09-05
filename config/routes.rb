@@ -1,5 +1,9 @@
 Betafisha::Application.routes.draw do 
 
+  resources :news_blocks
+
+  resources :news_posts
+
   resources :page_subjects
 
   # user auth & reg
@@ -19,13 +23,13 @@ Betafisha::Application.routes.draw do
 
   # nav
   get "site_top_navigation/coefficients"
- # match "coefficients" =>  "site_top_navigation#coefficients", :as => :coefficients
- get "site_top_navigation/bookmakers"
- # match "bookmakers"  =>  "site_top_navigation#bookmakers", :as => :bookmakers
+  match "coefficients" =>  "site_top_navigation#coefficients", :as => :coefficients
+  get "site_top_navigation/bookmakers"
+  match "bookmakers"  =>  "site_top_navigation#bookmakers", :as => :bookmakers
   get "site_top_navigation/statistics"
- # match "statistics" =>  "site_top_navigation#statistics", :as => :statistics
+  match "statistics" =>  "site_top_navigation#statistics", :as => :statistics
   get "site_top_navigation/tools"
- # match "tools" =>  "site_top_navigation#tools", :as => :tools
+  match "tools" =>  "site_top_navigation#tools", :as => :tools
 
  # test page for feeds
   match "/api_test", :to =>  "bets_loader#api_test", :as => :api_test 
@@ -58,10 +62,10 @@ Betafisha::Application.routes.draw do
   
   # statc (flat) pages
   resources :pages
-  match '/:permalink' => "pages#show"
+  match '/info/:permalink' => "pages#show"
    
   # root page
-  root :to => "stub#stub"
+  root :to => "site_top_navigation#coefficients"
 
 
 end
