@@ -6,7 +6,6 @@ log/*.log
 log/*.pid
 /tmp/
 /test/
-/public/uploads/
 config/database.yml
 doc/
 nbproject/
