@@ -14,14 +14,14 @@ _bookmaker = Bookmaker.find_or_create_by_name BOOKMAKER
 SPORTS.each do |style|
   doc = Nokogiri::HTML(open("http://xml.gamebookers.com/sports/#{style}.xml_attr.xml"))
   doc.xpath('//sport').each do |sport|
-    Gamebooker.create(:table_name => 'sport', :element_name => sport['name'])
+    Common.create(:table_name => 'sport', :element_name => sport['name'])
     sport.children.each do |group|
       _country_name = group['name'].include?('~') ? 'World' : group['name'].split(' - ').first
       _league_name = group['name'].include?('~') ? group['name'].gsub('~','') : group['name'].split(' - ').last
-      Gamebooker.create(:table_name => 'country', :element_name => _country_name)
-      Gamebooker.create(:table_name => 'league', :element_name => _league_name)
+      Common.create(:table_name => 'country', :element_name => _country_name)
+      Common.create(:table_name => 'league', :element_name => _league_name)
       group.children.each do |event|
-        Gamebooker.create(:table_name => 'event', :element_name => event['name'])
+        Common.create(:table_name => 'event', :element_name => event['name'])
       end
     end
   end

@@ -17,8 +17,8 @@ begin
 
     require File.dirname(__FILE__) + "/../../config/application"
     require 'open-uri'
-
     Rails.application.require_environment!
+    include CalculatingName
 
     $running = true
     Signal.trap("TERM") do 
@@ -31,17 +31,24 @@ begin
       COMMON_SPORTS.each do |style|
         doc = Nokogiri::HTML(open("http://xml.gamebookers.com/sports/#{style}.xml_attr.xml"))
         doc.xpath('//sport').each do |sport|
-          _sport = Sport.find_or_create_by_name sport['name']
+          _sport_name = calculate_name(Gamebooker, sport['name'], 'sport')
+          _sport = Sport.find_or_create_by_name _sport_name
+
           sport.children.each do |group|
             _country_name = group['name'].include?('~') ? 'World' : group['name'].split(' - ').first
+            _common_country_name = calculate_name(Gamebooker, _country_name, 'country')
+            _country = Country.find_or_create_by_name _common_country_name
+
             _league_name = group['name'].include?('~') ? group['name'].gsub('~','') : group['name'].split(' - ').last
-            _country = Country.find_or_create_by_name _country_name
-            _league = League.find_or_create_by_name _league_name
+            _common_league_name = calculate_name(Gamebooker, _league_name, 'league')
+            _league = League.find_or_create_by_name _common_league_name
             _league.sport_id = _sport.id
             _league.country_id = _country.id
             _league.save
+
             group.children.each do |event|
-              _event = Event.find_or_create_by_name event['name']
+              _event_name = calculate_name(Gamebooker, event['name'], 'event')
+              _event = Event.find_or_create_by_name _event_name
               _event.league_id = _league.id
               _event.save
               event.children.each do |bettype|
