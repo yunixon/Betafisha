@@ -16,9 +16,6 @@ $j(document).ready(function() {
 		return false;
 	});
 	
-	
-	
-	
 	$j('#new_sport_item').click( function() {
 		$j.ajax({ 
 	   		type: 'POST',
@@ -38,7 +35,25 @@ $j(document).ready(function() {
 		return false;
 	});	
 	
-	$j('.priority').filter_input({regex:'[0-9]'});
+	$j('#admin_bookmaker_name').change(function() {
+  		$j.ajax({ 
+	   		type: 'GET',
+	   		data: { table_name : $j('#admin_table_name').val(), bookmaker_name : $j(this).val()  }, 
+	   		url: '/admin/bookmakers_manager', 
+	   		dataType:'script' 
+	   	});
+	});
 	
+	$j('#admin_table_name').change(function() {
+  		$j.ajax({ 
+	   		type: 'GET',
+	   		data: { table_name : $j(this).val(), bookmaker_name : $j('#admin_bookmaker_name').val() }, 
+	   		url: '/admin/bookmakers_manager', 
+	   		dataType:'script' 
+	   	});
+	});
+	
+	$j('.priority').filter_input({regex:'[0-9]'});
+
 });
 

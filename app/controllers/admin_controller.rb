@@ -7,8 +7,35 @@ class AdminController < ApplicationController
   
   layout 'admin'
   
+  include AdminHelper
+  
   def index 
   end
+  
+  def add_bookmaker_relation
+  
+  	redirect_to admin_bookmakers_manager_path, :notice => 'Test.'
+  end
+ 
+  def bookmakers_manager
+	if signed_in? && current_user.admin?
+		@gamebookers = Gamebooker.where(:table_name => 'sport')
+		@bookmakers = Bookmaker.all
+
+	  	respond_to do |format|
+        	format.html {
+        		@selected_bookmaker = 'Gamebookers'
+        	 	@values = Gamebooker.where(:table_name => 'sport')   	 	
+        	 }
+        	format.js {
+        	 	@selected_bookmaker = params[:bookmaker_name]
+        	 	@selected_table = params[:table_name]	
+        	 	@values =  get_bookmaker_values @selected_bookmaker, @selected_table
+        	 	@gamebookers = Gamebooker.where(:table_name => @selected_table)
+        	}   	
+      	end
+	end
+   end
   
   def users_manager
     if signed_in? && current_user.admin?
@@ -37,7 +64,6 @@ class AdminController < ApplicationController
   end
   
   def news_manager
-  
   end
   
   # creation and edition
@@ -100,6 +126,4 @@ class AdminController < ApplicationController
       end
     end
    end 
-  
-
 end

@@ -164,7 +164,7 @@ h2.last-child:hover a {
 	/*padding-left: 45px;*/
 	width: 16px;
 	float: right;
-	margin-top: 5px;
+	margin: 10px 25px 0px 0px;
 	background: url('../images/add.png') no-repeat  0px 0px; 
 	
 }

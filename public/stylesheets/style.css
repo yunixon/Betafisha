@@ -35,7 +35,8 @@ td, th {
 	
 }
 
-input[type="text"], input[type="password"] {
+input[type="text"], input[type="password"], select {
+	min-width: 350px;
     border: 1px solid #A0A0A0;
     color: #333333;
     font-size: 18px;

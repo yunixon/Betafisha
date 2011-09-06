@@ -1,9 +1,7 @@
 Betafisha::Application.routes.draw do 
 
   resources :news_blocks
-
   resources :news_posts
-
   resources :page_subjects
 
   # user auth & reg
@@ -51,6 +49,12 @@ Betafisha::Application.routes.draw do
   get "admin/news_manager"
   match "admin/news_manager" =>  "admin#news_manager", :as => :news_manager
   
+  get "admin/bookmakers_manager"
+  match "admin/bookmakers_manager" =>  "admin#bookmakers_manager", :as => :bookmakers_manager
+  
+  get "admin/add_bookmaker_relation"
+  match "admin/add_bookmaker_relation" =>  "admin#add_bookmaker_relation", :as => :add_bookmaker_relation
+  
   post "admin/league_edit"
   post "admin/league_new"   
   
@@ -66,6 +70,5 @@ Betafisha::Application.routes.draw do
    
   # root page
   root :to => "site_top_navigation#coefficients"
-
-
+  
 end

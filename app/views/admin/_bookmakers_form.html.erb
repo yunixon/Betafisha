@@ -1,0 +1,50 @@
+<%= form_for( :admin, :url => { :action =>"add_bookmaker_relation", :controller => "admin"} ) do |f| %>
+  <% flash.each do |key, value| %>
+	<div class="flash <%= key %>"> <%= value %> </div>
+  <% end %>
+  
+  <div class="field">
+    <b> Filters </b> <br/>
+    <%= f.label :table_name %> <br/>
+    <%= f.select :table_name, 
+    	options_for_select( ["sport", "country", "participant", "event", "bet_type", "bet"], @selected_table ), 
+    	:multiple => false
+    %>
+  </div>
+
+  <div class="field">
+  <b> Original values </b> <br/>
+  	<%= f.label :element_name %> <br/>
+    <%= f.select :element_name, 
+    	options_for_select( @gamebookers.collect { |p| [p.element_name] } ), 
+    	:multiple => false
+    %>
+  </div>
+  
+ <div class="field">
+  <b> Bookmaker </b> <br/>
+  	<%= f.label :bookmaker_name %> <br/>
+    <%= f.select :bookmaker_name, 
+    	options_for_select( @bookmakers.collect { |p| [p.name] }, @selected_bookmaker), 
+    	:multiple => false, :class => "bookmaker_select"
+    %> <br/>
+  </div>
+  
+  <% if !@values.nil? %>
+	  <div class="field">
+	  <b> <%= @selected_bookmaker %> values </b> <br/>
+	  	<%= f.label :bookmaker_values %> <br/>
+		<%= f.select :bookmaker_values, 
+			options_for_select( @values.collect { |p| [p.element_name] } ), 
+			:multiple => false, :class => "bookmaker_select"
+		%> <br/>
+	  </div>
+  <% end %>
+   
+  <div class="actions">
+    <%= f.submit "Объединить" %>
+  </div>
+  
+<% end %>
+
+<%= javascript_include_tag 'forms.js' %>
