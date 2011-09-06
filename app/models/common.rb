@@ -1,5 +1,6 @@
-class Betredking < ActiveRecord::Base
-  belongs_to :common
+class Common < ActiveRecord::Base
+  has_one :betredking
+  has_one :gamebookers
   validates :element_name, :bookmaker_element => true
   scope :leagues, where(:table_name => 'league')
   scope :sports, where(:table_name => 'sport')
