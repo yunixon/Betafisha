@@ -10,7 +10,7 @@ module CalculatingName
       model.create(:table_name => type, :element_name => element, :common_id => temp.id)
       _name = temp.element_name
     else
-      Common.all.each do |s|
+      Common.find(:all, :conditions => {:table_name => type}).each do |s|
         if element.downcase.include? s.element_name.downcase
            model.create(:table_name => type, :element_name => element, :common_id => s.id)
            _name = s.element_name
