@@ -54,7 +54,6 @@ $j(document).ready(function() {
 	});
 	
 	$j('.delete_relation').click (function() { 
-	    alert('a');
   		$j.ajax({ 
 	   		type: 'GET',
 	   		data: { table_name: $j('#admin_table_name').val(), 
