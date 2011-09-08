@@ -1,50 +1,59 @@
-<%= form_for( :admin, :url => { :action =>"add_bookmaker_relation", :controller => "admin"} ) do |f| %>
+<%= form_for( :admin, :url => { :action =>"add_bookmaker_relation", :controller => "admin"}, :html => { :class => "bookmakers_form" }) do |f| %>
   <% flash.each do |key, value| %>
 	<div class="flash <%= key %>"> <%= value %> </div>
   <% end %>
   
   <div class="field">
-    <b> Filters </b> <br/>
-    <%= f.label :table_name %> <br/>
+    <b> Фильтры: </b> <br/>
+    <%= f.label :table_name, "Таблицы:" %> <br/>
     <%= f.select :table_name, 
-    	options_for_select( ["sport", "country", "participant", "event", "bet_type", "bet"], @selected_table ), 
+    	options_for_select( ["sport", "country", "league", "participant", "event", "bet_type", "bet"], @params[:table_name] ), 
     	:multiple => false
     %>
   </div>
-
+ 
   <div class="field">
-  <b> Original values </b> <br/>
-  	<%= f.label :element_name %> <br/>
-    <%= f.select :element_name, 
-    	options_for_select( @gamebookers.collect { |p| [p.element_name] } ), 
-    	:multiple => false
-    %>
-  </div>
-  
- <div class="field">
-  <b> Bookmaker </b> <br/>
-  	<%= f.label :bookmaker_name %> <br/>
+  	<%= f.label :bookmaker_name, "Букмекеры:" %> <br/>
     <%= f.select :bookmaker_name, 
-    	options_for_select( @bookmakers.collect { |p| [p.name] }, @selected_bookmaker), 
+    	options_for_select( @bookmakers.collect { |p| [p.name] }, @params[:bookmaker_name]), 
     	:multiple => false, :class => "bookmaker_select"
     %> <br/>
   </div>
   
+
+  <div class="field">
+  <b> Выберите элементы для связи:   </b> <br/>
+  	<%= f.label :element_id, "Наши значения" %> <br/> 
+    <%= f.select :element_id, 
+    	options_for_select( @common_values.collect { |p| [ p["element_name"], p["id"] ] },  @params[:element_id]), 
+    	:multiple => false
+    %> * <%= link_to "Кликните", "#", :id => "show_relations" %> или измените значение для просмотра уже существующих связей.<br />
+   	<p>
+  </div>
+  
   <% if !@values.nil? %>
 	  <div class="field">
-	  <b> <%= @selected_bookmaker %> values </b> <br/>
-	  	<%= f.label :bookmaker_values %> <br/>
-		<%= f.select :bookmaker_values, 
-			options_for_select( @values.collect { |p| [p.element_name] } ), 
+	  <%= f.label :bookmaker_element_id, "Значения для " + @params[:bookmaker_name] %><br/>
+		<%= f.select :bookmaker_element_id, 
+			options_for_select( @values.collect { |p| [ p["element_name"], p["id"] ] } , @params[:bookmaker_element_id]), 
 			:multiple => false, :class => "bookmaker_select"
 		%> <br/>
 	  </div>
   <% end %>
-   
+  
+    <% if !@elements.nil? %>
+      <ul>
+        <b>Существующие связи:</b>  
+        <% @elements.each do |element| %>
+  	    <li><span id="has_relation">  <%= element.element_name %> </span> <%= link_to "Удалить связь", "#", :class => "delete_relation", :id => element.id   %> </li>
+  	    <% end %>
+  	  </ul>
+    <% end %>
+    
   <div class="actions">
     <%= f.submit "Объединить" %>
-  </div>
+  </div> 
   
-<% end %>
+  <% end %>
 
 <%= javascript_include_tag 'forms.js' %>

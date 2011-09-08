@@ -55,6 +55,9 @@ Betafisha::Application.routes.draw do
   get "admin/add_bookmaker_relation"
   match "admin/add_bookmaker_relation" =>  "admin#add_bookmaker_relation", :as => :add_bookmaker_relation
   
+  get "admin/delete_bookmaker_relation"
+  match "admin/delete_bookmaker_relation" =>  "admin#delete_bookmaker_relation", :as => :add_bookmaker_relation
+  
   post "admin/league_edit"
   post "admin/league_new"   
   

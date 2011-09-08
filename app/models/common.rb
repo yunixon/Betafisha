@@ -1,9 +1,8 @@
 class Common < ActiveRecord::Base
 
-  #each of bookmaker models
-  has_one :betredking
-  has_one :gamebooker
-  has_one :stan_jame
+  has_many :betredking
+  has_many :gamebooker
+  has_many :stan_jame
 
   validates :element_name, :bookmaker_element => true
 
