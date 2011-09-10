@@ -1,4 +1,8 @@
-require 'bundler/capistrano'
+$:.unshift(File.expand_path('./lib', ENV['rvm_path']))  # Add RVM's lib directory to the load path.
+require "rvm/capistrano"                                # Load RVM's capistrano plugin.
+set :rvm_ruby_string, 'ree'             # Or whatever env you want it to run in.
+set :rvm_type, :user
+
 
 set :application, "Betafisha"
 set :rails_env, "production"
@@ -15,7 +19,6 @@ set :scm, :git
 set :repository,  "git@github.com:axgusev/Betafisha.git"
 set :branch, "master"
 set :ssh_options, { :forward_agent => true }
-
 
 role :web, "rvm@188.127.226.141"
                           # Your HTTP server, Apache/etc
