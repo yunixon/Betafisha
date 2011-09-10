@@ -5,9 +5,9 @@ set :rails_env, "production"
 default_run_options[:pty] = true
 
 
-set :user, "root"
+set :user, "rvm"
 set :use_sudo, false
-set	:deploy_to, "/var/www/#{application}"
+set	:deploy_to, "/home/rvm/webapps/#{application}"
 
 set :deploy_via, :remote_cache
 
@@ -17,10 +17,10 @@ set :branch, "master"
 set :ssh_options, { :forward_agent => true }
 
 
-role :web, "root@188.127.231.233"
+role :web, "rvm@188.127.226.141"
                           # Your HTTP server, Apache/etc
-role :app, "root@188.127.231.233"                          # This may be the same as your `Web` server
-role :db,  "root@188.127.231.233", :primary => true # This is where Rails migrations will run
+role :app, "rvm@188.127.226.141"                          # This may be the same as your `Web` server
+role :db,  "rvm@188.127.226.141", :primary => true # This is where Rails migrations will run
 
 namespace :deploy do
    task :start do ; end
