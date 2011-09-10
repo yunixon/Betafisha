@@ -52,13 +52,15 @@ begin
                     case element.name
                     when 'participants' then
                       element.children.each do |participant|
-                        _team = Participant.new(:name => participant['name'], :priority => 1)
+                        _team_name = calculate_name(Betredking, participant['name'], 'participant')
+                        _team = Participant.new(:name => _team_name, :priority => 1)
                         _team.event_id = _event.id
                         _team.save
                       end
                     when 'matchodds' then
                       element.children.each do |type|
-                        _type = BetType.create :name => type['type'], :priority => 1
+                        _type_name = calculate_name(Betredking, type['type'], 'bet_type')
+                        _type = BetType.find_or_create_by_name _type_name
                         type.children.each do |odd|
                           _bet = Bet.new :priority => 1
                           _bet.name = type['scope']

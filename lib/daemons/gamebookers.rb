@@ -53,10 +53,12 @@ begin
               _event.save
               event.children.each do |bettype|
                 if AVAILABLE_BETTYPES.include?(bettype['name'])
-                  _bet_type = BetType.create :name => bettype['name'], :priority => 1
+                  _bet_type_name = calculate_name(Gamebooker, bettype['name'], 'bet_type')
+                  _bet_type = BetType.create :name => _bet_type_name, :priority => 1
                   bettype.children.each do |bet|
                     _team = Participant.new
-                    _team.name = bet['outcome_name'] == 'X' ? 'Draw' : bet['outcome_name']
+                    _team_name = calculate_name(Gamebooker, (bet['outcome_name'] == 'X' ? 'Draw' : bet['outcome_name']), 'participant')
+                    _team.name = _team_name
                     _team.event_id = _event.id
                     _team.save
                     _bet = Bet.new :priority => 1

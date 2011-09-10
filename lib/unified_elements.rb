@@ -22,6 +22,15 @@ SPORTS.each do |style|
       Common.create(:table_name => 'league', :element_name => _league_name)
       group.children.each do |event|
         Common.create(:table_name => 'event', :element_name => event['name'])
+        event.children.each do |bettype|
+          if AVAILABLE_BETTYPES.include?(bettype['name'])
+            Common.create(:table_name => 'bet_type', :element_name => bettype['name'])
+            bettype.children.each do |bet|
+              _team_name = bet['outcome_name'] == 'X' ? 'Draw' : bet['outcome_name']
+              Common.create(:table_name => 'participant', :element_name => _team_name)
+            end
+          end
+        end
       end
     end
   end

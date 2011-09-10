@@ -65,7 +65,6 @@ begin
               end
             end
           end
-          p _country
 
           _league_name = calculate_name(StanJame, event['sport'], 'league')
           _league = League.find_or_create_by_name _league_name
@@ -80,12 +79,14 @@ begin
 
           if event['name'].scan(' v ').present?
             event['name'].split(' v ').each do |participant|
-              _participant = Participant.find_or_create_by_name participant
+              _participant_name = calculate_name(StanJame, participant, 'participant')
+              _participant = Participant.find_or_create_by_name _participant_name
               _participant.event_id = _event.id
               _participant.save
 
               event.children.each do |bettype|
-                _bet_type = BetType.create :name => bettype['name']
+                _bet_type_name = calculate_name(StanJame, bettype['name'], 'bet_type')
+                _bet_type = BetType.find_or_create_by_name _bet_type_name
 
                 bettype.children.each do |bet|
                   _bet = Bet.create :name => bettype['name']
@@ -100,10 +101,12 @@ begin
             end
           else
             event.children.each do |bettype|
-              _bet_type = BetType.find_or_create_by_name bettype['name']
+              _bet_type_name = calculate_name(StanJame, bettype['name'], 'bet_type')
+              _bet_type = BetType.find_or_create_by_name _bet_type_name
 
               bettype.children.each do |bet|
-                _participant = Participant.find_or_create_by_name bet['name']
+                _participant_name = calculate_name(StanJame, bet['name'], 'participant')
+                _participant = Participant.find_or_create_by_name _participant_name
                 _participant.event_id = _event.id
                 _participant.save
                 
