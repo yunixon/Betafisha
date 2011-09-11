@@ -1,7 +1,5 @@
 class NewsBlocksController < ApplicationController
 
- 
-  
   def index
     @news_blocks = NewsBlock.all
     @counter = NewsBlock.all.count
@@ -12,6 +10,8 @@ class NewsBlocksController < ApplicationController
   @title = I18n.t(:top_menu_coefficients)
     @sports = Sport.all
     @news_block = NewsBlock.find(params[:id])
+    @comment = Comment.new
+    @comments = Comment.where( :news_block_id => @news_block.id  )
   end
 
   def new
@@ -33,8 +33,8 @@ class NewsBlocksController < ApplicationController
     @news_block = NewsBlock.find(params[:id])
     render :layout => 'admin'
   end
-  
- 
+
+
   def update
     @news_block = NewsBlock.find(params[:id])
 
@@ -50,5 +50,6 @@ class NewsBlocksController < ApplicationController
     @news_block.destroy
     redirect_to news_blocks_url, :notice => "Successfully destroyed news block."
   end
-  
+
 end
+

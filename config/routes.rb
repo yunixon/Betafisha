@@ -1,5 +1,7 @@
 Betafisha::Application.routes.draw do 
 
+  resources :comments
+
   resources :news_blocks
   resources :news_posts
   resources :page_subjects

@@ -2,6 +2,8 @@ require "digest"
 class User < ActiveRecord::Base
   paginates_per 5
   
+  has_many :comments, :dependent => :destroy
+  
   attr_accessor :password
   attr_accessible :name, :email, :password, :password_confirmation  
 

@@ -35,8 +35,8 @@ td, th {
 .actions {
  	margin-top: 15px;
 }
+
 .actions input {
-	
 	height: 30px;
 	width: 100px;
 	background: #eee;
@@ -46,13 +46,13 @@ td, th {
 	background: #ccc;
 }
 
-label { 
+label {
   font-size: 12px;
   color: #777;
 }
 
-.field { 
-  width: 400px;   
+.field {
+  width: 400px;
 }
 
 .field a {
@@ -87,23 +87,34 @@ input[type="submit"]:hover {
 	background: #B2BFCB;
 }
 
-input[type="checkbox"] { 
+input[type="checkbox"] {
   margin: 0;
   padding: 0;
 }
+textarea {
+  border-color: #ccc;
+  border-radius: 5px;
+  height: 100px;
+  width: 500px;
 
+}
+textarea:focus {
+  -moz-box-shadow: 0 0 8px #B2BFCB;
+  -webkit-box-shadow: 0 0 8px #B2BFCB;
+  border-color: #B2BFCB!important;
+}
 
 /* Logo */
 #logo {
-    margin-top: 5px;
+  margin-top: 5px;
 	min-height: 30px;
 	color: #ccc;
 }
 
 #logo a {
-    text-decoration: none;
-    color: #eee;
-    font-weight: bold;
+  text-decoration: none;
+  color: #eee;
+  font-weight: bold;
 }
 
 #user_entrance {
@@ -112,7 +123,7 @@ input[type="checkbox"] {
 
 /* Top navigation */
 #navigation ul {
- border-top: #BB0000 1px solid;
+  border-top: #BB0000 1px solid;
 }
 
 #navigation ul li {
@@ -130,7 +141,7 @@ input[type="checkbox"] {
 	list-style: none;
 	border-left: 1px solid #3E0000;
 }
-#navigation ul li:first-child { 
+#navigation ul li:first-child {
 	border-left: 1px solid #880C0C;
 }
 
@@ -144,13 +155,13 @@ input[type="checkbox"] {
 	font-size: 14px;
 	display: block;
 	height: 45px;
-} 
+}
 #navigation ul li:hover {
    	transition: background-color 0.4s ease-in-out;
    	-webkit-transition: background-color 0.4s ease-in-out;
     -moz-transition: background-color 0.4s ease-in-out;
     -o-transition: background-color 0.4s ease-in-out;
-    background: #9E0000; 
+    background: #9E0000;
 }
 /*#navigation ul li a:hover{
    	color: #eee;
@@ -164,7 +175,7 @@ input[type="checkbox"] {
 }
 
 #left_nav ul {
-	margin: 0; 
+	margin: 0;
 	padding: 0;
 }
 
@@ -230,7 +241,7 @@ font-size: 16px;
 	margin-top: 10px;
 	margin-left: 120px;
 	width: 350px;
-	text-align: center; 
+	text-align: center;
 }
 
 .success {

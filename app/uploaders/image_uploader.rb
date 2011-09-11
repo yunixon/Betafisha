@@ -16,7 +16,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   def store_dir
     "#{Rails.root}/public/uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
-  
+
   def cache_dir
   	"#{Rails.root}/public/uploads/cache"
   end
@@ -32,14 +32,14 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def scale(width, height)
   #   # do something
   # end
-  
+
   # Create different versions of your uploaded files:
   version :thumb do
      process :resize_to_limit => [100,100]
   end
-   
+
    version :orig do
-     process :resize_to_limit => [250, 250]
+     process :resize_to_limit => [350, 350]
    end
 
   # Add a white list of extensions which are allowed to be uploaded.
@@ -55,3 +55,4 @@ class ImageUploader < CarrierWave::Uploader::Base
   # end
 
 end
+

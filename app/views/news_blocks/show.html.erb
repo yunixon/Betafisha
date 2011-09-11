@@ -5,7 +5,7 @@
 </div>
 <div class="news-block-timestamp news-show-margin"> <p> <%=  time_ago_in_words( @news_block.created_at ) %> назад </p> </div>
 <div class="news-block-content news-show-margin">
-  <%= image_tag @news_block.image_url().to_s %>
+  <%= image_tag @news_block.image_url(:orig).to_s %>
 </div>
 
 <div class="news-block-content news-show-margin ">
@@ -13,11 +13,28 @@
 </div>
 
 <div class="news-block-content news-show-margin ">
-<% if signed_in? %>	
-  <% if current_user.admin? %>
-    <%= link_to "Edit", edit_news_block_path(@news_block) %> |
-    <%= link_to "Destroy", @news_block, :confirm => 'Are you sure?', :method => :delete %> |
-    <%= link_to "View All", news_blocks_path %>
+  <% if signed_in? %>
+    <% if current_user.admin? %>
+      <%= link_to "Редактировать", edit_news_block_path(@news_block) %> |
+      <%= link_to "Удалить", @news_block, :confirm => 'Are you sure?', :method => :delete %>
+    <% end %>
+
+    <div class="new_comment">
+      <%= render "comments/form" %>
+    </div>
   <% end %>
-<% end %>
+
+<div class="comments">
+  <div class="comments-header""> Коминтарии (<%= @comments.count %>):  </div>
+
+  <% @comments.each do |comment| %>
+    <div class="comment">
+      <div class="commented-by"> Комментарий от <span><%= comment.user.name %></span>  </div>
+      <div class="comment-timestamp"> <%=  time_ago_in_words( comment.created_at ) %> назад </div>
+      <div class="comment-content"> <%= comment.content %> </div>
+    </div>
+  <% end %>
 </div>
+
+</div>
+
