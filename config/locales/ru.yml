@@ -74,7 +74,7 @@ ru:
   flash_sing_up_failed: "Неверный адрес электроннной почты или пароль." 
   
   sign_in_submit: "Войти"
-  remember_me: "Запомнить"
+  remember_me: "Оставаться в системе"
     
             
   # Russian localization for Ruby on Rails 2.2+
@@ -295,20 +295,20 @@ ru:
         many:  "меньше %{count} минут"
         other: "меньше %{count} минуты"
       x_minutes:
-        one:   "%{count} минуту"
-        few:   "%{count} минуты"
-        many:  "%{count} минут"
-        other: "%{count} минуты"
+        one:   "%{count} мин."
+        few:   "%{count} мин."
+        many:  "%{count} мин."
+        other: "%{count} мин."
       about_x_hours:
-        one:   "около %{count} часа"
-        few:   "около %{count} часов"
-        many:  "около %{count} часов"
-        other: "около %{count} часа"
+        one:   "около %{count} ч."
+        few:   "около %{count} ч."
+        many:  "около %{count} ч."
+        other: "около %{count} ч."
       x_days:
-        one:   "%{count} день"
-        few:   "%{count} дня"
-        many:  "%{count} дней"
-        other: "%{count} дня"
+        one:   "%{count} д."
+        few:   "%{count} д."
+        many:  "%{count} д."
+        other: "%{count} д."
       about_x_months:
         one:   "около %{count} месяца"
         few:   "около %{count} месяцев"

@@ -27,7 +27,7 @@
     <%= f.select :element_id, 
     	options_for_select( @common_values.collect { |p| [ p["element_name"], p["id"] ] },  @params[:element_id]), 
     	:multiple => false
-    %> * <%= link_to "Кликните", "#", :id => "show_relations" %> или измените значение для просмотра уже существующих связей.<br />
+    %> <br />*   <%= link_to "Кликните", "#", :id => "show_relations" %> или измените значение для просмотра уже существующих связей.<br />
    	<p>
   </div>
   

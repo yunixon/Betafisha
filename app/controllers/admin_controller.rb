@@ -19,7 +19,7 @@ class AdminController < ApplicationController
       format.js {
         @element = bookmaker_element_by_id(@params[:bookmaker_name], @params[:bookmaker_element_id])
         if !@element.nil?
-          ActiveRecord::Base.logger.info @element.element_name
+          #ActiveRecord::Base.logger.info @element.element_name
             @element.update_attributes( :common_id => @params[:element_id] )
             @element.save :validate => false
         end 
@@ -49,7 +49,7 @@ class AdminController < ApplicationController
   end
 
   def bookmakers_manager
-    ActiveRecord::Base.logger.info params.inspect
+   # ActiveRecord::Base.logger.info params.inspect
     if signed_in? && current_user.admin?
       @params = params
       @bookmakers = Bookmaker.all
@@ -59,10 +59,9 @@ class AdminController < ApplicationController
           @params[:table_name] = 'sport'
           
           @common_values = bookmaker_values_with_parents Common.where(:table_name => @params[:table_name]), @params[:table_name]
-          @values = bookmaker_values_with_parents((bookmaker_values @params[:bookmaker_name], @params[:table_name]), @params[:table_name])
-          
+          @values = bookmaker_values_with_parents((bookmaker_values @params[:bookmaker_name], @params[:table_name]), @params[:table_name])  
           #@elements = bookmaker_elements_by_common_id(@params[:bookmaker_name], @common_values.first.id)       
-     #     ActiveRecord::Base.logger.info @values.inspect
+          #ActiveRecord::Base.logger.info @values.inspect
         }
         format.js {
           if !@params[:element_id].nil?

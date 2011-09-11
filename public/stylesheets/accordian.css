@@ -161,8 +161,8 @@ h2.last-child:hover a {
 	text-indent: -9999px;
 	display: block;
 	color: #222;
-	/*padding-left: 45px;*/
 	width: 16px;
+	height: 16px;
 	float: right;
 	margin: 10px 25px 0px 0px;
 	background: url('../images/add.png') no-repeat  0px 0px; 

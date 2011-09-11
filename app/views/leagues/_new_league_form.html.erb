@@ -9,7 +9,7 @@
     <%= f.select :sport_id, 
     	options_for_select( Sport.all.collect { |p| [p.name, p.id] }), 
     	:multiple => false, :size => 3 
-    %> <%= link_to "Добавить", "#", :class => 'new_item', :id => 'new_sport_item' %>
+    %> <%= link_to "Добавить", "/admin/sport_new", :class => 'new_item', :id => 'new_sport_item' %>
   </div>
 
   <div class="field">
@@ -17,7 +17,7 @@
     <%= f.select :country_id, 
     	options_for_select( Country.all.collect { |p| [p.name, p.id] }), 
     	:multiple => false, :size => 3 
-    %> <%= link_to "Добавить", "#", :class => 'new_item', :id => 'new_country_item'  %>
+    %> <%= link_to "Добавить", "/admin/country_new", :class => 'new_item', :id => 'new_country_item'  %>
   </div>
 
 

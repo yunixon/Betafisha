@@ -1,21 +1,23 @@
-
 <% title "News Block" %>
 
-<p>
-  <strong>Title:</strong>
+<div class="news-block-header news-show-margin news-block-show-header">
   <%= @news_block.title %>
-</p>
-<p>
-  <strong>Content:</strong>
-  <%= @news_block.content %>
-</p>
-<p>
-  <strong>Image:</strong>
-  <%= @news_block.image %>
-</p>
+</div>
+<div class="news-block-timestamp news-show-margin"> <p> <%=  time_ago_in_words( @news_block.created_at ) %> назад </p> </div>
+<div class="news-block-content news-show-margin">
+  <%= image_tag @news_block.image_url().to_s %>
+</div>
 
-<p>
-  <%= link_to "Edit", edit_news_block_path(@news_block) %> |
-  <%= link_to "Destroy", @news_block, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", news_blocks_path %>
-</p>
+<div class="news-block-content news-show-margin ">
+  <%= @news_block.content %>
+</div>
+
+<div class="news-block-content news-show-margin ">
+<% if signed_in? %>	
+  <% if current_user.admin? %>
+    <%= link_to "Edit", edit_news_block_path(@news_block) %> |
+    <%= link_to "Destroy", @news_block, :confirm => 'Are you sure?', :method => :delete %> |
+    <%= link_to "View All", news_blocks_path %>
+  <% end %>
+<% end %>
+</div>

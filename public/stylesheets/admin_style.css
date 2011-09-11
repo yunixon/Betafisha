@@ -1,3 +1,4 @@
+
 .field { margin-top: 10px; }
 .field b { font-size: 14px; }
 
@@ -6,4 +7,23 @@
 span#has_relation { color: green;  }
 span#no_relation { color: red;  }
 
-#content form {  width: 100%;}
+#show_relations { 
+  color: #F15336;   
+}
+
+input[type="text"], input[type="password"], select {
+  min-width: 350px;
+  border: 1px solid #ddd;
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 4px;
+  padding: 7px 5px 5px;
+  font-weight: bold;
+  background: #f5f5f5;
+}
+
+div#content { 
+  background: #f5f5f5 
+} 
+
+

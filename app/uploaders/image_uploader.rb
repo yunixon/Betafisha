@@ -18,7 +18,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   end
   
   def cache_dir
-  	"#{Rails.root}/public/uploads/cw_temp"
+  	"#{Rails.root}/public/uploads/cache"
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
@@ -33,11 +33,10 @@ class ImageUploader < CarrierWave::Uploader::Base
   #   # do something
   # end
   
-  
   # Create different versions of your uploaded files:
-   version :thumb do
-     process :resize_to_limit => [100, 100]
-   end
+  version :thumb do
+     process :resize_to_limit => [100,100]
+  end
    
    version :orig do
      process :resize_to_limit => [250, 250]

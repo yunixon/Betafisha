@@ -9,10 +9,15 @@
 .news-block {
 	margin-bottom: 15px;
 	border-bottom: 1px solid #ccc;
+	min-height: 100px;
 }
 
+.news-show-margin {
+  margin: 10px;
+}
+.news-block-show-header { font-size: 16px; }
 
-.news-block-header {
+.news-block-header,.news-block-header a {
 	color: #333;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -22,6 +27,7 @@
 .news-block-content {
 	margin-top: 5px;
 	font-size: 12px;	
+	min-height: 42px;
 }
 
 .news-block-controls {
@@ -38,7 +44,7 @@
 
 .news-block-controls ul li a {
 	color: #A62424;
-		float: right;
+	float: right;
 }
 
 .news-block-controls ul li a {
@@ -53,5 +59,5 @@
 	margin-top: 5px;
 	font-size: 10px;
 	color: #aaa;
-
 }
+

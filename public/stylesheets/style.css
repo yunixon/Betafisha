@@ -17,7 +17,6 @@ html, body {
 a { font: normal 13px "Helvetica", Helvetica, Arial, sans-serif; }
 
 div#content, div#left_nav {
-	/*margin-top: 5px;*/
 	margin-bottom: 5px;
  	background: #eee;
 }
@@ -25,56 +24,74 @@ div#content, div#left_nav {
 table {
 	margin-left: 10px;
 	margin-top: 10px;
-	
 }
 
 td, th {
 	border: 1px solid #ccc;
 	padding: 5px;
 	text-align: center;
-	
-}
-
-input[type="text"], input[type="password"], select {
-	min-width: 350px;
-    border: 1px solid #A0A0A0;
-    color: #333333;
-    font-size: 12px;
-    margin-bottom: 4px;
-    padding: 7px 5px 5px;
-}
-
-input[type="submit"] {
-    padding: 7px 5px 5px;
-	height: 30px;
-	color: #111;
-	background: #8DCD5B;
-	text-align: center;
-
-}
-
-input[type="checkbox"] { 
-	width: 20px;
-}
-
-
-input[type="submit"]:hover {
-	background: #64A72F;
 }
 
 .actions {
  	margin-top: 15px;
 }
 .actions input {
-
-	border: 1px solid #ccc;
+	
 	height: 30px;
 	width: 100px;
 	background: #eee;
 }
+
 .actions input:hover {
 	background: #ccc;
 }
+
+label { 
+  font-size: 12px;
+  color: #777;
+}
+
+.field { 
+  width: 400px;   
+}
+
+.field a {
+  color: #333;
+  font-size: 12px;
+}
+
+input[type="text"], input[type="password"], select {
+	min-width: 350px;
+  border: 1px solid #DDDDDD;
+  color: #333333;
+  font-size: 14px;
+  margin-bottom: 4px;
+  padding: 7px 5px 5px;
+  font-weight: bold;
+  background: #f5f5f5;
+}
+
+input[type="submit"] {
+	height: 30px;
+	color: #111;
+	background: #D7DFE6;
+	text-align: center;
+	border: none;
+	color: #708296;
+	font-weight: bold;
+	border-radius: 3px;
+	border: 1px solid #BFCAD6;
+}
+
+input[type="submit"]:hover {
+	background: #B2BFCB;
+}
+
+input[type="checkbox"] { 
+  margin: 0;
+  padding: 0;
+}
+
 
 /* Logo */
 #logo {
@@ -99,8 +116,12 @@ input[type="submit"]:hover {
 }
 
 #navigation ul li {
+ 	transition: background-color 0.4s ease-in-out;
+ 	-webkit-transition: background-color 0.4s ease-in-out;
+  -moz-transition: background-color 0.4s ease-in-out;
+  -o-transition: background-color 0.4s ease-in-out;
 	width:239px;
-	background: #880C0C;
+	background: #780000;
 	margin: 0;
 	padding: 0;
 	height: 70px;
@@ -114,19 +135,27 @@ input[type="submit"]:hover {
 }
 
 #navigation ul li a{
-	color: #3E0303;
+	color: /*#3E0303*/ #ddd;
 	text-decoration: none;
 	text-transform: uppercase;
 	font-weight: 800;
 	text-shadow: #CE2828 1px 1px 1px;
-	margin-top: 25px;
+	padding-top: 25px;
 	font-size: 14px;
 	display: block;
+	height: 45px;
 } 
-
-#navigation ul li a:hover{
-   	color: #eee;
+#navigation ul li:hover {
+   	transition: background-color 0.4s ease-in-out;
+   	-webkit-transition: background-color 0.4s ease-in-out;
+    -moz-transition: background-color 0.4s ease-in-out;
+    -o-transition: background-color 0.4s ease-in-out;
+    background: #9E0000; 
 }
+/*#navigation ul li a:hover{
+   	color: #eee;
+
+}*/
 
 /* Left navigation */
 #left_nav  {
@@ -175,8 +204,9 @@ input[type="submit"]:hover {
 
 }
 #content h1 {
+font-size: 16px;
 	margin-top: 10px;
-	margin-left: 10px;
+	margin-left: 30px;
 }
 
 #content form {
@@ -199,7 +229,7 @@ input[type="submit"]:hover {
 	background: #ffa;
 	margin-top: 10px;
 	margin-left: 120px;
-	width: 320px;
+	width: 350px;
 	text-align: center; 
 }
 
@@ -208,7 +238,7 @@ input[type="submit"]:hover {
 	padding: 10px;
 	background: #cec;
 	margin: 10px 0 10px 100px;
-	width: 320px;
+	width: 350px;
 	text-align: center;
 }
 
@@ -219,6 +249,7 @@ input[type="submit"]:hover {
 	margin-top: 10px;
 	margin-left: 120px;
 	text-align: center;
+
 }
 
 .errorExplanation ul li {

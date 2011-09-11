@@ -5,7 +5,6 @@ ul.tabs {
 	list-style: none;
 	height: 32px; 
 	width: 100%;
-	
 }
 
 ul.tabs:first-child {
@@ -29,6 +28,7 @@ ul.tabs li {
 ul.tabs li{
 	border-top-right-radius: 7px;
 	border-top-left-radius: 7px;
+	background:  #F5F5F5;
 }
 
 ul.tabs li a {
@@ -39,18 +39,18 @@ ul.tabs li a {
 	padding: 5px 25px;
 	outline: none;
 	display: block;
-
 	border-top-right-radius: 7px;
 	border-top-left-radius: 7px;
 }
 
 
 ul.tabs li.active {
-    font-weight: bold;
+  font-weight: bold;
 	border-top: 1px solid #ccc;
 	border-right: 1px solid #ccc;
 	border-left: 1px solid #ccc;
 	border-bottom: none;
+	background:  #eee;
 }
 
 

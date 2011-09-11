@@ -1,22 +1,22 @@
 <%= form_for @news_block, :html => {:multipart => true}  do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :title %><br />
+    <%= f.label :title, "Заголовок" %><br />
     <%= f.text_field :title %>
   </p>
   <p>
-    <%= f.label :content %><br />
+    <%= f.label :content, "Текст новости" %><br />
     <%= f.text_area :content %>
   </p>
   <p>
-    <%= f.label :image %><br />
+    <%= f.label :image, "Изображение с компьютера" %><br />
     <%= f.file_field :image %>
   </p>
   
    <p>
-    <%= f.label :remote_image_url, 'or via url' %><br />
+    <%= f.label :remote_image_url, 'или вставьте url адрес изображения' %><br />
     <%= f.text_field :remote_image_url %>
   </p>
   
-  <p><%= f.submit %></p>
+  <p><%= f.submit "Создать" %></p>
 <% end %>
