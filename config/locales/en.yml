@@ -1,52 +1,52 @@
 
 en:
-  
+
   top_menu_coefficients: "Coefficients"
-  
+
   top_menu_home: "Home"
   top_menu_upcoming: "Upcoming"
   top_menu_live_bets: "Live bets"
   top_menu_dropping: "Dropping"
   top_menu_filters: "Filters"
-           
-    
+
+
   top_menu_bookmakers: "Bookmakers"
   top_menu_statistics: "Statistics"
-  
+
   top_menu_tools: "Tools"
-  
+
   top_menu_calculator: "Calculator"
   top_menu_dutching: "Dutching"
   top_menu_hutching: "Hutching"
   top_menu_hedging: "Hedging"
-  
-  
-  
+
+
+
   top_menu_sign_up: "Sing up"
   top_menu_sign_in: "Sing in"
   top_menu_sign_out: "Sing out"
   top_menu_profile: "Profile"
-  
+
   left_nav_search: "Search"
   left_nav_my_leagues: "My leagues"
   left_nav_my_sport: "Sport"
-  
+
   right_nav_my_coupon: "My coupon"
-  
-  
+
+
   footer_copyrights: "Copyright © 2011 BetAfisha.com"
   footer_about: "About"
   footer_contacts: "Contacts"
-  footer_faq: "FAQ"  
+  footer_faq: "FAQ"
 
 
-  
+
   sing_up_username: "Username"
   sing_up_email: "E-mail"
-  sing_up_password: "Password" 
+  sing_up_password: "Password"
   sing_up_password_confirmation: "Confirm password"
   sing_up_submit: "Create"
-  
+
 
   activerecord:
     errors:
@@ -64,21 +64,14 @@ en:
               too_short: "Password must be from 2 to 40 characters long. No whitespace."
               confirmation: "Need a new password confirmation."
               blank: ""
-                   
-  
+
+
   flash_sing_up_success: "Welcome to your profile!"
-  flash_sing_up_failed: "Invalid email or password." 
-  
-  
+  flash_sing_up_failed: "Invalid email or password."
+
+
   sign_in_submit: "Sing in"
   remember_me: "Remember me"
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+  ago: " ago"
+

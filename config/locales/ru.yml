@@ -453,4 +453,5 @@ ru:
       words_connector: ", "
       two_words_connector: " и "
       last_word_connector: " и "
+  ago: " назад"
 

@@ -14,7 +14,7 @@
 			<%= news_block.content.first(140)%>...
 
 		</div>
-		<div class="news-block-timestamp"> <p> <%=  time_ago_in_words( news_block.created_at ) %> назад </p> </div>
+		<div class="news-block-timestamp"> <p> <%= news_block.created_at > 1.days.ago ? time_ago_in_words( news_block.created_at  ) + t(:ago) : l( news_block.created_at, :format => :long )%> </p> </div>
 
 			<% if signed_in? %>
 	      <% if current_user.admin? %>

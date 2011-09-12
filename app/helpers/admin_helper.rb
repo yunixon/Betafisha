@@ -26,9 +26,9 @@ module AdminHelper
                  bookmaker_values #.collect { |x| x.element_name   }
                when "event" then
                  bookmaker_values #.collect   { |x| x.element_name   }
-            when "bet_type" then
+               when "bet_type" then
                  bookmaker_values #.collect   { |x| x.element_name   }
-              when "participant" then
+               when "participant" then
                  bookmaker_values #.collect   { |x| x.element_name   }
                else
                  "empty"
