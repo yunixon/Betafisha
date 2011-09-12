@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  
+
   layout 'sign'
   def new
     @title = I18n.t(:top_menu_sign_in)
@@ -14,13 +14,12 @@ class SessionsController < ApplicationController
       render 'new'
     else
       sign_in user
-      if user.admin?  
-        redirect_to admin_path 
+      if user.admin?
+        redirect_to admin_path
       else
         redirect_to root_path
       end
-      
-    end 
+    end
   end
 
   def destroy
@@ -29,3 +28,4 @@ class SessionsController < ApplicationController
   end
 
 end
+

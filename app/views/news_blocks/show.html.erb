@@ -3,13 +3,13 @@
 <div class="news-block-header news-show-margin news-block-show-header">
   <%= @news_block.title %>
 </div>
-<div class="news-block-timestamp news-show-margin"> <p> <%= @news_block.created_at > 1.days.ago ? time_ago_in_words( @news_block.created_at  ) + t(:ago) : l( @news_block.created_at, :format => :long )%> </p> </div>
+<div class="news-block-timestamp news-show-margin"> <p>   <%= @news_block.created_at > 1.days.ago ? image_tag("http://www.awwwards.com/images/ico_pending.png") + " " + time_ago_in_words( @news_block.created_at ) + t( :ago ) : l( @news_block.created_at, :format => :long )%> </p> </div>
 <div class="news-block-content news-show-margin">
-  <%= image_tag @news_block.image_url(:orig).to_s %>
+  <%= image_tag @news_block.image_url( :orig ).to_s %>
 </div>
 
 <div class="news-block-content news-show-margin ">
-  <%= @news_block.content %>
+  <%= raw ( @news_block.content ) %>
 </div>
 
 <div class="news-block-content news-show-margin ">
@@ -30,7 +30,7 @@
   <% @comments.each do |comment| %>
     <div class="comment">
       <div class="commented-by"> Комментарий от <span><%= comment.user.name %></span>  </div>
-      <div class="comment-timestamp"> <%= comment.created_at > 1.days.ago ? time_ago_in_words( comment.created_at  ) + t(:ago) : l( comment.created_at, :format => :long )%> </div>
+      <div class="comment-timestamp"> <%= comment.created_at > 1.days.ago ? image_tag("http://www.awwwards.com/images/ico_pending.png") + " " + time_ago_in_words( comment.created_at  ) + t(:ago) : l( comment.created_at, :format => :long )%> </div>
       <div class="comment-content"> <%= comment.content %> </div>
     </div>
   <% end %>

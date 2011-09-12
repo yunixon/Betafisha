@@ -75,3 +75,21 @@
 
 #content form { margin: 10px 5px 10px 5px; padding: 0; }
 
+.create_news_block a {
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  background: #005318;
+  color: white;
+  width: 120px;
+  padding: 10px;
+  height: 15px;
+  border-radius: 5px;
+  text-decoration: none;
+
+}
+.create_news_block a:hover {
+  background: #00681E;
+}
+

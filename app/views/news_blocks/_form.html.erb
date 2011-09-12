@@ -6,17 +6,18 @@
   </p>
   <p>
     <%= f.label :content, "Текст новости" %><br />
-    <%= f.text_area :content %>
+    <%= f.text_area :content, :class => "mceEditor" %>
   </p>
   <p>
     <%= f.label :image, "Изображение с компьютера" %><br />
     <%= f.file_field :image %>
   </p>
-  
+
    <p>
     <%= f.label :remote_image_url, 'или вставьте url адрес изображения' %><br />
     <%= f.text_field :remote_image_url %>
   </p>
-  
+
   <p><%= f.submit "Создать" %></p>
 <% end %>
+

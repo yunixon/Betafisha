@@ -33,12 +33,16 @@
   </div>
 
   <div id="user_entrance" class="grid_12">
+    <ul id="locale_switch">
+       <li id="locale_en"> <%= link_to "en", "#{request.path}?locale=en" %> </li>
+       <li id="locale_ru"> <%= link_to "ru", "#{request.path}?locale=ru" %> </li>
+    </ul>
     <ul>
        <% if !signed_in? %>
       	  <li><%= link_to t(:top_menu_sign_up), signup_path %></li>
        <% end %>
 	   <% if signed_in? %>
-	      <li><%= link_to t(:top_menu_sign_out), signout_path, :method => :delete %></li>
+	      <li><%= link_to t(:top_menu_sign_out), signout_path, :method => :delete %> (<%= image_tag("../images/sign_in_icon.png") + " " +  current_user.name %>)</li>
 	   <% else %>
 
 	      <li><%= link_to t(:top_menu_sign_in), "#?w=400", :class => "poplight", :rel =>"popup_name"  %></li>
@@ -46,11 +50,7 @@
 	   <% if signed_in? %>
       	  <li><%= link_to t(:top_menu_profile), current_user %></li>
        <% end %>
-
-       <li> <%= link_to "en", "#{request.path}?locale=en" %> </li>
-       <li> <%= link_to "ru", "#{request.path}?locale=ru" %> </li>
     </ul>
-
   </div>
 
   <div id="navigation" class="grid_24">

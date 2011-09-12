@@ -1,12 +1,10 @@
 class PageSubjectsController < ApplicationController
- 
- 
   layout 'admin'
   def index
     @page_subjects = PageSubject.all
 
     respond_to do |format|
-      format.html 
+      format.html
     end
   end
 
@@ -63,3 +61,4 @@ class PageSubjectsController < ApplicationController
     end
   end
 end
+

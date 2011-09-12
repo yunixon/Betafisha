@@ -1,28 +1,25 @@
-<% if signed_in? %>	
+<% if signed_in? %>
 	<% if current_user.admin? %>
-	 
+
 	<ul class="tabs">
 		<li class="active"><%= link_to "Приложение", admin_path , :class => 'admin_profile_tab' %></li>
-		<li><%= link_to "Пользователи", admin_users_manager_path, :class => 'users_manager_tab' %></li> 
-		<li><%= link_to "Лиги", admin_leagues_manager_path, :class => 'sports_manager_tab' %></li>  
-		<li><%= link_to "Страницы", admin_pages_manager_path, :class => 'pages_manager_tab' %></li>  
+		<li><%= link_to "Пользователи", admin_users_manager_path, :class => 'users_manager_tab' %></li>
+		<li><%= link_to "Лиги", admin_leagues_manager_path, :class => 'leagues_manager_tab' %></li>
+		<li><%= link_to "Страницы", admin_pages_manager_path, :class => 'pages_manager_tab' %></li>
 		<li><%= link_to "Новости", admin_news_manager_path, :class => 'news_manager_tab' %></li>
-		<li><%= link_to "Букмекеры", admin_bookmakers_manager_path, :class => 'bookmakers_manager_tab' %></li>   
+		<li><%= link_to "Букмекеры", admin_bookmakers_manager_path, :class => 'bookmakers_manager_tab' %></li>
 	</ul>
 
 	<div class="tab_container">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-		nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in 
-		reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-		Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+		Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+		nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+		reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+		Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
 		officia deserunt mollit anim id est laborum.
-	</div>	
-		
+	</div>
+
 	<% end %>
 <% end %>
 
-
-
-	

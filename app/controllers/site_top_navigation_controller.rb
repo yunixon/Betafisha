@@ -1,8 +1,6 @@
-# coding: utf-8
-
-include SportsHelper
-
 class SiteTopNavigationController < ApplicationController
+
+  include SportsHelper
 
   def coefficients
      #@title = I18n.t(:top_menu_coefficients)
