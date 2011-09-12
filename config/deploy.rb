@@ -36,7 +36,9 @@ namespace :deploy do
   end
 
   task :symlink_shared do
-    puts '-------------------------------------------------'
+    puts '---------------------------------------------------------------------'
+    puts 'symlink_shared: #{shared_path}/uploads #{release_path}/public/uploads'
+    puts '---------------------------------------------------------------------'
     run "ln -nfs #{shared_path}/uploads #{release_path}/public/uploads"
   end
 

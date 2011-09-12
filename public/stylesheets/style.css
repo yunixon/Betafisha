@@ -1,20 +1,21 @@
 /* temp */
 #debug {
-	color: #eee;
+  color: #eee;
 }
 
 /* HTML5 */
 section, header, footer, aside, article, nav {
-    display: block;
+  display: block;
 }
 
 /* Basic settings */
 html, body {
-  font: normal 13px "Helvetica", Helvetica, Arial, sans-serif;
+  font: normal 12px  Helvetica, Arial, Freesans, sans-serif;
   background: #aaa;
 }
 
-a { font: normal 13px "Helvetica", Helvetica, Arial, sans-serif; }
+a { font: normal 12px  Helvetica, Arial, Freesans, sans-serif; }
+
 
 div#content, div#left_nav {
 	margin-bottom: 5px;
@@ -96,6 +97,7 @@ textarea {
   border-radius: 5px;
   height: 100px;
   width: 500px;
+  border: 1px solid #ccc;
 
 }
 textarea:focus {
@@ -148,7 +150,7 @@ textarea:focus {
 #navigation ul li a{
 	color: /*#3E0303*/ #ddd;
 	text-decoration: none;
-	text-transform: uppercase;
+	/*text-transform: uppercase;*/
 	font-weight: 800;
 	text-shadow: #CE2828 1px 1px 1px;
 	padding-top: 25px;

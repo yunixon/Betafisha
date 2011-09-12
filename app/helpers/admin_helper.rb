@@ -26,6 +26,10 @@ module AdminHelper
                  bookmaker_values #.collect { |x| x.element_name   }
                when "event" then
                  bookmaker_values #.collect   { |x| x.element_name   }
+            when "bet_type" then
+                 bookmaker_values #.collect   { |x| x.element_name   }
+              when "participant" then
+                 bookmaker_values #.collect   { |x| x.element_name   }
                else
                  "empty"
              end
@@ -43,7 +47,7 @@ module AdminHelper
                  "empty"
              end
   end
-  
+
   def bookmaker_element_by_id ( bookmaker_name, element_id )
     value = case bookmaker_name
                when "Gamebookers" then
@@ -56,7 +60,7 @@ module AdminHelper
                  "empty"
              end
   end
-  
+
   def find_sport_name_by_common_id (id)
     if !Common.find(id).nil?
       if !League.find_by_name(Common.find(id).element_name).nil?
@@ -65,5 +69,6 @@ module AdminHelper
     end
     return sport ||= ""
   end
-  
+
 end
+

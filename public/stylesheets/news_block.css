@@ -15,7 +15,8 @@
 .news-show-margin {
   margin: 10px;
 }
-.news-block-show-header { font-size: 16px; }
+
+.news-block-show-header { font-size: 14px; }
 
 .news-block-header, .news-block-header a {
 	color: #333;
