@@ -25,9 +25,23 @@ role :app, "rvm@188.127.226.141" # This may be the same as your `Web` server
 role :db,  "rvm@188.127.226.141", :primary => true # This is where Rails migrations will run
 
 namespace :deploy do
-   task :start do ; end
-   task :stop do ; end
-   task :restart, :roles => :app, :except => { :no_release => true } do
-     run "touch #{File.join(current_path,'tmp','restart.txt')}"
-   end
+  task :start do ; end
+  task :stop do ; end
+  task :restart, :roles => :app, :except => { :no_release => true } do
+   run "touch #{File.join(current_path,'tmp','restart.txt')}"
+  end
+
+  task :upload_settings do
+    run "mkdir -p #{shared_path}/uploads/"
+  end
+
+  task :symlink_shared do
+    puts '-------------------------------------------------'
+    run "ln -nfs #{shared_path}/uploads #{release_path}/public/uploads"
+  end
+
 end
+
+after 'deploy:setup', 'deploy:upload_settings'
+after 'deploy:update_code', 'deploy:symlink_shared'
+
