@@ -27,7 +27,7 @@
 }
 img.btn_close {
 	float: right;
-	margin: -55px -55px 0 0;
+	margin: -10px -10px  0 0;
 }
 /*--Making IE6 Understand Fixed Positioning--*/
 *html #fade {
@@ -36,3 +36,4 @@ img.btn_close {
 *html .popup_block {
 	position: absolute;
 }
+
