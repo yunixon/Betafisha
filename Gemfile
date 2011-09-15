@@ -9,7 +9,7 @@ gem 'bundler'
 gem 'annotate'
 
 # parser
-gem 'nokogiri'
+gem 'nokogiri', "1.4.2"
 
 # soap 
 gem 'savon' 
@@ -49,3 +49,10 @@ gem 'carrierwave'
 gem 'rmagick'
 
 
+<<<<<<< HEAD
+=======
+#social authenticate
+#gem 'omniauth'
+gem 'omniauth'
+
+>>>>>>> parent of 960cd4d... deleted omni
