@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 # core
 gem 'rails', '3.0.7'
 gem 'rake'
-gem 'bundler' 
+gem 'bundler'
 
 # annotate model.rb files
 gem 'annotate'
@@ -11,8 +11,8 @@ gem 'annotate'
 # parser
 gem 'nokogiri'
 
-# soap 
-gem 'savon' 
+# soap
+gem 'savon'
 
 # db
 gem 'mysql2', '0.2.7'
@@ -47,5 +47,4 @@ gem 'tiny_mce'
 # image uploader
 gem 'carrierwave'
 gem 'rmagick'
-
 
