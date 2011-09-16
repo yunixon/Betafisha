@@ -1,8 +1,4 @@
-begin
-  #!/usr/bin/env ruby
-
-  # You might want to change this
-  ENV["RAILS_ENV"] ||= "development"
+class StanjamesParser
   BOOKMAKER = "StanJames"
   URL = 'http://xml.stanjames.com/'
   SPORTS = {
@@ -23,19 +19,8 @@ begin
       'football-turkey', 'football-uk-cups', 'football-unibond-league', 'football-worldcup', 'FootballUkpromotions' ]
     }
 
-  require File.dirname(__FILE__) + "/../../config/application"
-  require 'open-uri'
-  Rails.application.require_environment!
-  include CalculatingName
-
-  $running = true
-  Signal.trap("TERM") do 
-    $running = false
-  end
-
-  _bookmaker = Bookmaker.find_or_create_by_name BOOKMAKER
-
-  while $running do
+  def self.parse!
+    _bookmaker = Bookmaker.find_or_create_by_name BOOKMAKER
     SPORTS.each do |pair|
       pair.last.each do |url|
         doc = Nokogiri::HTML(open(URL + url + '.XML'))
