@@ -44,7 +44,7 @@ class StanjamesParser
                   _country_name = calculate_name(StanJame, c.element_name, 'country')
                   _country = Country.find_or_create_by_name _country_name
                 else
-                  _country_name = calculate_name(StanJame, 'World', 'country')
+                  _country_name = calculate_name(StanJame, bettype['name'], 'country')
                   _country = Country.find_or_create_by_name _country_name
                 end
               end
