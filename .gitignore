@@ -11,7 +11,7 @@ doc/
 nbproject/
 *.swp
 .pydevproject
-.DS_Store 
+.DS_Store
 nbproject/
 .project
 .settings/

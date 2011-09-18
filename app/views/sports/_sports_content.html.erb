@@ -1,20 +1,44 @@
 <% @sports.each do |sport| %>
 
-  <% if %>
-  <h2 class="acc_trigger" name = "<%=sport.name %>" id="sport_<%=sport.id %>">
-	  <%= link_to sport.name, "#" %>
-	  <% if signed_in? && current_user.admin? %>
-	    <%= link_to "Удалить", sport, :confirm => "Вы уверены?",  :title => "Удалить #{sport.name}", :class => 'delete_sport_item' %>
-	    <%= link_to "Редактировать", sport, :class => 'edit_sport_item', :id => sport.id %>
-	  <% end %>
-  </h2>
-  <% end %>
+<h2 class="acc_trigger" name = "<%=sport.name %>" id="sport_<%=sport.id %>">
+	<%= link_to sport.name, "#" %>
+	<% if signed_in? && current_user.admin? %>
+	<%= link_to "Удалить", sport, :confirm => "Вы уверены?",  :title => "Удалить #{sport.name}", :class => 'delete_sport_item' %>
+	<%= link_to "Редактировать", sport, :class => 'edit_sport_item', :id => sport.id %>	<% end %>  </h2>
 
-  <div class="acc_container">
-	  <div class="block">
+<div class="acc_container">
+	<div class="block">
+			<ul class="countries">
+				<% sport.leagues.find( :all,
+									  :select     => "country_id, COUNT(country_id) AS duplicate_count",
+									  :conditions => "country_id IS NOT NULL",
+									  :group      => "country_id HAVING duplicate_count >= 1").each do |countries|   %>
 
-      </div>
-  </div>
+				  <li class="country" id='sport_<%= sport.id %>_country_<%= countries.country.id %>'>
+				  	  <%= link_to countries.country.name , "#", :id => countries.country.id  %>
+					  <% if signed_in? && current_user.admin? %>
+						<%= link_to "Удалить",  countries.country, :class => 'delete_country_item' %>
+						<%= link_to "Редактировать", countries.country , :class => 'edit_country_item', :id => countries.country.id %>
+					  <% end %>
+				  </li>
+
+				  <ul class="leagues">
+					<% League.where(:sport_id => sport.id, :country_id => countries.country.id ).each do |league| %>
+						<li class='league' id="league_<%= league.id %>"   >
+							<%= link_to league.name, "#" %>
+
+							<% if signed_in? && current_user.admin? %>
+								<%= link_to "Удалить", league, :confirm => "Вы уверены?", :title => "Удалить #{league.name}", :class => 'delete_league_item' %>
+								<%= link_to "Редактировать", league , :class => 'edit_league_item', :id => league.id %>
+							<% end %>
+
+						</li>
+					<% end %>
+				  </ul>
+				 <% end %>
+			</ul>
+    </div>
+</div>
 
 <% end %>
 <%= javascript_include_tag 'accordian.js' %>
