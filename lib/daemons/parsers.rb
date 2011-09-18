@@ -71,6 +71,18 @@ begin
       @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
     end
 
+    begin
+      @log.write "Nordicbet parsing started #{Time.now}\n"
+      StanjamesParser.parse!
+      @log.write "Nordicbet parsing finished #{Time.now}\n"
+    rescue Exception => e
+      @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+      @log.write "Nordicbet error:\n"
+      @log.write e
+      @log.write "\n"
+      @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+    end
+
     @log.write "========================================================================\n"
 
     #One time per day
