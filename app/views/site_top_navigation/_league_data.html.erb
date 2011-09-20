@@ -1,0 +1,18 @@
+<div class="betting-odds">
+
+  <div class="betting-odds-header">
+    <%= @league.name %> Betting Odds
+  </div>
+
+  <div class="bettings-odds-bookmakers">
+    <%= link_to "Outright", "#" %> <%= link_to "1x2", "#" %>
+  </div>
+
+  <div class="bettings-odds-data">
+    <% @league.events.each do |e| %>
+        <div class="event"> <%= link_to e.name, "#" %> </div>
+    <% end %>
+  </div>
+
+</div>
+

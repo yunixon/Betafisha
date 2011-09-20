@@ -1,10 +1,22 @@
+<div class="header">Виды спорта</div>
+
 <% @sports.each do |sport| %>
 
 <h2 class="acc_trigger" name = "<%=sport.name %>" id="sport_<%=sport.id %>">
-	<%= link_to sport.name, "#" %>
+
+  <% if sport.name == 'Basketball'%>
+   <%= image_tag "http://www.nordicbet.com/photos/50000001308.png" %>
+  <% elsif sport.name == 'Football' %>
+   <%= image_tag "http://www.nordicbet.com/photos/50000001417.png" %>
+  <% elsif sport.name == 'Ice Hockey' %>
+   <%= image_tag "http://www.nordicbet.com/photos/50000000885.png" %>
+  <% elsif sport.name == 'Tennis' %>
+    <%= image_tag "http://www.nordicbet.com/photos/50000001298.png" %>
+  <% end %> <%= link_to sport.name, "#" %>
+
 	<% if signed_in? && current_user.admin? %>
-	<%= link_to "Удалить", sport, :confirm => "Вы уверены?",  :title => "Удалить #{sport.name}", :class => 'delete_sport_item' %>
-	<%= link_to "Редактировать", sport, :class => 'edit_sport_item', :id => sport.id %>	<% end %>  </h2>
+	  <%= link_to "Удалить", sport, :confirm => "Вы уверены?",  :title => "Удалить #{sport.name}", :class => 'delete_sport_item' %>
+	  <%= link_to "Редактировать", sport, :class => 'edit_sport_item', :id => sport.id %>	<% end %>  </h2>
 
 <div class="acc_container">
 	<div class="block">
@@ -24,7 +36,7 @@
 
 				  <ul class="leagues">
 					<% League.where(:sport_id => sport.id, :country_id => countries.country.id ).each do |league| %>
-						<li class='league' id="league_<%= league.id %>"   >
+						<li class='league' id="league_<%= league.id %>">
 							<%= link_to league.name, "#" %>
 
 							<% if signed_in? && current_user.admin? %>

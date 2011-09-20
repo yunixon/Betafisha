@@ -22,10 +22,12 @@ h2.acc_trigger a {
 	text-decoration: none;
 	display: block;
 	padding: 0;
-
-	margin: 7px 0 3px 10px;
+  font-weight: bold;
+	margin: 7px 0 3px 5px;
 	float:left;
 }
+
+h2.acc_trigger img { float: left; margin: 5px 0 0 5px; }
 
 h2.acc_trigger a.delete_sport_item {
 	width: 16px;
