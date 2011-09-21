@@ -27,7 +27,7 @@ begin
     @log.write "========================================================================\n"
     @log.write "Clearing DB started\n"
     Sport.delete_all
-    Bookmaker.delete_all
+   # Bookmaker.delete_all
     Event.delete_all
     League.delete_all
     Country.delete_all
@@ -73,7 +73,7 @@ begin
 
     begin
       @log.write "Nordicbet parsing started #{Time.now}\n"
-      StanjamesParser.parse!
+      NordicbetsParser.parse!
       @log.write "Nordicbet parsing finished #{Time.now}\n"
     rescue Exception => e
       @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
