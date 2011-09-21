@@ -1,5 +1,7 @@
 Betafisha::Application.routes.draw do 
 
+  resources :coupons
+
   resources :comments
 
   resources :news_blocks

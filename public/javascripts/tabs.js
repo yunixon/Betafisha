@@ -1,4 +1,4 @@
-jQuery.ajaxSetup({ 
+jQuery.ajaxSetup({
   'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
 })
 
@@ -7,14 +7,14 @@ var $j = jQuery.noConflict();
 $j(document).ready(function() {
 
 	$j('.add_league_item').click( function() {
-		$j.ajax({ 
+		$j.ajax({
 	   		type: 'POST',
 	   		url: "league_new",
-	   		dataType:'script' 
+	   		dataType:'script'
 	   	});
 		return false;
 	});
-		
+
 
 	//When page loads...
 	/*$j(".tab_content").hide(); //Hide all content
@@ -32,11 +32,11 @@ $j(document).ready(function() {
 		$j(activeTab).fadeIn(); //Fade in the active ID content
 		return false;
 	});*/
-	
 
-	
+
+
 	/*$j('.pagination a').live('click', function() {
-		
+
 		$j.getScript(this.href);//, null, null, 'script');
 		return false;
 	});
@@ -53,11 +53,9 @@ $j(document).ready(function() {
 	   //return false;
 	  // }
 	//})
-	
 
 
-	
+
+
 });
-	
-	
-	
+

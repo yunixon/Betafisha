@@ -48,7 +48,6 @@ $j(document).ready(function() {
 	});
 
 	$j("a.edit_league_item").click( function() {
-	      alert('a');
         $j.ajax({
 	   		type: 'POST',
 	   		url: "league_edit",
@@ -62,13 +61,16 @@ $j(document).ready(function() {
 		if( $j(this).next().is(':hidden') ) {
 			$j('.acc_trigger').removeClass('active').next().hide();
 			$j(this).toggleClass('active').next().show();
+		} else {
+		  $j('.acc_trigger').removeClass('active');
+		  $j('.acc_container').hide();
+
 		}
 
 		return false;
 	});
 
 	$j('.countries li.country a').click( function() {
-
 		if( $j(this).parent().next().is(':hidden') ) {
 			$j('.countries li.country a').parent().removeClass('active').next().hide();
 			$j(this).parent().toggleClass('active').next().show();
@@ -80,7 +82,7 @@ $j(document).ready(function() {
 	$j('.leagues li.league').click( function() {
 		$j.ajax({
 	   		type: 'GET',
-	   		data: { sport_id :  this.getAttribute('id')  },
+	   		data: { sport_id :  this.getAttribute('id'), type: "show_league_events"  },
 	   		url: '/coefficients',
 	   		dataType:'script'
 	   	});

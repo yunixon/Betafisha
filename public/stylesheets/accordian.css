@@ -69,11 +69,11 @@ li a.edit_country_item, li a.edit_league_item {
 }
 
 h2.acc_trigger:hover {
-	background: #eee;
+	background: #fff;
 }
 
 h2.active, h2.active:hover {
-	background: #eee;
+	background: #fff;
 }
 
 .acc_container {

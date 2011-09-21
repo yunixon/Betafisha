@@ -1,24 +1,39 @@
+<% if !@top_event.nil? %>
 <div class="betting-odds">
-
   <div class="betting-odds-header">
     <%= @top_event.name %> Betting Odds
   </div>
 
   <div class="bettings-odds-bookmakers">
-       <%= @top_event.bets.first.bet_type.name  %>
+       <!-- %= @top_event.bets.first.bet_type.name  % -->
+     <div class="bet-bookmaker ">
+      <% @bookmakers.each do |b| %>
+        <% if !b.nil? %>
+          <%= image_tag imageUriByBookmakerName( b.bookmaker.name ), :width => 100, :height => 20 %>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 
-  <div class="bettings-odds-data">
-    <% if @top_event.bets.first.bookmaker.name == 'Gamebookers' %>
-      <img src="./images/gb.gif" width="100" height="20"/>
-    <% else %>
-    	<img src="./images/brk.gif" width="100" height="20"/>
-    <% end %>
+  <% if @top_event.bets.first.bet_type.name == "Outright" %>
+    <div class="bettings-odds-data">
+      <% @top_event.bets.each do |b| %>
+          <div class="event">
+            <div class="bet-name">
+              <%= b.name %>
+            </div>
+            <div class="bet-odd">
+              <%= b.odd %>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  <% end %>
 
-    <% @top_event.bets.each do |b| %>
-        <div class="event"> <%= b.name %> - <%= b.odd %> </div>
-    <% end %>
-  </div>
+
 
 </div>
+<% end %>
+
+<%= javascript_include_tag 'script' %>
 

@@ -1,18 +1,34 @@
+<% if !@league.nil? %>
 <div class="betting-odds">
-
   <div class="betting-odds-header">
     <%= @league.name %> Betting Odds
   </div>
 
   <div class="bettings-odds-bookmakers">
-    <%= link_to "Outright", "#" %> <%= link_to "1x2", "#" %>
+  	<% if signed_in? %>
+		  <%= link_to "добавить лигу", "#", :class => "add_to_coupon" %>
+		<% end %>
   </div>
 
-  <div class="bettings-odds-data">
+  <div class="events-data">
     <% @league.events.each do |e| %>
-        <div class="event"> <%= link_to e.name, "#" %> </div>
+        <div class= " event-title "> <%= link_to e.name, "#" %> </div>
+        <div class="odds-data">
+        <% e.bets.each do |b| %>
+          <div class="event">
+            <div class="bet-name">
+              <%= b.name %>
+            </div>
+            <div class="bet-odd">
+              <%= b.odd %>
+            </div>
+          </div>
+        <% end %>
+    </div>
     <% end %>
   </div>
-
 </div>
+<% end %>
+
+<%= javascript_include_tag 'script' %>
 

@@ -5,6 +5,7 @@ module AdminHelper
                when "Gamebookers" then Gamebooker.where(:table_name => table_name)
                when "Betredkings" then Betredking.where(:table_name => table_name)
                when "StanJames" then StanJame.where(:table_name => table_name)
+               when "Nordicbets" then Nordicbet.where(:table_name => table_name)
                else "empty"
              end
   end
@@ -30,6 +31,7 @@ module AdminHelper
                when "Gamebookers" then Gamebooker.where( :common_id => common_id )
                when "Betredkings" then Betredking.where( :common_id => common_id )
                when "StanJames" then StanJame.where( :common_id => common_id )
+               when "Nordicbets" then Nordicbet.where( :common_id => common_id )
                else "empty"
              end
   end
@@ -39,6 +41,7 @@ module AdminHelper
                when "Gamebookers" then Gamebooker.find( element_id )
                when "Betredkings" then Betredking.find( element_id )
                when "StanJames" then StanJame.find( element_id )
+               when "Nordicbets" then Nordicbet.find( element_id )
                else "empty"
              end
   end
