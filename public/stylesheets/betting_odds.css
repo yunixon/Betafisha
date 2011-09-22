@@ -1,10 +1,10 @@
-.betting-odds-header, .bettings-odds-bookmakers, .bettings-odds-data { margin: 10px 0 0 5px; }
+.betting-odds-header, .bettings-odds-bookmakers, .bettings-odds-data { margin: 1px 0 0 5px; }
 
 .betting-odds-header, .header { font-weight: bold; font-size: 16px; }
+.betting-odds-header { margin-top: 10px; min-height: 25px; }
+.bettings-odds-data a, .events-data a { color: #333; text-decoration: none; display: block; width: 100%; height: 100%; color: #EEE; margin-left: 5px; }
 
-.bettings-odds-data a, .events-data a { color: #333; text-decoration: none; display: block; width: 100%; height: 100%; }
-
-.event { min-height: 20px; background: #fff; margin-bottom: 1px; font-size: 92%; width: 300px; }
+.event { min-height: 20px; background: #fff; margin-bottom: 1px; font-size: 92%; width: 560px; margin-left: 5px; }
 
 .header { margin: 0 0 0 5px; padding: 0; border: 0; }
 
@@ -12,7 +12,14 @@
 
 .bet-odd { float: right; font-weight: bold; }
 
+.event-title { min-height: 20px; background: #282A34; text-align: center; margin: 1px 0 0 0px; font-size: 92%; width: 560px;  padding: 5px; }
 
-.event-title { min-height: 20px; background: #CCC; text-align: center; margin: 5px 0 1px 5px; font-size: 92%; width: 300px; }
-.event-title a { margin-top: 5px;}
+.add_to_coupon, .remove_to_coupon { float: left; display: block; text-indent: -9999px; width: 16px; height: 16px; margin-left: 5px;}
+
+.add_to_coupon { background: url('../images/add.png') no-repeat 0 0; }
+
+.remove_to_coupon { background: url('../images/delete.png') no-repeat 0 0; }
+
+
+.arrow_toggle_down { float: right; }
 

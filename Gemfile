@@ -48,3 +48,5 @@ gem 'tiny_mce'
 gem 'carrierwave'
 gem 'rmagick'
 
+gem 'jquery-rails'
+

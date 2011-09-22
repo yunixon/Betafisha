@@ -1,0 +1,9 @@
+Мои лиги
+<% if signed_in? %>
+  <ul>
+  <% current_user.coupons.each do |c| %>
+    <li> <%= c.league.name if !c.league.nil?  %> </li>
+  <% end %>
+  </ul>
+<% end %>
+

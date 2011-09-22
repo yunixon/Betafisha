@@ -7,7 +7,6 @@ class CreateLigues < ActiveRecord::Migration
 
       t.integer :country_id
       t.integer :sport_id
-      t.integer :coupon_id
 
       t.timestamps
     end

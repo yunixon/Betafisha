@@ -4,7 +4,7 @@ class League < ActiveRecord::Base
 
   belongs_to :sport
   belongs_to :country
-
+  has_many :coupons
   has_many :events, :dependent => :destroy
 
   letters_regex = /[\w\s]+/i
@@ -16,3 +16,4 @@ class League < ActiveRecord::Base
   default_scope :order => 'leagues.priority DESC'
 
 end
+

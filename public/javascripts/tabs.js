@@ -2,12 +2,12 @@ jQuery.ajaxSetup({
   'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
 })
 
-var $j = jQuery.noConflict();
+//var $j = jQuery.noConflict();
 
-$j(document).ready(function() {
+$(document).ready(function() {
 
-	$j('.add_league_item').click( function() {
-		$j.ajax({
+	$('.add_league_item').click( function() {
+		$.ajax({
 	   		type: 'POST',
 	   		url: "league_new",
 	   		dataType:'script'

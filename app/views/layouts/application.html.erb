@@ -15,10 +15,10 @@
   <%= stylesheet_link_tag 'news_block' %>
   <%= stylesheet_link_tag 'comments' %>
   <%= stylesheet_link_tag 'betting_odds' %>
-	<%= javascript_include_tag :defaults %>
-	<%= javascript_include_tag 'jquery' %>
-	<%= javascript_include_tag 'textinputfilter' %>
 
+
+	<%= javascript_include_tag :defaults %>
+	<%= javascript_include_tag 'textinputfilter' %>
 	<%= javascript_include_tag 'popup' %>
 	<%= javascript_include_tag 'script' %>
 	<%= include_tiny_mce_if_needed %>
@@ -83,6 +83,11 @@
 			<% end %>
 			<%= yield %>
 	  	</div>
+
+	  <div id="right_nav" >
+			<%= render 'site_top_navigation/coupons' %>
+		</div>
+
 	  	<div id="footer" class="grid_24">
     		<%= t(:footer_copyrights) %>
   		</div>

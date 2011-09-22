@@ -15,7 +15,7 @@
     </div>
   </div>
 
-  <% if @top_event.bets.first.bet_type.name == "Outright" %>
+  <% if @top_event.bets.first.bet_type.name == "Versus (with Draw)" %>
     <div class="bettings-odds-data">
       <% @top_event.bets.each do |b| %>
           <div class="event">
@@ -29,9 +29,6 @@
       <% end %>
     </div>
   <% end %>
-
-
-
 </div>
 <% end %>
 

@@ -1,25 +1,35 @@
-var $j = jQuery.noConflict();
-
-$j.ajaxSetup({
+jQuery.ajaxSetup({
   'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
 })
 
-$j(document).ready(function() {
-  $j('.add_to_coupon').click( function() { alert("sada ");	});
+$(document).ready(function() {
 
-  $j('.odds-data').hide();
+  $('.add_to_coupon, .remove_to_coupon').click( function() {
+	  $.ajax({
+	     		type: 'GET',
+	     		data: { type: this.getAttribute("class"), sport_id: this.getAttribute("id") },
+	     		url: '/coefficients',
+	     		dataType:'script'
+	     	});
+		  return false;
+  });
 
-	$j('.event a').click( function() {
+  $('.odds-data').hide();
 
-	/*	$j.ajax({
-	   		type: 'GET',
-	   		data: { type: "show_event_bets"  },
-	   		url: '/coefficients',
-	   		dataType:'script'
-	   	});
-		return false;*/
+  $('.event-title').click( function() {
+		if( $(this).next().is(':hidden') ) {
+			$('.event-title').removeClass('active').next().hide();
+			$(this).toggleClass('active').next().show();
+		} else {
+		  $('.event-title').removeClass('active');
+		  $('.odds-data').hide();
 
+		}
+		return false;
 	});
+
+	//$('.event-title  a').click( function() {});
+
 	//$j('wrapper').css('height', $j('#left_nav').css('height') );
 	/*console.log('a');
 

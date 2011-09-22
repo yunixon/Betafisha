@@ -1,18 +1,22 @@
 <% if !@league.nil? %>
 <div class="betting-odds">
   <div class="betting-odds-header">
-    <%= @league.name %> Betting Odds
+   <span style= "float: left;" ><%= @league.name %> Betting Odds</span>
+    <% if signed_in? %>
+     <% if @has_ligue.nil? %>
+		  <%= link_to "добавить лигу", "#", :class => "add_to_coupon", :id => "league_#{@league.id }"  %>
+		  <% elsif %>
+		  <%= link_to "удалить лигу", "#", :class => "remove_to_coupon", :id => "league_#{@league.id }"  %>
+		  <% end %>
+		<% end %>
   </div>
 
   <div class="bettings-odds-bookmakers">
-  	<% if signed_in? %>
-		  <%= link_to "добавить лигу", "#", :class => "add_to_coupon" %>
-		<% end %>
   </div>
 
   <div class="events-data">
     <% @league.events.each do |e| %>
-        <div class= " event-title "> <%= link_to e.name, "#" %> </div>
+        <div class= " event-title "> <%= link_to e.name, "#" %> <%= image_tag "ico_arrow_toggle.png", :class => " arrow_toggle_down" %> </div>
         <div class="odds-data">
         <% e.bets.each do |b| %>
           <div class="event">
