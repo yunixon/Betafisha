@@ -13,4 +13,6 @@ class Participant < ActiveRecord::Base
                     :format   => { :with => letters_regex },
                     :uniqueness => true
 
+  #find old elements, interval can be changed
+  scope :old, where("updated_at < ?", Time.now - 24.hours)
 end

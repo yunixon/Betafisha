@@ -9,6 +9,7 @@ class BetredkingsParser
 
   def self.parse!
     _bookmaker = Bookmaker.find_or_create_by_name BOOKMAKER
+    _bookmaker.touch
 
     COMMON_SPORTS.each do |style|
       doc = Nokogiri::HTML(open("http://aws2.betredkings.com/feed/#{style}.xml"))
@@ -16,10 +17,12 @@ class BetredkingsParser
       doc.xpath('//sport').each do |sport|
         _sport_name = calculate_name(Betredking, sport['name'], 'sport')
         _sport = Sport.find_or_create_by_name _sport_name
+        _sport.touch
 
         sport.children.each do |country|
           _country_name = calculate_name(Betredking, country['name'], 'country')
           _country = Country.find_or_create_by_name _country_name
+          _country.touch
 
           country.children.each do |tournament|
             _league_name = calculate_name(Betredking, tournament['name'], 'league')
@@ -27,6 +30,8 @@ class BetredkingsParser
             _league.sport_id = _sport.id
             _league.country_id = _country.id
             _league.save
+            _league.touch
+
             tournament.children.each do |match|
               if match.name == 'match'
                 _match_name = ''
@@ -35,6 +40,8 @@ class BetredkingsParser
                 _event = Event.find_or_create_by_name _event_name
                 _event.league_id = _league.id
                 _event.save
+                _event.touch
+
                 match.children.each do |element|
                   case element.name
                   when 'participants' then
@@ -43,6 +50,7 @@ class BetredkingsParser
                       _team = Participant.new(:name => _team_name, :priority => 1)
                       _team.event_id = _event.id
                       _team.save
+                      _team.touch
                     end
                   when 'matchodds' then
                     element.children.each do |type|
@@ -56,6 +64,7 @@ class BetredkingsParser
                         _bet.bookmaker_id = _bookmaker.id
                         _bet.odd = odd.text
                         _bet.save
+                        _bet.touch
                       end
                     end
                   end
