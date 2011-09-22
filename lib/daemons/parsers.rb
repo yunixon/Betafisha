@@ -4,6 +4,8 @@ begin
   Rails.application.require_environment!
 
   include CalculatingName
+  include Spawn
+
   ENV["RAILS_ENV"] ||= "development"
 
   $running = true
@@ -34,54 +36,67 @@ begin
     Bet.old.delete_all
     @log.write "Clearing DB finished\n"
 
-    begin
-      @log.write "Gamebookers parsing started #{Time.now}\n"
-      GamebookersParser.parse!
-      @log.write "Gamebookers parsing finished #{Time.now}\n"
-    rescue Exception => e
-      @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
-      @log.write "Gamebookers error:\n"
-      @log.write e
-      @log.write "\n"
-      @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+    #array for pids
+    threads = []
+
+    threads[0] = spawn do
+      begin
+        @log.write "Gamebookers parsing started #{Time.now}\n"
+        GamebookersParser.parse!
+        @log.write "Gamebookers parsing finished #{Time.now}\n"
+      rescue Exception => e
+        @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+        @log.write "Gamebookers error:\n"
+        @log.write e
+        @log.write "\n"
+        @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+      end
     end
 
-    begin
-      @log.write "Betredkings parsing started #{Time.now}\n"
-      BetredkingsParser.parse!
-      @log.write "Betredkings parsing finished #{Time.now}\n"
-    rescue Exception => e
-      @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
-      @log.write "Betredkings error:\n"
-      @log.write e
-      @log.write "\n"
-      @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+    threads[1] = spawn do
+      begin
+        @log.write "Betredkings parsing started #{Time.now}\n"
+        BetredkingsParser.parse!
+        @log.write "Betredkings parsing finished #{Time.now}\n"
+      rescue Exception => e
+        @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+        @log.write "Betredkings error:\n"
+        @log.write e
+        @log.write "\n"
+        @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+      end
     end
 
-    begin
-      @log.write "Stan James parsing started #{Time.now}\n"
-      StanjamesParser.parse!
-      @log.write "Stan James parsing finished #{Time.now}\n"
-    rescue Exception => e
-      @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
-      @log.write "Stan James error:\n"
-      @log.write e
-      @log.write "\n"
-      @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+    threads[2] = spawn do
+      begin
+        @log.write "Stan James parsing started #{Time.now}\n"
+        StanjamesParser.parse!
+        @log.write "Stan James parsing finished #{Time.now}\n"
+      rescue Exception => e
+        @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+        @log.write "Stan James error:\n"
+        @log.write e
+        @log.write "\n"
+        @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+      end
     end
 
-    begin
-      @log.write "Nordicbet parsing started #{Time.now}\n"
-      NordicbetsParser.parse!
-      @log.write "Nordicbet parsing finished #{Time.now}\n"
-    rescue Exception => e
-      @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
-      @log.write "Nordicbet error:\n"
-      @log.write e
-      @log.write "\n"
-      @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+    threads[3] = spawn do
+      begin
+        @log.write "Nordicbet parsing started #{Time.now}\n"
+        NordicbetsParser.parse!
+        @log.write "Nordicbet parsing finished #{Time.now}\n"
+      rescue Exception => e
+        @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+        @log.write "Nordicbet error:\n"
+        @log.write e
+        @log.write "\n"
+        @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
+      end
     end
 
+    #waiting all parsers to finish
+    wait(threads)
     @log.write "========================================================================\n"
 
     #One time per day
