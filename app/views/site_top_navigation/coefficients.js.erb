@@ -1,2 +1,3 @@
-$j("#refresh_box").html(' <%= escape_javascript( render( :partial => "league_data" ) ) %> ');
+$("#refresh_box").html(' <%= escape_javascript( render "league_data" ) %> ');
+$("#right_nav").html(' <%= escape_javascript( render "site_top_navigation/coupons" ) %> ');
 

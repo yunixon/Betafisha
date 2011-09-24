@@ -1,5 +1,5 @@
 class Coupon < ActiveRecord::Base
   belongs_to :user
-  has_many :leagues
+  belongs_to :league
 end
 

@@ -28,8 +28,6 @@ gem 'daemons'
 group :development, :test do
   gem 'rails-erd'
   gem 'nifty-generators'
-  gem 'webrat'
-  gem 'ruby-debug'
 end
 
 #for nifty_generator
@@ -47,4 +45,6 @@ gem 'tiny_mce'
 # image uploader
 gem 'carrierwave'
 gem 'rmagick'
+
+gem 'jquery-rails'
 

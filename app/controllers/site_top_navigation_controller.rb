@@ -17,8 +17,17 @@ class SiteTopNavigationController < ApplicationController
 									  :group      => "bookmaker_id HAVING duplicate_count >= 1")
       }
       format.js {
-          @league = League.find_by_id( params[:sport_id].gsub("league_", "").to_i )
-          @bookmakers = @league.events
+        ActiveRecord::Base.logger.info "!!!!!!!!!!!!!!!!!!!!!!" + params.inspect
+        if params['type'] == 'add_to_coupon'
+          current_user.coupons.find_or_create_by_league_id params[:sport_id].gsub("league_", "").to_i
+        elsif params['type'] == 'remove_to_coupon'
+          coupon = Coupon.find_by_league_id params[:sport_id].gsub("league_", "").to_i
+          coupon.destroy
+        end
+
+        @has_ligue = current_user.coupons.find_by_league_id params[:sport_id].gsub("league_", "").to_i
+        @league = League.find_by_id( params[:sport_id].gsub("league_", "").to_i )
+        @bookmakers = @league.events
       }
     end
   end

@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   paginates_per 5
 
   has_many :comments, :dependent => :destroy
-  has_one :coupon
+  has_many :coupons
 
   attr_accessor :password
   attr_accessible :name, :email, :password, :password_confirmation
