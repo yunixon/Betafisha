@@ -25,10 +25,12 @@ div#content, div#left_nav {
  	background: #eee;
  	min-height: 700px;
 }
+
 #navigation {
   border-right: 1px solid #333;
   border-left: 1px solid #333;
 }
+
 table {
 	margin-left: 10px;
 	margin-top: 10px;
