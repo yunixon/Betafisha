@@ -1,14 +1,18 @@
 <% if !@league.nil? %>
+
 <div class="betting-odds">
   <div class="betting-odds-header">
    <span style= "float: left;" ><%= @league.name %> Betting Odds</span>
     <% if signed_in? %>
+
      <% if @has_ligue.nil? %>
 		  <%= link_to "добавить лигу", "#", :class => "add_to_coupon", :id => "league_#{@league.id }"  %>
 		  <% elsif %>
 		  <%= link_to "удалить лигу", "#", :class => "remove_to_coupon", :id => "league_#{@league.id }"  %>
 		  <% end %>
+
 		<% end %>
+
   </div>
 
   <div class="bettings-odds-bookmakers">
