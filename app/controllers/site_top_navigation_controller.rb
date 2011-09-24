@@ -9,13 +9,15 @@ class SiteTopNavigationController < ApplicationController
  	  @sports = Sport.all
     @coupon = Coupon.new
     respond_to do |format|
-      format.html {
-        @top_event = League.first.events.first
-        @bookmakers = @top_event.bets.find( :all,
-									  :select     => "bookmaker_id, COUNT(bookmaker_id) AS duplicate_count",
-									  :conditions => "bookmaker_id IS NOT NULL",
-									  :group      => "bookmaker_id HAVING duplicate_count >= 1")
-      }
+      format.html #{
+ #       @top_event = League.first.events.first
+    #    if !@top_event.nil? and !@top_event.bets.nil?
+    #      @bookmakers = @top_event.bets.find( :all,
+		#							    :select     => "bookmaker_id, COUNT(bookmaker_id) AS duplicate_count",
+		#							    :conditions => "bookmaker_id IS NOT NULL",
+		#							    :group      => "bookmaker_id HAVING duplicate_count >= 1")
+		#    end
+   #   }
       format.js {
         if signed_in?
           if params['type'] == 'add_to_coupon'

@@ -11,7 +11,10 @@ section, header, footer, aside, article, nav {
 /* Basic settings */
 html, body {
   font: normal 12px  Helvetica, Arial, Freesans, sans-serif;
-  background: #aaa;
+
+}
+body {
+  background: #ccc url('../images/bg.png') repeat-x 0 0;
 }
 
 a { font: normal 12px  Helvetica, Arial, Freesans, sans-serif; }
@@ -20,8 +23,12 @@ a { font: normal 12px  Helvetica, Arial, Freesans, sans-serif; }
 div#content, div#left_nav {
 	margin-bottom: 5px;
  	background: #eee;
+ 	min-height: 700px;
 }
-
+#navigation {
+  border-right: 1px solid #333;
+  border-left: 1px solid #333;
+}
 table {
 	margin-left: 10px;
 	margin-top: 10px;
@@ -108,19 +115,23 @@ textarea:focus {
 
 /* Logo */
 #logo {
-  margin-top: 5px;
 	min-height: 30px;
 	color: #ccc;
+	background: #45494C;
 }
 
 #logo a {
   text-decoration: none;
   color: #eee;
   font-weight: bold;
+  display: block;
+  margin: 5px;
+
 }
 
 #user_entrance {
 	min-height: 30px;
+	background: #45494C;
 }
 
 /* Top navigation */
@@ -134,14 +145,14 @@ textarea:focus {
   -moz-transition: background-color 0.4s ease-in-out;
   -o-transition: background-color 0.4s ease-in-out;
 	width:245px;
-	background: #780000;
+	background: #c53727;
 	margin: 0;
 	padding: 0;
 	height: 70px;
 	float: left;
 	text-align: center;
 	list-style: none;
-	border-left: 1px solid #3E0000;
+	border-left: 1px solid #333;
 }
 
 #navigation ul li:first-child {
@@ -149,17 +160,17 @@ textarea:focus {
 }
 
 #navigation ul li a{
-	color: /*#3E0303*/ #ddd;
+	color: #fff;
 	text-decoration: none;
-	/*text-transform: uppercase;*/
+
 	font-weight: 800;
 	text-shadow: #CE2828 1px 1px 1px;
 	padding-top: 25px;
 	font-size: 14px;
 	display: block;
 	height: 45px;
-		box-shadow: inset 0 0 30px #4e0404;
-	-moz-box-shadow:inset 0 0 30px #4e0404;
+	box-shadow: inset 0 0 30px #c53727;
+	-moz-box-shadow:inset 0 0 30px #c53727;
 }
 
 #navigation ul li:hover {
@@ -167,7 +178,7 @@ textarea:focus {
  	-webkit-transition: background-color 0.4s ease-in-out;
   -moz-transition: background-color 0.4s ease-in-out;
   -o-transition: background-color 0.4s ease-in-out;
-  background: #9E0000;
+  background: #AF301F;
 }
 
 /*#navigation ul li a:hover{
@@ -203,6 +214,7 @@ textarea:focus {
   list-style-type: none;
   display: inline-block;
   margin-left: 10px;
+  color: #f5f5f5;
 }
 
 #user_entrance ul li a {
