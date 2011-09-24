@@ -16,6 +16,6 @@ class League < ActiveRecord::Base
   default_scope :order => 'leagues.priority DESC'
   
   #find old elements, interval can be changed
-  scope :old, where("updated_at < ?", Time.now - 1.minute)
+  scope :old, where("updated_at < ?", Time.now - 1.hour)
 end
 
