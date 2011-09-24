@@ -10,12 +10,11 @@
 		  <% elsif %>
 		  <%= link_to "удалить лигу", "#", :class => "remove_to_coupon", :id => "league_#{@league.id }"  %>
 		  <% end %>
-
 		<% end %>
-
   </div>
 
   <div class="bettings-odds-bookmakers">
+
   </div>
 
   <div class="events-data">
@@ -23,10 +22,14 @@
         <div class= " event-title "> <%= link_to e.name, "#" %> <%= image_tag "ico_arrow_toggle.png", :class => " arrow_toggle_down" %> </div>
         <div class="odds-data">
         <% e.bets.each do |b| %>
-          <div class="event">
+          <div class="event" >
             <div class="bet-name">
+               <%= image_tag imageUriByBookmakerName( b.bookmaker.name ), :width => 100, :height => 20 %>
+            </div>
+            <div class="bet-bookmaker" style="width: 100px; float:left;">
               <%= b.name %>
             </div>
+
             <div class="bet-odd">
               <%= b.odd %>
             </div>
