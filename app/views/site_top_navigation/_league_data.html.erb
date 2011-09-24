@@ -23,13 +23,12 @@
         <div class="odds-data">
         <% e.bets.each do |b| %>
           <div class="event" >
-            <div class="bet-name">
-               <%= image_tag imageUriByBookmakerName( b.bookmaker.name ), :width => 100, :height => 20 %>
-            </div>
             <div class="bet-bookmaker" style="width: 100px; float:left;">
-              <%= b.name %>
+              <%= image_tag imageUriByBookmakerName( b.bookmaker.name ), :width => 100, :height => 20 %>
             </div>
-
+            <div class="bet-name">
+               <%= b.name %>
+            </div>
             <div class="bet-odd">
               <%= b.odd %>
             </div>
