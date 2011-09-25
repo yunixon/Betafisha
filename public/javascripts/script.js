@@ -19,11 +19,13 @@ $(document).ready(function() {
   $('.event-title').click( function() {
 		if( $(this).next().is(':hidden') ) {
 			$('.event-title').removeClass('active').next().hide();
+			$("a.expand").css({backgroundPosition: '0px -50px'});
+			$(this).find( "a.expand" ).css({backgroundPosition: '0px -10px'});
 			$(this).toggleClass('active').next().show();
 		} else {
 		  $('.event-title').removeClass('active');
+		  $(this).find( "a.expand" ).css({backgroundPosition: '0px -50px'});
 		  $('.odds-data').hide();
-
 		}
 		return false;
 	});

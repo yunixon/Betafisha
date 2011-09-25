@@ -19,7 +19,7 @@
 
   <div class="events-data">
     <% @league.events.each do |e| %>
-        <div class= " event-title "> <%= link_to e.name, "#" %> <%= image_tag "ico_arrow_toggle.png", :class => " arrow_toggle_down" %> </div>
+        <div class= " event-title "> <%= link_to e.name, "#" %> <%= link_to "expand", "#", :class => "expand" %> </div>
         <div class="odds-data">
         <% e.bets.each do |b| %>
           <div class="event" >
@@ -30,8 +30,12 @@
                <%= b.name %>
             </div>
             <div class="bet-odd">
-              <%= b.odd %>
+              <%= b.odd %> /
+              <% if !b.bet_type.nil? %>
+                <%= b.bet_type.name %>
+              <% end %>
             </div>
+
           </div>
         <% end %>
     </div>

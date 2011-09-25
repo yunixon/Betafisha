@@ -14,7 +14,7 @@ html, body {
 
 }
 body {
-  background: #ccc url('../images/bg.png') repeat-x 0 0;
+  background: #333 url('../images/bg.png') repeat-x 0 0;
 }
 
 a { font: normal 12px  Helvetica, Arial, Freesans, sans-serif; }
