@@ -1,12 +1,18 @@
-#content { border-radius: 5px; border: 3px solid #E1E2E6; background: #F6F6F6; }
+body { background: #EEE url('../images/admin_bg.png') repeat-x -1px -1px; }
 
-.warning, .notice, .success, .errorExplanation { 
-  text-align: left; 
-  margin: 5px 0px 10px 0px; 
+#wrapper { border-bottom: 1px solid #ccc; border-left: 1px solid #ccc; border-right: 1px solid #ccc;}
+.warning, .notice, .success, .errorExplanation {
+  text-align: left;
+  margin: 5px 0px 10px 0px;
   width: 350px;
   font-size: 12px;
   border-radius: 2px;
 }
 
- 
+div#wrapper{
+  margin-top: 42px;
+  padding: 35px;
+  background: #f5f5f5;
+  min-height: 100px;
+}
 

@@ -4,7 +4,7 @@ jQuery.ajaxSetup({
 
 $(document).ready(function() {
 
-  $('.add_to_coupon, .remove_to_coupon').click( function() {
+  $('.add_to_coupon, .remove_from_coupon').click( function() {
 	  $.ajax({
 	     		type: 'GET',
 	     		data: { type: this.getAttribute("class"), sport_id: this.getAttribute("id") },

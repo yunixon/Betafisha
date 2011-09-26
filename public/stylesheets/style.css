@@ -20,7 +20,7 @@ body {
 a { font: normal 12px  Helvetica, Arial, Freesans, sans-serif; }
 
 
-div#content, div#left_nav {
+div#wrapper, div#left_nav, div#right_nav {
 	margin-bottom: 5px;
  	background: #eee;
  	min-height: 700px;
@@ -191,7 +191,6 @@ textarea:focus {
 /* Left navigation */
 #left_nav  {
 	min-height: 400px;
-	margin-top: 10px;
 }
 
 #left_nav ul {

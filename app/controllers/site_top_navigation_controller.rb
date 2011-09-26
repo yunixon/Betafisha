@@ -3,26 +3,25 @@ class SiteTopNavigationController < ApplicationController
   include SportsHelper
 
   def coefficients
-    #@title = I18n.t(:top_menu_coefficients)
     @news_blocks = NewsBlock.all(:limit => 5)
     @counter = NewsBlock.all.count
  	  @sports = Sport.all
     @coupon = Coupon.new
     respond_to do |format|
-      format.html #{
- #       @top_event = League.first.events.first
-    #    if !@top_event.nil? and !@top_event.bets.nil?
-    #      @bookmakers = @top_event.bets.find( :all,
-		#							    :select     => "bookmaker_id, COUNT(bookmaker_id) AS duplicate_count",
-		#							    :conditions => "bookmaker_id IS NOT NULL",
-		#							    :group      => "bookmaker_id HAVING duplicate_count >= 1")
-		#    end
-   #   }
+      format.html {
+        @top_event = League.first.events.first
+        if !@top_event.nil? and !@top_event.bets.nil?
+          @bookmakers = @top_event.bets.find( :all,
+									    :select     => "bookmaker_id, COUNT(bookmaker_id) AS duplicate_count",
+									    :conditions => "bookmaker_id IS NOT NULL",
+									    :group      => "bookmaker_id HAVING duplicate_count >= 1")
+		    end
+      }
       format.js {
         if signed_in?
           if params['type'] == 'add_to_coupon'
             current_user.coupons.find_or_create_by_league_id params[:sport_id].gsub("league_", "").to_i
-          elsif params['type'] == 'remove_to_coupon'
+          elsif params['type'] == 'remove_from_coupon'
             coupon = Coupon.find_by_league_id params[:sport_id].gsub("league_", "").to_i
             coupon.destroy
           end
@@ -35,17 +34,14 @@ class SiteTopNavigationController < ApplicationController
   end
 
   def bookmakers
-    #@title = I18n.t(:top_menu_bookmakers)
     @sports = Sport.all
   end
 
   def statistics
-    #@title = I18n.t(:top_menu_statistics)
     @sports = Sport.all
   end
 
   def tools
-   # @title = I18n.t(:top_menu_ools)
     @sports = Sport.all
   end
 

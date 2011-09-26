@@ -5,7 +5,6 @@
   </div>
 
   <div class="bettings-odds-bookmakers">
-       <!-- %= @top_event.bets.first.bet_type.name  % -->
      <div class="bet-bookmaker ">
       <% @bookmakers.each do |b| %>
         <% if !b.bookmaker.nil?  %>
@@ -15,22 +14,21 @@
     </div>
   </div>
 
-  <!--% if @top_event.bets.first.bet_type.name == "Versus (with Draw)" %-->
-    <div class="bettings-odds-data">
-      <% @top_event.bets.each do |b| %>
-          <div class="event">
-            <div class="bet-name">
-              <%= b.name %>
-            </div>
-            <div class="bet-odd">
-              <%= b.odd %>
-            </div>
+  <div class="bettings-odds-data">
+    <% @top_event.bets.each do |b| %>
+        <div class="event">
+          <div class="bet-name">
+            <%= b.name %>
           </div>
-      <% end %>
-    </div>
-  <% end %>
+          <div class="bet-odd">
+            <%= b.odd %>
+          </div>
+        </div>
+    <% end %>
+  </div>
+
 </div>
-<!-- % end %-- >
+<% end %>
 
 <%= javascript_include_tag 'script' %>
 
