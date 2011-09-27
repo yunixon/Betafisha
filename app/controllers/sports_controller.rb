@@ -1,8 +1,7 @@
 class SportsController < ApplicationController
 
-  before_filter :authenticate
-  before_filter :admin_user
-  
+  before_filter :admin_user, :only => [:edit, :update, :destroy]
+
   def index
     @sports = Sport.find(:all)
   end
@@ -45,3 +44,4 @@ class SportsController < ApplicationController
   end
 
 end
+
