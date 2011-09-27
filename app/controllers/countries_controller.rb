@@ -1,8 +1,7 @@
 # coding: utf-8
 class CountriesController < ApplicationController
 
-  before_filter :authenticate
-  before_filter :admin_user
+  before_filter :admin_user, :only => [:edit, :update, :destroy]
 
   def index
     @countries = Country.find(:all)

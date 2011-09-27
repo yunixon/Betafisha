@@ -58,48 +58,63 @@
 
   <div id="navigation" class="grid_24">
 	<ul>
-	<!-- Hide dat shit in to controller -->
 	    <li><%= link_to t(:top_menu_coefficients), coefficients_path %></li>
       <li><%= link_to t(:top_menu_bookmakers), bookmakers_path %></li>
       <li><%= link_to t(:top_menu_statistics), statistics_path %></li>
       <li><%= link_to t(:top_menu_tools), tools_path %></li>
 	</ul>
   </div>
-
+  <div id="sub_navigation" class="grid_24">
+  </div>
 </header>
 
 <section class="container_24">
 	<div id="wrapper" class="grid_24">
+
+	  <div id="breadcrumb"  class="grid_24">
+       <%= yield :breadcrumb %>
+    </div>
+
 		<div id="left_nav" class="grid_5">
-      <div class="header">Виды спорта</div>
-			<%= render 'sports/sports_content' %>
+      <%= yield :left_nav%>
 		</div>
 
 	  <div id="content" class="grid_14">
 		  <% flash.each do |key, value| %>
 		      <div class="flash <%= key %>"> <%= value %> </div>
 		  <% end %>
-		  <%= yield %>
+		  <%= yield :content%>
+		  <%= yield%>
 	   </div>
 
 	  <div id="right_nav" class="grid_5">
-	    <div class="header">Мои Лиги</div>
-			<%= render 'site_top_navigation/coupons' %>
-		</div>
-  </div>
+      <%= yield :right_nav%>
+    </div>
 </section>
 
 <footer class="container_24">
 	  <div id="footer" class="grid_24">
-    	<%= t(:footer_copyrights) %>
+	     <div id= "bottom_links" class="grid_10">
+	      <%= link_to "Privacy Policy", "#" %> |
+	      <%= link_to "Terms of use", "#" %> |
+      	<%= link_to "About", "#" %> |
+      	<%= link_to "Contact us", "#" %>
+       </div>
+
+       <div id= "copyrights" class="grid_12">
+      	<%= t(:footer_copyrights) %>
+       </div>
   	</div>
+
   	<div id="debug" class="grid_24">
-    	<%= debug(params) if Rails.env.development? %>
+    	<% if signed_in? %>
+      	<%= debug(params) if Rails.env.development? %>
+      <% end %>
   	</div>
 </footer>
 
 <div id="popup_name" class="popup_block">
-  <%= render 'sessions/new_session' %>
+    <%= render 'sessions/new_session' %>
 </div>
 
 </body>

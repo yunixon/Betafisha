@@ -10,14 +10,16 @@ section, header, footer, aside, article, nav {
 
 /* Basic settings */
 html, body {
-  font: normal 12px  Helvetica, Arial, Freesans, sans-serif;
+  font: normal 11px  Helvetica, Arial, Freesans, sans-serif;
 
 }
 body {
   background: #333 url('../images/bg.png') repeat-x 0 0;
 }
 
-a { font: normal 12px  Helvetica, Arial, Freesans, sans-serif; }
+a { font: normal 11px  Helvetica, Arial, Freesans, sans-serif; color: #CE2828; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
 
 
 div#wrapper, div#left_nav, div#right_nav {
@@ -30,6 +32,19 @@ div#wrapper, div#left_nav, div#right_nav {
   border-right: 1px solid #333;
   border-left: 1px solid #333;
 }
+#sub_navigation {
+  min-height: 40px;
+  background: #aaa;
+
+}
+#breadcrumb {
+  border-bottom: 1px solid #ccc;
+  min-height: 20px;
+  padding-top: 10px;
+  background: #f5f5f5;
+}
+
+#breadcrumb a:first-child {   margin: 5px 0px 0px 10px }
 
 table {
 	margin-left: 10px;
@@ -305,8 +320,8 @@ font-size: 16px;
   margin-right: 5px;
   cursor: pointer;
 }
-#footer {
+
+#footer, footer a {
   color: #AAA;
-  margin-left: 400px;
 }
 

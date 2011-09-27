@@ -1,7 +1,28 @@
-<%if !@top_event.bets.nil? %>
-  <div id="refresh_box">
-    <%= render "top_event"  %>
+<% content_for :sub_navigation do %>
+<% end %>
+
+<% content_for :breadcrumb do %>
+   <%= link_to t(:top_menu_coefficients), coefficients_path %> »
+   <%= "Home" %>
+<% end %>
+
+<% content_for :left_nav do %>
+  <div class="header">Виды спорта</div>
+	<%= render 'sports/sports_content' %>
+<% end %>
+
+<% content_for :content do %>
+  <%if !@top_event.bets.nil? %>
+    <div id="refresh_box">
+      <%= render "top_event"  %>
+    </div>
+  <% end %>
+<%= render "news_blocks/news" %>
+<% end %>
+
+<% content_for :right_nav do %>
+  <div class="header">Мои Лиги</div>
+    <%= render 'site_top_navigation/coupons' %>
   </div>
 <% end %>
-<%= render "news_blocks/news" %>
 
