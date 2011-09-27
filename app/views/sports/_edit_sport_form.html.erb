@@ -3,21 +3,22 @@
   <div class="form_name">
   Редактировать вид спорта
   </div>
-  
+
   <div class="field">
   	<%= f.label :name, "Название" %> <br/>
     <%= f.text_field :name %>
   </div>
-  
- <div class="field">
+
+  <div class="field">
   	<%= f.label :priority, "Приоритет" %> <br/>
   	<%= f.text_field :priority, :class => 'priority' %>
   </div>
-  
+
   <div class="actions">
   	<%= f.submit "Изменить" %> <%=  link_to 'Назад', leagues_manager_path, :class => 'back_from_form'  %>
   </div>
-  
+
 <% end %>
 
 <%= javascript_include_tag 'forms.js' %>
+

@@ -4,15 +4,26 @@
   	<%= f.label :name, "Название" %> <br/>
     <%= f.text_field :name %>
   </div>
-  
+
 	<div class="field">
   	<%= f.label :priority, "Приоритет" %> <br/>
   	<%= f.text_field :priority, :class => 'priority' %>
   </div>
-  
+
+  <% if !@flags.nil? %>
+    <div class="field">
+      <b> Фильтры: </b> <br/>
+      <%= f.label :flag_image, "Флаг:" %> <br/>
+      <%= f.select :flag_image,
+      	options_for_select( @flags ), :multiple => false
+      %>
+    </div>
+  <% end %>
+
   <div class="actions">
   	<%= f.submit "Добавить" %> <%=  link_to 'Назад', leagues_manager_path, :class => 'back_from_form'  %>
   </div>
 <% end %>
 
 <%= javascript_include_tag 'forms.js' %>
+

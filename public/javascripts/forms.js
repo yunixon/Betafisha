@@ -74,5 +74,16 @@ $(document).ready(function() {
 
 	$('.priority').filter_input({regex:'[0-9]'});
 
+  $('select').selectmenu({
+		    style:'dropdown',
+		    width: 350,
+		    menuWidth: 350,
+		    maxHeight: 300,
+		    icons: [
+			    {find: '.russia'},
+			    {find: '.usa'},
+		    ]
+  });
+
 });
 

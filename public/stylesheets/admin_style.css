@@ -25,3 +25,11 @@ input[type="text"], input[type="password"], select {
 
 div#content { background: #f5f5f5; min-height: 100px; }
 
+.ui-selectmenu { float: left; }
+
+.field a { color: #eee; }
+
+
+.russia .ui-selectmenu-item-icon { background: url(../images/flags/ru.png) 0 0 no-repeat; }
+.usa .ui-selectmenu-item-icon { background: url(../images/flags/us.png) 0 0 no-repeat; }
+
