@@ -71,7 +71,7 @@ class StanjamesParser
               _participant.touch
 
               event.children.each do |bettype|
-                _bet_type_name = calculate_name(StanJame, bettype['name'], 'bet_type')
+                _bet_type_name = calculate_name(StanJame, bettype['name'], 'bet_type', false)
                 _bet_type = BetType.find_or_create_by_name _bet_type_name
                 _bet_type.touch
 
@@ -89,7 +89,7 @@ class StanjamesParser
             end
           else
             event.children.each do |bettype|
-              _bet_type_name = calculate_name(StanJame, bettype['name'], 'bet_type')
+              _bet_type_name = calculate_name(StanJame, bettype['name'], 'bet_type', false)
               _bet_type = BetType.find_or_create_by_name _bet_type_name
               _bet_type.touch
 

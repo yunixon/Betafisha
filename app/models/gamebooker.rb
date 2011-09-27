@@ -5,4 +5,5 @@ class Gamebooker < ActiveRecord::Base
   scope :sports, where(:table_name => 'sport')
   scope :countries, where(:table_name => 'country')
   scope :events, where(:table_name => 'event')
+  scope :bet_types, where(:table_name => 'bet_type')
 end

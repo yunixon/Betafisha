@@ -7,6 +7,32 @@ begin
   include Spawn
 
   ENV["RAILS_ENV"] ||= "development"
+  COMMON_BETTYPES = ['Outright', '1x2', '1or2']
+  GAMEBOOKERS = ['Outright', 'Versus (with Draw)', ['To Win the Match', 'Versus', 'Draw No Bet']]
+  BETREDKINGS = ['Winner', 'Home Draw Away', 'Home Away With Impossible Draw']
+  NORDICBET = ['Result Winner', 'Result (OutcomeSet has 3 children nodes)', 'Result (OutcomeSet has 2 children nodes)']
+  STANJAMES = [["NBA Outright", "Eastern Conference", "Western Conference",
+                "Tournament Outright Prices", "Outright Prices", "Australian Open 2012",
+                "Wimbledon 2012", "French Open 2012", "Australian Open 2012",
+                "Davis Cup Outright 2011", "Men's Wimbledon 2012", "US Open 2012"],
+                'Match Betting',
+                ["Draw No Bet", "Match Winner", "Match Prices"]]
+
+  COMMON_BETTYPES.each_with_index do |c,i|
+    common = Common.create(:element_name => c, :table_name => 'bet_type')
+    GAMEBOOKERS[i].each do |g|
+      Gamebooker.create(:element_name => g, :table_name => 'bet_type', :common_id => common.id)
+    end
+    BETREDKINGS[i].each do |b|
+      Betredking.create(:element_name => b, :table_name => 'bet_type', :common_id => common.id)
+    end
+    NORDICBET[i].each do |n|
+      Nordicbet.create(:element_name => n, :table_name => 'bet_type', :common_id => common.id)
+    end
+    STANJAMES[i].each do |s|
+      StanJame.create(:element_name => s, :table_name => 'bet_type', :common_id => common.id)
+    end
+  end
 
   $running = true
   Signal.trap("TERM") do

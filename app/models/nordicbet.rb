@@ -7,4 +7,5 @@ class Nordicbet < ActiveRecord::Base
   scope :events, where(:table_name => 'event')
   scope :bet_types, where(:table_name => 'bet_type')
   scope :participants, where(:table_name => 'participant')
+  scope :bet_types, where(:table_name => 'bet_type')
 end

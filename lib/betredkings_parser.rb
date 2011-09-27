@@ -54,7 +54,7 @@ class BetredkingsParser
                     end
                   when 'matchodds' then
                     element.children.each do |type|
-                      _type_name = calculate_name(Betredking, type['type'], 'bet_type')
+                      _type_name = calculate_name(Betredking, type['type'], 'bet_type', false)
                       _type = BetType.find_or_create_by_name _type_name
                       type.children.each do |odd|
                         _bet = Bet.new :priority => 1

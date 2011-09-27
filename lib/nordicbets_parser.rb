@@ -41,7 +41,7 @@ class NordicbetsParser
             @_participant.save
             @_participant.touch
           when 'outcomeset' then
-            _bettype_name = calculate_name(Nordicbet, element['type'], 'bet_type')
+            _bettype_name = calculate_name(Nordicbet, element['type'], 'bet_type', false)
             @_bettype = BetType.find_or_create_by_name _bettype_name
             @_bettype.touch
             
