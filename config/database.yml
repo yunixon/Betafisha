@@ -11,7 +11,7 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: test
+  database: betafisha
   pool: 5
   username: root
   password: qwerty
@@ -31,7 +31,7 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: test
+  database: betafisha
   pool: 5
   username: root
   password: qwerty
@@ -46,7 +46,7 @@ production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: test
+  database: betafisha
   pool: 5
   username: root
   password: qwerty

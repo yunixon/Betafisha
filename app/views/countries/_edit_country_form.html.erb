@@ -10,12 +10,12 @@
   	<%= f.text_field :priority, :class => 'priority' %>
   </div>
 
-  <% if !@flags.nil? %>
+   <% if !@flags.nil? %>
     <div class="field">
       <b> Фильтры: </b> <br/>
       <%= f.label :flag_image, "Флаг:" %> <br/>
       <%= f.select :flag_image,
-      	options_for_select( @flags, @country.flag_image   ), :multiple => false, :class => "countries_flags"
+      	options_for_select( @flags ), :multiple => false
       %>
     </div>
   <% end %>

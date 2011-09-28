@@ -25,7 +25,7 @@
 									  :group      => "country_id HAVING duplicate_count >= 1").each do |countries|   %>
 
 				  <li class="country" id='sport_<%= sport.id %>_country_<%= countries.country.id %>'>
-				  	  <%= link_to countries.country.name , "#", :id => countries.country.id  %>
+				  	<% if !countries.country.flag_image.nil? %><%= image_tag "flags/" + countries.country.flag_image %> <% end %>  <%= link_to countries.country.name , "#", :id => countries.country.id  %>
 					  <% if signed_in? && current_user.admin? %>
 						<%= link_to "Удалить",  countries.country, :class => 'delete_country_item' %>
 						<%= link_to "Редактировать", countries.country , :class => 'edit_country_item', :id => countries.country.id %>
