@@ -42,22 +42,24 @@ class NordicbetsParser
             @_participant.touch
           when 'outcomeset' then
             _bettype_name = calculate_name(Nordicbet, element['type'], 'bet_type', false)
-            @_bettype = BetType.find_or_create_by_name _bettype_name
-            @_bettype.touch
-            
-            element.children.each do |outcome|
-              @_bet_odd = outcome['odds']
-              outcome.children.each do |bet|
-                if bet.name == 'participant'
-                  _bet = Bet.create
-                  _bet.odd = @_bet_odd
-                  _bet.name = bet.text
-                  _bet.event_id = @_event.id
-                  _bet.participant_id = @_participant.id
-                  _bet.bet_type_id = @_bettype.id
-                  _bet.bookmaker_id = @_bookmaker.id
-                  _bet.save
-                  _bet.touch
+            if _bettype_name.present?
+              @_bettype = BetType.find_or_create_by_name _bettype_name
+              @_bettype.touch
+
+              element.children.each do |outcome|
+                @_bet_odd = outcome['odds']
+                outcome.children.each do |bet|
+                  if bet.name == 'participant'
+                    _bet = Bet.create
+                    _bet.odd = @_bet_odd
+                    _bet.name = bet.text
+                    _bet.event_id = @_event.id
+                    _bet.participant_id = @_participant.id
+                    _bet.bet_type_id = @_bettype.id
+                    _bet.bookmaker_id = @_bookmaker.id
+                    _bet.save
+                    _bet.touch
+                  end
                 end
               end
             end

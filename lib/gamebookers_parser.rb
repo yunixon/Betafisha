@@ -1,7 +1,6 @@
 class GamebookersParser
 
   BOOKMAKER = "Gamebookers"
-  AVAILABLE_BETTYPES = ["Outright", "Versus (with Draw)", "To Win the Match"]
   SPORTS = ['american_football', 'athletics', 'aussie_rules', 'badminton', 'bandy',
     'baseball', 'basketball', 'beach_volleyball', 'bowls', 'boxing__and__mma', 'chess',
     'cricket', 'cycling', 'darts', 'financials', 'floorball', 'football', 'gaelic_sports',
@@ -44,8 +43,8 @@ class GamebookersParser
             _event.save
             _event.touch
             event.children.each do |bettype|
-              if AVAILABLE_BETTYPES.include?(bettype['name'])
-                _bet_type_name = calculate_name(Gamebooker, bettype['name'], 'bet_type', false)
+              _bet_type_name = calculate_name(Gamebooker, bettype['name'], 'bet_type', false)
+              if _bet_type_name.present?
                 _bet_type = BetType.create :name => _bet_type_name
                 _bet_type.touch
                 bettype.children.each do |bet|
@@ -72,7 +71,5 @@ class GamebookersParser
         end
       end
     end
-
-
   end
 end
