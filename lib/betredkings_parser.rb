@@ -11,6 +11,7 @@ class BetredkingsParser
     _bookmaker = Bookmaker.find_or_create_by_name BOOKMAKER
     _bookmaker.touch
     _participants_array = []
+    _participants_hash = {}
     
     COMMON_SPORTS.each do |style|
       doc = Nokogiri::HTML(open("http://aws2.betredkings.com/feed/#{style}.xml"))
@@ -26,13 +27,14 @@ class BetredkingsParser
           _country.touch
 
           country.children.each do |tournament|
-            _league_name = calculate_name(Betredking, tournament['name'], 'league')
+            _league_name = calculate_name(Betredking, tournament['name'].gsub(/[^a-zA-Z]*/, ''), 'league')
             _league = League.find_or_create_by_name _league_name
             _league.sport_id = _sport.id
             _league.country_id = _country.id
             _league.save
             _league.touch
 
+            _participants_hash.clear
             tournament.children.each do |match|
               _participants_array.clear
               if match.name == 'match'
@@ -77,6 +79,41 @@ class BetredkingsParser
                           _bet.save
                           _bet.touch
                         end
+                      end
+                    end
+                  end
+                end
+              else
+                _event_name = calculate_name(Betredking, _league_name, 'event')
+                _event = Event.find_or_create_by_name _event_name
+                _event.league_id = _league.id
+                _event.save
+                _event.touch
+
+                case match.name
+                when 'participants' then
+                  match.children.each do |participant|
+                    _participants_hash[participant['id']] = participant['name']
+                    _team_name = calculate_name(Betredking, participant['name'], 'participant')
+                    _team = Participant.new(:name => _team_name, :priority => 1)
+                    _team.event_id = _event.id
+                    _team.save
+                    _team.touch
+                  end
+                when 'tournamentodds' then
+                  match.children.each do |type|
+                    _type_name = calculate_name(Betredking, type['type'], 'bet_type', false)
+                    if _type_name.present?
+                      _type = BetType.find_or_create_by_name _type_name
+                      type.children.each_with_index do |odd, i|
+                        _bet = Bet.new :priority => 1
+                        _bet.name = _participants_hash[odd['participantid']]
+                        _bet.bet_type_id = _type.id
+                        _bet.event_id = _event.id
+                        _bet.bookmaker_id = _bookmaker.id
+                        _bet.odd = odd.text
+                        _bet.save
+                        _bet.touch
                       end
                     end
                   end
