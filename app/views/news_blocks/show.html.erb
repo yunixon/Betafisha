@@ -12,29 +12,32 @@
   <%= raw ( @news_block.content ) %>
 </div>
 
-<div class="news-block-content news-show-margin ">
+  <div class="news-block-content news-show-margin ">
   <% if signed_in? %>
     <% if current_user.admin? %>
       <%= link_to "Редактировать", edit_news_block_path(@news_block) %> |
       <%= link_to "Удалить", @news_block, :confirm => 'Are you sure?', :method => :delete %>
     <% end %>
-
-    <div class="new_comment">
-      <%= render "comments/form" %>
-    </div>
   <% end %>
 
-<div class="comments">
-  <div class="comments-header""> Коминтарии (<%= @comments.count %>):  </div>
+  <div class="comments">
+    <div class="comments-header""> Коминтарии (<%= @comments.count %>):  </div>
 
-  <% @comments.each do |comment| %>
-    <div class="comment">
-      <div class="commented-by"> Комментарий от <span><%= comment.user.name %></span>  </div>
-      <div class="comment-timestamp"> <%= comment.created_at > 1.days.ago ? image_tag("http://www.awwwards.com/images/ico_pending.png") + " " + time_ago_in_words( comment.created_at  ) + t(:ago) : l( comment.created_at, :format => :long )%> </div>
-      <div class="comment-content"> <%= comment.content %> </div>
-    </div>
+    <% @comments.each do |comment| %>
+      <div class="comment">
+        <div class="commented-by"> Комментарий от <span><%= comment.user.name %></span>  </div>
+        <div class="comment-timestamp"> <%= comment.created_at > 1.days.ago ? image_tag("http://www.awwwards.com/images/ico_pending.png") + " " + time_ago_in_words( comment.created_at  ) + t(:ago) : l( comment.created_at, :format => :long )%> </div>
+        <div class="comment-content"> <%= comment.content %> </div>
+      </div>
+    <% end %>
+  </div>
+
+   <% if signed_in? %>
+    <% if current_user.admin? %>
+      <div class="new_comment">
+        <%= render "comments/form" %>
+      </div>   <% end %>
   <% end %>
-</div>
 
 </div>
 

@@ -1,10 +1,16 @@
-<p id="notice"><%= notice %></p>
+<% content_for :content do %>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
-  <%= @page_subject.name %>
-</p>
+  <p>
+    <b>Name:</b>
+    <%= @page_subject.name %>
+  </p>
 
+  <% if signed_in? %>
+	  <% if current_user.admin? %>
+      <%= link_to 'Edit', edit_page_subject_path(@page_subject) %> |
+      <%= link_to 'Back', page_subjects_path %>
+    <% end %>
+  <% end %>
+<% end %>
 
-<%= link_to 'Edit', edit_page_subject_path(@page_subject) %> |
-<%= link_to 'Back', page_subjects_path %>

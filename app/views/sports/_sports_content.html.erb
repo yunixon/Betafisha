@@ -8,8 +8,20 @@
    <%= image_tag "http://www.nordicbet.com/photos/50000001417.png" %>
   <% elsif sport.name == 'Ice Hockey' %>
    <%= image_tag "http://www.nordicbet.com/photos/50000000885.png" %>
-  <% elsif sport.name == 'Tennis' %>
+   <% elsif sport.name == 'Tennis' %>
     <%= image_tag "http://www.nordicbet.com/photos/50000001298.png" %>
+   <% elsif sport.name == 'American Football' %>
+    <%= image_tag "http://www.nordicbet.com/photos/50000001304.png" %>
+   <% elsif sport.name == 'Floorball' %>
+    <%= image_tag "http://www.nordicbet.com/photos/50000001298.png" %>
+   <% elsif sport.name == 'Volleyball' %>
+    <%= image_tag "http://www.nordicbet.com/photos/50000001302.png" %>
+   <% elsif sport.name == 'Baseball' %>
+    <%= image_tag "http://www.nordicbet.com/photos/50000001310.png" %>
+    <% elsif sport.name == 'Rugby' %>
+    <%= image_tag "http://www.nordicbet.com/photos/50000001320.png" %>
+  <% elsif sport.name == 'Handball' %>
+    <%= image_tag "http://www.nordicbet.com/photos/50000001322.png" %>
   <% end %> <%= link_to sport.name, "#" %>
 
 	<% if signed_in? && current_user.admin? %>

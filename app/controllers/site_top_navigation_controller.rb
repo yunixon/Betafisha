@@ -9,7 +9,7 @@ class SiteTopNavigationController < ApplicationController
     @coupon = Coupon.new
     respond_to do |format|
       format.html {
-        @top_event = League.first.events.first
+        @top_event = League.first.events.first ||= []
         if !@top_event.nil? and !@top_event.bets.nil?
           @bookmakers = @top_event.bets.find( :all,
 									    :select     => "bookmaker_id, COUNT(bookmaker_id) AS duplicate_count",
