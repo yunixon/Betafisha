@@ -7,6 +7,6 @@ class Comment < ActiveRecord::Base
   validates :content, :presence => true,
                     :length   => { :within => 2..256}
 
-   default_scope :order => 'comments.created_at DESC'
+   default_scope :order => 'comments.created_at ASC'
 end
 
