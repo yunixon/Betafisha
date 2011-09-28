@@ -28,6 +28,15 @@ begin
 
     @log.write "========================================================================\n"
 
+    @log.write "Clearing DB (old elements) started\n"
+    Sport.delete_all
+    Event.delete_all
+    League.delete_all
+    Country.delete_all
+    BetType.delete_all
+    Bet.delete_all
+    @log.write "Clearing DB finished\n"
+
     #array for pids
     threads = []
 
@@ -90,14 +99,14 @@ begin
     #waiting all parsers to finish
     wait(threads)
 
-    @log.write "Clearing DB (old elements) started\n"
-    Sport.old.delete_all
-    Event.old.delete_all
-    League.old.delete_all
-    Country.old.delete_all
-    BetType.old.delete_all
-    Bet.old.delete_all
-    @log.write "Clearing DB finished\n"
+#    @log.write "Clearing DB (old elements) started\n"
+#    Sport.old.delete_all
+#    Event.old.delete_all
+#    League.old.delete_all
+#    Country.old.delete_all
+#    BetType.old.delete_all
+#    Bet.old.delete_all
+#    @log.write "Clearing DB finished\n"
 
     @log.write "========================================================================\n"
 
