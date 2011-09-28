@@ -12,7 +12,7 @@ class NewsBlocksController < ApplicationController
     @sports = Sport.all
     @news_block = NewsBlock.find(params[:id])
     @comment = Comment.new
-    @comments = Comment.where( :news_block_id => @news_block.id  ).order("comment.created_at ASC")
+    @comments = Comment.where( :news_block_id => @news_block.id  )
   end
 
   def new
