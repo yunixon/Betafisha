@@ -325,3 +325,27 @@ font-size: 16px;
   color: #AAA;
 }
 
+
+/*
+	LEVEL ONE
+*/
+
+ul.dropdown li.hover, ul.dropdown li:hover { position: relative; }
+
+
+
+/*
+	LEVEL TWO
+*/
+#navigation ul.dropdown ul 	{ visibility: hidden; position: absolute; top: 100%; left: 0; z-index: 1000; }
+#navigation ul.dropdown ul li { font-weight: normal; font-size: 12px; background: #000; color: #eee; height: 30px; float: none; padding-top: 5px; }
+
+/* IE 6 & 7 Needs Inline Block */
+ul.dropdown ul li a	{  width: 100%; display: inline-block; margin-top: 5px; }
+
+/*
+	LEVEL THREE
+*/
+ul.dropdown ul ul 	{ left: 100%; top: 0; background: #000; color: #eee; }
+ul.dropdown li:hover > ul { visibility: visible; }
+

@@ -56,14 +56,27 @@
   </div>
 
   <div id="navigation" class="grid_24">
-	<ul>
+	<ul class="dropdown">
 	    <li><%= link_to t(:top_menu_coefficients), coefficients_path %></li>
       <li><%= link_to t(:top_menu_bookmakers), bookmakers_path %></li>
       <li><%= link_to t(:top_menu_statistics), statistics_path %></li>
-      <li><%= link_to t(:top_menu_tools), tools_path %></li>
+      <li><%= link_to t(:top_menu_tools), tools_path %>
+        <ul class="sub_menu">
+            <li>
+                Calculators
+        				<ul>
+        					<li>Dutching</li>
+        					<li>Hutching</li>
+        					<li>Hedging</li>
+        					<li>Bet Calculator</li>
+        				</ul>
+        		</li>
+        </ul>
+      </li>
 	</ul>
   </div>
   <div id="sub_navigation" class="grid_24">
+      <%= yield :sub_navigation%>
   </div>
 </header>
 
