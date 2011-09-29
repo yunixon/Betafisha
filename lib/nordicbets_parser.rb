@@ -41,7 +41,17 @@ class NordicbetsParser
             @_participant.save
             @_participant.touch
           when 'outcomeset' then
-            _bettype_name = calculate_name(Nordicbet, element['type'], 'bet_type', false)
+
+            if element['type'] == 'Result'
+              count_of_outcomes = 0
+              element.children.each do |outcome|
+                count_of_outcomes += 1 if outcome.name == 'outcome'
+              end
+              _bettype_name = calculate_name(Nordicbet, count_of_outcomes == 2 ? 'Result' : 'Result with draw', 'bet_type', false)
+            else
+
+              _bettype_name = calculate_name(Nordicbet, element['type'], 'bet_type', false)
+            end
             if _bettype_name.present?
               @_bettype = BetType.find_or_create_by_name _bettype_name
               @_bettype.touch
@@ -67,7 +77,5 @@ class NordicbetsParser
         end
       end
     end
-
-
   end
 end

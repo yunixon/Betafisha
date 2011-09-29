@@ -5,7 +5,7 @@ SPORTS = ['basketball', 'football', 'ice_hockey', 'tennis']
 COMMON_BETTYPES = ['Outright', '1x2', '1or2']
 GAMEBOOKERS = ['Outright', 'Versus (with Draw)', ['To Win the Match', 'Versus', 'Draw No Bet']]
 BETREDKINGS = ['Winner', 'Home Draw Away', 'Home Away With Impossible Draw']
-NORDICBET = ['Result Winner', 'Result (OutcomeSet has 3 children nodes)', 'Result (OutcomeSet has 2 children nodes)']
+NORDICBET = ['Result Winner', 'Result with draw', 'Result']
 STANJAMES = [["NBA Outright", "Eastern Conference", "Western Conference",
               "Tournament Outright Prices", "Outright Prices", "Australian Open 2012",
               "Wimbledon 2012", "French Open 2012", "Australian Open 2012",
