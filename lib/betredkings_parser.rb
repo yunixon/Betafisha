@@ -27,7 +27,7 @@ class BetredkingsParser
           _country.touch
 
           country.children.each do |tournament|
-            _league_name = calculate_name(Betredking, tournament['name'].gsub(/[^a-zA-Z]*/, ''), 'league')
+            _league_name = calculate_name(Betredking, tournament['name'].gsub(/[^a-zA-Z ]*/, ''), 'league')
             _league = League.find_or_create_by_name _league_name
             _league.sport_id = _sport.id
             _league.country_id = _country.id
