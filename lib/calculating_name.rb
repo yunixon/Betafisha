@@ -5,7 +5,7 @@ module CalculatingName
 
   def calculate_name(model, element, type, allownew = true)
     _name = ''
-    if temp = model.find(:first, :conditions => {:element_name => element})
+    if temp = model.find(:first, :conditions => {:element_name => element, :table_name => type})
       _name = temp.common ? temp.common.element_name : temp.element_name
     elsif temp = Common.find(:first, :conditions => ["element_name like :e and table_name = :t", {:e => "%#{element}%", :t => type}])
       model.create(:table_name => type, :element_name => element, :common_id => temp.id)
