@@ -21,6 +21,7 @@ module CalculatingName
         if type == 'country'
           element_common_world = Common.find(:first, :conditions => {:element_name => 'World', :table_name => 'country'})
           model.create(:table_name => type, :element_name => 'World', :common_id => element_common_world.id)
+          _name = 'World'
         else
           model.create(:table_name => type, :element_name => element)
           _name = element
