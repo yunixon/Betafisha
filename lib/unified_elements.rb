@@ -64,7 +64,8 @@ SPORTS.each do |style|
   doc.xpath('//sport').each do |sport|
     calculate_common_name(sport['name'], 'sport')
     sport.children.each do |group|
-      _country_name = group['name'].include?('~') ? 'World' : group['name'].split(' - ').first
+      _country_name = group['name'].include?('~') ? 'World' :
+        group['name'].split(' - ').length == 2 ? group['name'].split(' - ').first  : 'World'
       _league_name = group['name'].include?('~') ? group['name'].gsub('~','') : group['name'].split(' - ').last
       calculate_common_name(_country_name, 'country')
       calculate_common_name(_league_name, 'league')
