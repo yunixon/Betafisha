@@ -81,7 +81,7 @@ begin
         @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
       end
     end
-#temporarily disabled
+
     threads[3] = spawn do
       begin
         @log.write "Nordicbet parsing started #{Time.now}\n"
@@ -108,6 +108,11 @@ begin
 #    Bet.old.delete_all
 #    @log.write "Clearing DB finished\n"
 
+    @log.write "Deleting events without bets\n"
+    Event.all.each do |e|
+      e.destroy if e.bets.empty?
+    end
+    @log.write "Deleting events without bets finished\n"
     @log.write "========================================================================\n"
 
     #One time per day
