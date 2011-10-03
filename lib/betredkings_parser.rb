@@ -61,7 +61,7 @@ class BetredkingsParser
                     element.children.each do |type|
                       _type_name = calculate_name(Betredking, type['type'], 'bet_type', false)
                       if _type_name.present?
-                        if _type_name == '1x2' && !type['scope'].downcase.include?('full time')
+                        if (_type_name == '1x2' or _type_name == '1or2') && !type['scope'].downcase.include?('full time')
                         else
                           _type = BetType.find_or_create_by_name _type_name
                           type.children.each_with_index do |odd, i|
