@@ -4,6 +4,11 @@ jQuery.ajaxSetup({
 
 $(document).ready(function() {
 
+    /**************** ********** ********************/
+    /****************  EVENTS    ********************/
+    /**************** ********** ********************/
+
+
   $('.add_to_coupon, .remove_from_coupon').click( function() {
 	  $.ajax({
 	     		type: 'GET',
@@ -30,6 +35,20 @@ $(document).ready(function() {
 		return false;
 	});
 
+
+   /* BET TYPE FILTERS */
+    $('.allin-filter, .1x2-filter, .1or2-filter, .Outright-filter').click(function(){
+	    $.ajax({
+	       		type: 'GET',
+	       		data: { filter_type: this.getAttribute("class"), sport_id: this.getAttribute("id") },
+	       		url: '/coefficients',
+	       		dataType:'script'
+	       	});
+      	return false;
+    });
+
+
+
 	//$('.event-title  a').click( function() {});
 
 	//$j('wrapper').css('height', $j('#left_nav').css('height') );
@@ -45,6 +64,11 @@ $(document).ready(function() {
 
 		}, 5000 );
 		*/
+
+
+    /**************** ********** ********************/
+    /****************  STYLINGS  ********************/
+    /**************** ********** ********************/
 
     $("ul.dropdown li").hover(function(){
 

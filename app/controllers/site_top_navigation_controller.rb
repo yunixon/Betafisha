@@ -7,6 +7,10 @@ class SiteTopNavigationController < ApplicationController
     @counter = NewsBlock.all.count
  	  @sports = Sport.all
     @coupon = Coupon.new
+
+    @bet_type_filter = params[:filter_type] ||= "allin-filter"
+
+   ActiveRecord::Base.logger.info @bet_type_filter.split("-")[0]
     respond_to do |format|
       format.html {
         @top_event = League.first.events.first ||= []
@@ -18,6 +22,7 @@ class SiteTopNavigationController < ApplicationController
 		    end
       }
       format.js {
+        @bet_type_filter = @bet_type_filter.split("-")[0]
         if signed_in?
           if params['type'] == 'add_to_coupon'
             current_user.coupons.find_or_create_by_league_id params[:sport_id].gsub("league_", "").to_i

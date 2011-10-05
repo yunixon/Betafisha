@@ -4,7 +4,6 @@
   <div class="betting-odds-header">
    <span style= "float: left;" ><%= @league.name %> Betting Odds</span>
     <% if signed_in? %>
-
      <% if @has_ligue.nil? %>
 		  <%= link_to "добавить лигу", "#", :class => "add_to_coupon", :id => "league_#{@league.id }"  %>
 		  <% elsif %>
@@ -14,7 +13,10 @@
   </div>
 
   <div class="bettings-odds-bookmakers">
-
+    <%= link_to "show all", "#", :class => "allin-filter", :id => "league_#{@league.id }"  %> |
+    <%= link_to "1x2", "#", :class => "1x2-filter", :id => "league_#{@league.id }" %> |
+    <%= link_to "1or2", "#", :class => "1or2-filter", :id => "league_#{@league.id }" %> |
+    <%= link_to "Outright", "#", :class => "Outright-filter", :id => "league_#{@league.id }" %>
   </div>
 
   <div class="events-data">
@@ -22,21 +24,22 @@
         <div class= " event-title "> <%= link_to e.name, "#" %> <%= link_to "expand", "#", :class => "expand" %> </div>
         <div class="odds-data">
         <% e.bets.each do |b| %>
-          <div class="event" >
-            <div class="bet-bookmaker" style="width: 100px; float:left;">
-              <%= image_tag imageUriByBookmakerName( b.bookmaker.name ), :width => 100, :height => 20 %>
-            </div>
-            <div class="bet-name">
-               <%= b.name %>
-            </div>
-            <div class="bet-odd">
-              <%= b.odd %> /
-              <% if !b.bet_type.nil? %>
-                <%= b.bet_type.name %>
-              <% end %>
-            </div>
-
-          </div>
+         <% if b.bet_type.name == @bet_type_filter %>
+            <div class="event" >
+              <div class="bet-bookmaker" style="width: 100px; float:left;">
+                <%= image_tag imageUriByBookmakerName( b.bookmaker.name ), :width => 100, :height => 20 %>
+              </div>
+              <div class="bet-name">
+                 <%= b.name %>
+              </div>
+              <div class="bet-odd">
+                <%= b.odd %> /
+                <% if !b.bet_type.nil? %>
+                  <%= b.bet_type.name %>
+                <% end %>
+              </div>
+             </div>
+          <% end %>
         <% end %>
     </div>
     <% end %>
