@@ -7,3 +7,11 @@ $("#breadcrumb").append('<%= escape_javascript(  @league.name  ) %>');
 $("#refresh_box").html(' <%= escape_javascript( render "league_data" ) %> ');
 $("#right_nav").html(' <%= escape_javascript( render "site_top_navigation/coupons" ) %> ');
 
+
+
+$(".odds-data").each(function(index) {
+    if ( $(this).children().size() == 0 ) {
+      $(this).prev().hide();
+    }
+});
+

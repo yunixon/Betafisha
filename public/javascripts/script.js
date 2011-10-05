@@ -4,9 +4,6 @@ jQuery.ajaxSetup({
 
 $(document).ready(function() {
 
-    /**************** ********** ********************/
-    /****************  EVENTS    ********************/
-    /**************** ********** ********************/
 
 
   $('.add_to_coupon, .remove_from_coupon').click( function() {
@@ -35,6 +32,9 @@ $(document).ready(function() {
 		return false;
 	});
 
+    /**************** ********** ********************/
+    /****************  EVENTS    ********************/
+    /**************** ********** ********************/
 
    /* BET TYPE FILTERS */
     $('.allin-filter, .1x2-filter, .1or2-filter, .Outright-filter').click(function(){
