@@ -12,12 +12,12 @@
       <% end %>
     </div>
 
-    <div class="bettings-odds-bookmakers">
-      <%= link_to "show all", "#", :class => "allin-filter active", :id => "league_#{@league.id }"  %> |
-      <%= link_to "1x2", "#", :class => "1x2-filter", :id => "league_#{@league.id }" %> |
-      <%= link_to "1or2", "#", :class => "1or2-filter", :id => "league_#{@league.id }" %> |
-      <%= link_to "Outright", "#", :class => "Outright-filter", :id => "league_#{@league.id }" %>
-    </div>
+  <div class="bettings-odds-bookmakers">
+    <%= link_to "show all", "#", :class => "allin-filter", :id => "league_#{@league.id }"  %> |
+    <%= link_to "1x2", "#", :class => "1x2-filter", :id => "league_#{@league.id }" %> |
+    <%= link_to "1or2", "#", :class => "1or2-filter", :id => "league_#{@league.id }" %> |
+    <%= link_to "Outright", "#", :class => "Outright-filter", :id => "league_#{@league.id }" %>
+  </div>
 
     <div class="events-data">
       <% @league.events.each do |e| %>

@@ -38,6 +38,7 @@ $(document).ready(function() {
 
    /* BET TYPE FILTERS */
     $('.allin-filter, .1x2-filter, .1or2-filter, .Outright-filter').click(function(){
+    $(this).addClass("active");
 	    $.ajax({
 	       		type: 'GET',
 	       		data: { filter_type: this.getAttribute("class"), sport_id: this.getAttribute("id") },

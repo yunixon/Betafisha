@@ -34,3 +34,8 @@ a.expand {
         background: #fff url("../images/expand.png") 0 -50px ;
 }
 
+
+div.bettings-odds-bookmakers a.active {
+    text-decoration: underline;
+}
+
