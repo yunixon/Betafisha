@@ -45,7 +45,7 @@ class GamebookersParser
             event.children.each do |bettype|
               _bet_type_name = calculate_name(Gamebooker, bettype['name'], 'bet_type', false)
               if _bet_type_name.present?
-                _bet_type = BetType.create :name => _bet_type_name
+                _bet_type = BetType.find_or_create_by_name _bet_type_name
                 _bet_type.touch
                 bettype.children.each do |bet|
                   _team = Participant.new
@@ -73,3 +73,4 @@ class GamebookersParser
     end
   end
 end
+
