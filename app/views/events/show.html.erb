@@ -1,0 +1,12 @@
+<% content_for :breadcrumb do %>
+   <%= link_to t(:top_menu_coefficients), coefficients_path %>
+   »  <%= link_to @event.league.country.name,  @event.league.country %>
+   » <%= link_to @event.league.sport.name,  @event.league.sport %>
+   » <%= link_to @event.league.name, @event.league %>
+   » <%= @event.name %>
+<% end %>
+
+<%= render 'events/outright' %>
+<%= render 'events/towin' %>
+<%= render 'events/towin_with_draw' %>
+

@@ -1,4 +1,11 @@
-<ul>
-		</b><%= @country.name %></li>
-</ul>
+<% content_for :breadcrumb do %>
+   <%= link_to t(:top_menu_coefficients), coefficients_path %>
+   »  <%= @country.name %>
+<% end %>
+
+<% content_for :content do %>
+  <% @country.leagues.each do |l| %>
+    <%= link_to l.name, l %> <br />
+  <% end %>
+<% end %>
 

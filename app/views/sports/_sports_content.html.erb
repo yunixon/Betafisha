@@ -47,7 +47,7 @@
 				  <ul class="leagues">
 					<% League.where(:sport_id => sport.id, :country_id => countries.country.id ).each do |league| %>
 						<li class='league' id="league_<%= league.id %>">
-							<%= link_to league.name, "#" %>
+							<%= link_to league.name, league %>
 
 							<% if signed_in? && current_user.admin? %>
 								<%= link_to "Удалить", league, :confirm => "Вы уверены?", :title => "Удалить #{league.name}", :class => 'delete_league_item' %>

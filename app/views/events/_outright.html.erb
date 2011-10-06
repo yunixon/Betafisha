@@ -1,0 +1,8 @@
+<% content_for :content do %>
+  <% @event.bets.each do |b| %>
+    <% if b.bet_type.name == 'Outright'%>
+      <%=  b.name %> - <%= b.odd %> <br />
+    <% end %>
+  <% end %>
+<% end %>
+

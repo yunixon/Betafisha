@@ -4,8 +4,6 @@ jQuery.ajaxSetup({
 
 $(document).ready(function() {
 
-
-
   $('.add_to_coupon, .remove_from_coupon').click( function() {
 	  $.ajax({
 	     		type: 'GET',
@@ -16,10 +14,10 @@ $(document).ready(function() {
 		  return false;
   });
 
-  $('.odds-data').hide();
+ //('.odds-data').hide();
 
   $('.event-title').click( function() {
-		if( $(this).next().is(':hidden') ) {
+	/*	if( $(this).next().is(':hidden') ) {
 			$('.event-title').removeClass('active').next().hide();
 			$("a.expand").css({backgroundPosition: '0px -50px'});
 			$(this).find( "a.expand" ).css({backgroundPosition: '0px -10px'});
@@ -28,7 +26,7 @@ $(document).ready(function() {
 		  $('.event-title').removeClass('active');
 		  $(this).find( "a.expand" ).css({backgroundPosition: '0px -50px'});
 		  $('.odds-data').hide();
-		}
+		}*/
 		return false;
 	});
 

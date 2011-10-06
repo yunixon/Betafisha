@@ -12,13 +12,12 @@
 <% end %>
 
 <% content_for :content do %>
-
-  <%if !@top_event.bets.nil? %>
+  <%if !@top_event.bets.nil?%>
     <div id="refresh_box">
-      <%= render "top_event"  %>
+      <%= render "top_event"%>
     </div>
   <% end %>
-<%= render "news_blocks/news" %>
+  <%= render "news_blocks/news"%>
 <% end %>
 
 <% content_for :right_nav do %>

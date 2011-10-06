@@ -24,18 +24,18 @@
         <div class= " event-title ">
           <%= link_to e.name, "#" %> <%= link_to "expand", "#", :class => "expand" %>
         </div>
+
+        <% @bet_vals = []  %>
         <div class="odds-data">
           <% e.bets.each do |b| %>
-            <% @bet_name = b.name %>
-            <% @bet_odd = b.odd %>
-            <% @bet_bookmaker = b.bookmaker.name %>
-            <% if b.bet_type.name == @bet_type_filter %>
-              <%= render 'bet' %>
-            <% elsif "allin" == @bet_type_filter %>
+            <% if b.bet_type.name == "1x2" %>
+              <%= render 'towin' %>
+            <% elsif b.bet_type.name == "Outright" %>
               <%= render 'bet' %>
             <% end %>
            <% end %>
         </div>
+
       <% end %>
     </div>
 

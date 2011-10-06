@@ -1,0 +1,15 @@
+<% content_for :breadcrumb do %>
+   <%= link_to t(:top_menu_coefficients), coefficients_path %>
+   »  <%= link_to @league.country.name,  @league.country %>
+   » <%= link_to @league.sport.name,  @league.sport %>
+   » <%= @league.name %>
+<% end %>
+
+<% content_for :content do %>
+  <% @league.events.each do |e| %>
+    <!--% @event = e %-->
+    <%= link_to e.name, e  %> <br />
+    <!--%= render 'events/outright' %-->
+  <% end %>
+<% end %>
+

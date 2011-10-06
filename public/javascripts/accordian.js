@@ -78,7 +78,7 @@ $(document).ready(function() {
 		return false;
 	});
 
-	$('.leagues li.league').click( function() {
+	/*$('.leagues li.league').click( function() {
 		$.ajax({
 	   		type: 'GET',
 	   		data: { sport_id :  this.getAttribute('id'), type: "show_league_events"  },
@@ -86,7 +86,7 @@ $(document).ready(function() {
 	   		dataType:'script'
 	   	});
 		return false;
-	});
+	});*/
 
 });
 
