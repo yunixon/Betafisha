@@ -1,12 +1,11 @@
 class LeaguesController < ApplicationController
 
-  before_filter :authenticate
-  before_filter :admin_user
+  before_filter :admin_user, :only => [:edit, :update, :destroy]
 
   def index
     @leagues = League.all
   end
-  
+
   def new
     @leagues = League.all
   end
@@ -16,16 +15,16 @@ class LeaguesController < ApplicationController
       @success = false
       respond_to do |format|
         format.html
-        format.js { 
-          if @league.save  
+        format.js {
+          if @league.save
             @success = true
             @sports = Sport.all
-          else 
-            @success = false  
+          else
+            @success = false
             @sports = Sport.all
-          end 
+          end
         }
-      end  
+      end
 
   end
 
@@ -50,10 +49,10 @@ class LeaguesController < ApplicationController
 
   def destroy
     league = League.find(params[:id])
-    
+
     @sport_id = league.sport.id
     @country_id = league.country.id
-    
+
     league.destroy
     respond_to do |format|
       format.js { @sports = Sport.all }
@@ -61,3 +60,4 @@ class LeaguesController < ApplicationController
   end
 
 end
+
