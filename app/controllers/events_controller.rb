@@ -4,6 +4,7 @@ class EventsController < ApplicationController
   end
 
   def show
+    @sports = Sport.all
     @event = Event.find(params[:id])
   end
 
@@ -39,3 +40,4 @@ class EventsController < ApplicationController
     redirect_to events_url, :notice => "Successfully destroyed event."
   end
 end
+

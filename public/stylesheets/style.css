@@ -22,11 +22,10 @@ a:hover { text-decoration: underline; }
 
 
 
-div#wrapper, div#left_nav, div#right_nav {
-	margin-bottom: 5px;
- 	background: #eee;
- 	min-height: 700px;
-}
+div#wrapper, div#left_nav, div#right_nav { background: #eee; min-height: 700px; }
+
+div#left_nav { border-right: 1px solid #ccc; }
+div#right_nav { border-left: 1px solid #ccc; }
 
 #navigation {
   border-right: 1px solid #333;

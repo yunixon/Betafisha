@@ -16,6 +16,7 @@ class CountriesController < ApplicationController
   end
 
   def show
+    @sports = Sport.all
     @country = Country.find(params[:id])
   end
 

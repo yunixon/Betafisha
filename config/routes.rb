@@ -35,9 +35,8 @@ Betafisha::Application.routes.draw do
   get "site_top_navigation/tools"
   match "tools" =>  "site_top_navigation#tools", :as => :tools
 
- # test page for feeds
-  match "/api_test", :to =>  "bets_loader#api_test", :as => :api_test
-
+ # add coupon
+  match "leaguetocoupon", :to =>  "leagues#leaguetocoupon", :as => :leaguetocoupon
 
   # admin
   get "admin/index"

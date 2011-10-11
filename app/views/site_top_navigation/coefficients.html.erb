@@ -20,8 +20,11 @@
 <% end %>
 
 <% content_for :right_nav do %>
-  <div class="header">Мои Лиги</div>
-    <%= render 'site_top_navigation/coupons' %>
+  <div id="my_coupon">
+    <div class="header">Мои Лиги</div>
+    <div class="my_coupon_data">
+      <%= render 'site_top_navigation/coupons' %>
+    </div>
   </div>
 <% end %>
 

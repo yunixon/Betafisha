@@ -1,12 +1,5 @@
 $(document).ready(function() {
 
-	$('.acc_container').hide();
-	$('.leagues').hide();
-	$("a.delete_sport_item").hide();
-	$("a.edit_sport_item").hide();
-	//$j('.acc_trigger:first').addClass('active').next().show();
-
-
 	$('.acc_trigger').mouseover( function(){
 		$("a.delete_sport_item").hide();
 		$(this).find('a.delete_sport_item').show();
@@ -57,9 +50,13 @@ $(document).ready(function() {
         return false;
 	});
 
-	$('.acc_trigger').click( function() {
+  /*
+    Sports menu expand events
+  */
 
-    $.cookie('nav_menu_sport', $(this).attr("id"), { expires: 7 });
+  // sport expand
+	$('.acc_trigger').click( function() {
+    $.cookie('nav_menu_sport', $(this).attr("id"), { path: '/'});
     $.cookie('nav_menu_country', null);
 
 		if( $(this).next().is(':hidden') ) {
@@ -69,14 +66,13 @@ $(document).ready(function() {
       $.cookie('nav_menu_sport', null);
 		  $('.acc_trigger').removeClass('active');
 		  $('.acc_container').hide();
-
 		}
-
 		return false;
 	});
 
+  // country expand
 	$('.countries li.country a').click( function() {
-    $.cookie('nav_menu_country', $(this).parent().attr("id"), { expires: 7 });
+    $.cookie('nav_menu_country', $(this).parent().attr("id"),{ path: '/'});
 		if( $(this).parent().next().is(':hidden') ) {
 			$('.countries li.country a').parent().removeClass('active').next().hide();
 			$(this).parent().toggleClass('active').next().show();
@@ -84,15 +80,6 @@ $(document).ready(function() {
 		return false;
 	});
 
-	/*$('.leagues li.league').click( function() {
-		$.ajax({
-	   		type: 'GET',
-	   		data: { sport_id :  this.getAttribute('id'), type: "show_league_events"  },
-	   		url: '/coefficients',
-	   		dataType:'script'
-	   	});
-		return false;
-	});*/
 
 });
 

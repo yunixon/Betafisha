@@ -5,11 +5,30 @@
    » <%= @league.name %>
 <% end %>
 
+<% content_for :left_nav do %>
+  <div class="header">Виды спорта</div>
+	<%= render 'sports/sports_content' %>
+<% end %>
+
 <% content_for :content do %>
+
+  <div class="coupon-league-manage">
+    <%= render 'coupons/manage_leagues_coupon' %>
+  </div>
+
   <% @league.events.each do |e| %>
-    <!--% @event = e %-->
     <%= link_to e.name, e  %> <br />
-    <!--%= render 'events/outright' %-->
   <% end %>
+
+<% end %>
+
+
+<% content_for :right_nav do %>
+  <div id="my_coupon">
+    <div class="header">Мои Лиги</div>
+    <div class="my_coupon_data">
+      <%= render 'site_top_navigation/coupons' %>
+    </div>
+  </div>
 <% end %>
 

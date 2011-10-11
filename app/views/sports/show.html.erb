@@ -3,9 +3,23 @@
    »  <%= @sport.name %>
 <% end %>
 
+<% content_for :left_nav do %>
+  <div class="header">Виды спорта</div>
+	<%= render 'sports/sports_content' %>
+<% end %>
+
 <% content_for :content do %>
   <% @sport.leagues.each do |l| %>
     <%= link_to  l.name, l %> <br />
   <% end %>
+<% end %>
+
+<% content_for :right_nav do %>
+  <div id="my_coupon">
+    <div class="header">Мои Лиги</div>
+    <div class="my_coupon_data">
+      <%= render 'site_top_navigation/coupons' %>
+    </div>
+  </div>
 <% end %>
 

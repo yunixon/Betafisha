@@ -1,0 +1,11 @@
+<span style= "float: left;" ><%= @league.name %> Betting Odds</span>
+<% if signed_in? %>
+  <% if @has_ligue.nil? %>
+    <%= link_to "добавить лигу", "#", :class => "add_to_coupon", :id => "league_#{@league.id }"  %>
+  <% elsif %>
+    <%= link_to "удалить лигу", "#", :class => "remove_from_coupon", :id => "league_#{@league.id }"  %>
+  <% end %>
+<% end %>
+
+<%= javascript_include_tag 'coupon.js' %>
+

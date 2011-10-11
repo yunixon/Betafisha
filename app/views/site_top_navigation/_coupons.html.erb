@@ -1,7 +1,9 @@
 <% if signed_in? %>
   <ul>
   <% current_user.coupons.each do |c| %>
-    <li> <%= c.league.name if !c.league.nil?  %> </li>
+      <% if !c.league.nil?%>
+        <li>  <%= link_to c.league.name, c.league %> </li>
+      <% end %>
   <% end %>
   </ul>
 <% end %>
