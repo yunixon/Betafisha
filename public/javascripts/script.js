@@ -4,6 +4,8 @@ jQuery.ajaxSetup({
 
 $(document).ready(function() {
 
+  menuFromCookies();
+
   $('.add_to_coupon, .remove_from_coupon').click( function() {
 	  $.ajax({
 	     		type: 'GET',
@@ -70,20 +72,26 @@ $(document).ready(function() {
     /**************** ********** ********************/
 
     $("ul.dropdown li").hover(function(){
-
         $(this).addClass("hover");
         $('ul:first',this).css('visibility', 'visible');
-
     }, function(){
-
         $(this).removeClass("hover");
         $('ul:first',this).css('visibility', 'hidden');
-
     });
 
     $("ul.dropdown li ul li:has(ul)").find("a:first").append(" &raquo; ");
 
+});
 
 
-})
+function menuFromCookies() {
+      if($.cookie('nav_menu_sport') != null) {
+      sport_item_id = $.cookie('nav_menu_sport');
+       $("#" + sport_item_id).addClass("active").next().show();
+      if($.cookie('nav_menu_country') != null) {
+         country_item_id = $.cookie('nav_menu_country');
+         $("#" + country_item_id).addClass("active").next().show();
+      }
+    }
+}
 

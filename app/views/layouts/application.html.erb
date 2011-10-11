@@ -20,6 +20,7 @@
 	<%= javascript_include_tag 'textinputfilter' %>
 	<%= javascript_include_tag 'popup' %>
 	<%= javascript_include_tag 'script' %>
+  <%= javascript_include_tag 'jquery.cookie.js' %>
 	<%= include_tiny_mce_if_needed %>
 
 </head>
@@ -75,9 +76,11 @@
       </li>
 	</ul>
   </div>
+
   <div id="sub_navigation" class="grid_24">
       <%= yield :sub_navigation%>
   </div>
+
 </header>
 
 <section class="container_24">
@@ -105,6 +108,7 @@
 </section>
 
 <footer class="container_24">
+
 	  <div id="footer" class="grid_24">
 	     <div id= "bottom_links" class="grid_10">
 	        <%= link_to "Privacy Policy", "/info/policy" %> |
@@ -123,6 +127,7 @@
       	<%= debug(params) if Rails.env.development? %>
       <% end %>
   	</div>
+
 </footer>
 
 <div id="popup_name" class="popup_block">

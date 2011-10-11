@@ -58,10 +58,15 @@ $(document).ready(function() {
 	});
 
 	$('.acc_trigger').click( function() {
+
+    $.cookie('nav_menu_sport', $(this).attr("id"), { expires: 7 });
+    $.cookie('nav_menu_country', null);
+
 		if( $(this).next().is(':hidden') ) {
 			$('.acc_trigger').removeClass('active').next().hide();
 			$(this).toggleClass('active').next().show();
 		} else {
+      $.cookie('nav_menu_sport', null);
 		  $('.acc_trigger').removeClass('active');
 		  $('.acc_container').hide();
 
@@ -71,6 +76,7 @@ $(document).ready(function() {
 	});
 
 	$('.countries li.country a').click( function() {
+    $.cookie('nav_menu_country', $(this).parent().attr("id"), { expires: 7 });
 		if( $(this).parent().next().is(':hidden') ) {
 			$('.countries li.country a').parent().removeClass('active').next().hide();
 			$(this).parent().toggleClass('active').next().show();
