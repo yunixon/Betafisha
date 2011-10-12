@@ -63,29 +63,27 @@ class StanjamesParser
           _event.touch
 
           if event['name'].scan(' v ').present?
-            event['name'].split(' v ').each do |participant|
-              _participant_name = calculate_name(StanJame, participant, 'participant')
-              _participant = Participant.find_or_create_by_name _participant_name
-              _participant.event_id = _event.id
-              _participant.save
-              _participant.touch
+            event.children.each do |bettype|
+              _bet_type_name = calculate_name(StanJame, bettype['name'], 'bet_type', false)
+              if _bet_type_name.present?
+                _bet_type = BetType.find_or_create_by_name _bet_type_name
+                _bet_type.touch
 
-              event.children.each do |bettype|
-                _bet_type_name = calculate_name(StanJame, bettype['name'], 'bet_type', false)
-                if _bet_type_name.present?
-                  _bet_type = BetType.find_or_create_by_name _bet_type_name
-                  _bet_type.touch
+                bettype.children.each do |bet|
+                  _participant_name = calculate_name(StanJame, bet['name'], 'participant')
+                  _participant = Participant.find_or_create_by_name _participant_name
+                  _participant.event_id = _event.id
+                  _participant.save
+                  _participant.touch
 
-                  bettype.children.each do |bet|
-                    _bet = Bet.create :name => bet['name']
-                    _bet.odd = bet['pricedecimal'].to_i
-                    _bet.event_id = _event.id
-                    _bet.participant_id = _participant.id
-                    _bet.bet_type_id = _bet_type.id
-                    _bet.bookmaker_id = _bookmaker.id
-                    _bet.save
-                    _bet.touch
-                  end
+                  _bet = Bet.create :name => _participant_name
+                  _bet.odd = bet['pricedecimal']
+                  _bet.event_id = _event.id
+                  _bet.participant_id = _participant.id
+                  _bet.bet_type_id = _bet_type.id
+                  _bet.bookmaker_id = _bookmaker.id
+                  _bet.save
+                  _bet.touch
                 end
               end
             end
