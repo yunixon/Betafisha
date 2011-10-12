@@ -31,4 +31,23 @@ module CalculatingName
     return _name
   end
 
+  
+  def calculate_common_name(name, type)
+    result = nil
+    if temp = Common.find(:first, :conditions => {:element_name => name})
+      result = temp
+    elsif temp = Common.find(:first, :conditions => ["element_name like :e and table_name = :t", {:e => "%#{name}%", :t => type}])
+      if temp.element_name.length > name.length
+        temp.update_attribute(:element_name, name)
+        result = temp
+      end
+    else
+      Common.find(:all, :conditions => {:table_name => type}).each do |s|
+        if name.downcase.include? s.element_name.downcase
+          result = s
+        end
+      end
+      result = Common.create(:table_name => type, :element_name => name) unless result
+    end
+  end
 end
