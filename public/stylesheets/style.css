@@ -331,8 +331,6 @@ font-size: 16px;
 
 ul.dropdown li.hover, ul.dropdown li:hover { position: relative; }
 
-
-
 /*
 	LEVEL TWO
 */
@@ -347,4 +345,23 @@ ul.dropdown ul li a	{  width: 100%; display: inline-block; margin-top: 5px; }
 */
 ul.dropdown ul ul 	{ left: 100%; top: 0; background: #000; color: #eee; }
 ul.dropdown li:hover > ul { visibility: visible; }
+
+
+#refresh_box, .my_coupon_data {
+  margin-left: 1px; margin-right: 1px;
+}
+
+h2.acc_trigger, .acc_container { width: 195px; }
+
+.event_name_cell, .event_cell {
+  background: #ccc;
+  text-align: center;
+  float: left;
+}
+
+.event_name_cell { width: 400px; }
+
+.event_cell { width: 50px; }
+.event_cell_data { text-align: left; }
+.event_cell_data a, .event_cell_data span  {  padding: 3px; display: block; }
 

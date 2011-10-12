@@ -8,13 +8,14 @@
 
 <% content_for :left_nav do %>
   <div class="header">Виды спорта</div>
-	<%= render 'sports/sports_content' %>
 <% end %>
 
 <% content_for :content do %>
+  <div id="refresh_box">
     <%= render 'events/outright' %>
     <%= render 'events/towin' %>
     <%= render 'events/towin_with_draw' %>
+  </div>
 <% end %>
 
 <% content_for :right_nav do %>

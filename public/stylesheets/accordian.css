@@ -4,7 +4,7 @@
 
 h2.acc_trigger {
 	padding: 0;
-	margin: 0 ;
+	margin-left: 5px;
 	background: #ccc;
 	height: 32px;
 	width: 200px;
@@ -77,7 +77,7 @@ h2.active, h2.active:hover {
 }
 
 .acc_container {
-	margin: 0;
+	margin-left: 5px;
 	padding: 0;
 	overflow: hidden;
 	font-size: 1em;
