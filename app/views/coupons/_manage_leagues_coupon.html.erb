@@ -1,3 +1,4 @@
+<% if signed_in? %>
 <span style= "float: left;" ><%= @league.name %> Betting Odds</span>
 <% if signed_in? %>
   <% if @has_ligue.nil? %>
@@ -8,4 +9,5 @@
 <% end %>
 
 <%= javascript_include_tag 'coupon.js' %>
+<% end %>
 

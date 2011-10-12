@@ -31,7 +31,9 @@ class LeaguesController < ApplicationController
     @sports = Sport.all
     @coupon = Coupon.new
     @league = League.find(params[:id])
-    @has_ligue = current_user.coupons.find_by_league_id params[:id]
+    if signed_in?
+      @has_ligue = current_user.coupons.find_by_league_id params[:id]
+    end
   end
 
   def edit
@@ -62,17 +64,19 @@ class LeaguesController < ApplicationController
   end
 
   def leaguetocoupon
-    respond_to do |format|
-      format.js{
-        @league = League.find(params[:sport_id].gsub("league_", "").to_i)
-        if params['type'] == 'add_to_coupon'
-         current_user.coupons.find_or_create_by_league_id params[:sport_id].gsub("league_", "").to_i
-        elsif params['type'] == 'remove_from_coupon'
-         coupon = Coupon.find_by_league_id params[:sport_id].gsub("league_", "").to_i
-         coupon.destroy
-        end
-        @has_ligue = current_user.coupons.find_by_league_id params[:sport_id].gsub("league_", "").to_i
-      }
+    if signed_in?
+      respond_to do |format|
+        format.js{
+          @league = League.find(params[:sport_id].gsub("league_", "").to_i)
+          if params['type'] == 'add_to_coupon'
+           current_user.coupons.find_or_create_by_league_id params[:sport_id].gsub("league_", "").to_i
+          elsif params['type'] == 'remove_from_coupon'
+           coupon = Coupon.find_by_league_id params[:sport_id].gsub("league_", "").to_i
+           coupon.destroy
+          end
+          @has_ligue = current_user.coupons.find_by_league_id params[:sport_id].gsub("league_", "").to_i
+        }
+      end
     end
    end
 
