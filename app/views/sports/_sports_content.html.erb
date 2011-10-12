@@ -24,11 +24,11 @@
     <%= image_tag "http://www.nordicbet.com/photos/50000001322.png" %>
   <% end %> <%= link_to sport.name, "#" %>
 
-	<% if signed_in? && current_user.admin? %>
-    <% if params[:controller] == 'admin'%>
+	<% if signed_in? && current_user.admin? && params[:controller] == 'admin' %>
 	    <%= link_to "Удалить", sport, :confirm => "Вы уверены?",  :title => "Удалить #{sport.name}", :class => 'delete_sport_item' %>
-	    <%= link_to "Редактировать", sport, :class => 'edit_sport_item', :id => sport.id %>	<% end %>  </h2>
-    <% end %>
+	    <%= link_to "Редактировать", sport, :class => 'edit_sport_item', :id => sport.id %>	 <% end %> </h2>
+
+
 <div class="acc_container">
 	<div class="block">
 			<ul class="countries">
@@ -39,7 +39,7 @@
 
 				  <li class="country" id='sport_<%= sport.id %>_country_<%= countries.country.id %>'>
 				  	<% if !countries.country.flag_image.nil? %><%= image_tag "flags/" + countries.country.flag_image %> <% end %>  <%= link_to countries.country.name , "#", :id => countries.country.id  %>
-					  <% if signed_in? && current_user.admin? && params[:controller] == 'admin'%>
+					  <% if signed_in? && current_user.admin? && params[:controller] == 'admin' %>
 						      <%= link_to "Удалить",  countries.country, :class => 'delete_country_item' %>
 						      <%= link_to "Редактировать", countries.country , :class => 'edit_country_item', :id => countries.country.id %>
 					  <% end %>
