@@ -102,7 +102,7 @@ class StanjamesParser
                   _participant.touch
 
                   _bet = Bet.create :name => bet['name']
-                  _bet.odd = bet['pricedecimal'].to_i
+                  _bet.odd = bet['pricedecimal']
                   _bet.event_id = _event.id
                   _bet.participant_id = _participant.id
                   _bet.bet_type_id = _bet_type.id
