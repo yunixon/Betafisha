@@ -363,5 +363,7 @@ h2.acc_trigger, .acc_container { width: 195px; }
 
 .event_cell { width: 50px; }
 .event_cell_data { text-align: left; }
-.event_cell_data a, .event_cell_data span  {  padding: 3px; display: block; }
+.event_cell_data a, .event_cell_data span  {  padding: 3px 3px 3px 7px; display: block;  }
+
+.event_cell_data span { text-align: center;}
 

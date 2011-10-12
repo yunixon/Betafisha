@@ -22,11 +22,9 @@
 
     <% @league.events.each_with_index do |e,i| %>
     <div class="event_name_cell event_cell_data" style="background: <%= '#fff' if i%2 == 0 %>; "> <%=  link_to e.name, e  %> </div>
-
-      <% e.bets.each_with_index do |b,i| %>
+      <% e.bets.each_with_index do |b,j| %>
         <% if b.bet_type.name == "1x2" %>
-          <% %>
-          <div class="event_cell event_cell_data" style="background: <%= '#fff' if i%2 == 0 %>;  "><span> <%= b.odd %> </span> </div>
+          <div class="event_cell event_cell_data" style="background: <%= '#fff' if i%2 == 0 %>;  "><span> <%= b.odd %> / <%= b.bet_type.name %> /<%= b.name %> </span> </div>
         <% end %>
       <% end %> <br />
     <% end %>
