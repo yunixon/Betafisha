@@ -29,6 +29,7 @@ class GamebookersParser
           _country.touch
 
           _league_name = group['name'].include?('~') ? group['name'].gsub('~','') : group['name'].split(' - ').last
+          _league_name = group['name'] if group['name'].split(' - ').last == 'Championship'
           _common_league_name = calculate_name(Gamebooker, _league_name, 'league')
           _league = League.find_or_create_by_name _common_league_name
           _league.sport_id = _sport.id
