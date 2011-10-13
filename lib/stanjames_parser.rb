@@ -3,20 +3,19 @@ class StanjamesParser
   URL = 'http://xml.stanjames.com/'
   SPORTS = {
     :ice_hockey => ['icehockey'],
-    :basketball => ['basketball-college', 'Basketball-conextra', 'basketball-euroleague', 'basketball-italy',
-      'basketball-international', 'basketball-us', 'basketball', 'Basketballbysport'],
+    :basketball => ['basketball-college', 'basketball-euroleague', 'basketball-italy',
+      'basketball-international', 'basketball-us', 'basketball'],
     :tennis => ['tennis-ladies', 'tennis-matches', 'tennis-mens', 'tennis-outrights'],
-    :football => ['football-antepost', 'football-antepost2', 'football-argentina', 'football-austria',
-      'football-austria2', 'football-belgium', 'football-brazil', 'football-coca-cola1', 'football-coca-cola2',
+    :football => ['football-argentina', 'football-austria',
+      'football-austria2', 'football-belgium', 'football-brazil',
       'football-conference', 'football-czech-div1', 'football-denmark', 'football-euro-champions-league',
-      'Football-Euro-Club-Competions-Markets', 'Football-Euro-Leagues-Markets', 'football-finland',
-      'Football-EuroLeagues-Cups-Markets', 'football-france', 'football-germany', 'football-germany4',
+       'football-finland', 'football-france', 'football-germany',
       'football-holland', 'football-hungary', 'football-international2', 'football-italy', 'football-major-league-soccer',
-      'FootBall-Match-Prices', 'football-mexico', 'Football-NonEuro-Leagues-Markets', 'Football-NonUk-Markets',
+       'football-mexico',
       'football-poland', 'football-portugal', 'football-premiership', 'football-romania-liga1', 'football-russia',
       'football-scottish-non-prem', 'football-scottish-prem', 'football-south-america',
       'football-spain', 'football-spanishcups', 'football-sweden', 'football-sweden2', 'football-switzerland', 'football-thechampionship',
-      'football-turkey', 'football-uk-cups', 'football-unibond-league', 'football-worldcup', 'FootballUkpromotions' ]
+      'football-turkey','football-worldcup' ]
     }
 
   def self.parse!
@@ -118,3 +117,4 @@ class StanjamesParser
     end
   end
 end
+

@@ -43,7 +43,7 @@ begin
     threads[0] = spawn do
       begin
         @log.write "Gamebookers parsing started #{Time.now}\n"
-      #  GamebookersParser.parse!
+        GamebookersParser.parse!
         @log.write "Gamebookers parsing finished #{Time.now}\n"
       rescue Exception => e
         @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
@@ -71,7 +71,7 @@ begin
     threads[2] = spawn do
       begin
         @log.write "Stan James parsing started #{Time.now}\n"
-        StanjamesParser.parse!
+        #StanjamesParser.parse!
         @log.write "Stan James parsing finished #{Time.now}\n"
       rescue Exception => e
         @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"

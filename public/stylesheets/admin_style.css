@@ -33,3 +33,6 @@ div#content { background: #f5f5f5; min-height: 100px; }
 .russia .ui-selectmenu-item-icon { background: url(../images/flags/ru.png) 0 0 no-repeat; }
 .usa .ui-selectmenu-item-icon { background: url(../images/flags/us.png) 0 0 no-repeat; }
 
+
+h2.acc_trigger, .acc_container { width: 235px; }
+

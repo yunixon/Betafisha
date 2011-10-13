@@ -119,7 +119,7 @@ textarea {
   border-color: #ccc;
   border-radius: 5px;
   height: 100px;
-  width: 500px;
+  width: 500px;ui-selectmenu
   border: 1px solid #ccc;
 
 }
@@ -366,4 +366,7 @@ h2.acc_trigger, .acc_container { width: 195px; }
 .event_cell_data a, .event_cell_data span  {  padding: 3px 3px 3px 7px; display: block;  }
 
 .event_cell_data span { text-align: center;}
+
+
+#country_submit { margin-top: 15px;}
 

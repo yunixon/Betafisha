@@ -5,13 +5,14 @@ class SiteTopNavigationController < ApplicationController
   def coefficients
 
  	  @sports = Sport.all
-    @bet_type_filter = params[:filter_type] ||= "allin-filter"
+    #@bet_type_filter = params[:filter_type] ||= "allin-filter"
 
-   ActiveRecord::Base.logger.info @bet_type_filter.split("-")[0]
+    #ActiveRecord::Base.logger.info @bet_type_filter.split("-")[0]
 
     respond_to do |format|
       format.html {
-        @top_event = League.limit(5).first(:order => "rand()").events.first
+
+        @top_event = Event.limit(5).first(:order => "rand()")
 
         if !@top_event.nil? and !@top_event.bets.nil?
           @bookmakers = @top_event.bets.find( :all,
@@ -21,7 +22,7 @@ class SiteTopNavigationController < ApplicationController
 		    end
       }
       format.js {
-        @bet_type_filter = @bet_type_filter.split("-")[0]
+       # @bet_type_filter = @bet_type_filter.split("-")[0]
         @league = League.find_by_id( params[:sport_id].gsub("league_", "").to_i )
         @bookmakers = @league.events
       }
