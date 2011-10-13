@@ -20,7 +20,10 @@ class Bet < ActiveRecord::Base
       result = Bet.find(:all, :conditions =>
       ['name = ? and bookmaker_id = ? and odd = ? and event_id = ?', self.name, self.bookmaker_id, self.odd, self.event_id])
 
-      return false if result.present?
+      !result.present?
+    else
+      #validate only for stan james
+      true
     end
   end
 end
