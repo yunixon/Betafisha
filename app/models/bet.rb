@@ -16,9 +16,9 @@ class Bet < ActiveRecord::Base
   private
 
   def verify_the_uniqueness
-    if self.bookmaker = Bookmaker.find(:first, :conditions => ['name = ?', 'StanJames'])
+    if self.bookmaker == Bookmaker.find(:first, :conditions => ['name = ?', 'StanJames'])
       result = Bet.find(:all, :conditions =>
-      ['name = ? and bookmaker_id = ? and odd = ? and event_id = ?', self.name, self.bookmaker_id, self.odd, self.event_id])
+        {:name => self.name, :bookmaker_id => self.bookmaker_id, :odd => self.odd, :event_id => self.event_id})
 
       !result.present?
     else
