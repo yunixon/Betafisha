@@ -38,7 +38,7 @@ class GamebookersParser
           _league.touch
 
           group.children.each do |event|
-            _event_name = calculate_name(Gamebooker, event['name'], 'event')
+            _event_name = calculate_name(Gamebooker, event['name'].gsub(' [Draw No Bet]', ''), 'event')
             _event = Event.find_or_create_by_name _event_name
             _event.league_id = _league.id
             _event.save

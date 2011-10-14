@@ -53,7 +53,7 @@ SPORTS.each do |style|
       calculate_common_name(_country_name, 'country')
       calculate_common_name(_league_name, 'league')
       group.children.each do |event|
-        calculate_common_name(event['name'], 'event')
+        calculate_common_name(event['name'].gsub(' [Draw No Bet]', ''), 'event')
         event.children.each do |bettype|
           if GAMEBOOKERS.flatten.include?(bettype['name'])
             bettype.children.each do |bet|
