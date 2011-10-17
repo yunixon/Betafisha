@@ -42,7 +42,7 @@ class BetredkingsParser
                 _match_name << match.children.children[0]['name'] << ' - ' << match.children.children[1]['name']
                 _event_name = calculate_name(Betredking, _match_name, 'event')
                 _event = Event.find_or_create_by_name _event_name
-                _event.league_id = _league.id
+                _event.league_id = _league.id unless _event.league_id.present?
                 _event.save
                 _event.touch
 
@@ -89,7 +89,7 @@ class BetredkingsParser
               else
                 _event_name = calculate_name(Betredking, _league_name, 'event')
                 _event = Event.find_or_create_by_name _event_name
-                _event.league_id = _league.id
+                _event.league_id = _league.id unless _event.league_id.present?
                 _event.save
                 _event.touch
 
