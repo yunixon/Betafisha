@@ -21,6 +21,7 @@ class StanjamesParser
   def self.parse!
     _bookmaker = Bookmaker.find_or_create_by_name BOOKMAKER
     _bookmaker.touch
+    bets_hash = {}
 
     SPORTS.each do |pair|
       pair.last.each do |url|
@@ -68,6 +69,7 @@ class StanjamesParser
                 _bet_type = BetType.find_or_create_by_name _bet_type_name
                 _bet_type.touch
 
+                bets_hash.clear
                 bettype.children.each do |bet|
                   _participant_name = calculate_name(StanJame, bet['name'], 'participant')
                   _participant = Participant.find_or_create_by_name _participant_name
@@ -81,8 +83,7 @@ class StanjamesParser
                   _bet.participant_id = _participant.id
                   _bet.bet_type_id = _bet_type.id
                   _bet.bookmaker_id = _bookmaker.id
-                  _bet.save
-                  _bet.touch
+                  bets_hash[bet['name']] = _bet
                 end
               end
             end
@@ -93,22 +94,27 @@ class StanjamesParser
                 _bet_type = BetType.find_or_create_by_name _bet_type_name
                 _bet_type.touch
 
+                bets_hash.clear
                 bettype.children.each do |bet|
-                  _participant_name = calculate_name(StanJame, bet['name'], 'participant')
-                  _participant = Participant.find_or_create_by_name _participant_name
+                  _participant_name     = calculate_name(StanJame, bet['name'], 'participant')
+                  _participant          = Participant.find_or_create_by_name _participant_name
                   _participant.event_id = _event.id
                   _participant.save
                   _participant.touch
 
-                  _bet = Bet.create :name => bet['name']
-                  _bet.odd = bet['pricedecimal']
-                  _bet.event_id = _event.id
-                  _bet.participant_id = _participant.id
-                  _bet.bet_type_id = _bet_type.id
-                  _bet.bookmaker_id = _bookmaker.id
-                  _bet.save
-                  _bet.touch
+                  _bet                  = Bet.create :name => bet['name']
+                  _bet.odd              = bet['pricedecimal']
+                  _bet.event_id         = _event.id
+                  _bet.participant_id   = _participant.id
+                  _bet.bet_type_id      = _bet_type.id
+                  _bet.bookmaker_id     = _bookmaker.id
+                  bets_hash[bet['name']] = _bet
+                end  
+                bets_hash.sort.each do |b|
+                  b.last.save
+                  b.last.touch
                 end
+
               end
             end
           end

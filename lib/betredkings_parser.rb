@@ -12,6 +12,7 @@ class BetredkingsParser
     _bookmaker.touch
     _participants_array = []
     _participants_hash = {}
+    bets_hash = {}
     
     COMMON_SPORTS.each do |style|
       doc = Nokogiri::HTML(open("http://aws2.betredkings.com/feed/#{style}.xml"))
@@ -64,6 +65,8 @@ class BetredkingsParser
                         if (_type_name == '1x2' or _type_name == '1or2') && !type['scope'].downcase.include?('full time')
                         else
                           _type = BetType.find_or_create_by_name _type_name
+
+                          bets_hash.clear
                           type.children.each_with_index do |odd, i|
                             _bet = Bet.new :priority => 1
                             _bet.name = case odd['outcome']
@@ -78,9 +81,13 @@ class BetredkingsParser
                             _bet.event_id = _event.id
                             _bet.bookmaker_id = _bookmaker.id
                             _bet.odd = odd.text
-                            _bet.save
-                            _bet.touch
+                            bets_hash[odd['outcome']] = _bet
                           end
+                          bets_hash.sort.each do |b|
+                            b.last.save
+                            b.last.touch
+                          end
+
                         end
                       end
                     end
