@@ -10,8 +10,27 @@ class Bet < ActiveRecord::Base
   #find old elements, interval can be changed
   scope :old, where("updated_at < ?", Time.now - 1.hour)
 
-  before_save :verify_the_uniqueness
 
+  def self.with_bet_type( name )
+    joins(:bet_type).where("bet_types.name = ?", name)
+  end
+
+  def self.with_bookmaker_name( name )
+    joins(:bet_type).where("bet_types.name = ?", type)
+  end
+
+  def self.with_participant_name( name )
+    joins(:bet_type).where("bet_types.name = ?", type)
+  end
+
+  #filters
+  scope :to_win_with_draw, with_bet_type("1x2")
+
+  scope :to_win, with_bet_type("1or2")
+  scope :outright, with_bet_type("Outright")
+
+
+  before_save :verify_the_uniqueness
 
   private
 
@@ -27,3 +46,4 @@ class Bet < ActiveRecord::Base
     end
   end
 end
+

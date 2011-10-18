@@ -1,6 +1,6 @@
 <% content_for :breadcrumb do %>
    <%= link_to t(:top_menu_coefficients), coefficients_path %>
-   »  <%= link_to @league.country.name,  @league.country %>
+   » <%= link_to @league.country.name,  @league.country %>
    » <%= link_to @league.sport.name,  @league.sport %>
    » <%= @league.name %>
 <% end %>
@@ -15,20 +15,19 @@
     <%= render 'coupons/manage_leagues_coupon' %>
   </div>
   <div id="refresh_box">
-    <div class="event_name_cell"> Игра </div>
-    <div class="event_cell"> 1 </div>
-    <div class="event_cell"> X </div>
-    <div class="event_cell"> 2 </div> <br />
-
-    <% @league.events.each_with_index do |e,i| %>
-    <div class="event_name_cell event_cell_data" style="background: <%= '#fff' if i%2 == 0 %>; "> <%=  link_to e.name, e  %> </div>
-      <% e.bets.each_with_index do |b,j| %>
-        <% if b.bet_type.name == "1x2" %>
-          <div class="event_cell event_cell_data" style="background: <%= '#fff' if i%2 == 0 %>;  "><span> <%= b.odd %> / <%= b.bet_type.name %> /<%= b.name %> </span> </div>
-        <% end %>
-      <% end %> <br />
-    <% end %>
-  </div>
+    <% @league.events.to_win_with_draw ("1x2", @league.id).each_with_index do |e,i| %>
+      <% if i == 0 %>
+        <div class="event_name_cell"> Игра </div>
+        <div class="event_cell"> 1 </div>
+        <div class="event_cell"> X </div>
+        <div class="event_cell"> 2 </div> <br />
+      <% end %>
+      <div class="event_name_cell event_cell_data" style="background: <%= '#fff' if i%2 == 0 %>; "> <%= link_to e.name, e %> </div>
+        <% e.bets.to_win_with_draw .each_with_index do |b,j| %>
+            <div class="event_cell event_cell_data" style="background: <%= '#fff' if i%2 == 0 %>;  "><span> <%= b.odd %> </span> </div>
+        <% end %> <br />
+      <% end %>
+    </div>
 <% end %>
 
 <% content_for :right_nav do %>

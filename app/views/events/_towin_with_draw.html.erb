@@ -2,20 +2,18 @@
 <% @bet_array = Array.new %>
 
 <% content_for :content do %>
-  <% @event.bets.each_with_index do |b,i| %>
-    <% if b.bet_type.name == '1x2'%>
+  <% @event.bets.to_win_with_draw.each_with_index do |b,i| %>
       <% if i == 0  %>
-        <% @bet_info_array = {"bet_type"=> b.bet_type.name, "bookmaker"=> b.bookmaker.name } %>
+        <% @bet_info_array = { "bet_type"=> b.bet_type.name, "bookmaker"=> b.bookmaker.name } %>
       <% end %>
       <% hash = {"name"=> b.name, "odd"=> b.odd } %>
       <% @bet_array[i] = hash%>
-    <% end %>
   <% end %>
 
   <% if @bet_info_array["bet_type"] == '1x2'%>
 
-    <!-- %= @bet_array.inspect %> <br /-->
-    <!--%= @bet_info_array.inspect % -->
+    <%= @bet_array.inspect %> <br />
+    <%= @bet_info_array.inspect %>
     <br />
 
     <div style="width: 150px; float:left;">Букмекер</div>

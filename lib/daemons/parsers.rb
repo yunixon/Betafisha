@@ -57,7 +57,11 @@ begin
     threads[1] = spawn do
       begin
         @log.write "Betredkings parsing started #{Time.now}\n"
+<<<<<<< Updated upstream
         BetredkingsParser.parse!
+=======
+       #BetredkingsParser.parse!
+>>>>>>> Stashed changes
         @log.write "Betredkings parsing finished #{Time.now}\n"
       rescue Exception => e
         @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
