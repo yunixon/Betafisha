@@ -30,8 +30,8 @@ class BetredkingsParser
           country.children.each do |tournament|
             _league_name = calculate_name(Betredking, tournament['name'].gsub(/[^a-zA-Z ]*/, ''), 'league')
             _league = League.find_or_create_by_name _league_name
-            _league.sport_id = _sport.id
-            _league.country_id = _country.id
+            _league.sport_id = set_attribute_unless_given(_league, :sport_id, _sport.id)
+            _league.country_id = set_attribute_unless_given(_league, :country_id, _country.id)
             _league.save
             _league.touch
 
@@ -43,7 +43,7 @@ class BetredkingsParser
                 _match_name << match.children.children[0]['name'] << ' - ' << match.children.children[1]['name']
                 _event_name = calculate_name(Betredking, _match_name, 'event')
                 _event = Event.find_or_create_by_name _event_name
-                _event.league_id = _league.id unless _event.league_id.present?
+                _event.league_id = set_attribute_unless_given(_event, :league_id, _league.id)
                 _event.save
                 _event.touch
 
@@ -54,7 +54,7 @@ class BetredkingsParser
                       _participants_array << participant
                       _team_name = calculate_name(Betredking, participant['name'], 'participant')
                       _team = Participant.new(:name => _team_name, :priority => 1)
-                      _team.event_id = _event.id
+                      _team.event_id = set_attribute_unless_given(_team, :event_id, _event.id)
                       _team.save
                       _team.touch
                     end
@@ -77,10 +77,10 @@ class BetredkingsParser
                             when 'X' then
                               'Draw'
                             end
-                            _bet.bet_type_id = _type.id
-                            _bet.event_id = _event.id
-                            _bet.bookmaker_id = _bookmaker.id
-                            _bet.odd = odd.text
+                            _bet.bet_type_id = set_attribute_unless_given(_bet, :bet_type_id, _type.id)
+                            _bet.event_id = set_attribute_unless_given(_bet, :event_id, _event.id)
+                            _bet.bookmaker_id = set_attribute_unless_given(_bet, :bookmaker_id, _bookmaker.id)
+                            _bet.odd = set_attribute_unless_given(_bet, :odd, odd.text)
                             bets_hash[odd['outcome']] = _bet
                           end
                           bets_hash.sort.each do |b|
@@ -96,7 +96,7 @@ class BetredkingsParser
               else
                 _event_name = calculate_name(Betredking, _league_name, 'event')
                 _event = Event.find_or_create_by_name _event_name
-                _event.league_id = _league.id unless _event.league_id.present?
+                _event.league_id = set_attribute_unless_given(_event, :league_id, _league.id)
                 _event.save
                 _event.touch
 
@@ -105,8 +105,8 @@ class BetredkingsParser
                   match.children.each do |participant|
                     _participants_hash[participant['id']] = participant['name']
                     _team_name = calculate_name(Betredking, participant['name'], 'participant')
-                    _team = Participant.new(:name => _team_name, :priority => 1)
-                    _team.event_id = _event.id
+                    _team = Participant.create(:name => _team_name, :priority => 1)
+                    _team.event_id = set_attribute_unless_given(_team, :event_id, _event.id)
                     _team.save
                     _team.touch
                   end
@@ -117,11 +117,11 @@ class BetredkingsParser
                       _type = BetType.find_or_create_by_name _type_name
                       type.children.each_with_index do |odd, i|
                         _bet = Bet.new :priority => 1
-                        _bet.name = _participants_hash[odd['participantid']]
-                        _bet.bet_type_id = _type.id
-                        _bet.event_id = _event.id
-                        _bet.bookmaker_id = _bookmaker.id
-                        _bet.odd = odd.text
+                        _bet.name = set_attribute_unless_given(_bet, :name, _participants_hash[odd['participantid']])
+                        _bet.bet_type_id = set_attribute_unless_given(_bet, :bet_type_id, _type.id)
+                        _bet.event_id = set_attribute_unless_given(_bet, :event_id, _event.id)
+                        _bet.bookmaker_id = set_attribute_unless_given(_bet, :bookmaker_id, _bookmaker.id)
+                        _bet.odd = set_attribute_unless_given(_bet, :odd, odd.text)
                         _bet.save
                         _bet.touch
                       end

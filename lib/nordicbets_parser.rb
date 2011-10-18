@@ -24,20 +24,20 @@ class NordicbetsParser
           when 'season' then
             _league_name = calculate_name(Nordicbet, element.text, 'league')
             @_league = League.find_or_create_by_name _league_name
-            @_league.sport_id = @_sport.id
-            @_league.country_id = @_country.id
+            @_league.sport_id = set_attribute_unless_given(@_league, :sport_id, @_sport.id)
+            @_league.country_id = set_attribute_unless_given(@_league, :country_id, @_country.id)
             @_league.save
             @_league.touch
           when 'breadcrumbs' then
             _event_name = calculate_name(Nordicbet, element.text, 'event')
             @_event = Event.find_or_create_by_name _event_name
-            @_event.league_id = @_league.id
+            @_event.league_id = set_attribute_unless_given(@_event, :league_id, @_league.id)
             @_event.save
             @_event.touch
           when 'participant' then
             _participant_name = calculate_name(Nordicbet, element.text, 'participant')
             @_participant = Participant.find_or_create_by_name _participant_name
-            @_participant.event_id = @_event.id
+            @_participant.event_id = set_attribute_unless_given(@participant, :event_id, @_event.id)
             @_participant.save
             @_participant.touch
           when 'outcomeset' then
@@ -60,13 +60,13 @@ class NordicbetsParser
                 @_bet_odd = outcome['odds']
                 outcome.children.each do |bet|
                   if bet.name == 'participant'
-                    _bet = Bet.create
-                    _bet.odd = @_bet_odd
-                    _bet.name = bet.text
-                    _bet.event_id = @_event.id
-                    _bet.participant_id = @_participant.id
-                    _bet.bet_type_id = @_bettype.id
-                    _bet.bookmaker_id = @_bookmaker.id
+                    _bet                   = Bet.new
+                    _bet.participant_id    = set_attribute_unless_given(_bet, :participant_id, @_participant.id)
+                    _bet.bet_type_id       = set_attribute_unless_given(_bet, :bet_type_id, @_bettype.id)
+                    _bet.event_id          = set_attribute_unless_given(_bet, :event_id, @_event.id)
+                    _bet.bookmaker_id      = set_attribute_unless_given(_bet, :bookmaker_id, @_bookmaker.id)
+                    _bet.odd               = set_attribute_unless_given(_bet, :odd, @_bet_odd)
+                    _bet.name              = set_attribute_unless_given(_bet, :name, bet.text)
                     _bet.save
                     _bet.touch
                   end

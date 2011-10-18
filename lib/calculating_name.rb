@@ -31,7 +31,6 @@ module CalculatingName
     return _name
   end
 
-  
   def calculate_common_name(name, type)
     result = nil
     if temp = Common.find(:first, :conditions => {:element_name => name})
@@ -49,5 +48,9 @@ module CalculatingName
       end
       result = Common.create(:table_name => type, :element_name => name) unless result
     end
+  end
+
+  def set_attribute_unless_given(element, field, value)
+    element.send(field).present? ? value : element.send(field)
   end
 end

@@ -51,14 +51,14 @@ class StanjamesParser
 
           _league_name = calculate_name(StanJame, event['sport'], 'league')
           _league = League.find_or_create_by_name _league_name
-          _league.sport_id = _sport.id
-          _league.country_id = _country.id
+          _league.sport_id = set_attribute_unless_given(_league, :sport_id, _sport.id)
+          _league.country_id = set_attribute_unless_given(_league, :country_id, _country.id)
           _league.save
           _league.touch
 
           _event_name = calculate_name(StanJame, event['name'], 'event')
           _event = Event.find_or_create_by_name _event_name
-          _event.league_id = _league.id
+          _event.league_id = set_attribute_unless_given(_event, :league_id, _league.id)
           _event.save
           _event.touch
 
@@ -71,19 +71,21 @@ class StanjamesParser
 
                 bets_hash.clear
                 bettype.children.each do |bet|
-                  _participant_name = calculate_name(StanJame, bet['name'], 'participant')
-                  _participant = Participant.find_or_create_by_name _participant_name
-                  _participant.event_id = _event.id
+                  _participant_name      = calculate_name(StanJame, bet['name'], 'participant')
+                  _participant           = Participant.find_or_create_by_name _participant_name
+                  _participant.event_id  = set_attribute_unless_given(_participant, :event_id, _event.id)
                   _participant.save
                   _participant.touch
 
-                  _bet = Bet.create :name => _participant_name
-                  _bet.odd = bet['pricedecimal']
-                  _bet.event_id = _event.id
-                  _bet.participant_id = _participant.id
-                  _bet.bet_type_id = _bet_type.id
-                  _bet.bookmaker_id = _bookmaker.id
+                  _bet                   = Bet.create
+                  _bet.participant_id    = set_attribute_unless_given(_bet, :participant_id, _participant.id)
+                  _bet.bet_type_id       = set_attribute_unless_given(_bet, :bet_type_id, _bet_type.id)
+                  _bet.event_id          = set_attribute_unless_given(_bet, :event_id, _event.id)
+                  _bet.bookmaker_id      = set_attribute_unless_given(_bet, :bookmaker_id, _bookmaker.id)
+                  _bet.odd               = set_attribute_unless_given(_bet, :odd, bet['pricedecimal'])
+                  _bet.name              = set_attribute_unless_given(_bet, :name, _participant_name)
                   bets_hash[bet['name']] = _bet
+
                 end
               end
             end
@@ -98,16 +100,18 @@ class StanjamesParser
                 bettype.children.each do |bet|
                   _participant_name     = calculate_name(StanJame, bet['name'], 'participant')
                   _participant          = Participant.find_or_create_by_name _participant_name
-                  _participant.event_id = _event.id
+                  _participant.event_id = set_attribute_unless_given(_participant, :event_id, _event.id)
                   _participant.save
                   _participant.touch
 
-                  _bet                  = Bet.create :name => bet['name']
-                  _bet.odd              = bet['pricedecimal']
-                  _bet.event_id         = _event.id
-                  _bet.participant_id   = _participant.id
-                  _bet.bet_type_id      = _bet_type.id
-                  _bet.bookmaker_id     = _bookmaker.id
+                  _bet                = Bet.create
+                  _bet.participant_id = set_attribute_unless_given(_bet, :participant_id, _participant.id)
+                  _bet.bet_type_id    = set_attribute_unless_given(_bet, :bet_type_id, _bet_type.id)
+                  _bet.event_id       = set_attribute_unless_given(_bet, :event_id, _event.id)
+                  _bet.bookmaker_id   = set_attribute_unless_given(_bet, :bookmaker_id, _bookmaker.id)
+                  _bet.odd            = set_attribute_unless_given(_bet, :odd, bet['pricedecimal'])
+                  _bet.name           = set_attribute_unless_given(_bet, :name, bet['name'])
+
                   bets_hash[bet['name']] = _bet
                 end  
                 bets_hash.sort.each do |b|
