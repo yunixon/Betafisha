@@ -14,7 +14,6 @@ class GamebookersParser
   def self.parse!
     _bookmaker = Bookmaker.find_or_create_by_name BOOKMAKER
     _bookmaker.touch
-    bets_hash = {}
 
     COMMON_SPORTS.each do |style|
       doc = Nokogiri::HTML(open("http://xml.gamebookers.com/sports/#{style}.xml_attr.xml"))
@@ -50,7 +49,6 @@ class GamebookersParser
                 _bet_type = BetType.find_or_create_by_name _bet_type_name
                 _bet_type.touch
 
-                bets_hash.clear
                 bettype.children.each do |bet|
                   _team = Participant.create
                   _team_name = calculate_name(Gamebooker, (bet['outcome_name'] == 'X' ? 'Draw' : bet['outcome_name']), 'participant')
@@ -66,11 +64,8 @@ class GamebookersParser
                   _bet.bookmaker_id = set_attribute_unless_given(_bet, :bookmaker_id, _bookmaker.id)
                   _bet.odd = set_attribute_unless_given(_bet, :odd, bet['odd'])
                   _bet.name = set_attribute_unless_given(_bet, :name, bet['outcome_name'] == 'X' ? 'Draw' : bet['outcome_name'])
-                  bets_hash[bet['outcome_name']] = _bet
-                end
-                bets_hash.sort.each do |b|
-                  b.last.save
-                  b.last.touch
+                  _bet.save
+                  _bet.touch
                 end
               end
             end
