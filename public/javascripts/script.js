@@ -48,17 +48,8 @@ $(document).ready(function() {
         $(".my_coupon_data").hide();
         $(this).removeClass("active");
       }
-
-
-
-
-
       return false;
     });
-
-
-
-
 
 });
 
