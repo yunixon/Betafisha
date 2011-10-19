@@ -13,9 +13,20 @@
 
 <% content_for :content do %>
   <div id="refresh_box">
-    <!--%= render 'events/outright' %-->
-    <%= render 'events/towin' %>
-    <%= render 'events/towin_with_draw' %>
+    <ul class="tabs">
+        <li><a href="#towin-with-draw">1x2</a></li>
+        <li><a href="#to-win">1or2</a></li>
+    </ul>
+
+    <div class="tab_container">
+        <div id="towin-with-draw" class="tab_content">
+          <%= render 'events/towin_with_draw' %>
+        </div>
+
+        <div id="to-win" class="tab_content">
+          <%= render 'events/towin' %>
+        </div>
+      </div>
   </div>
 <% end %>
 

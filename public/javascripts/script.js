@@ -39,6 +39,27 @@ $(document).ready(function() {
 
     $("ul.dropdown li ul li:has(ul)").find("a:first").append(" &raquo; ");
 
+
+    $("a#toggle-coupon-info").click(function() {
+      if($(".my_coupon_data").is(':hidden')){
+        $(".my_coupon_data").show();
+        $(this).addClass("active");
+      } else {
+        $(".my_coupon_data").hide();
+        $(this).removeClass("active");
+      }
+
+
+
+
+
+      return false;
+    });
+
+
+
+
+
 });
 
 

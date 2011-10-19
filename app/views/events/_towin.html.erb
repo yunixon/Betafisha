@@ -1,7 +1,10 @@
+
+
+<%# content_for :content do %>
+
 <% @bet_info_array = Hash.new %>
 <% @bet_array = Array.new %>
 
-<% content_for :content do %>
   <% @event.bets.each_with_index do |b,i| %>
     <% if b.bet_type.name == '1or2'%>
       <% if i == 0  %>
@@ -11,9 +14,9 @@
       <% @bet_array[i] = hash%>
     <% end %>
   <% end %>
-
-  <!--%= @bet_array.inspect  %-->
-  <!--%= @bet_info_array.inspect% -->
+<br />
+  <%#= @bet_array.inspect  %> <br />
+  <%#= @bet_info_array.inspect %> <br />
 
   <% if @bet_info_array["bet_type"] == '1or2'%>
     <div style="width: 150px; float:left;">Букмекер</div>
@@ -25,5 +28,5 @@
     <% end %>
   <% end %>
 
-<% end %>
+<%# end %>
 

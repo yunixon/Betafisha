@@ -1,6 +1,14 @@
-.betting-odds-header, .bettings-odds-bookmakers, .bettings-odds-data { margin: 1px 0 0 5px; }
+.betting-odds-header, .bettings-odds-bookmakers, .bettings-odds-data { }
 
-.betting-odds-header, .coupon-league-manage, .header { font-weight: bold; font-size: 12px;  margin: 10px 0 0 5px; min-height: 25px; }
+.betting-odds-header, .coupon-league-manage, .header {
+  font-weight: bold;
+  font-size: 12px;
+  min-height: 25px;
+  padding-left: 10px;
+  padding-top: 5px;
+  background: #222;
+  color: #EEE;
+}
 .bettings-odds-data a, .events-data a { color: #333; text-decoration: none; display: block; width: 530px; height: 100%; margin-left: 5px; float: right; }
 
 .event { min-height: 15px; background: #fff; margin-bottom: 1px; font-size: 92%; width: 550px; margin-left: 5px;  padding: 5px;}
@@ -21,17 +29,40 @@ border: 1px solid #CCC; }
 .arrow_toggle_down { float: right; }
 
 a.expand {
-        float: left;
-        cursor: pointer;
-        display: block;
-        width: 15px;
-        height: 16px;
-        overflow: hidden;
-        text-indent: -9999px;
-        background: #fff url("../images/expand.png") 0 -50px ;
+  float: left;
+  cursor: pointer;
+  display: block;
+  width: 15px;
+  height: 16px;
+  overflow: hidden;
+  text-indent: -9999px;
+  background: #fff url("../images/expand.png") 0 -50px ;
 }
 
 div.bettings-odds-bookmakers a.active {
     text-decoration: underline;
 }
+
+
+#toggle-coupon-info {
+  float: right;
+  display: inline;
+
+  width: 20px;
+  height: 20px;
+  text-indent: -9999em;
+  margin-top: 0px;
+  margin-right: 10px;
+  outline: none;
+  background: url("../images/toggle_up_light.png") no-repeat right 3px;
+  border-left: 1px solid #555;
+  /*background: url("http://d1c2wop9xwia98.cloudfront.net/graphics/toggle_down_light.png") no-repeat 0 0;*/
+}
+
+a#toggle-coupon-info.active {
+  background: url("../images/toggle_down_light.png") no-repeat right 3px;
+}
+
+
+.my_coupon_data { background: #fff; padding: 5px;}
 

@@ -43,7 +43,7 @@ begin
     threads[0] = spawn do
       begin
         @log.write "Gamebookers parsing started #{Time.now}\n"
-        GamebookersParser.parse!
+        #GamebookersParser.parse!
         @log.write "Gamebookers parsing finished #{Time.now}\n"
       rescue Exception => e
         @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
@@ -57,11 +57,9 @@ begin
     threads[1] = spawn do
       begin
         @log.write "Betredkings parsing started #{Time.now}\n"
-<<<<<<< Updated upstream
-        BetredkingsParser.parse!
-=======
+
        #BetredkingsParser.parse!
->>>>>>> Stashed changes
+
         @log.write "Betredkings parsing finished #{Time.now}\n"
       rescue Exception => e
         @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
@@ -75,7 +73,7 @@ begin
     threads[2] = spawn do
       begin
         @log.write "Stan James parsing started #{Time.now}\n"
-        StanjamesParser.parse!
+        #StanjamesParser.parse!
         @log.write "Stan James parsing finished #{Time.now}\n"
       rescue Exception => e
         @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
@@ -89,7 +87,7 @@ begin
     threads[3] = spawn do
       begin
         @log.write "Nordicbet parsing started #{Time.now}\n"
-       # NordicbetsParser.parse!
+        NordicbetsParser.parse!
         @log.write "Nordicbet parsing finished #{Time.now}\n"
       rescue Exception => e
         @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
