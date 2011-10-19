@@ -21,7 +21,7 @@
 border: 1px solid #CCC; }
 
 .add_to_coupon, .remove_from_coupon { float: left; display: block; text-indent: -9999px; width: 16px; height: 16px; margin-left: 5px;}
-
+.coupon { float: right; margin-right: 2px; }
 .add_to_coupon { background: url('../images/add.png') no-repeat 0 0; }
 
 .remove_from_coupon { background: url('../images/delete.png') no-repeat 0 0; }
@@ -64,5 +64,8 @@ a#toggle-coupon-info.active {
 }
 
 
-.my_coupon_data { background: #fff; padding: 5px;}
+.my_coupon_data { background: #eee; border-bottom: 1px solid #ccc;  }
+.my_coupon_data ul li { background: #eee; height: 16px; padding: 5px;}
+.my_coupon_data ul li.even { background: #fff; }
+/*a.coupon_league_name { float: left;  }*/
 

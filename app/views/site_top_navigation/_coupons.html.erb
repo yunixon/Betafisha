@@ -1,9 +1,9 @@
 
 <% if signed_in? %>
   <ul>
-  <% current_user.coupons.each do |c| %>
+  <% current_user.coupons.each_with_index do |c,i| %>
       <% if !c.league.nil?%>
-        <li>  <%= link_to c.league.name, c.league %> </li>
+        <li class="<%= 'even' if i%2 == 0 %>"> <%= image_tag get_sport_image c.league.sport.name %>  <%= link_to c.league.name, c.league, :class => "coupon_league_name" %> <%= link_to "удалить лигу", "#", :class => "remove_from_coupon coupon", :id => "league_#{c.league.id }" %> </li>
       <% end %>
   <% end %>
   </ul>

@@ -41,6 +41,7 @@ $(document).ready(function() {
 
 
     $("a#toggle-coupon-info").click(function() {
+      $(this).removeClass("active");
       if($(".my_coupon_data").is(':hidden')){
         $(".my_coupon_data").show();
         $(this).addClass("active");
