@@ -353,7 +353,7 @@ ul.dropdown li:hover > ul { visibility: visible; }
   margin-left: 1px; margin-right: 1px;
 }
 
-h2.acc_trigger, .acc_container { width: 195px; }
+h2.acc_trigger, .acc_container { width: 203px; 	margin-left: 0; }
 
 .event_name_cell, .event_cell {
   background: #ccc;
