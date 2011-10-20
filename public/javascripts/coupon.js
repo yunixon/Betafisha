@@ -3,10 +3,11 @@
 })
 
 $(document).ready(function() { // add league to coupon
-  $('.add_to_coupon, .remove_from_coupon').click( function() {
+  $('.add_coupon_manager, .remove_coupon_manager, .remove_coupon_from_list').click( function() {
+    alert( this.getAttribute("data") );
     $.ajax({
 	     		type: 'GET',
-	     		data: { type: this.getAttribute("class"), sport_id: this.getAttribute("id") },
+	     		data: { type: this.getAttribute("data"), sport_id: this.getAttribute("id") },
 	     		url: '/leaguetocoupon',
 	     		dataType:'script'
 	     	});

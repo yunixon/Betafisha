@@ -20,11 +20,11 @@
 .event-title { min-height: 20px; background: #fff; text-align: center; margin: 2px 0 0 0px; font-size: 92%; width: 560px;  padding: 5px; border-radius: 3px;
 border: 1px solid #CCC; }
 
-.add_to_coupon, .remove_from_coupon { float: left; display: block; text-indent: -9999px; width: 16px; height: 16px; margin-left: 5px;}
-.coupon { float: right; margin-right: 2px; }
-.add_to_coupon { background: url('../images/add.png') no-repeat 0 0; }
+.add_coupon_manager, .remove_coupon_manager, .remove_coupon_from_list { float: left; display: block; text-indent: -9999px; width: 16px; height: 16px; margin-left: 5px;}
+.remove_coupon_from_list { float: right; margin-right: 2px; }
+.add_coupon_manager { background: url('../images/add.png') no-repeat 0 0; }
 
-.remove_from_coupon { background: url('../images/delete.png') no-repeat 0 0; }
+.remove_coupon_manager, .remove_coupon_from_list { background: url('../images/delete.png') no-repeat 0 0; }
 
 .arrow_toggle_down { float: right; }
 

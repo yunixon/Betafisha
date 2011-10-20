@@ -2,9 +2,9 @@
 <span style= "float: left;" ><%= @league.name %> Betting Odds</span>
 <% if signed_in? %>
   <% if @has_ligue.nil? %>
-    <%= link_to "добавить лигу", "#", :class => "add_to_coupon", :id => "league_#{@league.id }"  %>
+    <%= link_to "добавить лигу", "#", :class => "add_coupon_manager", :id => "league_#{@league.id }", :data => "add_to_coupon"   %>
   <% elsif %>
-    <%= link_to "удалить лигу", "#", :class => "remove_from_coupon", :id => "league_#{@league.id }"  %>
+    <%= link_to "удалить лигу", "#", :class => "remove_coupon_manager", :id => "league_#{@league.id }", :data => "remove_from_coupon"   %>
   <% end %>
 <% end %>
 
