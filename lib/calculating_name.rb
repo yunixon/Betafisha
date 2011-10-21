@@ -51,6 +51,6 @@ module CalculatingName
   end
 
   def set_attribute_unless_given(element, field, value)
-    element.send(field).present? ? value : element.send(field)
+    element.send(field).present? ? element.send(field) : value
   end
 end
