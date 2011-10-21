@@ -37,7 +37,7 @@ class NordicbetsParser
           when 'participant' then
             _participant_name = calculate_name(Nordicbet, element.text, 'participant')
             @_participant = Participant.find_or_create_by_name _participant_name
-            @_participant.event_id = set_attribute_unless_given(@participant, :event_id, @_event.id)
+            @_participant.event_id = set_attribute_unless_given(@_participant, :event_id, @_event.id)
             @_participant.save
             @_participant.touch
           when 'outcomeset' then
