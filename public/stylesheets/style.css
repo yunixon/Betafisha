@@ -31,11 +31,12 @@ div#right_nav { border-left: 1px solid #ccc; }
   border-right: 1px solid #333;
   border-left: 1px solid #333;
 }
-#sub_navigation {
-  min-height: 40px;
-  background: #aaa;
 
+#sub_navigation {
+  min-height: 30px;
+  background: #aaa;
 }
+
 #breadcrumb {
   border-bottom: 1px solid #ccc;
   min-height: 20px;
@@ -341,6 +342,12 @@ ul.dropdown li.hover, ul.dropdown li:hover { position: relative; }
 
 /* IE 6 & 7 Needs Inline Block */
 ul.dropdown ul li a	{  width: 100%; display: inline-block; margin-top: 5px; }
+
+
+
+#sub_navigation ul li { display: block; width: 100px; float: left; padding: 10px; text-align: center; border-right: 1px solid #bbb;  }
+
+#sub_navigation ul li a { color: #eee; }
 
 /*
 	LEVEL THREE

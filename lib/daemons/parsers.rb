@@ -87,7 +87,7 @@ begin
     threads[3] = spawn do
       begin
         @log.write "Nordicbet parsing started #{Time.now}\n"
-        NordicbetsParser.parse!
+       # NordicbetsParser.parse!
         @log.write "Nordicbet parsing finished #{Time.now}\n"
       rescue Exception => e
         @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
