@@ -13,7 +13,7 @@ class BetredkingsParser
     _participants_array = []
     _participants_hash = {}
     bets_array = []
-    
+
     COMMON_SPORTS.each do |style|
       doc = Nokogiri::HTML(open("http://aws2.betredkings.com/feed/#{style}.xml"))
 
@@ -28,8 +28,10 @@ class BetredkingsParser
           _country.touch
 
           country.children.each do |tournament|
+            #find a way to fix a moment when leagues has the same name in different countries and sports ( ex. Serie A in Italy(Football, Ice Hockey, Basketball), Brazil(Football))
             _league_name = calculate_name(Betredking, tournament['name'].gsub(/[^a-zA-Z ]*/, ''), 'league')
-            _league = League.find_or_create_by_name _league_name
+            # temp solution
+            _league = League.find_or_create_by_name_and_sport_id_and_country_id _league_name, _sport.id, _country.id
             _league.sport_id = set_attribute_unless_given(_league, :sport_id, _sport.id)
             _league.country_id = set_attribute_unless_given(_league, :country_id, _country.id)
             _league.save
