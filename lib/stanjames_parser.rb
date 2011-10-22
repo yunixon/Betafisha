@@ -7,15 +7,12 @@ class StanjamesParser
       'basketball-international', 'basketball-us', 'basketball'],
     :tennis => ['tennis-ladies', 'tennis-matches', 'tennis-mens', 'tennis-outrights'],
     :football => ['football-argentina', 'football-austria',
-      'football-austria2', 'football-belgium', 'football-brazil',
+      'football-belgium', 'football-brazil',
       'football-conference', 'football-czech-div1', 'football-denmark', 'football-euro-champions-league',
-       'football-finland', 'football-france', 'football-germany',
-      'football-holland', 'football-hungary', 'football-international2', 'football-italy', 'football-major-league-soccer',
-       'football-mexico',
-      'football-poland', 'football-portugal', 'football-premiership', 'football-romania-liga1', 'football-russia',
-      'football-scottish-non-prem', 'football-scottish-prem', 'football-south-america',
-      'football-spain', 'football-spanishcups', 'football-sweden', 'football-sweden2', 'football-switzerland', 'football-thechampionship',
-      'football-turkey','football-worldcup' ]
+      'football-finland', 'football-france', 'football-germany',
+      'football-holland', 'football-hungary', 'football-italy', 'football-major-league-soccer',
+      'football-mexico', 'football-poland', 'football-portugal', 'football-premiership', 'football-romania-liga1', 'football-russia' 'football-scottish-prem', 'football-south-america',
+      'football-spain', 'football-sweden', 'football-switzerland', 'football-turkey','football-worldcup' ]
     }
 
   def self.parse!
@@ -112,7 +109,7 @@ class StanjamesParser
                   _bet.save
                   _bet.touch
 
-                end  
+                end
               end
             end
           end

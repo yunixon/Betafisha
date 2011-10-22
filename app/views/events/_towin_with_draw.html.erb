@@ -1,35 +1,24 @@
+<%  @event.bets.to_win_with_draw.each_with_index do |b,i| %>
 
-
-<%# content_for :content do %>
-
-<% @bet_info_array = Hash.new %>
-<% @bet_array = Array.new %>
-
-  <% @event.bets.to_win_with_draw.each_with_index do |b,i| %>
-      <% if i == 0  %>
-        <% @bet_info_array = { "bet_type"=> b.bet_type.name, "bookmaker"=> b.bookmaker.name } %>
-      <% end %>
-      <% hash = {"name"=> b.name, "odd"=> b.odd } %>
-      <% @bet_array[i] = hash %>
+<% if (i+1)%4 == 0 %>
+    <br />
+    <br />
   <% end %>
 
-  <% if @bet_info_array["bet_type"] == '1x2'%>
+  <% if i == 0 %>
+    <div class = "odd-bookmaker-header">Букмекер</div>
+    <div class = "odd-value">1</div>
+    <div class = "odd-value">X</div>
+    <div class = "odd-value">2</div>
     <br />
-    <%#= @bet_array.inspect %> <br />
-    <%#= @bet_info_array.inspect %>
     <br />
-
-    <div style="width: 150px; float:left;">Букмекер</div>
-    <div style="width: 50px; float:left;">1</div>
-    <div style="width: 50px; float:left;">X</div>
-    <div style="width: 50px; float:left;">2</div><br />
-    <div style="width: 150px; float:left;"><%= image_tag imageUriByBookmakerName( @bet_info_array["bookmaker"] ), :width => 100, :height => 20 %></div>
-
-    <% @bet_array.each do |b| %>
-        <div style="width: 50px; float:left;"><%=  b["odd"] %></div>
-    <% end %>
-
   <% end %>
 
-<%# end %>
+  <% if i%3 == 0 %>
+    <div class= "odd-bookmaker-header"><%= image_tag imageUriByBookmakerName( b.bookmaker.name ), :width => 100, :height => 20 %></div>
+  <% end %>
+
+    <div class = "odd-value"><%=  b["odd"] %></div>
+
+<% end %>
 

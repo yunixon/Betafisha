@@ -69,3 +69,10 @@ a#toggle-coupon-info.active {
 .my_coupon_data ul li.even { background: #fff; }
 /*a.coupon_league_name { float: left;  }*/
 
+
+#towin-with-draw div { float: left; background: #fff; }
+
+.odd-bookmaker-header { width: 150px;}
+
+.odd-value { width: 50px;}
+
