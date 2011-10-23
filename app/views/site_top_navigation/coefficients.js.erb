@@ -5,7 +5,7 @@ $("#breadcrumb").append('<%= escape_javascript(  @league.name  ) %>');
 
 
 $("#refresh_box").html(' <%= escape_javascript( render "league_data" ) %> ');
-$("#right_nav").html(' <%= escape_javascript( render "site_top_navigation/coupons" ) %> ');
+$("#sports_menu").before(' <%= escape_javascript( render "site_top_navigation/coupons" ) %> ');
 
 $("div.bettings-odds-bookmakers a").removeClass("active");
 //$('.<%= escape_javascript( @bet_type_filter ) %>-filter ').addClass("active");

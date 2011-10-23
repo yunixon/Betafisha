@@ -14,27 +14,28 @@ html, body {
 
 }
 body {
-  background: #333 url('../images/bg.png') repeat-x 0 0;
+ background: #333 url('../images/main-bg.png') repeat 0 0;
 }
 
 a { font: normal 11px  Helvetica, Arial, Freesans, sans-serif; color: #CE2828; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-
-
-div#wrapper, div#left_nav, div#right_nav { background: #eee; min-height: 700px; }
-
+.logo-image-wrapper { width: 187px; height: 51px; float: left; margin: 0 25px 0 16px; }
+.logo-image { display:block; width: 187px; height: 51px; background: url('../images/logo.png') no-repeat 0 0; text-indent: -9999px; }
+div#wrapper { margin-top: 10px; }
+div#wrapper, div#left_nav, div#right_nav { min-height: 700px; /*background: #eee*/ }
+/*
 div#left_nav { border-right: 1px solid #ccc; }
 div#right_nav { border-left: 1px solid #ccc; }
 
 #navigation {
   border-right: 1px solid #333;
   border-left: 1px solid #333;
-}
+}*/
 
 #sub_navigation {
-  min-height: 30px;
-  background: #aaa;
+  background: url('../images/main-menu-bg.png') repeat 0 0;
+  margin-top: 10px;
 }
 
 #breadcrumb {
@@ -42,6 +43,7 @@ div#right_nav { border-left: 1px solid #ccc; }
   min-height: 20px;
   padding-top: 10px;
   background: #f5f5f5;
+  margin-bottom: 10px;
 }
 
 #breadcrumb a:first-child {   margin: 5px 0px 0px 10px }
@@ -96,6 +98,10 @@ input[type="text"], input[type="password"], select {
   background: #f5f5f5;
 }
 
+
+
+
+
 input[type="submit"] {
 	height: 30px;
 	color: #111;
@@ -116,6 +122,8 @@ input[type="checkbox"] {
   margin: 0;
   padding: 0;
 }
+
+
 textarea {
   border-color: #ccc;
   border-radius: 5px;
@@ -132,9 +140,8 @@ textarea:focus {
 
 /* Logo */
 #logo {
-	min-height: 30px;
 	color: #ccc;
-	background: #45494C;
+	margin-bottom: 24px;
 }
 
 #logo a {
@@ -142,62 +149,68 @@ textarea:focus {
   color: #eee;
   font-weight: bold;
   display: block;
-  margin: 5px;
   /*background: url('../images/betafisha.png') no-repeat 0 0;*/
 
 
 }
 
 #user_entrance {
-	min-height: 30px;
-	background: #45494C;
+	margin-bottom: 24px;
 }
 
 /* Top navigation */
+.top-nav {
+  float: left;
+  width: 772px;
+}
+
+
 #navigation ul {
-  border-top: #333 1px solid;
+  /*border-top: #333 1px solid;*/
+  	background: url('../images/main-menu-bg.png') repeat 0 0;
+  	height: 32px;
+  	margin-top: 17px;
 }
 
 #navigation ul li {
- 	transition: background-color 0.4s ease-in-out;
+ /*	transition: background-color 0.4s ease-in-out;
  	-webkit-transition: background-color 0.4s ease-in-out;
   -moz-transition: background-color 0.4s ease-in-out;
   -o-transition: background-color 0.4s ease-in-out;
-	width:245px;
-	background: #c53727;
+	/*width:245px;*/
+
 	margin: 0;
-	padding: 0;
-	height: 70px;
+	padding: 0 25px;
+	height: 32px;
 	float: left;
 	text-align: center;
 	list-style: none;
-	border-left: 1px solid #333;
+	border-right: 2px solid #333;
 }
 
-#navigation ul li:first-child {
-	border: none;
-}
 
-#navigation ul li a{
-	color: #fff;
+#navigation ul li a, #sub_navigation ul li a{
+	color: #494EA4;
 	text-decoration: none;
+	text-transform: uppercase;
 
 	font-weight: 800;
-	text-shadow: #CE2828 1px 1px 1px;
-	padding-top: 25px;
+	/*text-shadow: #CE2828 1px 1px 1px;*/
+	padding-top: 7px;
 	font-size: 14px;
+	width: 100%;
 	display: block;
-	height: 45px;
-	box-shadow: inset 0 0 30px #c53727;
-	-moz-box-shadow:inset 0 0 30px #c53727;
+	height: 25px;
+/*	box-shadow: inset 0 0 30px #c53727;
+	-moz-box-shadow:inset 0 0 30px #c53727;*/
 }
 
 #navigation ul li:hover {
- 	transition: background-color 0.4s ease-in-out;
+ /*	transition: background-color 0.4s ease-in-out;
  	-webkit-transition: background-color 0.4s ease-in-out;
   -moz-transition: background-color 0.4s ease-in-out;
   -o-transition: background-color 0.4s ease-in-out;
-  background: #AF301F;
+  background: #AF301F;*/
 }
 
 /*#navigation ul li a:hover{
@@ -217,18 +230,15 @@ textarea:focus {
 
 
 /* Right navigation */
-#right_nav {
-	background: #eee;
-	min-height: 400px;
-}
+
 
 /* Registration */
 #user_entrance ul {
-    float: right;
+  /*  float: right;*/
 }
 
 #user_entrance ul li {
-	margin-top: 5px;
+	margin-top: 0px;
   list-style-type: none;
   display: inline-block;
   margin-left: 10px;
@@ -344,10 +354,10 @@ ul.dropdown li.hover, ul.dropdown li:hover { position: relative; }
 ul.dropdown ul li a	{  width: 100%; display: inline-block; margin-top: 5px; }
 
 
-
-#sub_navigation ul li { display: block; width: 100px; float: left; padding: 10px; text-align: center; border-right: 1px solid #bbb;  }
-
-#sub_navigation ul li a { color: #eee; }
+#sub_navigation, #sub_navigation ul { height: 32px; width: 100%;}
+#sub_navigation ul li { display: block; float: left;  text-align: center; border-right: 2px solid #333; padding: 0 21px;  }
+/*
+#sub_navigation ul li a { color: #eee; }*/
 
 /*
 	LEVEL THREE
@@ -357,20 +367,20 @@ ul.dropdown li:hover > ul { visibility: visible; }
 
 
 #refresh_box, .my_coupon_data {
-  margin-left: 1px; margin-right: 1px;
+  margin-left: 5px; /*margin-right: 1px;*/
 }
 
-h2.acc_trigger, .acc_container { width: 203px; 	margin-left: 0; }
-
+h2.acc_trigger, .acc_container { width: 200px; 	margin-left: 0; }
+ h2.acc_trigger {  background: url('../images/main-menu-bg.png') repeat 0 0; }
 .event_name_cell, .event_cell {
   background: #ccc;
   text-align: center;
   float: left;
 }
 
-.event_name_cell { width: 400px; }
+.event_name_cell { width: 425px; }
 
-.event_cell { width: 50px; }
+.event_cell { width: 40px; }
 .event_cell_data { text-align: left; }
 .event_cell_data a, .event_cell_data span  {  padding: 3px 3px 3px 7px; display: block;  }
 
@@ -378,4 +388,41 @@ h2.acc_trigger, .acc_container { width: 203px; 	margin-left: 0; }
 
 
 #country_submit { margin-top: 15px;}
+
+
+#user_entrance input[type="text"], #user_entrance input[type="password"] {
+  height: 16px;
+  line-height: 16px;
+  min-width: 100px;
+  padding: 0 2px;
+  font-size: 12px;
+  color: #2A2828;
+  margin-left: 6px;
+  width: 108px;
+}
+
+#user_entrance input[type="submit"]  {
+  width: 46px;
+  color: #2C33A7;
+  padding: 0;
+  background: #FFF600;
+  margin-right: 4width: 108px;px;
+  cursor: pointer;
+  height: 15px;
+  text-align: center;
+  border-radius: 0px;
+  border: none;
+}
+
+
+#content .coupon-league-manage { margin-left: 5px; }
+
+#left_nav #my_coupon .header { margin-left: 0px;}
+
+
+
+#right_nav #my_coupon .header { margin-left: 5px; }
+
+#left_nav #my_coupon .my_coupon_data { margin-left: 0px; }
+#right_nav #my_coupon .my_coupon_data { margin-left: 5px; }
 

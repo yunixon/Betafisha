@@ -12,7 +12,7 @@ class SiteTopNavigationController < ApplicationController
     respond_to do |format|
       format.html {
 
-        @top_event = Event.limit(5).first(:order => "rand()")
+       # @top_event = Event.limit(5).first(:order => "rand()")
 
        # if !@top_event.nil? and !@top_event.bets.nil?
        #   @bookmakers = @top_event.bets.find( :all,

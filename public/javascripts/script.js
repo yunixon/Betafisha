@@ -42,11 +42,11 @@ $(document).ready(function() {
 
     $("a#toggle-coupon-info").click(function() {
       $(this).removeClass("active");
-      if($(".my_coupon_data").is(':hidden')){
-        $(".my_coupon_data").show();
-        $(this).addClass("active");
+      if($(this).parent().next().is(':hidden')){
+        $(this).parent().next().show();
+        $(this).parent().next().addClass("active");
       } else {
-        $(".my_coupon_data").hide();
+        $(this).parent().next().hide();
         $(this).removeClass("active");
       }
       return false;

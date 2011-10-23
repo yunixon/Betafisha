@@ -7,42 +7,20 @@
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
-	<%= stylesheet_link_tag 'reset' %>
-	<%= stylesheet_link_tag 'grid' %>
-	<%= stylesheet_link_tag 'accordian' %>
-	<%= stylesheet_link_tag 'style' %>
-	<%= stylesheet_link_tag 'popup' %>
-  <%= stylesheet_link_tag 'news_block' %>
-  <%= stylesheet_link_tag 'comments' %>
-  <%= stylesheet_link_tag 'betting_odds' %>
-  <%= stylesheet_link_tag 'tabs' %>
-
-	<%= javascript_include_tag :defaults %>
-  <%= javascript_include_tag 'jquery.cookie.js' %>
-	<%= javascript_include_tag 'tabs' %>
-	<%= javascript_include_tag 'script' %>
-
-	<%= javascript_include_tag 'textinputfilter' %>
-	<%= javascript_include_tag 'popup' %>
-
-
-
+	<%= stylesheet_link_tag 'reset', 'grid', 'accordian', 'style', 'popup', 'news_block', 'comments', 'betting_odds', 'tabs', 'temp' %>
+	<%= javascript_include_tag :defaults, 'jquery.cookie.js', 'tabs', 'script', 'textinputfilter', 'popup' %>
 	<%= include_tiny_mce_if_needed %>
-
 </head>
 <body>
 
-<header class="container_24">
+<div class="top-line" style="width: 100%; height:25px; border-bottom: 1px solid #000; display: block; margin-bottom: 10px; text-align: center; position: relative; background: url(../images/top-line-bg.png) repeat;">
 
-  <div id="logo" class="grid_12">
-    <%= link_to "BetAfisha", root_path %>
-  </div>
+  <div id="user_entrance">
+    <!--ul id="locale_switch">
+       <li id="locale_en"> <%#= link_to "en", "#{request.path}?locale=en" %> </li>
+       <li id="locale_ru"> <%#= link_to "ru", "#{request.path}?locale=ru" %> </li>
+    </ul-->
 
-  <div id="user_entrance" class="grid_12">
-    <ul id="locale_switch">
-       <li id="locale_en"> <%= link_to "en", "#{request.path}?locale=en" %> </li>
-       <li id="locale_ru"> <%= link_to "ru", "#{request.path}?locale=ru" %> </li>
-    </ul>
     <ul>
        <% if !signed_in? %>
       	  <li><%= link_to t(:top_menu_sign_up), signup_path %></li>
@@ -53,8 +31,7 @@
         <% end %>
 	      <li><%= link_to t(:top_menu_sign_out), signout_path, :method => :delete %> (<%= image_tag("../images/sign_in_icon.png") + " " +  current_user.name %>)</li>
 	   <% else %>
-
-	      <li><%= link_to t(:top_menu_sign_in), "#?w=400", :class => "poplight", :rel =>"popup_name"  %></li>
+	      <li><%= render 'sessions/new_session' %><%#= link_to t(:top_menu_sign_in), "#?w=400", :class => "poplight", :rel =>"popup_name"  %></li>
 	   <% end %>
 	   <% if signed_in? %>
       	  <li><%= link_to t(:top_menu_profile), current_user %></li>
@@ -62,12 +39,20 @@
     </ul>
   </div>
 
-  <div id="navigation" class="grid_24">
-	<ul class="dropdown">
-	    <li><%= link_to t(:top_menu_coefficients), coefficients_path %></li>
-      <li><%= link_to t(:top_menu_bookmakers), bookmakers_path %></li>
-      <li><%= link_to t(:top_menu_statistics), statistics_path %></li>
-      <li><%= link_to t(:top_menu_tools), tools_path %>
+</div>
+
+<header class="container_20">
+
+
+  <div id="navigation" class="grid_20">
+    <div class="logo-image-wrapper"> <%= link_to "logo", root_path, :class => "logo-image" %> </div>
+    <div class="top-nav">
+	  <ul class="dropdown">
+	      <li><%= link_to t(:top_menu_coefficients), coefficients_path %></li>
+        <li><%= link_to t(:top_menu_bookmakers), bookmakers_path %></li>
+        <li><%= link_to t(:top_menu_statistics), statistics_path %></li>
+        <li><%= link_to t(:top_menu_tools), tools_path %>
+        <li><%= link_to "форум", root_path  %>
         <ul class="sub_menu">
             <li>
                 Calculators
@@ -79,28 +64,29 @@
         				</ul>
         		</li>
         </ul>
-      </li>
-	</ul>
+        </li>
+	  </ul>
+	  </div>
   </div>
 
-  <div id="sub_navigation" class="grid_24">
+  <div id="sub_navigation" class="grid_20">
       <%= yield :sub_navigation%>
   </div>
 
 </header>
 
-<section class="container_24">
-	<div id="wrapper" class="grid_24">
+<section class="container_20">
+	<div id="wrapper" class="grid_20">
 
-	  <div id="breadcrumb"  class="grid_24">
+	  <div id="breadcrumb"  class="grid_20">
        <%= yield :breadcrumb %>
     </div>
 
-		<div id="left_nav" class="grid_5">
+		<div id="left_nav" class="grid_4">
       <%= yield :left_nav%>
 		</div>
 
-	  <div id="content" class="grid_14">
+	  <div id="content" class="grid_11">
 		  <% flash.each do |key, value| %>
 		      <div class="flash <%= key %>"> <%= value %> </div>
 		  <% end %>
@@ -113,9 +99,9 @@
     </div>
 </section>
 
-<footer class="container_24">
+<footer class="container_20">
 
-	  <div id="footer" class="grid_24">
+	  <div id="footer" class="grid_20">
 	     <div id= "bottom_links" class="grid_10">
 	        <%= link_to "Privacy Policy", "/info/policy" %> |
 	        <%= link_to "Terms of use", "/info/terms" %> |
@@ -128,7 +114,7 @@
        </div>
   	</div>
 
-  	<div id="debug" class="grid_24">
+  	<div id="debug" class="grid_20">
     	<% if signed_in? %>
       	<%= debug(params) if Rails.env.development? %>
       <% end %>

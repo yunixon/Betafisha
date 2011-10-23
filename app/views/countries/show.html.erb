@@ -1,11 +1,31 @@
+<% content_for :sub_navigation do %>
+  <ul>
+    <li><%= link_to "Главная", "#" %></li>
+    <li><%= link_to "Ближайшие", "#" %></li>
+    <li><%= link_to "Live ставки", "#" %></li>
+    <li><%= link_to "Топ матчи", "#" %></li>
+    <li><%= link_to "Dropping", "#" %></li>
+    <li><%= link_to "Вилки", "#" %></li>
+    <li><%= link_to "Фильтр", "#" %></li>
+  </ul>
+<% end %>
+
 <% content_for :breadcrumb do %>
    <%= link_to t(:top_menu_coefficients), coefficients_path %>
    »  <%= @country.name %>
 <% end %>
 
 <% content_for :left_nav do %>
-  <div class="header">Виды спорта</div>
-	<%= render 'sports/sports_content' %>
+  <div id="my_coupon">
+    <div class="header">Мои Лиги<a id="toggle-coupon-info" href="#" class="active"></a></div>
+    <div class="my_coupon_data">
+      <%= render 'site_top_navigation/coupons' %>
+    </div>
+  </div>
+  <div id="sports_menu">
+    <div class="header">Виды спорта</div>
+	  <%= render 'sports/sports_content' %>
+	</div>
 <% end %>
 
 <% content_for :content do %>
@@ -16,9 +36,12 @@
 
 <% content_for :right_nav do %>
   <div id="my_coupon">
-    <div class="header">Мои Лиги<a id="toggle-coupon-info" href="#" class="active"></a></div>
-    <div class="my_coupon_data">
-      <%= render 'site_top_navigation/coupons' %>
+    <div class="header">Мои Купон<a id="toggle-coupon-clear" href="#" class="active"></a></div>
+    <div class="my_coupon_data" style=" line-height: 16px; font-size: 12px; padding: 5px 0 10px 10px; background: url('../images/main-menu-bg.png') repeat 0 0;">
+        <b>Карточка пуста.</b>  <br />
+        Добавляйте события, <br />
+        кликая на коэффициенты  <br />
+        на нашем сайте.  <br />
     </div>
   </div>
 <% end %>

@@ -16,8 +16,16 @@
 <% end %>
 
 <% content_for :left_nav do %>
-  <div class="header">Виды спорта</div>
-	<%= render 'sports/sports_content' %>
+  <div id="my_coupon">
+    <div class="header">Мои Лиги<a id="toggle-coupon-info" href="#" class="active"></a></div>
+    <div class="my_coupon_data">
+      <%= render 'site_top_navigation/coupons' %>
+    </div>
+  </div>
+  <div id="sports_menu">
+    <div class="header">Виды спорта</div>
+	  <%= render 'sports/sports_content' %>
+	</div>
 <% end %>
 
 <% content_for :content do %>
@@ -25,16 +33,242 @@
   <% if !@top_event.nil? and !@top_event.bets.nil? %>
       <%= render "top_event"%>
   <% else %>
-      нету топ матчей
+
+    				<div class="main-col">
+					<div class="block">
+						<div class="block-title inline-title"><big>ФУТБОЛ: Удинезе - Арсенал</big></div>
+						<div class="block-content">
+							<div class="big-img"><img src="images/img.jpg" alt="img" width="261" height="238" /></div>
+							<div class="big-content">
+								<div class="table">
+									<div class="table-title">
+										<span><small>25.05.2011</small> <strong>Лучшие ставки:</strong></span>
+										<a href="" class="yellow">Все ставки</a>
+									</div>
+									<div class="table-content">
+										<table>
+											<tr class="zebra">
+												<td class="col-1"><a href="">15:15</a></td>
+												<td class="col-2">Zeballos H.</td>
+												<td class="col-3"><a href="">2.7</a></td>
+											</tr>
+											<tr>
+												<td class="col-1"><a href="">15:15</a></td>
+												<td class="col-2">Prodon E.</td>
+												<td class="col-3"><a href="">2.34</a></td>
+											</tr>
+											<tr class="zebra">
+												<td class="col-1"><a href="">15:15</a></td>
+												<td class="col-2">Monreal</td>
+												<td class="col-3"><a href="">4</a></td>
+											</tr>
+											<tr>
+												<td class="col-1"><a href="">15:15</a></td>
+												<td class="col-2">Arsenal</td>
+												<td class="col-3"><a href="">3</a></td>
+											</tr>
+										</table>
+									</div>
+								</div>
+
+								<p>
+									<a href=""><img src="images/logo-sponsora.png" alt="logo-sponsora" width="105" height="38" /></a><br />
+								Дела в Арсенале идут довольно мрачно, на этой неделе после домашнего поражения в Ливерпуле со счетом 2-0 уход Фабрегас Сеск в Барселону и потенциальные продажи Самир Насри в Манчестер Сити.</p>
+								<p><a href="" class="yellow">Ставки на футбол : Удинезе Арсенал сейчас!</a></p>
+							</div>
+							<div class="bl">
+								<p>
+									<img src="images/supra.png" alt="supra" width="108" height="25" /><br />
+									Сделав ставку на точный счёт матча, вы застрахованы от «сухой» игры!<br />Если матч завершится со счётом 0:0, сумма вашей ставки возвращается.</p>
+							</div>
+						</div>
+					</div>
+      <div class="block big-table">
+						<a href="" class="yellow all">Все ближайшие матчи</a>
+						<div class="block-title inline-title"><big>Ближайшие матчи</big></div>
+						<div class="block-content">
+							<div class="table">
+								<div class="table-content">
+									<table>
+										<tr class="zebra">
+											<td class="col-0">
+												<img src="images/icon-football.png" alt="icon-football" width="14" height="15" />
+												Футбол >
+												<img src="images/flags/icon-germany.png" alt="icon-germany" width="19" height="13" />
+												Германия > Dortmud Chalenger
+												<br />
+												<span class="time">15:15</span>
+												<a href="">Dregenstain - Monreal</a>
+											</td>
+											<td class="col-1">
+												<span>1</span>
+												<a href=""><strong>1.25</strong></a>
+											</td>
+											<td class="col-1">
+												<span>1</span>
+												<a href=""><strong>1.25</strong></a>
+											</td>
+										</tr>
+										<tr>
+											<td class="col-0">
+												<img src="images/icon-football.png" alt="icon-football" width="14" height="15" />
+												Футбол >
+												<img src="images/flags/icon-germany.png" alt="icon-germany" width="19" height="13" />
+												Германия > Dortmud Chalenger
+												<br />
+												<span class="time">15:15</span>
+												<a href="">Dregenstain - Monreal</a>
+											</td>
+											<td class="col-1">
+												<strong>1</strong>
+												<a href=""><strong>1.25</strong></a>
+											</td>
+											<td class="col-1">
+												<strong>1</strong>
+												<a href=""><strong>1.25</strong></a>
+											</td>
+										</tr>
+										<tr class="zebra">
+											<td class="col-0">
+												<img src="images/icon-football.png" alt="icon-football" width="14" height="15" />
+												Футбол >
+												<img src="images/flags/icon-germany.png" alt="icon-germany" width="19" height="13" />
+												Германия > Dortmud Chalenger
+												<br />
+												<span class="time">15:15</span>
+												<a href="">Dregenstain - Monreal</a>
+											</td>
+											<td class="col-1">
+												<strong>1</strong>
+												<a href=""><strong>1.25</strong></a>
+											</td>
+											<td class="col-1">
+												<strong>1</strong>
+												<a href=""><strong>1.25</strong></a>
+											</td>
+										</tr>
+										<tr>
+											<td class="col-0">
+												<img src="images/icon-football.png" alt="icon-football" width="14" height="15" />
+												Футбол >
+												<img src="images/flags/icon-germany.png" alt="icon-germany" width="19" height="13" />
+												Германия > Dortmud Chalenger
+												<br />
+												<span class="time">15:15</span>
+												<a href="">Dregenstain - Monreal</a>
+											</td>
+											<td class="col-1">
+												<strong>1</strong>
+												<a href=""><strong>1.25</strong></a>
+											</td>
+											<td class="col-1">
+												<strong>1</strong>
+												<a href=""><strong>1.25</strong></a>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="block big-table">
+						<a href="" class="yellow all">Все Live-ставки</a>
+						<div class="block-title inline-title"><big>LIVE ставки</big></div>
+						<div class="block-content">
+							<div class="table">
+								<div class="table-content">
+									<table>
+										<tr class="zebra">
+											<td class="col-0">
+												<img src="images/icon-football.png" alt="icon-football" width="14" height="15" />
+												Футбол >
+												<img src="images/flags/icon-germany.png" alt="icon-germany" width="19" height="13" />
+												Германия > Dortmud Chalenger
+												<br />
+												<span class="time"></span>
+												<a href="">Dregenstain - Monreal</a>
+												<a href="" class="show-tv"></a>
+											</td>
+											<td class="col-1">
+												<strong>1</strong>
+												<a href=""><strong>1.25</strong></a>
+											</td>
+											<td class="col-1">
+												<strong>X</strong>
+												<a href=""><strong>1.25</strong></a>
+											</td>
+											<td class="col-1">
+												<strong>1</strong>
+												<a href=""><strong>1.25</strong></a>
+											</td>
+										</tr>
+										<tr>
+											<td class="col-0">
+												<img src="images/icon-football.png" alt="icon-football" width="14" height="15" />
+												Футбол >
+												<img src="images/flags/icon-germany.png" alt="icon-germany" width="19" height="13" />
+												Германия > Dortmud Chalenger
+												<br />
+												<span class="time"></span>
+												<a href="">Dregenstain - Monreal</a>
+												<a href="" class="show-tv"></a>
+											</td>
+											<td class="col-1">
+												<strong>1</strong>
+												<a href=""><strong>1.25</strong></a>
+											</td>
+											<td class="col-1">
+												<strong>X</strong>
+												<a href=""><strong>1.25</strong></a>
+											</td>
+											<td class="col-1">
+												<strong>1</strong>
+												<a href=""><strong>1.25</strong></a>
+											</td>
+										</tr>
+										<tr class="zebra">
+											<td class="col-0">
+												<img src="images/icon-football.png" alt="icon-football" width="14" height="15" />
+												Футбол >
+												<img src="images/flags/icon-germany.png" alt="icon-germany" width="19" height="13" />
+												Германия > Dortmud Chalenger
+												<br />
+												<span class="time"></span>
+												<a href="">Dregenstain - Monreal</a>
+												<a href="" class="show-tv"></a>
+											</td>
+											<td class="col-1">
+												<strong>1</strong>
+												<a href=""><strong>1.25</strong></a>
+											</td>
+											<td class="col-1">
+												<strong>X</strong>
+												<a href=""><strong>1.25</strong></a>
+											</td>
+											<td class="col-1">
+												<strong>1</strong>
+												<a href=""><strong>1.25</strong></a>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
   <% end %>
-    </div>
+  </div>
+  </div>
 <% end %>
 
 <% content_for :right_nav do %>
   <div id="my_coupon">
-    <div class="header">Мои Лиги<a id="toggle-coupon-info" href="#" class="active"></a></div>
-    <div class="my_coupon_data">
-      <%= render 'site_top_navigation/coupons' %>
+    <div class="header">Мои Купон<a id="toggle-coupon-clear" href="#" class="active"></a></div>
+    <div class="my_coupon_data" style=" line-height: 16px; font-size: 12px; padding: 5px 0 10px 10px; background: url('../images/main-menu-bg.png') repeat 0 0;">
+        <b>Карточка пуста.</b>  <br />
+        Добавляйте события, <br />
+        кликая на коэффициенты  <br />
+        на нашем сайте.  <br />
     </div>
   </div>
 <% end %>

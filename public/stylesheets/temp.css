@@ -1,0 +1,109 @@
+
+		.page-content {overflow: hidden; zoom: 1}
+			.page-content .right-col{float: right; width: 235px; margin-left: 5px;}
+			.page-content .left-col{float: left; width: 190px; margin-right: 5px;}
+			.page-content .main-col{overflow: hidden; zoom: 1}
+
+			.block {margin-bottom: 10px; position: relative}
+				.block a.all{line-height: 28px; position: absolute; right: 0; top: 0; }
+
+				.block .block-title{height: 28px; line-height: 28px; border-bottom: 1px solid #2c33a7; position: relative; padding: 0 7px; font-weight: bold; color: #2c33a7; font-size: 13px;background: #fff600;   }
+					.block .inline-title{ display: inline-block; *display: inline; zoom: 1 }
+					.block .block-title big{font-size: 14px; display: block;}
+				.block .block-title .close{height: 28px; line-height: 28px; border-left: 1px solid #2c33a7; position: absolute; right: 0; top: 0; width:26px; background: url(../images/title-close.png) no-repeat center center; cursor: pointer; }
+				.block .block-content{background: #fff600 url(../images/main-menu-bg.png) repeat; padding: 7px 7px}
+					.block .block-content p strong{display: block; margin-bottom: 2px}
+
+			.block-search {}
+				.block-search .block-title{border-bottom: 0; height: 25px; line-height: 35px}
+				.block-search .block-content{background-image: none;}
+					.block-search .i-text{color: #a7a6a6; width: 127px; height: 22px; line-height: 22px; border: 1px solid #504e4e; padding: 0 4px; font-size: 12px}
+					.block-search .i-submit{background: url(../images/icon-search.png) no-repeat 0 0; width: 24px; height: 19px; margin-left: 6px; cursor: pointer}
+
+			.main-col .block {margin-bottom: 15px}
+				.main-col .block .block-title{border-bottom: 0}
+				.main-col .block .block-content{padding: 0; border: 2px solid #fff600; background:#9daeb2; overflow: hidden; zoom: 1}
+
+				.block .big-img {float: left; margin-right: 10px; margin-bottom: 10px;}
+				.block .big-content {overflow: hidden; zoom: 1; padding-top: 10px; padding-right: 5px}
+				.block .bl {padding: 0 15px}
+
+				.table {margin-bottom: 5px}
+					.table .table-title{position: relative; }
+						.table .table-title a{position: absolute; right: 0; padding: 4px 0}
+						.table .table-title span{display: inline-block; *display: inline; zoom: 1; background: #ffee00; color: #2c33a7; padding: 4px 5px; }
+							.table .table-title span small{font-size: 11px}
+
+					.table .table-content{overflow: hidden; zoom: 1}
+						.table .table-content table{width: 100%; border-collapse: collapse}
+						.table .table-content table tr{}
+						.table .table-content table tr.zebra td{background-color: #e6e8d6; }
+						.table .table-content table tr td{height: 15px; line-height: 15px; padding: 3px 12px; border: 2px solid #ffee00}
+						.table .table-content table tr td img{position: relative; top: 2px; margin-right: 3px}
+						.table .table-content table tr td a{text-decoration: none; color: #2c33a7}
+						.table .table-content table tr td.col-1{text-align: center; width: 23px}
+						.table .table-content table tr td.col-3{text-align: center; width: 23px}
+
+
+					.big-table .block-content {padding: 0 !important; border: 0 !important}
+					.big-table .block-content .table {margin-bottom: 0 !important}
+					.big-table .table-content table tr td {line-height: 18px; position: relative}
+					.big-table .table-content table tr td .time {width: 40px; display: inline-block; *display: inline; zoom: 1}
+
+				.show-tv {position: absolute; right: 10px; top: 50%; background: url(../images/tv-show.png) no-repeat 0 0; width: 18px; height: 15px; margin-top: -8px}
+
+			.footer {color: #fff; padding: 20px 0; padding-top: 100px; font-size: 14px; overflow: hidden; zoom: 1}
+				.footer .copyright{float: left}
+				.footer .footer-menu{float: right}
+				.footer a{color: #fff; text-decoration: none; margin: 0 3px}
+
+			.banner {margin-bottom: 5px}
+
+			.left-menu {margin: -5px -5px -8px}
+				.left-menu ul{}
+					.left-menu ul li{padding-left: 31px; font-weight: bold; font-size: 16px; border-bottom: 1px solid #2c33a7; min-height: 30px;  line-height: 30px; background-repeat: no-repeat; background-position: 9px 6px; zoom: 1; position: relative}
+					.left-menu ul li.active{border-bottom: 0}
+						.left-menu ul li a{color: #2c33a7;}
+
+					.left-menu ul li ul{margin-left: -31px; background: #fff; padding: 5px 0}
+						.left-menu ul li ul li{padding-left: 25px; border-bottom: 0; min-height: 0; line-height: normal; margin-left: 11px;font-size: 12px; line-height: 13px; margin-bottom: 7px}
+							.left-menu ul li ul li a{color: #020202; text-decoration: none}
+
+						.left-menu ul li ul li ul {padding-bottom: 1px; padding-top: 7px; margin-left: 0}
+							.left-menu ul li ul li ul li{margin-bottom: 5px; padding-left: 13px; margin-left: -13px; background: url(../images/left-menu-li.png) no-repeat 0 5px; }
+								.left-menu ul li ul li ul li a{color: #d34f3d; text-decoration: underline}
+								.left-menu ul li ul li ul li span{color: #666666; }
+
+					.left-menu ul li.football {background-image: url(../images/icon-football.png);}
+					.left-menu ul li.basketball {background-image: url(../images/icon-basketball.png);}
+					.left-menu ul li.hockey {background-image: url(../images/icon-hockey.png);}
+					.left-menu ul li.voleyball {background-image: url(../images/icon-voleyball.png);}
+
+
+					.left-menu ul li.today {background: url(../images/flags/icon-today.png) no-repeat 0 0}
+					.left-menu ul li.popular {background: url(../images/flags/icon-popular.png) no-repeat 0 0}
+					.left-menu ul li.africa {background: url(../images/flags/icon-africa.png) no-repeat 0 0}
+					.left-menu ul li.argentina {background: url(../images/flags/icon-argentina.png) no-repeat 0 0}
+					.left-menu ul li.australia {background: url(../images/flags/icon-australia.png) no-repeat 0 0}
+					.left-menu ul li.austria {background: url(../images/flags/icon-austria.png) no-repeat 0 0}
+					.left-menu ul li.belgium {background: url(../images/flags/icon-belgium.png) no-repeat 0 0}
+					.left-menu ul li.brazil {background: url(../images/flags/icon-brazil.png) no-repeat 0 0}
+					.left-menu ul li.bulgaria {background: url(../images/flags/icon-bulgaria.png) no-repeat 0 0}
+					.left-menu ul li.canada {background: url(../images/flags/icon-canada.png) no-repeat 0 0}
+					.left-menu ul li.chile {background: url(../images/flags/icon-chile.png) no-repeat 0 0}
+					.left-menu ul li.costarica {background: url(../images/flags/icon-costarica.png) no-repeat 0 0}
+					.left-menu ul li.croatia {background: url(../images/flags/icon-croatia.png) no-repeat 0 0}
+					.left-menu ul li.czechrepublic {background: url(../images/flags/icon-czechrepublic.png) no-repeat 0 0}
+					.left-menu ul li.denmark {background: url(../images/flags/icon-denmark.png) no-repeat 0 0}
+					.left-menu ul li.england {background: url(../images/flags/icon-england.png) no-repeat 0 0}
+					.left-menu ul li.estonia {background: url(../images/flags/icon-estonia.png) no-repeat 0 0}
+					.left-menu ul li.europe {background: url(../images/flags/icon-europe.png) no-repeat 0 0}
+					.left-menu ul li.faroeislands {background: url(../images/flags/icon-faroeislands.png) no-repeat 0 0}
+					.left-menu ul li.finland {background: url(../images/flags/icon-finland.png) no-repeat 0 0}
+					.left-menu ul li.france {background: url(../images/flags/icon-france.png) no-repeat 0 0}
+					.left-menu ul li.germany {background: url(../images/flags/icon-germany.png) no-repeat 0 0}
+					.left-menu ul li.hungary {background: url(../images/flags/icon-hungary.png) no-repeat 0 0}
+					.left-menu ul li.iceland {background: url(../images/flags/icon-iceland.png) no-repeat 0 0}
+					.left-menu ul li.iran {background: url(../images/flags/icon-iran.png) no-repeat 0 0}
+					.left-menu ul li.ireland {background: url(../images/flags/icon-ireland.png) no-repeat 0 0}
+

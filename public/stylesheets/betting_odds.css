@@ -2,13 +2,16 @@
 
 .betting-odds-header, .coupon-league-manage, .header {
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   min-height: 25px;
   padding-left: 10px;
   padding-top: 5px;
-  background: #222;
-  color: #EEE;
+  background: yellow;
+  color: #2C33A7;
 }
+
+#my_coupon .header, .coupon-league-manage { margin-left: 1px;}
+/*.coupon-league-manage { width: 250px; }*/
 .bettings-odds-data a, .events-data a { color: #333; text-decoration: none; display: block; width: 530px; height: 100%; margin-left: 5px; float: right; }
 
 .event { min-height: 15px; background: #fff; margin-bottom: 1px; font-size: 92%; width: 550px; margin-left: 5px;  padding: 5px;}
@@ -43,8 +46,7 @@ div.bettings-odds-bookmakers a.active {
     text-decoration: underline;
 }
 
-
-#toggle-coupon-info {
+a#toggle-coupon-info {
   float: right;
   display: inline;
 
@@ -54,14 +56,33 @@ div.bettings-odds-bookmakers a.active {
   margin-top: 0px;
   margin-right: 10px;
   outline: none;
-  background: url("../images/toggle_up_light.png") no-repeat right 3px;
+  background: url("../images/toggle_up_dark.png") no-repeat right 3px;
   border-left: 1px solid #555;
   /*background: url("http://d1c2wop9xwia98.cloudfront.net/graphics/toggle_down_light.png") no-repeat 0 0;*/
 }
 
 a#toggle-coupon-info.active {
-  background: url("../images/toggle_down_light.png") no-repeat right 3px;
+  background: url("../images/toggle_down_dark.png") no-repeat right 3px;
 }
+
+a#toggle-coupon-clear {
+  float: right;
+  display: inline;
+  width: 20px;
+  height: 20px;
+  text-indent: -9999em;
+  margin-top: 0px;
+  margin-right: 10px;
+  outline: none;
+  background: url("../images/title-close.png") no-repeat right 3px;
+  border-left: 1px solid #555;
+}
+
+#my_coupon {
+ margin-bottom: 5px;
+
+}
+
 
 
 .my_coupon_data { background: #eee; border-bottom: 1px solid #ccc;  }
@@ -69,8 +90,7 @@ a#toggle-coupon-info.active {
 .my_coupon_data ul li.even { background: #fff; }
 /*a.coupon_league_name { float: left;  }*/
 
-
-#towin-with-draw div { float: left; background: #fff; }
+#towin-with-draw div { float: left;  }
 
 .odd-bookmaker-header { width: 150px;}
 
