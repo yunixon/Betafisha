@@ -156,6 +156,7 @@ textarea:focus {
 
 #user_entrance {
 	margin-bottom: 24px;
+	margin-left: 450px;
 }
 
 /* Top navigation */
@@ -234,7 +235,7 @@ textarea:focus {
 
 /* Registration */
 #user_entrance ul {
-  /*  float: right;*/
+  padding-top: 3px;
 }
 
 #user_entrance ul li {
@@ -334,7 +335,8 @@ font-size: 16px;
 }
 
 #footer, footer a {
-  color: #AAA;
+  color: #fff;
+  font-size: 12px;
 }
 
 

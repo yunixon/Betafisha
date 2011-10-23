@@ -23,13 +23,13 @@
 </head>
 <body>
 
-<header class="container_24">
+<header class="container_20">
 
-  <div id="logo" class="grid_12">
+  <div id="logo" class="grid_10">
     <%= link_to "BetAfisha", root_path %>
   </div>
 
-  <div id="user_entrance" class="grid_12">
+  <div id="user_entrance" class="grid_10">
     <ul>
 	   <% if signed_in? %>
 	      <li><%= link_to t(:top_menu_sign_out), signout_path, :method => :delete %> (<%= image_tag("../images/sign_in_icon.png") + " " +  current_user.name %>)</li>
@@ -41,14 +41,14 @@
 
 </header>
 
-<section class="container_24">
-  	<div id="content" class="grid_24">
+<section class="container_20">
+  	<div id="content" class="grid_20">
 	    <%= yield %>
   	</div>
 </section>
 
-<footer class="container_24">
-  	<div id="debug" class="grid_24">
+<footer class="container_20">
+  	<div id="debug" class="grid_20">
     	<%= debug(params) if Rails.env.development? %>
     	<%= debug(params) if Rails.env.production? %>
   	</div>

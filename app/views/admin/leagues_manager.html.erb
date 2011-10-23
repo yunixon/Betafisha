@@ -12,21 +12,21 @@
 
 	    <div class="tab_content">
 
-	      	<div class="accordian grid_6"">
-				<div class="form_name grid_6">
-				Предпросмотр
-				</div>
-	 			<%= render 'sports/sports_content' %>
-			</div>
+	      <div class="accordian grid_5">
+				  <div class="form_name grid_5">
+				  Предпросмотр
+				  </div>
+	 			  <%= render 'sports/sports_content' %>
+			  </div>
 
-			<div class="add_edit_form grid_11">
-				<% flash.each do |key, value| %>
-	        		<div class="flash <%= key %>"><%= value %></div>
-				<% end %>
-				<%= render 'leagues/new_league_form' %>
-			</div>
+		    <div class="add_edit_form grid_10">
+			    <% flash.each do |key, value| %>
+            		<div class="flash <%= key %>"><%= value %></div>
+			    <% end %>
+			    <%= render 'leagues/new_league_form' %>
+		    </div>
 
-			<div class="grid_4">
+			<div class="grid_5">
 				- <b> Управление лигами </b><br />
 				  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 				<br />

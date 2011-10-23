@@ -43,7 +43,6 @@
 
 <header class="container_20">
 
-
   <div id="navigation" class="grid_20">
     <div class="logo-image-wrapper"> <%= link_to "logo", root_path, :class => "logo-image" %> </div>
     <div class="top-nav">
@@ -78,6 +77,10 @@
 <section class="container_20">
 	<div id="wrapper" class="grid_20">
 
+	  <div id="banner"  class="grid_20" style=" height: 60px; margin-bottom: 10px; text-align: center;">
+         <%= image_tag "banner-long.png",  :width=>"1001", :height=>"60" %>
+    </div>
+
 	  <div id="breadcrumb"  class="grid_20">
        <%= yield :breadcrumb %>
     </div>
@@ -96,20 +99,21 @@
 
 	  <div id="right_nav" class="grid_5">
       <%= yield :right_nav%>
+      <div class="banner">       <%= image_tag "banner-1.jpg",  :width=>"235", :height=>"422" %></div>
+					<div class="banner">   <%= image_tag "banner-2.jpg",  :width=>"237", :height=>"357" %></div>
     </div>
 </section>
 
 <footer class="container_20">
 
 	  <div id="footer" class="grid_20">
-	     <div id= "bottom_links" class="grid_10">
-	        <%= link_to "Privacy Policy", "/info/policy" %> |
-	        <%= link_to "Terms of use", "/info/terms" %> |
-        	<%= link_to "About", "/info/about" %> |
-        	<%= link_to "Contact us", "/info/contactus" %>
+	     <div id= "bottom_links" class="grid_4" style="float: right; margin-left: 10px;">
+	        <%= link_to "Информация", "/info/policy" %> |
+	        <%= link_to "Контакты", "/info/terms" %> |
+        	<%= link_to "Faq", "/info/about" %>
        </div>
 
-       <div id= "copyrights" class="grid_12">
+       <div id= "copyrights" class="grid_10">
       	<%= t(:footer_copyrights) %>
        </div>
   	</div>
