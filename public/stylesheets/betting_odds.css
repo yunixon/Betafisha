@@ -96,3 +96,8 @@ a#toggle-coupon-clear {
 
 .odd-value { width: 50px;}
 
+.my_coupon_bets {
+
+   margin-left: 5px; line-height: 16px; font-size: 12px; padding: 5px 0 10px 10px; background: url('../images/main-menu-bg.png') repeat 0 0;
+}
+
