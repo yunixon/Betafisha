@@ -36,7 +36,7 @@
   </div>
   <div id="refresh_box">
   <% if @league.sport.name == "Basketball"%>
-    <% @league.events.with_bet_type ("1or2", @league.id).each_with_index do |e,i| %>
+    <% @league.events.with_bet_type("1or2", @league.id).each_with_index do |e,i| %>
     <% if i == 0 %>
       <div class="event_name_cell"> Игра </div>
       <div class="event_cell"> 1 </div>
@@ -48,7 +48,7 @@
       <% end %> <br />
     <% end %>
   <% else %>
-    <% @league.events.with_bet_type ("1x2", @league.id).each_with_index do |e,i| %>
+    <% @league.events.with_bet_type("1x2", @league.id).each_with_index do |e,i| %>
       <% if i == 0 %>
         <div class="event_name_cell"> Игра </div>
         <div class="event_cell"> 1 </div>

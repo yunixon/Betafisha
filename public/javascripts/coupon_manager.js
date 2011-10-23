@@ -4,7 +4,7 @@
 
 $(document).ready(function() { // add league to coupon
 
-  $('a.remove_coupon_from_list').click( function(e) {
+   $('a.remove_coupon_manager, a.add_coupon_manager').click( function(e) {
     $.ajax({
 	     		type: 'GET',
 	     		data: { type: this.getAttribute("data"), sport_id: this.getAttribute("id") },
