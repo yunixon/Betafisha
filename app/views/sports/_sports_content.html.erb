@@ -1,3 +1,5 @@
+<%= javascript_include_tag 'accordian.js' %>
+<%= javascript_include_tag 'script.js' %>
 <% @sports.each do |sport| %>
 
     <h2 class="acc_trigger" name="<%= sport.name %>" id="sport_<%= sport.id %>">
@@ -45,5 +47,4 @@
     </div>
 
 <% end %>
-<%= javascript_include_tag 'accordian.js' %>
 

@@ -72,6 +72,7 @@ $(document).ready(function() {
 
   // country expand
 	$('.countries li.country a').click( function() {
+	  alert("a");
     $.cookie('nav_menu_country', $(this).parent().attr("id"),{ path: '/'});
 		if( $(this).parent().next().is(':hidden') ) {
 			$('.countries li.country a').parent().removeClass('active').next().hide();
