@@ -82,113 +82,24 @@
 							</div>
 						</div>
 					</div>
-      <div class="block big-table">
-						<a href="" class="yellow all">Все ближайшие матчи</a>
-						<div class="block-title inline-title"><big>Ближайшие матчи</big></div>
-						<div class="block-content">
-							<div class="table">
-								<div class="table-content">
-									<table>
-										<tr class="zebra">
-											<td class="col-0">
-												<img src="images/icon-football.png" alt="icon-football" width="14" height="15" />
-												Футбол >
-												<img src="images/flags/de.png" alt="icon-germany" width="16" height="11" />
-												Германия > Dortmud Chalenger
-												<br />
-												<span class="time">15:15</span>
-												<a href="">Dregenstain - Monreal</a>
-											</td>
-											<td class="col-1">
-												<span>1</span>
-												<a href=""><strong>1.25</strong></a>
-											</td>
-											<td class="col-1">
-												<span>1</span>
-												<a href=""><strong>1.25</strong></a>
-											</td>
-										</tr>
-										<tr>
-											<td class="col-0">
-												<img src="images/icon-football.png" alt="icon-football" width="14" height="15" />
-												Футбол >
-												<img src="images/flags/de.png" alt="icon-germany" width="16" height="11" />
-												Германия > Dortmud Chalenger
-												<br />
-												<span class="time">15:15</span>
-												<a href="">Dregenstain - Monreal</a>
-											</td>
-											<td class="col-1">
-												<strong>1</strong>
-												<a href=""><strong>1.25</strong></a>
-											</td>
-											<td class="col-1">
-												<strong>1</strong>
-												<a href=""><strong>1.25</strong></a>
-											</td>
-										</tr>
-										<tr class="zebra">
-											<td class="col-0">
-												<img src="images/icon-football.png" alt="icon-football" width="14" height="15" />
-												Футбол >
-												<img src="images/flags/de.png" alt="icon-germany" width="16" height="11" />
-												Германия > Dortmud Chalenger
-												<br />
-												<span class="time">15:15</span>
-												<a href="">Dregenstain - Monreal</a>
-											</td>
-											<td class="col-1">
-												<strong>1</strong>
-												<a href=""><strong>1.25</strong></a>
-											</td>
-											<td class="col-1">
-												<strong>1</strong>
-												<a href=""><strong>1.25</strong></a>
-											</td>
-										</tr>
-										<tr>
-											<td class="col-0">
-												<img src="images/icon-football.png" alt="icon-football" width="14" height="15" />
-												Футбол >
-												<img src="images/flags/de.png" alt="icon-germany" width="16" height="11" />
-												Германия > Dortmud Chalenger
-												<br />
-												<span class="time">15:15</span>
-												<a href="">Dregenstain - Monreal</a>
-											</td>
-											<td class="col-1">
-												<strong>1</strong>
-												<a href=""><strong>1.25</strong></a>
-											</td>
-											<td class="col-1">
-												<strong>1</strong>
-												<a href=""><strong>1.25</strong></a>
-											</td>
-										</tr>
-									</table>
-								</div>
-							</div>
-						</div>
-					</div>
 
 					<div class="block big-table">
 						<a href="" class="yellow all">Все Live-ставки</a>
 						<div class="block-title inline-title"><big>LIVE ставки</big></div>
-						<div class="block-content">
-													<iframe id="inscore-xdc" src="http://www.livescore.in/free/511733/" width="624" height="500" frameborder="0" scrolling="no"></iframe>
 
-<script type="text/javascript">
-//<![CDATA[
-try{function inscore_xdc(neco){this.elm=document.getElementById("inscore-xdc");this.hash=null;this.resize=function(){if(location.hash!=this.hash){this.hash=location.hash;var reggg=new RegExp(".*inscore_ifheight_xdc_([0-9]{2,5}).*");if((result=reggg.exec(location.hash))){if(typeof result[1]!="undefined")this.elm.style.height=((result[1]>0&&result[1]<=20000)?parseInt(result[1]):10000)+"px";this.elm.style.overflow="hidden";}else this.elm.style.height="10000px";}}}var inscore_xdc_run=new inscore_xdc();setInterval("inscore_xdc_run.resize()",100);}catch(e){document.getElementById("inscore-xdc").style.height = "10000px";}
-//]]>
-</script>
-								</div>
-							</div>
+						<div class="block-content">
+              <iframe id="inscore-xdc" src="http://www.livescore.in/ru/free/511733/" width="500" height="500" frameborder="0" scrolling="no"></iframe>
+              <script type="text/javascript">
+              //<![CDATA[
+              try{function inscore_xdc(neco){this.elm=document.getElementById("inscore-xdc");this.hash=null;this.resize=function(){if(location.hash!=this.hash){this.hash=location.hash;var reggg=new RegExp(".*inscore_ifheight_xdc_([0-9]{2,5}).*");if((result=reggg.exec(location.hash))){if(typeof result[1]!="undefined")this.elm.style.height=((result[1]>0&&result[1]<=20000)?parseInt(result[1]):10000)+"px";this.elm.style.overflow="hidden";}else this.elm.style.height="10000px";}}}var inscore_xdc_run=new inscore_xdc();setInterval("inscore_xdc_run.resize()",100);}catch(e){document.getElementById("inscore-xdc").style.height = "10000px";}
+              //]]>
+              </script>
 						</div>
 					</div>
+				</div>
+			</div>
   <% end %>
-  </div>
-  </div>
+
 <% end %>
 
 <% content_for :right_nav do %>
