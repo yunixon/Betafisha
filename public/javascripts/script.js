@@ -23,12 +23,9 @@ $(document).ready(function() {
       	return false;
     });
 
-
-
     /**************** ********** ********************/
     /****************  STYLINGS  ********************/
     /**************** ********** ********************/
-
     $("ul.dropdown li").hover(function(){
         $(this).addClass("hover");
         $('ul:first',this).css('visibility', 'visible');
@@ -38,7 +35,6 @@ $(document).ready(function() {
     });
 
     $("ul.dropdown li ul li:has(ul)").find("a:first").append(" &raquo; ");
-
 
     $("a#toggle-coupon-info").click(function() {
       $(this).removeClass("active");
@@ -55,7 +51,6 @@ $(document).ready(function() {
 
 
 });
-
 
 // accordion init
 function accordionInit() {
