@@ -1,5 +1,11 @@
 Betafisha::Application.routes.draw do
 
+  resources :posts
+
+  resources :topics
+
+  resources :forums
+
   resources :events
 
   resources :coupons
