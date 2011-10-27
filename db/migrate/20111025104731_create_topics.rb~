@@ -3,6 +3,7 @@ class CreateTopics < ActiveRecord::Migration
     create_table :topics do |t|
       t.string :name
       t.integer :forum_id
+      t.integer :user_id
       t.timestamps
     end
   end
