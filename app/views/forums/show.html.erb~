@@ -22,7 +22,7 @@
       <tr>
         <td> <%= link_to topic.name, topic %> </td>
         <td> <%= topic.posts.count %> </td>
-        <td> <%= topic.posts.last.created_at > 1.days.ago ? image_tag("http://www.awwwards.com/images/ico_pending.png") + " " + time_ago_in_words(topic.posts.last.created_at) + t( :ago ) : l(topic.posts.last.created_at, :format => :long) if !topic.posts.last.nil? %> </td>
+        <td> <%= topic.posts.last.created_at > 1.days.ago ? image_tag("http://www.awwwards.com/images/ico_pending.png") + " " + time_ago_in_words(forum.topics.last.created_at) + t( :ago ) : l(topic.posts.last.created_at, :format => :long) if !topic.posts.last.nil? %> </td>
         <% if current_user.admin? %>
           <td>  <%= link_to "Редактировать", edit_forum_path(@forum) %> | <%= link_to "Удалить", @forum, :confirm => 'Are you sure?', :method => :delete %> </td>
         <% end %>

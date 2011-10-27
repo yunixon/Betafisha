@@ -1,0 +1,6 @@
+div#content table { width: 100%; }
+div#content table td { text-align: center; border: 1px solid #ccc; background: #eee;}
+div#content table th { background: url('../images/main-menu-bg.png') repeat 0 0; }
+
+
+.post { background: #ccc;  border: 1px solid #333; width: 500%; margin: 0 auto; padding: 10px; } 

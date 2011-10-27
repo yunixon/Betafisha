@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title 'BetAfisha' %></title>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+   <%= stylesheet_link_tag 'reset', 'grid', 'style' , 'forum' %>
+
+  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag 'jquery.cookie.js' %>
+	<%= javascript_include_tag 'jquery-ui' %>
+	<%= javascript_include_tag 'select-ui' %>
+
+
+	<%= include_tiny_mce_if_needed %>
+
+</head>
+<body>
+
+<header class="container_20">
+
+  <div id="logo" class="grid_10">
+    <%= link_to "BetAfisha", root_path %>
+  </div>
+
+  <div id="user_entrance" class="grid_10">
+    <ul>
+	   <% if signed_in? %>
+	      <li><%= link_to t(:top_menu_sign_out), signout_path, :method => :delete %> (<%= image_tag("../images/sign_in_icon.png") + " " +  current_user.name %>)</li>
+	   <% end %>
+    </ul>
+
+  </div>
+
+
+</header>
+
+<section class="container_20">
+  	<div id="content" class="grid_20">
+	    <%= yield %>
+  	</div>
+</section>
+
+<footer class="container_20">
+  	<div id="debug" class="grid_20">
+    	<%= debug(params) if Rails.env.development? %>
+    	<%= debug(params) if Rails.env.production? %>
+  	</div>
+</footer>
+
+</body>
+</html>

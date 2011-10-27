@@ -63,7 +63,8 @@
         		</li>
            </ul> 
          </li>
-        <li><%= link_to "форум",  forums_path  %>
+
+        <li><%= link_to "форум", root_path  %>
     
         </li>
 	  </ul>

@@ -18,6 +18,7 @@
         <% if current_user.admin? %>
           <td><%= link_to "Редактировать", edit_forum_path(forum) %> <%= link_to "Удалить", forum, :confirm => 'Вы уверены, что хотите удалить форум?', :method => :delete %></td>
         <% end %>
+
       </tr>
     <% end %>
 </table>

@@ -16,7 +16,6 @@
   </div>
 
 <% end %>
-
 <p><%= link_to "Добавить пост", new_post_path( :topic => @topic.id ) %></p>
 <p><%= link_to "К топикам", forums_path %></p>
 <p><%= link_to "К форумам", forums_path %></p>

@@ -17,7 +17,7 @@ class TopicsController < ApplicationController
   end
 
   def create
-    @topic = Topic.new( params[:topic] )
+    @topic = Topic.new(params[:topic])
     ActiveRecord::Base.logger.info params[:topic][:forum_id]
     @topic.forum_id = params[:topic][:forum_id]
     @topic.user_id = current_user.id 
