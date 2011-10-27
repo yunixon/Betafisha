@@ -99,7 +99,6 @@
 				</div>
 			</div>
   <% end %>
-
 <% end %>
 
 <% content_for :right_nav do %>
