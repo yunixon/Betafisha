@@ -1,5 +1,0 @@
-<% title "New Forum" %>
-
-<%= render 'form' %>
-
-<p><%= link_to "Back to List", forums_path %></p>

@@ -4,13 +4,13 @@
   <strong>Name:</strong>
   <%= @topic.name %>
 </p>
-<div class="post">
-  <div class="post-content"> <%= @topic.content %> </div>
-  <div class="post-info"> <%= @topic.created_at > 1.days.ago ? image_tag("http://www.awwwards.com/images/ico_pending.png") + " " + time_ago_in_words(@topic.created_at) + t( :ago ) : l(@topic.created_at, :format => :long) if !@topic.nil? %> </div>
-  <% if current_user.admin? %>
-    <div class="post-controls">  <%= link_to "Редактировать", edit_topic_path(@topic) %> | <%= link_to "Удалить", @topic, :confirm => 'Are you sure?', :method => :delete %> </div>
-  <% end %>
-</div>
+  <div class="post">
+    <div class="post-content"> <%= @topic.content %> </div>
+    <div class="post-info"> <%= @topic.created_at > 1.days.ago ? image_tag("http://www.awwwards.com/images/ico_pending.png") + " " + time_ago_in_words(@topic.created_at) + t( :ago ) : l(@topic.created_at, :format => :long) if !@topic.nil? %> </div>
+    <% if current_user.admin? %>
+      <div class="post-controls">  <%= link_to "Редактировать", edit_topic_path(@topic) %> | <%= link_to "Удалить", @topic, :confirm => 'Are you sure?', :method => :delete %> </div>
+    <% end %>
+  </div>
 
 <% for post in @topic.posts %>
 
