@@ -1,4 +1,4 @@
-/*.news {
+.news {
 	margin: 20px 0px 10px 10px;
 }
 
@@ -96,5 +96,5 @@
   background-image: -moz-linear-gradient(top,#dd4b39, #AF301F);
   background-image: -o-linear-gradient(top,#dd4b39, #AF301F);
   background-image: -webkit-gradient(linear,left top,left bottom,from(#dd4b39),to(#AF301F));
-}*/
+}
 

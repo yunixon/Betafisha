@@ -17,7 +17,7 @@
 	     			<%= render 'sports/sports_content' %>
 			    </div>
 
-			<div class="add_edit_form grid_9">
+			<div class="add_edit_form grid_10">
 				<% flash.each do |key, value| %>
 	        		<div class="flash <%= key %>"><%= value %></div>
 				<% end %>

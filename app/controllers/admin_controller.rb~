@@ -22,6 +22,7 @@ class AdminController < ApplicationController
           #ActiveRecord::Base.logger.info @element.element_name
             @element.update_attributes( :common_id => @params[:element_id] )
             @element.save :validate => false
+
         end
         @elements =  bookmaker_elements_by_common_id(@params[:bookmaker_name], @params[:element_id])
         @common_values = bookmaker_values_with_parents Common.where(:table_name => @params[:table_name]), @params[:table_name]
@@ -40,10 +41,10 @@ class AdminController < ApplicationController
         @element.update_attributes(:common_id => nil)
         @element.save :validate => false
      end
-     @elements =  bookmaker_elements_by_common_id(@params[:bookmaker_name], @params[:element_id])
-    #  ActiveRecord::Base.logger.info @elements.inspect + @params[:element_id]
-     @common_values = bookmaker_values_with_parents Common.where(:table_name => @params[:table_name]), @params[:table_name]
-     @values = bookmaker_values_with_parents((bookmaker_values @params[:bookmaker_name], @params[:table_name]), @params[:table_name])
+      @elements =  bookmaker_elements_by_common_id(@params[:bookmaker_name], @params[:element_id])
+      #  ActiveRecord::Base.logger.info @elements.inspect + @params[:element_id]
+      @common_values = bookmaker_values_with_parents Common.where(:table_name => @params[:table_name]), @params[:table_name]
+      @values = bookmaker_values_with_parents((bookmaker_values @params[:bookmaker_name], @params[:table_name]), @params[:table_name])
      }
     end
   end
@@ -67,8 +68,8 @@ class AdminController < ApplicationController
           if !@params[:element_id].nil?
             @elements = bookmaker_elements_by_common_id(@params[:bookmaker_name], @params[:element_id])
           end
-          @common_values = bookmaker_values_with_parents Common.where(:table_name => @params[:table_name]), @params[:table_name]
-          @values = bookmaker_values_with_parents((bookmaker_values @params[:bookmaker_name], @params[:table_name]), @params[:table_name])
+            @common_values = bookmaker_values_with_parents Common.where(:table_name => @params[:table_name]), @params[:table_name]
+            @values = bookmaker_values_with_parents((bookmaker_values @params[:bookmaker_name], @params[:table_name]), @params[:table_name])
         }
       end
     end
