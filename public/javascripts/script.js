@@ -36,20 +36,6 @@ $(document).ready(function() {
 
     $("ul.dropdown li ul li:has(ul)").find("a:first").append(" &raquo; ");
 
-    $("a#toggle-coupon-info").click(function() {
-      $(this).removeClass("active");
-      if($(this).parent().next().is(':hidden')){
-        $(this).parent().next().show();
-        $(this).parent().next().addClass("active");
-      } else {
-        $(this).parent().next().hide();
-        $(this).removeClass("active");
-      }
-      return false;
-    });
-
-
-
 });
 
 // accordion init
