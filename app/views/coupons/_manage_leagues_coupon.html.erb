@@ -1,4 +1,3 @@
-<% if signed_in? %>
 <span style= "float: left;" ><%= @league.name %> Betting Odds</span>
 <% if signed_in? %>
   <% if @has_ligue.nil? %>
@@ -7,7 +6,5 @@
     <%= link_to "удалить лигу", "#", :class => "remove_coupon_manager", :id => "league_#{@league.id }", :data => "remove_from_coupon"   %>
   <% end %>
 <% end %>
-
 <%= javascript_include_tag 'coupon_manager.js' %>
-<% end %>
 

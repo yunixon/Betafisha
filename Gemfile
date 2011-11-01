@@ -4,7 +4,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.7'
 gem 'rake'
 gem 'bundler'
-
+gem 'rdoc'
 # annotate model.rb files
 gem 'annotate'
 

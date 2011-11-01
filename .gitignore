@@ -15,6 +15,6 @@ nbproject/
 nbproject/
 .project
 .settings/
-
+rdoc/*
 /public/uploads/
 
