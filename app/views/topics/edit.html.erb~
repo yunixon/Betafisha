@@ -1,8 +1,0 @@
-<% title "Edit Topic" %>
-
-<%= render 'form' %>
-
-<p>
-  <%= link_to "Show", @topic %> |
-  <%= link_to "View All", topics_path %>
-</p>
