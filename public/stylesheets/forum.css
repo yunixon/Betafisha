@@ -7,7 +7,7 @@ body { background: #e5e5e5; }
 a { font-size: 11px; }
 table { margin: 0; padding: 0; } 
 
-header { height: 40px;}
+header { height: 60px;}
 
 
 /*******************/
@@ -15,10 +15,11 @@ header { height: 40px;}
 /*******************/
 
 /* default elements */
-#logo, #user_entrance { margin: 0px; background: #333; height: 30px; }
+#logo, #user_entrance { margin: 0px;  height: 60px; }
 #user_entrance ul { float: right; margin-right: 10px; padding-top: 7px; }
 #logo a { padding-top: 7px; padding-left: 10px; }
-
+#user_entrance ul li a { color: #333; text-decoration: none; }
+#user_entrance ul li { color: #333; }
 /* main table */
 #content table { width: 100%; }
 #content table td {  border: 1px solid #ccc; background: #eee; padding: 10px; font-size: 11px; overflow: hidden; }
@@ -77,3 +78,13 @@ header { height: 40px;}
 }
 
 .forum-add-btn:hover {   text-decoration: none;   background-color: #fff;  } 
+
+
+
+#logo a {
+  display: block;
+  width: 187px;
+  height: 51px;
+  background: url('../images/logo.png') no-repeat 0 0;
+  text-indent: -9999px;
+}
