@@ -80,9 +80,7 @@ a#toggle-coupon-clear {
 
 #my_coupon {
  margin-bottom: 5px;
-
 }
-
 
 
 .my_coupon_data { background: #eee; border-bottom: 1px solid #ccc;  }
@@ -90,14 +88,13 @@ a#toggle-coupon-clear {
 .my_coupon_data ul li.even { background: #fff; }
 /*a.coupon_league_name { float: left;  }*/
 
-#towin-with-draw div { float: left;  }
+#towin-with-draw div, #towin div { float: left;  }
 
 .odd-bookmaker-header { width: 150px;}
 
 .odd-value { width: 50px;}
 
 .my_coupon_bets {
-
    margin-left: 5px; line-height: 16px; font-size: 12px; padding: 5px 0 10px 10px; background: url('../images/main-menu-bg.png') repeat 0 0;
 }
 
