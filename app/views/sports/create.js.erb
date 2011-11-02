@@ -1,4 +1,4 @@
-$("div.accordian").html(' <%= escape_javascript ( render ( :partial => 'sports_content')  ) %>  ');
+$("div.accordian").html('<div class="form_name grid_5">Предпросмотр</div> <%= escape_javascript ( render ( :partial => 'sports_content')  ) %>  ');
 $('.acc_trigger').removeClass('active').next().hide();
 $('h2#sport_' + '<%= escape_javascript ( @sport.id.to_s ) %>').toggleClass('active').next().show();
 

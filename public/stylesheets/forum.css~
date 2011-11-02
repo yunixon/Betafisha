@@ -1,6 +1,80 @@
-div#content table { width: 100%; }
-div#content table td { text-align: center; border: 1px solid #ccc; background: #eee;}
-div#content table th { background: url('../images/main-menu-bg.png') repeat 0 0; }
+/*******************/
+/* Basic settings  */
+/*******************/
+
+body { background: #e5e5e5; }
+
+a { font-size: 11px; }
+table { margin: 0; padding: 0; } 
+
+header { height: 40px;}
 
 
-.post { background: #ccc;  border: 1px solid #333; width: 500%; margin: 0 auto; } 
+/*******************/
+/* Other settings  */
+/*******************/
+
+/* default elements */
+
+#logo, #user_entrance { margin: 0px; background: #333; height: 30px; }
+#user_entrance ul { float: right; margin-right: 10px; padding-top: 7px; }
+#logo a { padding-top: 7px; padding-left: 10px; }
+
+/* main table */
+#content table { width: 100%; }
+#content table td {  border: 1px solid #ccc; background: #eee; padding: 10px; font-size: 11px; overflow: hidden; }
+#content table th { background: #333; color: #e5e5e5; padding: 10px; font-size: 12px;  text-align: center; }
+
+/* forum */
+.forum-name { width: 150px;}
+.forum-description { width: 450px;}
+.forum-updated { width: 150px;}
+.forum-admin, .topic-admin { width: 50px; text-align: center; }
+
+/* topic */
+#content table th.topic-name, #content table td.topic-name { width: 450px; text-align: left;}
+
+.topic-header { }
+.topic-header, .topic-header a { font-size: 12px; font-weight: normal; }
+
+/* post */
+.post { background: #fff;   width: 100%;  padding: 15px;  font-size: 11px; border-bottom: 1px solid #ccc; height: 35px; } 
+.post-user { float: left;  min-width: 100px;}
+.post .post-content { float: left; margin-left: 20px; font-size: 14px;  }
+
+.first-post { background: #E0DED1; }
+.first-post .post-content { color: #444; } 
+
+.forum-edit-icon, .forum-delete-icon {
+  width: 16px;
+  height: 16px;
+  text-indent: -9999px;
+  background: url('../images/note_edit.png') no-repeat 0 0;
+  margin-right: 5px;
+  display: block;
+  float: left;
+}
+
+.forum-delete-icon {
+  background: url('../images/note_delete.png') no-repeat 0 0;
+}
+
+.forum-add-btn {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  background-color: #EEE;
+  background-repeat: repeat-x;
+  font-size: 15px;
+  width: 100px;
+  height: 15px;
+  padding: 10px 10px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #333;
+  display: block;
+  text-align: center;
+}
+
+.forum-add-btn:hover {   text-decoration: none;   background-color: #fff;  } 

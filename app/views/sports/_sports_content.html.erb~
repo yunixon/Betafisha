@@ -1,0 +1,50 @@
+<%= javascript_include_tag 'accordian.js' %>
+<%= javascript_include_tag 'script.js' %>
+
+
+<% @sports.each do |sport| %>
+    <h2 class="acc_trigger" name="<%= sport.name %>" id="sport_<%= sport.id %>">
+
+      <%= image_tag get_sport_image sport.name %>
+      <%= link_to sport.name, "#" %>
+
+      <% if signed_in? && current_user.admin? && params[:controller] != 'site_top_navigation' %>
+          <%= link_to "Удалить", sport, :confirm => "Вы уверены?", :title => "Удалить #{sport.name}", :class => 'delete_sport_item' %>
+          <%= link_to "Редактировать", sport, :class => 'edit_sport_item', :id => sport.id %>
+      <% end %> </h2>
+
+    <div class="acc_container">
+      <div class="block">
+        <ul class="countries">
+          <% sport.leagues.get_countries.each do |countries| %>
+
+              <li class="country" id='sport_<%= sport.id %>_country_<%= countries.country.id %>'>
+                <% if !countries.country.flag_image.nil? %>
+                  <%= image_tag "flags/" + countries.country.flag_image %>
+                <% end %>
+                <%= link_to countries.country.name, "#", :id => countries.country.id %>
+                <% if signed_in? && current_user.admin? && params[:controller] != 'site_top_navigation' %>
+                    <%= link_to "Удалить", countries.country, :class => 'delete_country_item' %>
+                    <%= link_to "Редактировать", countries.country, :class => 'edit_country_item', :id => countries.country.id %>
+                <% end %>
+              </li>
+
+              <ul class="leagues">
+                <% League.get_league_by_country_and_sport(sport.id, countries.country.id).each do |league| %>
+                    <%= content_tag_for(:li, league) do %>
+                        <%= link_to league.name, league %>
+                        <% if signed_in? && current_user.admin? && params[:controller] != 'site_top_navigation' %>
+                            <%= link_to "Удалить", league, :confirm => "Вы уверены?", :title => "Удалить #{league.name}", :class => 'delete_league_item' %>
+                            <%= link_to "Редактировать", league, :class => 'edit_league_item', :id => league.id %>
+                        <% end %>
+
+                    <% end %>
+                <% end %>
+              </ul>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+<% end %>
+

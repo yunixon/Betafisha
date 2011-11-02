@@ -4,10 +4,10 @@
   <% if params[:topic] %> <input type="hidden" id="post_topic_id" name="post[topic_id]" value="<%= params[:topic] %>" /><% end %>
 
   <p>
-    <%= f.label :content %><br />
+    <%= f.label :content, "Введите текст сообщения" %><br />
     <%= f.text_area :content %>
   </p>
 
-  <p><%= f.submit %></p>
+  <p><%= f.submit "Сохранить" %></p>
 <% end %>
 

@@ -3,15 +3,15 @@
   <% if params[:forum] %> <input type="hidden" id="topic_forum_id" name="topic[forum_id]" value="<%= params[:forum] %>" /> <% end %>
 
    <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name, :value => params[:forum] %>
+    <%= f.label :name, "Название топика" %><br />
+    <%= f.text_field :name %>
   </p>
 
   <p>
-    <%= f.label :content %><br />
+    <%= f.label :content, "Первый пост" %><br />
     <%= f.text_area :content %>
   </p>
 
-  <p><%= f.submit %></p>
+  <p><%= f.submit "Сохранить" %></p>
 <% end %>
 

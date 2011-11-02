@@ -1,4 +1,4 @@
-$("div.accordian").html(' <%= escape_javascript ( render 'sports/sports_content'  ) %>  ');
+$("div.accordian").html('<div class="form_name grid_5">Предпросмотр</div> <%= escape_javascript ( render 'sports/sports_content'  ) %>  ');
 
 
 var active_sport_item = $('h2#sport_' + '<%= escape_javascript ( @sport_id.to_s ) %>');

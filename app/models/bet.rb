@@ -25,7 +25,6 @@ class Bet < ActiveRecord::Base
 
   #filters
   scope :to_win_with_draw, with_bet_type("1x2")
-
   scope :to_win, with_bet_type("1or2")
   scope :outright, with_bet_type("Outright")
 

@@ -1,6 +1,6 @@
 <%  @event.bets.to_win_with_draw.each_with_index do |b,i| %>
 
-<% if (i+1)%4 == 0 %>
+  <% if i%3 == 0 and i > 0 %>
     <br />
     <br />
   <% end %>
@@ -15,10 +15,9 @@
   <% end %>
 
   <% if i%3 == 0 %>
-    <div class= "odd-bookmaker-header"><%= image_tag imageUriByBookmakerName( b.bookmaker.name ), :width => 100, :height => 20 %></div>
+    <div class="odd-bookmaker-header"><%= image_tag imageUriByBookmakerName( b.bookmaker.name ), :width => 100, :height => 20 %></div>
   <% end %>
-
-    <div class = "odd-value"><%=  b["odd"] %></div>
+    <div class="odd-value"><%= b["odd"] %></div>
 
 <% end %>
 

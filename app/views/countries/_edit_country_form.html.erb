@@ -1,5 +1,9 @@
 <%= form_for @country do |f| %>
-  <b> Редактировать страну</b>
+
+  <div class="form_name">
+    Редактирование страны
+  </div> 
+  
   <div class="field">
   	<%= f.label :name, "Название" %> <br/>
     <%= f.text_field :name %>

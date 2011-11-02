@@ -1,0 +1,20 @@
+<%  @event.bets.to_win.each_with_index do |b,i| %>
+
+  <% if i%2 == 0 and i > 0 %>
+    <br />
+    <br />
+  <% end %>
+
+  <% if i == 0 %>
+    <div class = "odd-bookmaker-header">Букмекер</div>
+    <div class = "odd-value">1</div>
+    <div class = "odd-value">2</div>
+    <br />
+    <br />
+  <% end %>
+
+  <% if i%2 == 0 %>
+    <div class="odd-bookmaker-header"><%= image_tag imageUriByBookmakerName( b.bookmaker.name ), :width => 100, :height => 20 %></div>
+  <% end %>
+    <div class="odd-value"><%=  b["odd"] %></div>
+<% end %>

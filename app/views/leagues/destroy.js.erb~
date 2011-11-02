@@ -1,0 +1,24 @@
+$("div.accordian").html(' <%= escape_javascript ( render 'sports/sports_content'  ) %>  ');
+
+
+var active_sport_item = $('h2#sport_' + '<%= escape_javascript ( @sport_id.to_s ) %>');
+
+var active_country_item = $j('#sport_'
+	+ '<%= escape_javascript ( @sport_id.to_s ) %>'
+	+ '_country_'
+	+ '<%= escape_javascript ( @country_id.to_s ) %>'
+	+ ' a'
+   );
+
+$('.acc_trigger').removeClass('active').next().hide();
+
+if (active_sport_item !== null) {
+	active_sport_item.toggleClass('active').next().show();
+}
+
+$('.countries li.country a').parent().removeClass('active').next().hide();
+
+if (active_sport_item !== null) {
+	active_country_item.parent().toggleClass('active').next().show();
+}
+

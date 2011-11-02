@@ -1,3 +1,4 @@
+
 namespace :db do
   desc "Fill db"
   task :populate => :environment do
@@ -8,21 +9,25 @@ namespace :db do
                          :email => "admin@betafisha.com",
                          :password => "qwerty",
                          :password_confirmation => "qwerty")
-
     admin.toggle!(:admin)
+
+    User.create!( :name => "testuser",
+                  :email => "dxkxzx@gmail.com",
+                  :password => "111111",
+                  :password_confirmation => "111111"  )
 
   end
 end
 
 
 namespace :db do
-  desc "reset db"
-  task :r => :environment do
-    puts "Recreating db... please wait!"
-    Rake::Task['db:drop'].execute
-    Rake::Task['db:create'].execute
-    Rake::Task['db:migrate'].execute
-    Rake::Task['db:populate'].execute
+    desc "reset db"
+    task :r => :environment do
+      puts "Recreating db... please wait!"
+      Rake::Task['db:drop'].execute
+      Rake::Task['db:create'].execute
+      Rake::Task['db:migrate'].execute
+      Rake::Task['db:populate'].execute
   end
 
 end

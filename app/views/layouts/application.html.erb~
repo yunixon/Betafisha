@@ -8,7 +8,7 @@
 	<![endif]-->
 
 	<%= stylesheet_link_tag 'reset', 'grid', 'accordian', 'style', 'popup', 'news_block', 'comments', 'betting_odds', 'tabs', 'temp' %>
-	<%= javascript_include_tag :defaults, 'jquery.cookie.js', 'tabs', 'script', 'textinputfilter', 'popup' %>
+	<%= javascript_include_tag :defaults, 'jquery.cookie.js', 'tabs', 'script', 'textinputfilter', 'popup', 'application' %>
 	<%= include_tiny_mce_if_needed %>
 </head>
 <body>
@@ -50,7 +50,7 @@
 	      <li><%= link_to t(:top_menu_coefficients), coefficients_path %></li>
         <li><%= link_to t(:top_menu_bookmakers), bookmakers_path %></li>
         <li><%= link_to t(:top_menu_statistics), statistics_path %></li>
-        <li><%= link_to t(:top_menu_tools), tools_path %>   
+        <li><%= link_to t(:top_menu_tools), tools_path %>
          <ul class="sub_menu">
             <li>
                 Calculators
@@ -61,11 +61,10 @@
         					<li>Bet Calculator</li>
         				</ul>
         		</li>
-           </ul> 
+           </ul>
          </li>
+        <li><%= link_to "форум",  forums_path  %>
 
-        <li><%= link_to "форум", root_path  %>
-    
         </li>
 	  </ul>
 	  </div>
@@ -81,7 +80,7 @@
 	<div id="wrapper" class="grid_20">
 
 	  <div id="banner"  class="grid_20" style=" height: 60px; margin-bottom: 10px; text-align: center;">
-         <%= image_tag "banner-long.png",  :width=>"1001", :height=>"60" %>
+         <%= image_tag "banner-long.png",  :width=>"1000", :height=>"60" %>
     </div>
 
 	  <div id="breadcrumb"  class="grid_20">
@@ -108,7 +107,6 @@
 </section>
 
 <footer class="container_20">
-
 	  <div id="footer" class="grid_20">
 	     <div id= "bottom_links" class="grid_4" style="float: right; margin-left: 10px;">
 	        <%= link_to "Информация", "/info/policy" %> |
@@ -127,7 +125,6 @@
       	<%= debug(params) if Rails.env.development? %>
       <% end %>
   	</div>
-
 </footer>
 
 <div id="popup_name" class="popup_block">
@@ -136,4 +133,18 @@
 
 </body>
 </html>
+
+<script>
+  $("a#toggle-coupon-info").click( function() {
+    $(this).removeClass("active");
+    if($(this).parent().next().is(':hidden')){
+      $(this).parent().next().show();
+      $(this).parent().next().addClass("active");
+    } else {
+      $(this).parent().next().hide();
+      $(this).removeClass("active");
+    }
+    return false;
+  });
+</script>
 

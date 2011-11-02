@@ -1,8 +1,11 @@
 require "digest"
+
 class User < ActiveRecord::Base
+
   paginates_per 5
+
   has_many :posts, :dependent => :destroy
-  has_many :comments, :dependent => :destroy
+  has_many :topics, :dependent => :destroy
   has_many :coupons
 
   attr_accessor :password
@@ -48,7 +51,6 @@ class User < ActiveRecord::Base
     UserMailer.reset_password(self).deliver
   end
 
-
   private
 
   def encrypt_password
@@ -67,7 +69,6 @@ class User < ActiveRecord::Base
   def secure_hash (string)
       Digest::SHA2.hexdigest(string)
   end
-
 
 
 end
