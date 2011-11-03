@@ -18,7 +18,7 @@
      <% if !@flags.nil? %>
         <b> Фильтры: </b> <br/>
         <%= f.label :flag_image, "Флаг:" %> <br/>
-        <%= f.select :flag_image, options_for_select( @flags ), :multiple => false %>
+        <%= f.select :flag_image, options_for_select( @flags, @country.flag_image), :multiple => false %>
     <% end %>
   </div><br />
 
