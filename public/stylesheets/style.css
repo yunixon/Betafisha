@@ -14,7 +14,7 @@ html, body {
 
 }
 body {
- background: #333 url('../images/main-bg.png') repeat 0 0;
+ background: #333 url('http://r3.oddsportal.com/x/oddsportal1110311432/img/bg-body.png') repeat 0 0;
 }
 
 a { font: normal 11px  Helvetica, Arial, Freesans, sans-serif; color: #CE2828; text-decoration: none; }
