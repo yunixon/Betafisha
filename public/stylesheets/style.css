@@ -373,7 +373,7 @@ ul.dropdown li:hover > ul { visibility: visible; }
 }
 
 h2.acc_trigger, .acc_container { width: 200px; 	margin-left: 0; }
- h2.acc_trigger {  background: url('../images/main-menu-bg.png') repeat 0 0; }
+ h2.acc_trigger {  background: url('../images/main-menu-bg.png') repeat 0 0; border-bottom: 1px solid #333; }
 .event_name_cell, .event_cell {
   background: #ccc;
   text-align: center;
@@ -407,7 +407,7 @@ h2.acc_trigger, .acc_container { width: 200px; 	margin-left: 0; }
   width: 46px;
   color: #2C33A7;
   padding: 0;
-  background: #FFF600;
+  background: #FFAE01;
   margin-right: 4width: 108px;px;
   cursor: pointer;
   height: 15px;

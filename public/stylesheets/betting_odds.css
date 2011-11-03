@@ -6,7 +6,7 @@
   min-height: 25px;
   padding-left: 10px;
   padding-top: 5px;
-  background: yellow;
+  background: #ffae01;
   color: #2C33A7;
 }
 
@@ -82,7 +82,7 @@ a#toggle-coupon-clear {
  margin-bottom: 5px;
 }
 
-.my_coupon_data { background: #eee; border-bottom: 1px solid #ccc;  }
+.my_coupon_data { background: #eee;  }
 .my_coupon_data ul li { background: #eee; height: 16px; padding: 5px;}
 .my_coupon_data ul li.even { background: #fff; }
 

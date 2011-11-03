@@ -7,11 +7,11 @@
 			.block {margin-bottom: 10px; position: relative}
 				.block a.all{line-height: 28px; position: absolute; right: 0; top: 0; }
 
-				.block .block-title{height: 28px; line-height: 28px; border-bottom: 1px solid #2c33a7; position: relative; padding: 0 7px; font-weight: bold; color: #2c33a7; font-size: 13px;background: #fff600;   }
+				.block .block-title{height: 28px; line-height: 28px; border-bottom: 1px solid #2c33a7; position: relative; padding: 0 7px; font-weight: bold; color: #2c33a7; font-size: 13px;background: #FFAE01;   }
 					.block .inline-title{ display: inline-block; *display: inline; zoom: 1 }
 					.block .block-title big{font-size: 14px; display: block;}
 				.block .block-title .close{height: 28px; line-height: 28px; border-left: 1px solid #2c33a7; position: absolute; right: 0; top: 0; width:26px; background: url(../images/title-close.png) no-repeat center center; cursor: pointer; }
-				.block .block-content{background: #fff600 url(../images/main-menu-bg.png) repeat; padding: 7px 7px}
+				.block .block-content{background: #FFAE01 url(../images/main-menu-bg.png) repeat; padding: 7px 7px}
 					.block .block-content p strong{display: block; margin-bottom: 2px}
 
 			.block-search {}
@@ -22,7 +22,7 @@
 
 			.main-col .block {margin-bottom: 15px}
 				.main-col .block .block-title{border-bottom: 0}
-				.main-col .block .block-content{padding: 0; border: 2px solid #fff600; background:#9daeb2; overflow: hidden; zoom: 1}
+				.main-col .block .block-content{padding: 0; border: 2px solid #FFAE01; background:#9daeb2; overflow: hidden; zoom: 1}
 
 				.block .big-img {float: left; margin-right: 10px; margin-bottom: 10px;}
 				.block .big-content {overflow: hidden; zoom: 1; padding-top: 10px; padding-right: 5px}
@@ -31,14 +31,14 @@
 				.table {margin-bottom: 5px}
 					.table .table-title{position: relative; }
 						.table .table-title a{position: absolute; right: 0; padding: 4px 0}
-						.table .table-title span{display: inline-block; *display: inline; zoom: 1; background: #ffee00; color: #2c33a7; padding: 4px 5px; }
+						.table .table-title span{display: inline-block; *display: inline; zoom: 1; background: #FFAE01; color: #2c33a7; padding: 4px 5px; }
 							.table .table-title span small{font-size: 11px}
 
 					.table .table-content{overflow: hidden; zoom: 1}
 						.table .table-content table{width: 100%; border-collapse: collapse}
 						.table .table-content table tr{}
 						.table .table-content table tr.zebra td{background-color: #e6e8d6; }
-						.table .table-content table tr td{height: 15px; line-height: 15px; padding: 3px 12px; border: 2px solid #ffee00}
+						.table .table-content table tr td{height: 15px; line-height: 15px; padding: 3px 12px; border: 2px solid #FFAE01}
 						.table .table-content table tr td img{position: relative; top: 2px; margin-right: 3px}
 						.table .table-content table tr td a{text-decoration: none; color: #2c33a7}
 						.table .table-content table tr td.col-1{text-align: center; width: 23px}
