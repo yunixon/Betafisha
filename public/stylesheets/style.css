@@ -427,4 +427,6 @@ h2.acc_trigger, .acc_container { width: 200px; 	margin-left: 0; }
 
 #left_nav #my_coupon .my_coupon_data { margin-left: 0px; }
 #right_nav #my_coupon .my_coupon_data { margin-left: 5px; }
+#partners { text-align: center; } 
+#partners a { text-decoration: underline; }
 
