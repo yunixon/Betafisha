@@ -30,7 +30,15 @@ class GamebookersParser
 
           _league_name = group['name'].include?('~') ? group['name'].gsub('~','') : group['name'].split(' - ').last
           _league_name = group['name'] if group['name'].split(' - ').last == 'Championship'
-          _common_league_name = calculate_name(Gamebooker, _league_name, 'league')
+          _common_league_name = calculate_name(Gamebooker,
+                                                [_sport.name,
+                                                  _country.name,
+                                                  _league_name
+                                                ].join(' | '),
+                                                'league',
+                                                true,
+                                                [_sport.name, _country.name, _league_name]
+                                              )
           _league = League.find_or_create_by_name _common_league_name
           _league.sport_id = set_attribute_unless_given(_league, :sport_id, _sport.id)
           _league.country_id = set_attribute_unless_given(_league, :country_id, _country.id)

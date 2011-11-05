@@ -57,7 +57,7 @@ begin
     threads[1] = spawn do
       begin
         @log.write "Betredkings parsing started #{Time.now}\n"
-       #BetredkingsParser.parse!
+        BetredkingsParser.parse!
         @log.write "Betredkings parsing finished #{Time.now}\n"
       rescue Exception => e
         @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
@@ -71,7 +71,7 @@ begin
     threads[2] = spawn do
       begin
         @log.write "Stan James parsing started #{Time.now}\n"
-       #StanjamesParser.parse!
+        StanjamesParser.parse!
         @log.write "Stan James parsing finished #{Time.now}\n"
       rescue Exception => e
         @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
@@ -85,7 +85,7 @@ begin
     threads[3] = spawn do
       begin
         @log.write "Nordicbet parsing started #{Time.now}\n"
-        #NordicbetsParser.parse!
+        NordicbetsParser.parse!
         @log.write "Nordicbet parsing finished #{Time.now}\n"
       rescue Exception => e
         @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
@@ -108,6 +108,10 @@ begin
   #  Bet.old.delete_all
   #  @log.write "Clearing DB finished\n"
 
+    @log.write "Changing element titles\n"
+    check_and_set_titles
+    @log.write "Changing element titles finished\n"
+    
     @log.write "Deleting events without bets\n"
     Event.all.each do |e|
       e.destroy if e.bets.empty?

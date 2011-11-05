@@ -22,7 +22,15 @@ class NordicbetsParser
             @_country = Country.find_or_create_by_name _country_name
             @_country.touch
           when 'season' then
-            _league_name = calculate_name(Nordicbet, element.text, 'league')
+            _league_name = calculate_name(Nordicbet,
+                                            [@_sport.name,
+                                              @_country.name,
+                                              element.text
+                                            ].join(' | '),
+                                            'league',
+                                            true,
+                                            [@_sport.name, @_country.name, element.text]
+                                          )
             @_league = League.find_or_create_by_name _league_name
             @_league.sport_id = set_attribute_unless_given(@_league, :sport_id, @_sport.id)
             @_league.country_id = set_attribute_unless_given(@_league, :country_id, @_country.id)

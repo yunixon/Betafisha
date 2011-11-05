@@ -1,15 +1,24 @@
 module CalculatingName
 
+  MODELS_FOR_TITLE_CHECK = [Event, League, Country, Sport, Participant, BetType, Bookmaker]
+
   require File.dirname(__FILE__) + "/../config/application"
   Rails.application.require_environment!
 
-  def calculate_name(model, element, type, allownew = true)
+  def calculate_name(model, element, type, allownew = true, sport_and_country_and_league = [])
     _name = ''
     if temp = model.find(:first, :conditions => {:element_name => element, :table_name => type})
       _name = temp.common ? temp.common.element_name : temp.element_name
     elsif temp = Common.find(:first, :conditions => ["element_name like :e and table_name = :t", {:e => "%#{element}%", :t => type}])
       model.create(:table_name => type, :element_name => element, :common_id => temp.id)
       _name = temp.element_name
+    elsif type == 'league'
+      all_leagues = Common.find(:all, :conditions => ["element_name like :e and table_name = :t", {:e => "%#{sport_and_country_and_league[2]}%", :t => 'league'}])
+      all_leagues.each do |l|
+        if l.element_name.include?(sport_and_country_and_league[0]) && l.element_name.include?(sport_and_country_and_league[1])
+          _name = l.element_name
+        end
+      end
     elsif allownew
       Common.find(:all, :conditions => {:table_name => type}).each do |s|
         if element.downcase.include? s.element_name.downcase
@@ -52,5 +61,13 @@ module CalculatingName
 
   def set_attribute_unless_given(element, field, value)
     element.send(field).present? ? element.send(field) : value
+  end
+  
+  def check_and_set_titles
+    MODELS_FOR_TITLE_CHECK.each do |model|
+      model.all.each do |element|
+        element.update_attribute(:title, element.name) unless element.title.present?
+      end
+    end
   end
 end

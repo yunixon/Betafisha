@@ -44,14 +44,15 @@ end
 SPORTS.each do |style|
   doc = Nokogiri::HTML(open("http://xml.gamebookers.com/sports/#{style}.xml_attr.xml"))
   doc.xpath('//sport').each do |sport|
-    calculate_common_name(sport['name'], 'sport')
+    _sport = calculate_common_name(sport['name'], 'sport')
     sport.children.each do |group|
       _country_name = group['name'].include?('~') ? 'World' :
         group['name'].split(' - ').length == 2 ? group['name'].split(' - ').first  : 'World'
       _league_name = group['name'].include?('~') ? group['name'].gsub('~','') : group['name'].split(' - ').last  
       _league_name = group['name'] if group['name'].split(' - ').last == 'Championship'
-      calculate_common_name(_country_name, 'country')
-      calculate_common_name(_league_name, 'league')
+      _country = calculate_common_name(_country_name, 'country')
+      _league_name_full = [_sport.element_name, _country.element_name, _league_name].join(' | ')
+      calculate_common_name(_league_name_full, 'league')
       group.children.each do |event|
         calculate_common_name(event['name'].gsub(' [Draw No Bet]', ''), 'event')
         event.children.each do |bettype|

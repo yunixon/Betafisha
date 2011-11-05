@@ -45,7 +45,15 @@ class StanjamesParser
             end
           end
 
-          _league_name = calculate_name(StanJame, event['sport'], 'league')
+          _league_name = calculate_name(StanJame,
+                                          [_sport.name,
+                                            _country.name,
+                                            event['sport']
+                                          ].join(' | '),
+                                          'league',
+                                          true,
+                                          [_sport.name, _country.name, event['sport']]
+                                        )
           _league = League.find_or_create_by_name _league_name
           _league.sport_id = set_attribute_unless_given(_league, :sport_id, _sport.id)
           _league.country_id = set_attribute_unless_given(_league, :country_id, _country.id)
