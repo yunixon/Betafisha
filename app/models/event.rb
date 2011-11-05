@@ -17,7 +17,7 @@ class Event < ActiveRecord::Base
   #scope :to_win_with_draw, with_bet_type("1x2")    #joins(:bets) & Bet.to_win_with_draw
 
   #find old elements, interval can be changed
-  scope :old, where("updated_at < ?", Time.now - 1.hour)
+  scope :older_than, lambda { |time| where("updated_at < ?", time) }
 
 end
 

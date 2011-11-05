@@ -13,6 +13,10 @@ begin
     $running = false
   end
 
+  timestamp_file = File.dirname(__FILE__) + '/../../log/parsers.timestamp'
+  last_parsed_time = File.mtime timestamp_file
+  FileUtils.touch timestamp_file
+
   log = File.dirname(__FILE__) + '/../../log/parsers.rb.log'
   if File.exist?(log)
     @log = open(log, (File::WRONLY | File::APPEND))
@@ -28,14 +32,6 @@ begin
 
     @log.write "========================================================================\n"
 
-    @log.write "Clearing DB (old elements) started\n"
-    Sport.delete_all
-    Event.delete_all
-    League.delete_all
-    Country.delete_all
-    BetType.delete_all
-    Bet.delete_all
-    @log.write "Clearing DB finished\n"
 
     #array for pids
     threads = []
@@ -99,14 +95,16 @@ begin
     #waiting all parsers to finish
     wait(threads)
 
-   # @log.write "#Clearing DB (old elements) started\n"
-    #Sport.old.delete_all
-   # Event.old.delete_all
-   # League.old.delete_all
-   # Country.old.delete_all
-  #  BetType.old.delete_all
-  #  Bet.old.delete_all
-  #  @log.write "Clearing DB finished\n"
+    @log.write "#Clearing DB (old elements) started\n"
+    Bet.older_than(last_parsed_time).delete_all
+    BetType.older_than(last_parsed_time).delete_all
+    Bookmaker.older_than(last_parsed_time).delete_all
+    Country.older_than(last_parsed_time).delete_all
+    Event.older_than(last_parsed_time).delete_all
+    League.older_than(last_parsed_time).delete_all
+    Participant.older_than(last_parsed_time).delete_all
+    Sport.older_than(last_parsed_time).delete_all
+    @log.write "Clearing DB finished\n"
 
     @log.write "Changing element titles\n"
     check_and_set_titles

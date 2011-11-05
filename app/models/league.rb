@@ -16,7 +16,7 @@ class League < ActiveRecord::Base
   default_scope :order => 'leagues.priority DESC'
 
   #find old elements, interval can be changed
-  scope :old, where("updated_at < ?", Time.now - 1.hour)
+  scope :older_than, lambda { |time| where("updated_at < ?", time) }
 
   def self.get_countries
     find( :all, :select => "country_id, COUNT(country_id) AS duplicate_count", :conditions => "country_id IS NOT NULL", :group  => "country_id HAVING duplicate_count >= 1")

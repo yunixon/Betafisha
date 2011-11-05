@@ -8,7 +8,7 @@ class Bet < ActiveRecord::Base
   belongs_to :participant
 
   #find old elements, interval can be changed
-  scope :old, where("updated_at < ?", Time.now - 1.hour)
+  scope :older_than, lambda { |time| where("updated_at < ?", time) }
 
 
   def self.with_bet_type( name )
