@@ -80,17 +80,19 @@ class BetredkingsParser
                           type.children.each_with_index do |odd, i|
                             _bet = Bet.new :priority => 1
                             position = 0
-                            _bet.name = case odd['outcome']
+                            case odd['outcome']
                             when '1' then
-                              _participants_array[0]['name']
+                              _bet_name = _participants_array[0]['name']
                               position = 0
                             when '2' then
-                              _participants_array[1]['name']
+                              _bet_name = _participants_array[1]['name']
                               position = 2
                             when 'X' then
-                              'Draw'
+                              _bet_name = 'Draw'
                               position = 1
                             end
+
+                            _bet.name = _bet_name
                             _bet.bet_type_id = set_attribute_unless_given(_bet, :bet_type_id, _type.id)
                             _bet.event_id = set_attribute_unless_given(_bet, :event_id, _event.id)
                             _bet.bookmaker_id = set_attribute_unless_given(_bet, :bookmaker_id, _bookmaker.id)

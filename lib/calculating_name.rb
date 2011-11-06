@@ -13,11 +13,15 @@ module CalculatingName
       model.create(:table_name => type, :element_name => element, :common_id => temp.id)
       _name = temp.element_name
     elsif type == 'league'
-      all_leagues = Common.find(:all, :conditions => ["element_name like :e and table_name = :t", {:e => "%#{sport_and_country_and_league[2]}%", :t => 'league'}])
+      all_leagues = Common.find(:all, :conditions => ["element_name like :e and table_name = :t", {:e => "%#{sport_and_country_and_league[2].rstrip}%", :t => 'league'}])
       all_leagues.each do |l|
-        if l.element_name.include?(sport_and_country_and_league[0]) && l.element_name.include?(sport_and_country_and_league[1])
+        if l.element_name.include?(sport_and_country_and_league[0].rstrip) && l.element_name.include?(sport_and_country_and_league[1].rstrip)
           _name = l.element_name
         end
+      end
+      if _name.blank?
+        model.create(:table_name => type, :element_name => sport_and_country_and_league.join(' | '))
+        _name = sport_and_country_and_league.join(' | ')
       end
     elsif allownew
       Common.find(:all, :conditions => {:table_name => type}).each do |s|
