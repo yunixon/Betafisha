@@ -45,7 +45,7 @@ gem 'tiny_mce'
 
 # image uploader
 gem 'carrierwave'
-gem 'rmagick'
+#gem 'rmagick'
 
 gem 'jquery-rails'
 

@@ -106,7 +106,6 @@ GEM
     rbx-require-relative (0.0.5)
     rdoc (3.11)
       json (~> 1.4)
-    rmagick (2.13.1)
     ruby-debug (0.10.4)
       columnize (>= 0.1)
       ruby-debug-base (~> 0.10.4.0)
@@ -149,7 +148,6 @@ DEPENDENCIES
   rails-erd
   rake
   rdoc
-  rmagick
   ruby-debug
   savon
   tiny_mce
