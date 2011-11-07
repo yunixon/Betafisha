@@ -20,6 +20,11 @@ class NordicbetsParser
           when 'region' then
             _country_name = calculate_name(Nordicbet, element.text, 'country')
             @_country = Country.find_or_create_by_name _country_name
+            if _country_name != element.text && Country.find(:first, :conditions => ['name = ?', element.text]).present?
+              Country.find(:first, :conditions => ['name = ?', element.text]).leagues.each do |l|
+                l.update_attribute(:country_id, @_country.id)
+              end
+            end
             @_country.touch
           when 'season' then
             _league_name = calculate_name(Nordicbet,

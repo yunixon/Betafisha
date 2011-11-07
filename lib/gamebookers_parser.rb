@@ -26,6 +26,11 @@ class GamebookersParser
           _country_name = group['name'].include?('~') ? 'World' : group['name'].split(' - ').first
           _common_country_name = calculate_name(Gamebooker, _country_name, 'country')
           _country = Country.find_or_create_by_name _common_country_name
+          if _common_country_name != _common_country_name && Country.find(:first, :conditions => ['name = ?', _common_country_name]).present?
+            Country.find(:first, :conditions => ['name = ?', _common_country_name]).leagues.each do |l|
+              l.update_attribute(:country_id, _country.id)
+            end
+          end
           _country.touch
 
           _league_name = group['name'].include?('~') ? group['name'].gsub('~','') : group['name'].split(' - ').last

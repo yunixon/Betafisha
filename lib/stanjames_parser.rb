@@ -43,6 +43,11 @@ class StanjamesParser
             if event['sport'].include?(c.element_name)
               _country_name = calculate_name(StanJame, c.element_name, 'country')
               _country = Country.find_or_create_by_name _country_name
+              if _country_name != c.element_name && Country.find(:first, :conditions => ['name = ?', c.element_name]).present?
+                Country.find(:first, :conditions => ['name = ?', c.element_name]).leagues.each do |l|
+                  l.update_attribute(:country_id, _country.id)
+                end
+              end
               _country.touch
             end
           end

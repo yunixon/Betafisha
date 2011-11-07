@@ -25,6 +25,11 @@ class BetredkingsParser
         sport.children.each do |country|
           _country_name = calculate_name(Betredking, country['name'], 'country')
           _country = Country.find_or_create_by_name _country_name
+          if _country_name != country['name'] && Country.find(:first, :conditions => ['name = ?', country['name']]).present?
+            Country.find(:first, :conditions => ['name = ?', country['name']]).leagues.each do |l|
+              l.update_attribute(:country_id, _country.id)
+            end
+          end
           _country.touch
 
           country.children.each do |tournament|
