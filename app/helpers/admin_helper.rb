@@ -22,10 +22,10 @@ module AdminHelper
 
   def bookmaker_element_by_id ( bookmaker_name, element_id )
     value = case bookmaker_name
-      when "Gamebookers" then Gamebooker.find( element_id ).order("element_name asc")
-      when "Betredkings" then Betredking.find( element_id ).order("element_name asc")
-      when "StanJames" then StanJame.find( element_id ).order("element_name asc")
-      when "Nordicbets" then Nordicbet.find( element_id ).order("element_name asc")
+      when "Gamebookers" then Gamebooker.order("element_name asc").find( element_id )
+      when "Betredkings" then Betredking.order("element_name asc").find( element_id )
+      when "StanJames" then StanJame.order("element_name asc").find( element_id )
+      when "Nordicbets" then Nordicbet.order("element_name asc").find( element_id )
       else "empty"
      end
   end
