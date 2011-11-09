@@ -16,15 +16,12 @@ class NordicbetsParser
           when 'sport' then
             _sport_name = calculate_name(Nordicbet, element.text, 'sport')
             @_sport = Sport.find_or_create_by_name _sport_name
+            check_previous_names(element.text, _sport_name, Sport, :sport_id, @_sport.id, [:leagues])
             @_sport.touch
           when 'region' then
             _country_name = calculate_name(Nordicbet, element.text, 'country')
             @_country = Country.find_or_create_by_name _country_name
-            if _country_name != element.text && Country.find(:first, :conditions => ['name = ?', element.text]).present?
-              Country.find(:first, :conditions => ['name = ?', element.text]).leagues.each do |l|
-                l.update_attribute(:country_id, @_country.id)
-              end
-            end
+            check_previous_names(element.text, _country_name, Country, :country_id, @_country.id, [:leagues])
             @_country.touch
           when 'season' then
             _league_name = calculate_name(Nordicbet,
@@ -40,12 +37,19 @@ class NordicbetsParser
             @_league.sport_id = set_attribute_unless_given(@_league, :sport_id, @_sport.id)
             @_league.country_id = set_attribute_unless_given(@_league, :country_id, @_country.id)
             @_league.save
+            check_previous_names([@_sport.name, @_country.name, element.text].join(' | '),
+                                  _league_name,
+                                  League,
+                                  :league_id,
+                                  @_league.id,
+                                  [:events, :coupons])
             @_league.touch
           when 'breadcrumbs' then
             _event_name = calculate_name(Nordicbet, element.text, 'event')
             @_event = Event.find_or_create_by_name _event_name
             @_event.league_id = set_attribute_unless_given(@_event, :league_id, @_league.id)
             @_event.save
+            check_previous_names(element.text, _event_name, Event, :event_id, @_event.id, [:participants, :bets])
             @_event.touch
           when 'participant' then
             _participant_name = calculate_name(Nordicbet, element.text, 'participant')

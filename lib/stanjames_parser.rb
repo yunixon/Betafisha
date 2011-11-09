@@ -36,6 +36,7 @@ class StanjamesParser
         doc.xpath('//event').each do |event|
           _sport_name = calculate_name(StanJame, event['sporttype'], 'sport')
           _sport = Sport.find_or_create_by_name _sport_name
+          check_previous_names(event['sporttype'], _sport_name, Sport, :sport_id, _sport.id, [:leagues])
           _sport.touch
 
           _country_name = ''
@@ -44,11 +45,7 @@ class StanjamesParser
             if event['sport'].include?(c.element_name)
               _country_name = calculate_name(StanJame, c.element_name, 'country')
               _country = Country.find_or_create_by_name _country_name
-              if _country_name != c.element_name && Country.find(:first, :conditions => ['name = ?', c.element_name]).present?
-                Country.find(:first, :conditions => ['name = ?', c.element_name]).leagues.each do |l|
-                  l.update_attribute(:country_id, _country.id)
-                end
-              end
+              check_previous_names(c.element_name, _country_name, Country, :country_id, _country.id, [:leagues])
               _country.touch
             end
           end
@@ -74,12 +71,19 @@ class StanjamesParser
           _league.sport_id = set_attribute_unless_given(_league, :sport_id, _sport.id)
           _league.country_id = set_attribute_unless_given(_league, :country_id, _country.id)
           _league.save
+          check_previous_names([_sport.name, _country.name, event['sport']].join(' | '),
+                                _league_name,
+                                League,
+                                :league_id,
+                                _league.id,
+                                [:events, :coupons])
           _league.touch
 
           _event_name = calculate_name(StanJame, event['name'], 'event')
           _event = Event.find_or_create_by_name _event_name
           _event.league_id = set_attribute_unless_given(_event, :league_id, _league.id)
           _event.save
+          check_previous_names(event['name'], _event_name, Event, :event_id, _event.id, [:participants, :bets])
           _event.touch
 
           if event['name'].scan(' v ').present?

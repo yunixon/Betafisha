@@ -20,17 +20,14 @@ class GamebookersParser
       doc.xpath('//sport').each do |sport|
         _sport_name = calculate_name(Gamebooker, sport['name'], 'sport')
         _sport = Sport.find_or_create_by_name _sport_name
+        check_previous_names(sport['name'], _sport_name, Sport, :sport_id, _sport.id, [:leagues])
         _sport.touch
 
         sport.children.each do |group|
           _country_name = group['name'].include?('~') ? 'World' : group['name'].split(' - ').first
           _common_country_name = calculate_name(Gamebooker, _country_name, 'country')
           _country = Country.find_or_create_by_name _common_country_name
-          if _common_country_name != _common_country_name && Country.find(:first, :conditions => ['name = ?', _common_country_name]).present?
-            Country.find(:first, :conditions => ['name = ?', _common_country_name]).leagues.each do |l|
-              l.update_attribute(:country_id, _country.id)
-            end
-          end
+          check_previous_names(_country_name, _common_country_name, Country, :country_id, _country.id, [:leagues])
           _country.touch
 
           _league_name = group['name'].include?('~') ? group['name'].gsub('~','') : group['name'].split(' - ').last
@@ -48,6 +45,12 @@ class GamebookersParser
           _league.sport_id = set_attribute_unless_given(_league, :sport_id, _sport.id)
           _league.country_id = set_attribute_unless_given(_league, :country_id, _country.id)
           _league.save
+          check_previous_names([_sport.name, _country.name, _league_name].join(' | '),
+                                _common_league_name,
+                                League,
+                                :league_id,
+                                _league.id,
+                                [:events, :coupons])
           _league.touch
 
           group.children.each do |event|
@@ -55,6 +58,7 @@ class GamebookersParser
             _event = Event.find_or_create_by_name _event_name
             _event.league_id = set_attribute_unless_given(_event, :league_id, _league.id)
             _event.save
+            check_previous_names(event['name'].gsub(' [Draw No Bet]', ''), _event_name, Event, :event_id, _event.id, [:participants, :bets])
             _event.touch
             event.children.each do |bettype|
               _bet_type_name = calculate_name(Gamebooker, bettype['name'], 'bet_type', false)

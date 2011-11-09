@@ -74,4 +74,14 @@ module CalculatingName
       end
     end
   end
+
+  def check_previous_names(old_name, new_name, parent_model, parent_model_id_symbol, parent_model_id, childrens = [])
+    if new_name != old_name && parent_model.find(:first, :conditions => ['name = ?', old_name]).present?
+      childrens.each do |childs|
+        parent_model.find(:first, :conditions => ['name = ?', old_name]).send(childs).each do |l|
+          l.update_attribute(parent_model_id_symbol, parent_model_id)
+        end
+      end
+    end
+  end
 end

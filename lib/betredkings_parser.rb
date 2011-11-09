@@ -20,20 +20,16 @@ class BetredkingsParser
       doc.xpath('//sport').each do |sport|
         _sport_name = calculate_name(Betredking, sport['name'], 'sport')
         _sport = Sport.find_or_create_by_name _sport_name
+        check_previous_names(sport['name'], _sport_name, Sport, :sport_id, _sport.id, [:leagues])
         _sport.touch
 
         sport.children.each do |country|
           _country_name = calculate_name(Betredking, country['name'], 'country')
           _country = Country.find_or_create_by_name _country_name
-          if _country_name != country['name'] && Country.find(:first, :conditions => ['name = ?', country['name']]).present?
-            Country.find(:first, :conditions => ['name = ?', country['name']]).leagues.each do |l|
-              l.update_attribute(:country_id, _country.id)
-            end
-          end
+          check_previous_names(country['name'], _country_name, Country, :country_id, _country.id, [:leagues])
           _country.touch
 
           country.children.each do |tournament|
-            #find a way to fix a moment when leagues has the same name in different countries and sports ( ex. Serie A in Italy(Football, Ice Hockey, Basketball), Brazil(Football))
             _league_name = calculate_name(Betredking,
                                           [_sport.name,
                                             _country.name,
@@ -43,11 +39,17 @@ class BetredkingsParser
                                           true,
                                           [_sport.name, _country.name, tournament['name'].gsub(/[^a-zA-Z ]*/, '')]
                                           )
-            # temp solution
+
             _league = League.find_or_create_by_name _league_name
             _league.sport_id = set_attribute_unless_given(_league, :sport_id, _sport.id)
             _league.country_id = set_attribute_unless_given(_league, :country_id, _country.id)
             _league.save
+            check_previous_names([_sport.name, _country.name, tournament['name'].gsub(/[^a-zA-Z ]*/, '')].join(' | '),
+                                  _league_name,
+                                  League,
+                                  :league_id,
+                                  _league.id,
+                                  [:events, :coupons])
             _league.touch
 
             _participants_hash.clear
@@ -60,6 +62,7 @@ class BetredkingsParser
                 _event = Event.find_or_create_by_name _event_name
                 _event.league_id = set_attribute_unless_given(_event, :league_id, _league.id)
                 _event.save
+                check_previous_names(_match_name, _event_name, Event, :event_id, _event.id, [:participants, :bets])
                 _event.touch
 
                 match.children.each do |element|
@@ -119,6 +122,7 @@ class BetredkingsParser
                 _event = Event.find_or_create_by_name _event_name
                 _event.league_id = set_attribute_unless_given(_event, :league_id, _league.id)
                 _event.save
+                check_previous_names(_league_name, _event_name, Event, :event_id, _event.id, [:participants, :bets])
                 _event.touch
 
                 case match.name
