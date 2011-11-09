@@ -70,18 +70,19 @@ module CalculatingName
   def check_and_set_titles
     MODELS_FOR_TITLE_CHECK.each do |model|
       model.all.each do |element|
-        element.update_attribute(:title, element.name) unless element.title.present?
+        if model == League 
+          if element.title.present?
+           element.update_attribute(:title, element.title.split(" | ")[2]) if element.title.split(" | ").length == 3
+          else 
+            element.update_attribute(:title, element.name.split(" | ")[2]) if element.name.split(" | ").length == 3 
+          end # end of presents check
+        else
+          element.update_attribute(:title, element.name) unless element.title.present?
+        end # end of model check
       end
     end
   end
 
-  def check_previous_names(old_name, new_name, parent_model, parent_model_id_symbol, parent_model_id, childrens = [])
-    if new_name != old_name && parent_model.find(:first, :conditions => ['name = ?', old_name]).present?
-      childrens.each do |childs|
-        parent_model.find(:first, :conditions => ['name = ?', old_name]).send(childs).each do |l|
-          l.update_attribute(parent_model_id_symbol, parent_model_id)
-        end
-      end
-    end
-  end
 end
+
+

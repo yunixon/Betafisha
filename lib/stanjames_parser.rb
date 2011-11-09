@@ -28,10 +28,8 @@ class StanjamesParser
   def self.parse!
     _bookmaker = Bookmaker.find_or_create_by_name BOOKMAKER
     _bookmaker.touch
-
     SPORTS.each do |pair|
       pair.last.each do |url|
-        ActiveRecord::Base.logger.info URL + url + '.XML'
         doc = Nokogiri::HTML(open(URL + url + '.XML'))
         doc.xpath('//event').each do |event|
           _sport_name = calculate_name(StanJame, event['sporttype'], 'sport')
@@ -136,7 +134,6 @@ class StanjamesParser
                   _bet.name           = set_attribute_unless_given(_bet, :name, bet['name'])
                   _bet.save
                   _bet.touch
-
                 end
               end
             end

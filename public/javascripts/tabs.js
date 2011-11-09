@@ -15,11 +15,27 @@ $(document).ready(function() {
 		return false;
 	});
 
-
+    //      $("ul.bet-tabs li:first").addClass("active").show(); //Activate first tab
+	  //     $(".tab_content:first").show(); //Show first tab content
 	//When page loads...
-	$(".tab_content").hide(); //Hide all content
-	$("ul.bet-tabs li:first").addClass("active").show(); //Activate first tab
-	$(".tab_content:first").show(); //Show first tab content
+	//$(".tab_content").hide(); //Hide all content
+      
+  $("ul.bet-tabs li").each( function (index, element) {
+    content = $(".tab_content").get(index)
+   // console.log( $(content).is('#towin-with-draw') );
+      if( $(content).children().size() > 0  ) {
+            $("ul.bet-tabs li").removeClass("active");
+            $(".tab_content").hide();
+            $(element).addClass("active").show(); //Activate first tab    
+            $(content).show();  
+      } else  {
+         $(".tab_content").hide();
+         $("ul.bet-tabs li:first").addClass("active").show(); //Activate first tab
+	       $(".tab_content:first").show(); //Show first tab content
+      } 
+    });
+  
+
 
 	//On Click Event
 	$("ul.bet-tabs li").click(function() {
