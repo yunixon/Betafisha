@@ -32,7 +32,7 @@
               <ul class="leagues">
                 <% League.get_league_by_country_and_sport(sport.id, countries.country.id).each do |league| %>
                     <%= content_tag_for(:li, league) do %>
-                        <%= link_to league.name, league %>
+                        <%= link_to league.title, league %>
                         <% if signed_in? && current_user.admin? && params[:controller] != 'site_top_navigation' %>
                             <%= link_to "Удалить", league, :confirm => "Вы уверены?", :title => "Удалить #{league.name}", :class => 'delete_league_item' %>
                             <%= link_to "Редактировать", league, :class => 'edit_league_item', :id => league.id %>
