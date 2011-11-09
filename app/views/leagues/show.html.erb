@@ -31,37 +31,65 @@
 <% end %>
 
 <% content_for :content do %>
+
   <div class="coupon-league-manage">
     <%= render 'coupons/manage_leagues_coupon' %>
   </div>
+
   <div id="refresh_box">
-  <% if @league.sport.name == "Basketball"%>
-    <% @league.events.with_bet_type("1or2", @league.id).each_with_index do |e,i| %>
-    <% if i == 0 %>
-      <div class="event_name_cell"> Игра </div>
-      <div class="event_cell"> 1 </div>
-      <div class="event_cell"> 2 </div> <br />
-    <% end %>
-    <div class="event_name_cell event_cell_data" style="background: <%= '#fff' if i%2 == 0 %>; "> <%= link_to e.name, e %> </div>
-      <% e.bets.to_win.limit(2).each_with_index do |b,j| %>
-          <div class="event_cell event_cell_data" style="background: <%= '#fff' if i%2 == 0 %>;  "><span> <%= b.odd %> </span> </div>
-      <% end %> <br />
-    <% end %>
-  <% else %>
-    <% @league.events.with_bet_type("1x2", @league.id).each_with_index do |e,i| %>
-      <% if i == 0 %>
-        <div class="event_name_cell"> Игра </div>
-        <div class="event_cell"> 1 </div>
-        <div class="event_cell"> X </div>
-        <div class="event_cell"> 2 </div> <br />
-      <% end %>
-      <div class="event_name_cell event_cell_data" style="background: <%= '#fff' if i%2 == 0 %>; "> <%= link_to e.name, e %> </div>
-        <% e.bets.to_win_with_draw.limit(3) .each_with_index do |b,j| %>
-            <div class="event_cell event_cell_data" style="background: <%= '#fff' if i%2 == 0 %>;  "><span> <%= b.odd %> </span> </div>
-        <% end %> <br />
-      <% end %>
-     <% end %>
-    </div>
+    <ul class="bet-tabs">
+        <li><a href="#towin-with-draw">Матчи</a></li>
+        <li><a href="#outright">Outrights</a></li>
+    </ul>
+
+    <div class="tab_container">
+      <div id="towin-with-draw" class="tab_content">
+ 
+        <% if @league.sport.name == "Basketball" or @league.sport.name == "Volleyball"  or @league.sport.name == "Baseball" or @league.sport.name == "Handball" %>
+          <% if @league.events.with_bet_type("1or2", @league.id).empty? %> ставок на матчи нет <% end %>
+          <% @league.events.with_bet_type("1or2", @league.id).each_with_index do |e,i| %>
+          <% if i == 0 %>
+            <div class="event_name_cell"> Игра </div>
+            <div class="event_cell"> 1 </div>
+            <div class="event_cell"> 2 </div> <br />
+          <% end %>
+          <div class="event_name_cell event_cell_data" style="background: <%= '#fff' if i%2 == 0 %>; "> <%= link_to e.name, e %> </div>
+            <% e.bets.to_win.limit(2).each_with_index do |b,j| %>
+                <div class="event_cell event_cell_data" style="background: <%= '#fff' if i%2 == 0 %>;  "><span> <%= b.odd %> </span> </div>
+            <% end %> <br />
+          <% end %>
+        <% else %>
+          <% if @league.events.with_bet_type("1x2", @league.id).empty? %> ставок на матчи нет  <% end %>
+          <% @league.events.with_bet_type("1x2", @league.id).each_with_index do |e,i| %>
+            <% if i == 0 %>
+              <div class="event_name_cell"> Игра </div>
+              <div class="event_cell"> 1 </div>
+              <div class="event_cell"> X </div>
+              <div class="event_cell"> 2 </div> <br />
+            <% end %>
+            <div class="event_name_cell event_cell_data" style="background: <%= '#fff' if i%2 == 0 %>; "> <%= link_to e.name, e %> </div>
+              <% e.bets.to_win_with_draw.limit(3) .each_with_index do |b,j| %>
+                  <div class="event_cell event_cell_data" style="background: <%= '#fff' if i%2 == 0 %>;  "><span> <%= b.odd %> </span> </div>
+              <% end %> <br />
+            <% end %>
+         <% end %>   
+        </div>
+        <div id="outright" class="tab_content">
+          <% if @league.events.with_bet_type("Outright", @league.id).empty? %> ставок на сезон нет <% end %>
+          <% @league.events.with_bet_type("Outright", @league.id).each_with_index do |e,i| %>
+             <% if i == 0 %>
+              <div class="event_name_cell"> Команда </div>
+              <div class="event_cell"> odd </div> <br />
+            <% end %>
+              <% e.bets.outright.each_with_index do |b,j| %>
+                  <div class="event_name_cell event_cell_data" style="background: <%= '#fff' if j%2 == 0 %>; "> <%= image_tag imageUriByBookmakerName( b.bookmaker.name ), :width => 100, :height => 20 %> <%= b.name %> </div>
+                  <div class="event_cell event_cell_data" style="background: <%= '#fff' if j%2 == 0 %>;  "><span> <%= b.odd %> </span> </div> <br />
+            <% end %> 
+          <% end %>
+        </div>
+      </div>
+   </div>
+    
 <% end %>
 
 <% content_for :right_nav do %>

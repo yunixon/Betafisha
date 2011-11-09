@@ -14,7 +14,7 @@
 /*.coupon-league-manage { width: 250px; }*/
 .bettings-odds-data a, .events-data a { color: #333; text-decoration: none; display: block; width: 530px; height: 100%; margin-left: 5px; float: right; }
 
-.event { min-height: 15px; background: #fff; margin-bottom: 1px; font-size: 92%; width: 550px; margin-left: 5px;  padding: 5px;}
+.event { min-height: 15px; background: #fff; margin-bottom: 1px; font-size: 92%; width: 500px; margin-left: 5px;  padding: 5px;}
 
 .bet-name { float: left; margin-left: 5px; }
 

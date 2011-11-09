@@ -371,7 +371,7 @@ ul.dropdown li:hover > ul { visibility: visible; }
 #refresh_box, .my_coupon_data {
   margin-left: 5px; /*margin-right: 1px;*/
 }
-
+#refresh_box { background: #fff; min-height: 100px; }
 h2.acc_trigger, .acc_container { width: 200px; 	margin-left: 0; }
  h2.acc_trigger {  background: url('../images/main-menu-bg.png') repeat 0 0; border-bottom: 1px solid #333; }
 .event_name_cell, .event_cell {
@@ -380,7 +380,7 @@ h2.acc_trigger, .acc_container { width: 200px; 	margin-left: 0; }
   float: left;
 }
 
-.event_name_cell { width: 425px; }
+.event_name_cell { width: 400px; }
 
 .event_cell { width: 40px; }
 .event_cell_data { text-align: left; }

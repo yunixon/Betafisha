@@ -1,5 +1,5 @@
+<%= "ставок нет" if @event.bets.to_win.empty? %>
 <%  @event.bets.to_win.each_with_index do |b,i| %>
-
   <% if i%2 == 0 and i > 0 %>
     <br />
     <br />
