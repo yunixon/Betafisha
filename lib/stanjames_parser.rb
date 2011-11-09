@@ -31,6 +31,7 @@ class StanjamesParser
 
     SPORTS.each do |pair|
       pair.last.each do |url|
+        ActiveRecord::Base.logger.info URL + url + '.XML'
         doc = Nokogiri::HTML(open(URL + url + '.XML'))
         doc.xpath('//event').each do |event|
           _sport_name = calculate_name(StanJame, event['sporttype'], 'sport')

@@ -1,6 +1,6 @@
 ENV["RAILS_ENV"] ||= "development"
 BOOKMAKER = "Gamebookers"
-SPORTS = ['basketball', 'football', 'ice_hockey', 'tennis']
+SPORTS = [ 'basketball', 'football', 'ice_hockey', 'tennis',  'handball', 'floorball', 'baseball', 'rugby', 'volleyball' ]
 
 COMMON_BETTYPES = ['Outright', '1x2', '1or2']
 GAMEBOOKERS = ['Outright', 'Versus (with Draw)', ['To Win the Match', 'Versus', 'Draw No Bet']]

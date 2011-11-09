@@ -9,7 +9,7 @@ class GamebookersParser
     'swimming', 'table_tennis', 'tennis', 'trotting', 'virtual_dog_racing', 'virtual_football',
     'virtual_horse_racing', 'virtual_motor_racing', 'virtual_speedway', 'volleyball', 'waterpolo',
     'winter_olympics', 'winter_sports', '~junior_european_championship_(ladies)~']
-  COMMON_SPORTS = ['basketball', 'football', 'ice_hockey', 'tennis']
+  COMMON_SPORTS = [ 'basketball', 'football', 'ice_hockey', 'tennis',  'handball', 'floorball', 'baseball', 'rugby', 'volleyball' ]
 
   def self.parse!
     _bookmaker = Bookmaker.find_or_create_by_name BOOKMAKER
