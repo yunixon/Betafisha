@@ -1,13 +1,33 @@
-$("div.accordian").html('<div class="form_name grid_5">Предпросмотр</div> <%= escape_javascript ( render  'sports/sports_content'  ) %>  ');
+<% if @success %>
+  $("div.accordian").html('<div class="form_name grid_5">Предпросмотр</div> <%= escape_javascript ( render  'sports/sports_content'  ) %>  ');
 
-$('.acc_trigger').removeClass('active').next().hide();
-$('h2#sport_' + '<%= escape_javascript ( @league.sport.id.to_s ) %>').toggleClass('active').next().show();
+  $('.acc_trigger').removeClass('active').next().hide();
+  $('h2#sport_' + '<%= escape_javascript ( @league.sport.id.to_s ) %>').toggleClass('active').next().show();
 
-$('.countries li.country a').parent().removeClass('active').next().hide();
-$('#sport_'
-			+ '<%= escape_javascript ( @league.sport.id.to_s ) %>'
-			+ '_country_'
-			+ '<%= escape_javascript ( @league.country.id.to_s ) %>'
-			+ ' a'
-			).parent().toggleClass('active').next().show();
-
+  $('.countries li.country a').parent().removeClass('active').next().hide();
+  $('#sport_'
+			  + '<%= escape_javascript ( @league.sport.id.to_s ) %>'
+			  + '_country_'
+			  + '<%= escape_javascript ( @league.country.id.to_s ) %>'
+			  + ' a'
+			  ).parent().toggleClass('active').next().show();
+	
+	$(".form_info").removeClass('warning');	
+	$(".form_info").addClass('success');	  
+	$(".form_info").html('Лига <%= @league.title %> успешно добавлена!');
+	$(".form_info").show();
+	
+<% else %>
+  $(".form_info").removeClass('success');	
+	$(".form_info").addClass('warning');
+  <% if @league.errors.any? %>
+   $(".form_info").html('');
+   $(".form_info").append('<ul>');
+   <% @league.errors.each do |attr, msg| %>
+        $(".form_info").append('<li><%= attr %> - <%= msg %> </li>  ');
+  <% end %>
+  $(".form_info").append('</ul>');   
+  $(".form_info").show();    
+  <% end %>
+  
+<% end %>

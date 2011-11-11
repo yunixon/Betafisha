@@ -9,9 +9,6 @@ class AdminController < ApplicationController
 
   include AdminHelper
 
-  def index
-  end
-
   def add_bookmaker_relation
     @params = params[:admin]
     @bookmakers = Bookmaker.all
@@ -22,7 +19,7 @@ class AdminController < ApplicationController
           #ActiveRecord::Base.logger.info @element.element_name
             @element.update_attributes( :common_id => @params[:element_id] )
             @element.save :validate => false
-
+          # check_previous_names(_league_name, _event_name, Event, :event_id, _event.id, [:participants, :bets])
         end
         @elements =  bookmaker_elements_by_common_id(@params[:bookmaker_name], @params[:element_id])
         @common_values = bookmaker_values_with_parents Common.where(:table_name => @params[:table_name]), @params[:table_name]

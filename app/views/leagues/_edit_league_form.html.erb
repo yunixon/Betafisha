@@ -4,6 +4,9 @@
     Редактирование лиги
   </div> 
   
+  <div class="form_info">
+  </div>
+  
   <div class="field">
   	<%= f.label :sport_id, "Вид спорта" %> <br/>
     <%= f.select :sport_id, 
@@ -20,10 +23,14 @@
     %> <%= link_to "Добавить", "#", :class => 'new_item', :id => 'new_country_item'  %>
   </div>
 
+  <!--div class="field">
+  	<%#= f.label :name, "Фиксированное Название" %> <br/>
+    <%#= f.text_field :name, :readonly => "true" %>
+  </div-->
 
   <div class="field">
-  	<%= f.label :name, "Название" %> <br/>
-    <%= f.text_field :name %>
+  	<%= f.label :title, "Название" %> <br/>
+    <%= f.text_field :title %>
   </div>
   
   <div class="field">

@@ -1,5 +1,9 @@
 module AdminHelper
-  
+
+  def set_element_relation ( element )
+       
+  end  
+
   def bookmaker_values (bookmaker_name, table_name)
     values = case bookmaker_name
       when "Gamebookers" then Gamebooker.where(:table_name => table_name).order("element_name asc")

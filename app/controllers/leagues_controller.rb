@@ -1,6 +1,7 @@
 class LeaguesController < ApplicationController
-
+  
   before_filter :admin_user, :only => [:edit, :update, :destroy]
+  include CalculatingName
 
   def index
     @leagues = League.all
@@ -11,20 +12,35 @@ class LeaguesController < ApplicationController
   end
 
   def create
-    @league = League.create!(params[:league])
-      @success = false
-      respond_to do |format|
-        format.html
-        format.js {
-          if @league.save
-            @success = true
-            @sports = Sport.all
-          else
-            @success = false
-            @sports = Sport.all
-          end
-        }
-      end
+    @sports = Sport.all
+    @success = false
+    
+    country = Country.find(params[:league][:country_id])
+    sport = Sport.find(params[:league][:sport_id])
+
+    league_name_full = [ sport.name, country.name, params[:league][:name] ].join(' | ')
+ 
+    @league = League.find_or_create_by_name league_name_full
+    @league.title = params[:league][:name]
+    @league.sport_id = set_attribute_unless_given(@league, :sport_id, sport.id)
+    @league.country_id = set_attribute_unless_given(@league, :country_id, country.id)
+    
+    #ActiveRecord::Base.logger.info "------------------------"
+    #ActiveRecord::Base.logger.info @league.valid?
+    #ActiveRecord::Base.logger.info @league.errors
+    #ActiveRecord::Base.logger.info "------------------------"
+    
+    respond_to do |format|
+      format.html { redirect_to leagues_manager_path}
+      format.js {
+        if @league.save
+          calculate_common_name(league_name_full, 'league')
+          @success = true
+        else
+          @success = false
+        end
+      }
+    end
   end
 
   def show
@@ -44,7 +60,12 @@ class LeaguesController < ApplicationController
   def update
     @league = League.find(params[:id])
     @league.update_attributes(params[:league])
-
+    
+    ActiveRecord::Base.logger.info "------------------------"
+    ActiveRecord::Base.logger.info @league.valid?
+    ActiveRecord::Base.logger.info @league.errors
+    ActiveRecord::Base.logger.info "------------------------"
+    
     respond_to do |format|
       format.html
       format.js { @sports = Sport.all }
@@ -53,11 +74,14 @@ class LeaguesController < ApplicationController
 
   def destroy
     league = League.find(params[:id])
+    common_value = Common.find_by_element_name league.name
 
     @sport_id = league.sport.id
     @country_id = league.country.id
 
     league.destroy
+    common_value.destroy
+
     respond_to do |format|
       format.js { @sports = Sport.all }
     end

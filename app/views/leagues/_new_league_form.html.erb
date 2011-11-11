@@ -4,6 +4,9 @@
     Новая лига
   </div>
 
+  <div class="form_info">
+  </div>
+  
   <div class="field">
   	<%= f.label :sport_id, "Вид спорта" %> <br/>
     <%= f.select :sport_id,
@@ -19,7 +22,6 @@
     	:multiple => false, :size => 3
     %> <%= link_to "Добавить", "/admin/country_new", :class => 'new_item', :id => 'new_country_item'  %>
   </div>
-
 
   <div class="field">
   	<%= f.label :name, "Название" %> <br/>

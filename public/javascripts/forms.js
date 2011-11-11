@@ -6,6 +6,9 @@ jQuery.ajaxSetup({
 
 $(document).ready(function() {
 
+  $('.form_info').hide();
+  $('.form_info').html('');
+  
 	$('.new_sport, .new_league, .new_country, .edit_sport, .edit_league, .edit_country, .bookmakers_form').submit( function() {
 		$.post(this.action, $(this).serialize(), null, "script");
 		return false;
