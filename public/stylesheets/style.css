@@ -152,10 +152,6 @@ textarea:focus {
 
 }
 
-#user_entrance {
-	margin-bottom: 24px;
-/*	margin-left: 450px;*/
-}
 
 /* Top navigation */
 .top-nav {
@@ -228,8 +224,11 @@ textarea:focus {
 
 
 /* Registration */
+
+#user_entrance { }
+
 #user_entrance ul {
-  padding-top: 3px;
+  padding-top: 3px; float: right;
 }
 
 #user_entrance ul li {
