@@ -14,21 +14,18 @@
 </head>
 <body>
 
-<header class="container_24">
+<header class="container_20">
 
-  <div id="logo" class="grid_12">
+  <div id="logo" class="grid_10">
     <%= link_to "BetAfisha", root_path %>
   </div>
 
-  <div id="user_entrance" class="grid_12">
-    <ul id="locale_switch">
-       <li id="locale_en"> <%= link_to "en", "#{request.path}?locale=en" %> </li>
-       <li id="locale_ru"> <%= link_to "ru", "#{request.path}?locale=ru" %> </li>
-    </ul>
+  <div id="user_entrance" class="grid_10">
+    <!--ul id="locale_switch">
+       <li id="locale_en"> <%#= link_to "en", "#{request.path}?locale=en" %> </li>
+       <li id="locale_ru"> <%#= link_to "ru", "#{request.path}?locale=ru" %> </li>
+    </ul-->
     <ul>
-     <% if !signed_in? %>
-    	  <li><%= link_to t(:top_menu_sign_up), signup_path %></li>
-     <% end %>
 	   <% if signed_in? %>
 	       <li><%= link_to t(:top_menu_sign_out), signout_path, :method => :delete %> (<%= image_tag("../images/sign_in_icon.png") + " " +  current_user.name %>)</li>
 	   <% else %>
@@ -43,14 +40,14 @@
 
 </header>
 
-<section class="container_24">
-	<div id="wrapper" class="grid_10 push_6" >
+<section class="container_20">
+	<div id="wrapper" class="grid_9 push_6" >
 			<%= yield %>
 	  </div>
 </section>
 
-<footer class="container_24">
-  	<div id="debug" class="grid_24">
+<footer class="container_20">
+  	<div id="debug" class="grid_20">
   	</div>
 </footer>
 
