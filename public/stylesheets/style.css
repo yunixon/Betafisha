@@ -21,7 +21,7 @@ a { font: normal 11px  Helvetica, Arial, Freesans, sans-serif; color: #CE2828; t
 a:hover { text-decoration: underline; }
 
 .logo-image-wrapper { width: 187px; height: 51px; float: left; margin: 0 25px 0 16px; }
-.logo-image { display:block; width: 187px; height: 51px; background: url('../images/logo.png') no-repeat 5px 10px; text-indent: -9999px; }
+.logo-image { display:block; width: 197px; height: 51px; background: url('../images/logo.png') no-repeat 0px 10px; text-indent: -9999px; }
 div#wrapper { margin-top: 10px; }
 div#wrapper, div#left_nav, div#right_nav { min-height: 700px;}
 /*
