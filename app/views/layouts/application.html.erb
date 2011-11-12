@@ -31,7 +31,7 @@
         <% end %>
 	      <li><%= link_to t(:top_menu_sign_out), signout_path, :method => :delete %> (<%= image_tag("../images/sign_in_icon.png") + " " +  current_user.name %>)</li>
 	   <% else %>
-	      <li><%= render 'sessions/new_session' %><%#= link_to t(:top_menu_sign_in), "#?w=400", :class => "poplight", :rel =>"popup_name"  %></li>
+	      <li><%= render 'sessions/new_session_short' %><%#= link_to t(:top_menu_sign_in), "#?w=400", :class => "poplight", :rel =>"popup_name"  %></li>
 	   <% end %>
 	   <% if signed_in? %>
       	  <li><%= link_to t(:top_menu_profile), current_user %></li>

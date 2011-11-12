@@ -15,33 +15,34 @@
 <body>
 
 <header class="container_20">
-
-  <div id="logo" class="grid_10">
-    <%= link_to "BetAfisha", root_path %>
-  </div>
-
-  <div id="user_entrance" class="grid_10">
+  <div id="user_entrance" class="grid_20">
     <!--ul id="locale_switch">
        <li id="locale_en"> <%#= link_to "en", "#{request.path}?locale=en" %> </li>
        <li id="locale_ru"> <%#= link_to "ru", "#{request.path}?locale=ru" %> </li>
     </ul-->
     <ul>
+     <% if !signed_in? %>
+      <li><%= link_to t(:top_menu_sign_up), signup_path %></li>
+     <% end %>
 	   <% if signed_in? %>
-	       <li><%= link_to t(:top_menu_sign_out), signout_path, :method => :delete %> (<%= image_tag("../images/sign_in_icon.png") + " " +  current_user.name %>)</li>
+	    <li><%= link_to t(:top_menu_sign_out), signout_path, :method => :delete %> (<%= image_tag("../images/sign_in_icon.png") + " " +  current_user.name %>)</li>
 	   <% else %>
-	      <li><%= link_to t(:top_menu_sign_in), signin_path  %></li>
+	    <li><%= link_to t(:top_menu_sign_in), signin_path  %></li>
 	   <% end %>
 	   <% if signed_in? %>
-      	  <li><%= link_to t(:top_menu_profile), current_user %></li>
+      <li><%= link_to t(:top_menu_profile), current_user %></li>
      <% end %>
     </ul>
 
   </div>
-
 </header>
 
 <section class="container_20">
+
 	<div id="wrapper" class="grid_9 push_6" >
+	    <div id="logo">
+       <%= link_to "logo", root_path, :class => "logo-image" %>
+      </div>
 			<%= yield %>
 	  </div>
 </section>

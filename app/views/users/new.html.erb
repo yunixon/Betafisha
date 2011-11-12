@@ -1,7 +1,7 @@
-<h1><%= t(:top_menu_sign_up) %></h1>
+
 
 <%= form_for @user do |f| %>
-
+  <div class="field"><h1><%= t(:top_menu_sign_up) %></h1></div>
     <% if @user.errors.any? %>
         <div class="errorExplanation">
           <ul>

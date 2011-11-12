@@ -20,7 +20,6 @@
     %> <br/>
   </div>
   
-
   <div class="field">
   <b> Выберите элементы для связи:   </b> <br/>
   	<%= f.label :element_id, "Наши значения" %> <br/> 
@@ -41,19 +40,20 @@
 	  </div>
   <% end %>
   
+  <div class="actions">
+    <%= f.submit "Объединить" %>
+  </div> 
+  <div class="field">
     <% if !@elements.nil? %>
       <ul>
         <b>Существующие связи:</b>  
         <% @elements.each do |element| %>
-  	    <li><span id="has_relation">  <%= element.element_name %> </span> <%= link_to "Удалить связь", "#", :class => "delete_relation", :id => element.id   %> </li>
-  	    <% end %>
-  	  </ul>
+        <li><span id="has_relation">  <%= element.element_name %> </span> <%= link_to "Удалить связь", "#", :class => "delete_relation", :id => element.id   %> </li>
+        <% end %>
+      </ul>
     <% end %>
-    
-  <div class="actions">
-    <%= f.submit "Объединить" %>
-  </div> 
-  
-  <% end %>
+  </div>
+<% end %>
 
 <%= javascript_include_tag 'forms.js' %>
+

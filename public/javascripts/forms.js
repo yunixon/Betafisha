@@ -54,6 +54,7 @@ $(document).ready(function() {
 	   		type: 'GET',
 	   		data: { table_name: $('#admin_table_name').val(),
 	   		        bookmaker_name: $('#admin_bookmaker_name').val(),
+	   		        element_id: $('#admin_element_id').val()
               },
 	   		url: '/admin/bookmakers_manager',
 	   		dataType:'script'
