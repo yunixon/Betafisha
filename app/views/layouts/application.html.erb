@@ -119,10 +119,9 @@
 
 <script>
   $("a#toggle-coupon-info").click( function() {
-    $(this).removeClass("active");
     if($(this).parent().next().is(':hidden')){
       $(this).parent().next().show();
-      $(this).parent().next().addClass("active");
+      $(this).addClass("active");
     } else {
       $(this).parent().next().hide();
       $(this).removeClass("active");
