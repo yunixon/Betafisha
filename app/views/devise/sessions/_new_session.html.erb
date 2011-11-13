@@ -1,0 +1,29 @@
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+
+  <div class="field"><h1>Вход</h1></div>
+  
+	<% flash.each do |key, value| %>
+		<div class="flash <%= key %>"> <%= value %> </div>
+	<% end %>
+
+  <div class="field">
+    <%= f.label :email, "E-mail" %> <br />
+    <%= f.text_field :email %>  <br />
+  </div>
+  
+  <div class="field">
+   <%= f.label :password, "Пароль"  %>  <br />
+    <%= f.password_field :password %>  <br />
+  </div> 
+  
+  <div class="field">
+  <% if devise_mapping.rememberable? -%>
+    <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+  <% end -%>
+  </div>  
+  
+  <div class="action">
+    <%= f.submit t(:sign_in_submit) %>
+  </div> 
+  
+<% end %>

@@ -12,29 +12,34 @@
     <th>Ответов</th>
     <th>Автор</th>
     <th>Последние обновление</th>
-    <% if current_user.admin? %>
-      <th class="topic-admin"></th>
+    <% if user_signed_in?%>
+      <% if current_user.admin? %>
+        <th class="topic-admin"></th>
+      <% end %>
     <% end %>
   </tr>
     <% for topic in @forum.topics %>
       <tr>
         <td class="topic-name"> <%= link_to topic.name, topic %> </td>
         <td> <%= topic.posts.count %> </td>
-        <td> <%= topic.user.name %> </td>
+        <td> <%= topic.user.username %> </td>
         <% if !topic.posts.empty? %>
           <td> <%= topic.posts.last.created_at > 1.days.ago ? image_tag("http://www.awwwards.com/images/ico_pending.png") + " " + time_ago_in_words(topic.posts.last.created_at) + t( :ago ) : l(topic.posts.last.created_at, :format => :long) if !topic.posts.last.nil? %> </td>
         <% else %>
            <td> нет комментариев </td>
         <% end %>
-        <% if current_user.admin? %>
-          <td class="topic-admin">  <%= link_to "Редактировать", edit_topic_path(topic), :class => "forum-edit-icon" %><%= link_to "Удалить", topic, :confirm => 'Are you sure?', :class => "forum-delete-icon", :method => :delete %> </td>
+        <% if user_signed_in?%>
+          <% if current_user.admin? %>
+            <td class="topic-admin">  <%= link_to "Редактировать", edit_topic_path(topic), :class => "forum-edit-icon" %><%= link_to "Удалить", topic, :confirm => 'Are you sure?', :class => "forum-delete-icon", :method => :delete %> </td>
+          <% end %>
         <% end %>
       </tr>
     <% end %>
 </table>
-
+<% if user_signed_in?%>
 <%# if current_user.topics.first.created_at < 30.minutes.ago %>
   <p><%= link_to "Добавить топик", new_topic_path( :forum => @forum.id ), :class => "forum-add-btn" %></p>
+<% end %>
 <%# else %>
   <!--p> Вы можете создавать новые топики только один раз в 30 минут.</p-->
 <%# end %>

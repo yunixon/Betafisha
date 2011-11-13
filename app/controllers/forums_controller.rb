@@ -1,6 +1,6 @@
 class ForumsController < ApplicationController
   
-  before_filter :authenticate
+  before_filter :authenticate, :except => [:index, :show]
 
   uses_tiny_mce
 

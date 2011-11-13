@@ -5,8 +5,10 @@
     <th class="forum-name">Форум</th>
     <th class="forum-description">Описание</th>
     <th class="forum-updated">Последние обновление</th>
-    <% if current_user.admin? %>
-      <th class="forum-admin"></th>
+    <% if user_signed_in?%>
+      <% if current_user.admin? %>
+        <th class="forum-admin"></th>
+      <% end %>
     <% end %>
   </tr>
     <% for forum in @forums %>
@@ -18,13 +20,16 @@
         <% else %>
            <td class="forum-updated"> нет постов </td>
         <% end %>
-        <% if current_user.admin? %>
-          <td class="forum-admin"><%= link_to "Редактировать", edit_forum_path(forum), :class => "forum-edit-icon" %> <%= link_to "Удалить", forum, :confirm => 'Вы уверены, что хотите удалить форум?', :class => "forum-delete-icon", :method => :delete %></td>
+        <% if user_signed_in?%>
+          <% if current_user.admin? %>
+            <td class="forum-admin"><%= link_to "Редактировать", edit_forum_path(forum), :class => "forum-edit-icon" %> <%= link_to "Удалить", forum, :confirm => 'Вы уверены, что хотите удалить форум?', :class => "forum-delete-icon", :method => :delete %></td>
+          <% end %>   
         <% end %>
       </tr>
     <% end %>
 </table>
-
-<% if current_user.admin? %>
-  <p><%= link_to "Добавить форум", new_forum_path, :class => "forum-add-btn" %></p>
+<% if user_signed_in?%>
+  <% if current_user.admin? %>
+    <p><%= link_to "Добавить форум", new_forum_path, :class => "forum-add-btn" %></p>
+  <% end %>
 <% end %>
