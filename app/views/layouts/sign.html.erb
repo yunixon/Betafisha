@@ -25,7 +25,7 @@
       <li><%= link_to t(:top_menu_sign_up),  new_user_registration_path %></li>
      <% end %>
 	   <% if user_signed_in? %>
-	    <li><%= link_to t(:top_menu_sign_out), destroy_user_session_path, :method => :delete %> (<%= image_tag("../images/sign_in_icon.png") + " " +  current_user.name %>)</li>
+	    <li><%= link_to t(:top_menu_sign_out), destroy_user_session_path %> (<%= image_tag("../images/sign_in_icon.png") + " " +  current_user.username %>)</li>
 	   <% else %>
 	    <li><%= link_to t(:top_menu_sign_in), user_session_path  %></li>
 	   <% end %>

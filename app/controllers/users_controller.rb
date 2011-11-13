@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 #  before_filter :correct_user, :only => [:edit, :update]
  # before_filter :admin_user,   :only => :destroy
 
- # layout 'sign'
+  layout 'sign'
   
   def index
     @users = User.all
