@@ -48,7 +48,8 @@ module Betafisha
     
     
     config.to_prepare { 
-        Devise::SessionsController.layout "sign" 
+        Devise::SessionsController.layout "sign"
+        Devise::RegistrationsController.layout "sign" 
     } 
     
   end
