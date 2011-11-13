@@ -1,35 +1,22 @@
 Betafisha::Application.routes.draw do
 
+  devise_for :users
+  resources :users
   resources :posts
-
   resources :topics
-
   resources :forums
-
   resources :events
-
   resources :coupons
-
-  resources :comments
-
   resources :news_blocks
   resources :news_posts
   resources :page_subjects
 
-  # user auth & reg
-  resources :users
-  resources :sessions, :only => [:new, :create, :destroy]
-  resources :password_resets
 
   resources :sports
   resources :countries
   resources :leagues
   resources :participants
 
-  match "signup" => "users#new", :as => :signup
-  match "users" => "users#index", :as => :users
-  match "signin" => "sessions#new", :as => :signin
-  match "signout" => "sessions#destroy", :as => :signout
 
   # nav
   get "site_top_navigation/coefficients"
@@ -77,6 +64,7 @@ Betafisha::Application.routes.draw do
 
   post "admin/country_edit"
   post "admin/country_new"
+  
 
   # statc (flat) pages
   resources :pages

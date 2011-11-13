@@ -32,10 +32,10 @@ module Betafisha
     #config.i18n.default_locale = :ru
      
     # говорим библиотеке I18n, где искать наши переводы
-    I18n.load_path += Dir[Rails.root.join('lib', 'locale', '*.{rb,yml}')]
+   # I18n.load_path += Dir[Rails.root.join('lib', 'locale', '*.{rb,yml}')]
 
     # устанавливаем локаль по умолчанию на что-либо другое, чем :en
-    I18n.default_locale = :ru
+    I18n.default_locale = :en
 
     # JavaScript files you want as :defaults (application.js is always included).
     # config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
@@ -46,7 +46,10 @@ module Betafisha
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
     
-   
-
+    
+    config.to_prepare { 
+        Devise::SessionsController.layout "sign" 
+    } 
+    
   end
 end

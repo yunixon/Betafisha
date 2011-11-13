@@ -9,7 +9,7 @@ gem 'rdoc'
 gem 'annotate'
 
 # parser
-gem 'nokogiri'
+gem 'nokogiri', '~> 1.4.2'
 
 # soap
 gem 'savon'
@@ -48,4 +48,7 @@ gem 'carrierwave'
 #gem 'rmagick'
 
 gem 'jquery-rails'
+
+gem 'devise', '~> 1.2.1'
+gem 'omniauth', '~> 0.2.0'
 

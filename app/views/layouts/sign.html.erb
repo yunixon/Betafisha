@@ -21,15 +21,15 @@
        <li id="locale_ru"> <%#= link_to "ru", "#{request.path}?locale=ru" %> </li>
     </ul-->
     <ul>
-     <% if !signed_in? %>
-      <li><%= link_to t(:top_menu_sign_up), signup_path %></li>
+     <% if !user_signed_in? %>
+      <li><%= link_to t(:top_menu_sign_up),  new_user_registration_path %></li>
      <% end %>
-	   <% if signed_in? %>
-	    <li><%= link_to t(:top_menu_sign_out), signout_path, :method => :delete %> (<%= image_tag("../images/sign_in_icon.png") + " " +  current_user.name %>)</li>
+	   <% if user_signed_in? %>
+	    <li><%= link_to t(:top_menu_sign_out), destroy_user_session_path, :method => :delete %> (<%= image_tag("../images/sign_in_icon.png") + " " +  current_user.name %>)</li>
 	   <% else %>
-	    <li><%= link_to t(:top_menu_sign_in), signin_path  %></li>
+	    <li><%= link_to t(:top_menu_sign_in), user_session_path  %></li>
 	   <% end %>
-	   <% if signed_in? %>
+	   <% if user_signed_in? %>
       <li><%= link_to t(:top_menu_profile), current_user %></li>
      <% end %>
     </ul>

@@ -73,29 +73,23 @@ class AdminController < ApplicationController
   end
 
   def users_manager
-    if signed_in? && current_user.admin?
-      @users = User.all
-      @users = User.order(:name).page params[:page]
-    end
+    @users = User.all
+    @users = User.order(:username).page params[:page]
   end
 
   def leagues_manager
-    if signed_in? && current_user.admin?
-      @league = League.new
-      @sports = Sport.all
-      respond_to do |format|
-        format.html
-        format.js
-      end
+    @league = League.new
+    @sports = Sport.all
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 
   def pages_manager
-    if signed_in? && current_user.admin?
-      @page = Page.new
-      @pages = Page.all
-      @pages = Page.order(:name).page params[:page]
-    end
+    @page = Page.new
+    @pages = Page.all
+    @pages = Page.order(:name).page params[:page]
   end
 
   def news_manager
@@ -103,64 +97,52 @@ class AdminController < ApplicationController
 
   # creation and edition
   def sport_new
-    if signed_in? && current_user.admin?
-      @sport = Sport.new
-      respond_to do |format|
-        format.html
-        format.js
-      end
+    @sport = Sport.new
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 
   def sport_edit
-    if signed_in? && current_user.admin?
-      @sport = Sport.find(params[:id])
-      respond_to do |format|
-        format.html
-        format.js
-      end
+    @sport = Sport.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 
   def country_new
-    if signed_in? && current_user.admin?
-      @country = Country.new
-      @flags = Dir.glob("public/images/flags/*").collect {  |file|  file.gsub("public/images/flags/", "") }
-      respond_to do |format|
-        format.html
-        format.js
-      end
+    @country = Country.new
+    @flags = Dir.glob("public/images/flags/*").collect {  |file|  file.gsub("public/images/flags/", "") }
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 
   def country_edit
-    if signed_in? && current_user.admin?
-      @country = Country.find(params[:id])
-      @flags = Dir.glob("public/images/flags/*").collect {  |file|  file.gsub("public/images/flags/", "")  }
-      respond_to do |format|
-        format.html
-        format.js
-      end
+    @country = Country.find(params[:id])
+    @flags = Dir.glob("public/images/flags/*").collect {  |file|  file.gsub("public/images/flags/", "")  }
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 
   def league_new
-    if signed_in? && current_user.admin?
-      @league = League.new
-      respond_to do |format|
-        format.html
-        format.js
-      end
+    @league = League.new
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 
   def league_edit
-    if signed_in? && current_user.admin?
-      @league = League.find(params[:id])
-      respond_to do |format|
-        format.html
-        format.js
-      end
+    @league = League.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 end

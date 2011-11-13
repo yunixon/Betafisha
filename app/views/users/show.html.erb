@@ -1,21 +1,13 @@
-<% if signed_in? %>
+<% if user_signed_in? %>
 
 	<ul>
-		<li><b><%= t(:sing_up_username) %>: </b><%= @user.name %></li>
+		<li><b><%= t(:sing_up_username) %>: </b><%= @user.username %></li>
 		<li><b><%= t(:sing_up_email) %>: </b><%= @user.email %></li>
+		
 		<% if current_user?(@user) %>	
 		   	<li><%= link_to "Редактировать", edit_user_path(@user) %>   </li> 
 		 <% end %>  	
 	</ul>
 	
-	<% if current_user.admin? %>
-		<%= link_to "Управление пользователями" , users_path %> 
-	<% end %>
-	
-	<% if current_user.admin? %>
-		<%= link_to "Управление контентом" , ""%> 
-	<% end %>
-
 <% else %>
 
-<% end %>

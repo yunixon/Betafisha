@@ -1,5 +1,5 @@
 <span style= "float: left;" ><%= @league.name %> Betting Odds</span>
-<% if signed_in? %>
+<% if user_signed_in? %>
   <% if @has_ligue.nil? %>
     <%= link_to "добавить лигу", "#", :class => "add_coupon_manager", :id => "league_#{@league.id }", :data => "add_to_coupon"   %>
   <% elsif %>

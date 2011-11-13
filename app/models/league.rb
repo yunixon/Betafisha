@@ -13,8 +13,8 @@ class League < ActiveRecord::Base
   validates :name,  :presence => true,
                     :length   => { :within => 2..128}
 
-  validates :title, :presence => true,
-                    :length   => { :within => 2..128}
+  #validates :title, :presence => true,
+  #                  :length   => { :within => 2..128}
                     
   default_scope :order => 'leagues.priority DESC'
 

@@ -3,19 +3,13 @@ namespace :db do
   desc "Fill db"
   task :populate => :environment do
 
-    Rake::Task['db:reset'].invoke
+    User.delete_all
 
-    admin = User.create!(:name => "admin",
-                         :email => "admin@betafisha.com",
+    admin = User.create!(:username => "admin",
+                         :email => "dxkxzx@gmail.com",
                          :password => "qwerty",
                          :password_confirmation => "qwerty")
     admin.toggle!(:admin)
-
-    User.create!( :name => "testuser",
-                  :email => "dxkxzx@gmail.com",
-                  :password => "111111",
-                  :password_confirmation => "111111"  )
-
   end
 end
 
