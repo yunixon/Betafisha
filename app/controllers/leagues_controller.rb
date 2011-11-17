@@ -1,6 +1,8 @@
 class LeaguesController < ApplicationController
   
+  before_filter :authenticate, :only => [:edit, :update, :destroy]
   before_filter :admin_user, :only => [:edit, :update, :destroy]
+
   include CalculatingName
 
   def index
@@ -18,23 +20,18 @@ class LeaguesController < ApplicationController
     country = Country.find(params[:league][:country_id])
     sport = Sport.find(params[:league][:sport_id])
 
-    league_name_full = [ sport.name, country.name, params[:league][:name] ].join(' | ')
+    league_name_full = [ sport.name, country.name, params[:league][:name] ].join(' | ') unless params[:league][:name] == ""
  
     @league = League.find_or_create_by_name league_name_full
     @league.title = params[:league][:name]
     @league.sport_id = set_attribute_unless_given(@league, :sport_id, sport.id)
     @league.country_id = set_attribute_unless_given(@league, :country_id, country.id)
-    
-    #ActiveRecord::Base.logger.info "------------------------"
-    #ActiveRecord::Base.logger.info @league.valid?
-    #ActiveRecord::Base.logger.info @league.errors
-    #ActiveRecord::Base.logger.info "------------------------"
-    
+       
     respond_to do |format|
       format.html { redirect_to leagues_manager_path}
       format.js {
         if @league.save
-          calculate_common_name(league_name_full, 'league')
+          calculate_common_name(league_name_full, 'league') unless league_name_full.nil?
           @success = true
         else
           @success = false
@@ -58,13 +55,9 @@ class LeaguesController < ApplicationController
   end
 
   def update
+   #!!!!!!!!!!!!!!!!!
     @league = League.find(params[:id])
     @league.update_attributes(params[:league])
-    
-    ActiveRecord::Base.logger.info "------------------------"
-    ActiveRecord::Base.logger.info @league.valid?
-    ActiveRecord::Base.logger.info @league.errors
-    ActiveRecord::Base.logger.info "------------------------"
     
     respond_to do |format|
       format.html
@@ -73,6 +66,7 @@ class LeaguesController < ApplicationController
   end
 
   def destroy
+
     league = League.find(params[:id])
     common_value = Common.find_by_element_name league.name
 
@@ -80,7 +74,7 @@ class LeaguesController < ApplicationController
     @country_id = league.country.id
 
     league.destroy
-    common_value.destroy
+    common_value.destroy unless common_value.nil?
 
     respond_to do |format|
       format.js { @sports = Sport.all }
@@ -90,7 +84,7 @@ class LeaguesController < ApplicationController
   def leaguetocoupon
     if signed_in?
       respond_to do |format|
-        format.js{
+        format.js {
           @league = League.find(params[:sport_id].gsub("league_", "").to_i)
           if params['type'] == 'add_to_coupon'
            current_user.coupons.find_or_create_by_league_id params[:sport_id].gsub("league_", "").to_i

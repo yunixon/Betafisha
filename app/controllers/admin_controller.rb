@@ -92,8 +92,6 @@ class AdminController < ApplicationController
     @pages = Page.order(:name).page params[:page]
   end
 
-  def news_manager
-  end
 
   # creation and edition
   def sport_new
@@ -122,7 +120,7 @@ class AdminController < ApplicationController
   end
 
   def country_edit
-    @country = Country.find(params[:id])
+    @country = Country.find( params[:id] )
     @flags = Dir.glob("public/images/flags/*").collect {  |file|  file.gsub("public/images/flags/", "")  }
     respond_to do |format|
       format.html

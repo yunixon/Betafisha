@@ -32,10 +32,10 @@ module Betafisha
     #config.i18n.default_locale = :ru
      
     # говорим библиотеке I18n, где искать наши переводы
-   # I18n.load_path += Dir[Rails.root.join('lib', 'locale', '*.{rb,yml}')]
+    I18n.load_path += Dir[Rails.root.join('lib', 'locale', '*.{rb,yml}')]
 
     # устанавливаем локаль по умолчанию на что-либо другое, чем :en
-    I18n.default_locale = :en
+    I18n.default_locale = :ru
 
     # JavaScript files you want as :defaults (application.js is always included).
     # config.action_view.javascript_expansions[:defaults] = %w(jquery rails)

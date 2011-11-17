@@ -1,41 +1,32 @@
-<% if signed_in? %>
-	<% if current_user.admin? %>
-
-	<ul class="tabs">
+ <ul class="tabs">
 		<!--li><%#= link_to "Приложение", admin_path , :class => 'admin_profile_tab' %></li-->
 		<li><%= link_to "Пользователи", admin_users_manager_path, :class => 'users_manager_tab' %></li>
 		<li class="active"><%= link_to "Лиги", admin_leagues_manager_path, :class => 'leagues_manager_tab' %></li>
 		<li><%= link_to "Страницы", admin_pages_manager_path, :class => 'pages_manager_tab' %></li>
 		<li><%= link_to "Букмекеры", admin_bookmakers_manager_path, :class => 'bookmakers_manager_tab' %></li>
-	</ul>
-	<div class="tab_container">
-	    <div class="tab_content">
+</ul>
+<div class="tab_container">
+    <div class="tab_content">
 
-	      <div class="accordian grid_5">
-				  <div class="form_name grid_5">
-				  Предпросмотр
-				  </div>
-	 			  <%= render 'sports/sports_content' %>
+      <div class="accordian grid_5">
+			  <div class="form_name grid_5">
+			  Предпросмотр
 			  </div>
+ 			  <%= render 'sports/sports_content' %>
+		  </div>
 
-		    <div class="add_edit_form grid_9">
-			    <% flash.each do |key, value| %>
-            		<div class="flash <%= key %>"><%= value %></div>
-			    <% end %>
-			    <%= render 'leagues/new_league_form' %>
-		    </div>
+	    <div class="add_edit_form grid_9">
+		    <%= render 'leagues/new_league_form' %>
+	    </div>
 
-			<div class="grid_5">
-				- <b> Управление лигами </b><br />
-				  Ut enim ad minim veniam, quis nostrud exercitation
-				<br />
+		<div class="grid_5">
+			- <b> Управление лигами </b><br />
+			  Ut enim ad minim veniam, quis nostrud exercitation
+			<br />
 
-				- <b> Подсказки </b><br />
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit
-			</div>
-	  </div>
+			- <b> Подсказки </b><br />
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit
+		</div>
+  </div>
 
-	</div>
-	<% end %>
-<% end %>
-
+</div>

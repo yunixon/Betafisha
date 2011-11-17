@@ -1,19 +1,15 @@
-<% if signed_in? %>
-	<% if current_user.admin? %>
-		<ul class="tabs">
-		<!--li><%#= link_to "Приложение", admin_path , :class => 'admin_profile_tab' %></li-->
-			<li><%= link_to "Пользователи", admin_users_manager_path, :class => 'users_manager_tab' %></li>
-			<li><%= link_to "Лиги", admin_leagues_manager_path, :class => 'leagues_manager_tab' %></li>
-			<li class="active"><%= link_to "Страницы", admin_pages_manager_path, :class => 'pages_manager_tab' %></li>
-			<li><%= link_to "Букмекеры", admin_bookmakers_manager_path, :class => 'bookmakers_manager_tab' %></li>
-		</ul>
-		<div class="tab_container">
-		 	<% flash.each do |key, value| %>
-			    <div class="flash <%= key %>"><%= value %></div>
-			<% end %>
-			<div class="grid_13"> <%= render 'pages/page_manager' %> </div>
-			<div class="grid_10"> <%= render 'pages/form' %> </div>
-		</div>
+<ul class="tabs">
+<!--li><%#= link_to "Приложение", admin_path , :class => 'admin_profile_tab' %></li-->
+	<li><%= link_to "Пользователи", admin_users_manager_path, :class => 'users_manager_tab' %></li>
+	<li><%= link_to "Лиги", admin_leagues_manager_path, :class => 'leagues_manager_tab' %></li>
+	<li class="active"><%= link_to "Страницы", admin_pages_manager_path, :class => 'pages_manager_tab' %></li>
+	<li><%= link_to "Букмекеры", admin_bookmakers_manager_path, :class => 'bookmakers_manager_tab' %></li>
+</ul>
+<div class="tab_container">
+ 	<% flash.each do |key, value| %>
+	    <div class="flash <%= key %>"><%= value %></div>
 	<% end %>
-<% end %>
+	<div id="pages_manager_show" class="grid_10"> <%= render 'pages/page_manager' %> </div>
+	<div id="pages_manager_add"class="grid_10"> <%= render 'pages/form' %> </div>
+</div>
 
