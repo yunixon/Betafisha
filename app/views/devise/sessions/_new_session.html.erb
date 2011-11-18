@@ -7,23 +7,27 @@
 	<% end %>
 
   <div class="field">
-    <%= f.label :email, "E-mail" %> <br />
+    <%= f.label :email, "Адрес электронной почты" %> <br />
     <%= f.text_field :email %>  <br />
   </div>
   
   <div class="field">
-   <%= f.label :password, "Пароль"  %>  <br />
-    <%= f.password_field :password %>  <br />
+   <%= f.label :password, "Пароль" %> <br />
+   <%= f.password_field :password %>  <br />
   </div> 
-  
+
   <div class="field">
-  <% if devise_mapping.rememberable? -%>
-    <%= f.check_box :remember_me %> <%= f.label :remember_me %>
-  <% end -%>
+    <% if devise_mapping.rememberable? %> <%= f.check_box :remember_me %> <%= f.label :remember_me, "Запомнить" %> <% end %>
   </div>  
   
   <div class="action">
     <%= f.submit t(:sign_in_submit) %>
   </div> 
-  
+
+<%- if devise_mapping.omniauthable? %>
+  <%- resource_class.omniauth_providers.each do |provider| %>
+    <%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider) %><br />
+  <% end -%>
+<% end -%>
+
 <% end %>

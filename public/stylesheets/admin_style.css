@@ -62,3 +62,26 @@ h2.acc_trigger {
   background: #EEE;
   width: 100%;
 }
+
+.back_from_form {
+    height: 20px;
+    color: #111;
+    background: #D14836;
+    text-align: center;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    border: 1px solid #BFCAD6;
+    display: block;
+    width: 100px;
+    padding-top: 8px;
+    float: left;
+    font-size: 12px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+#country_submit, #sport_submit, #league_submit { float: left; margin-top: 0px;}
+
+.back_from_form:hover {  text-decoration: none;     background: #D13836; }
