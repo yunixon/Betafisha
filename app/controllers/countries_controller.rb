@@ -3,7 +3,9 @@ class CountriesController < ApplicationController
 
   before_filter :authenticate, :only => [:edit, :update, :destroy]
   before_filter :admin_user, :only => [:edit, :update, :destroy]
-
+  
+  include CalculatingName
+  
   def index
     @countries = Country.find(:all)
   end
@@ -11,9 +13,11 @@ class CountriesController < ApplicationController
   def create
     @country = Country.create!(params[:country])
     if @country.save
+     calculate_common_name(@country.name, 'country') unless @country.nil?
      flash[:success] = "Страна [" + @country.name +  "] была успешно добавлена."
-     redirect_to sports_manager_path
+     redirect_to leagues_manager_path
     end
+    
   end
 
   def show
