@@ -13,7 +13,7 @@ class CountriesController < ApplicationController
   def create
     @country = Country.create!(params[:country])
     if @country.save
-     calculate_common_name(@country.name, 'country') unless @country.nil?
+     Common.find_or_create_by_element_name_and_table_name(params[:country][:name], 'country')
      flash[:success] = "Страна [" + @country.name +  "] была успешно добавлена."
      redirect_to leagues_manager_path
     end
