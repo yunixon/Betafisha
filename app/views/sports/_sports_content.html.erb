@@ -6,7 +6,7 @@
     <h2 class="acc_trigger" name="<%= sport.name %>" id="sport_<%= sport.id %>">
 
       <%= image_tag get_sport_image sport.name %>
-      <%= link_to sport.name, "#" %>
+      <%= link_to "#{sport.name} (#{sport.leagues.get_countries.count})" , "#" %>
 
       <% if signed_in? && current_user.admin? && params[:controller] != 'site_top_navigation' %>
           <%= link_to "Удалить", sport, :confirm => "Вы уверены?", :title => "Удалить #{sport.name}", :class => 'delete_sport_item' %>
@@ -22,7 +22,7 @@
                 <% if !countries.country.flag_image.nil? %>
                   <%= image_tag "flags/" + countries.country.flag_image %>
                 <% end %>
-                <%= link_to countries.country.name, "#", :id => countries.country.id %>
+                <%= link_to  "#{countries.country.name} (#{League.get_league_by_country_and_sport(sport.id, countries.country.id).count})", "#", :id => countries.country.id %>
                 <% if signed_in? && current_user.admin? && params[:controller] != 'site_top_navigation' %>
                     <%= link_to "Удалить", countries.country, :class => 'delete_country_item' %>
                     <%= link_to "Редактировать", countries.country, :class => 'edit_country_item', :id => countries.country.id %>
@@ -31,7 +31,7 @@
 
               <ul class="leagues">
                 <% League.get_league_by_country_and_sport(sport.id, countries.country.id).each do |league| %>
-                   <% if !league.events.empty? %>
+                   <%# if !league.events.empty? %>
                       <%= content_tag_for(:li, league) do %>
                           <%= link_to league.title, league %>
                           <% if signed_in? && current_user.admin? && params[:controller] != 'site_top_navigation' %>
@@ -39,7 +39,7 @@
                               <%= link_to "Редактировать", league, :class => 'edit_league_item', :id => league.id %>
                           <% end %>
                       <% end %>
-                    <% end %>
+                    <%# end %>
                 <% end %>
                 
               </ul>
