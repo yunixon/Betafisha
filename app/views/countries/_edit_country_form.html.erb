@@ -15,15 +15,14 @@
   </div>
 
   <div class="field">
-     <% if !@flags.nil? %>
-        <b> Фильтры: </b> <br/>
-        <%= f.label :flag_image, "Флаг:" %> <br/>
-        <%= f.select :flag_image, options_for_select( @flags, @country.flag_image), :multiple => false %>
-    <% end %>
+     <%# if !@flags.nil? %>
+        <%#= f.label :flag_image, "Флаг:" %> <br/>
+        <%#= f.select :flag_image, options_for_select( @flags, @country.flag_image), :multiple => false %>
+    <%# end %>
   </div><br />
 
   <div class="actions">
-  	<%= f.submit "Изменить" %> <%=  link_to 'Назад', leagues_manager_path, :class => 'back_from_form'  %>
+  	<%= f.submit "Изменить" %> <%#=  link_to 'Назад', leagues_manager_path, :class => 'back_from_form'  %>
   </div>
 
 <% end %>

@@ -1,5 +1,7 @@
 class CouponsController < ApplicationController
+
   layout 'admin'
+  
   def index
     @coupons = Coupon.all
   end
@@ -39,5 +41,6 @@ class CouponsController < ApplicationController
     @coupon.destroy
     redirect_to coupons_url, :notice => "Successfully destroyed coupon."
   end
+  
 end
 

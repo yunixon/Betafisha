@@ -2,6 +2,8 @@ class AdminController < ApplicationController
 
   before_filter :authenticate
   before_filter :admin_user
+  
+  caches_action :leagues_manager
 
   uses_tiny_mce
 
@@ -86,7 +88,7 @@ class AdminController < ApplicationController
     end
   end
 
-  def pages_manager
+  def pages_manager   
     @page = Page.new
     @pages = Page.all
     @pages = Page.order(:name).page params[:page]

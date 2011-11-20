@@ -14,18 +14,15 @@
   	<%= f.text_field :priority, :class => 'priority' %>
   </div>
 
-  <% if !@flags.nil? %>
-    <div class="field">
-      <b> Фильтры: </b> <br/>
-      <%= f.label :flag_image, "Флаг:" %> <br/>
-      <%= f.select :flag_image,
-      	options_for_select( @flags ), :multiple => false
-      %>
-    </div>
-  <% end %>
+  <div class="field">
+     <%# if !@flags.nil? %>
+        <%#= f.label :flag_image, "Флаг:" %> <br/>
+        <%#= f.select :flag_image, options_for_select( @flags, @country.flag_image), :multiple => false %>
+    <%# end %>
+  </div><br />
 
   <div class="actions">
-  	<%= f.submit "Добавить" %> <%=  link_to 'Назад', leagues_manager_path, :class => 'back_from_form'  %>
+  	<%= f.submit "Добавить" %> <%#=  link_to 'Назад', leagues_manager_path, :class => 'back_from_form'  %>
   </div>
 <% end %>
 
