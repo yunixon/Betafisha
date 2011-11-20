@@ -34,7 +34,7 @@ begin
    
     @log.write "#Clearing Bets & Participants started\n"
       Bet.delete_all
-      Participant.delete_all
+      #Participant.delete_all
     @log.write "Clearing DB finished\n"
 
     #array for pids
@@ -102,12 +102,12 @@ begin
    @log.write "#Clearing DB (old elements) started\n"
  #   Bet.older_than(last_parsed_time).delete_all
  #   BetType.older_than(last_parsed_time).delete_all
-    Bookmaker.older_than(last_parsed_time).delete_all
+ #   Bookmaker.older_than(last_parsed_time).delete_all
     Country.older_than(last_parsed_time).delete_all
     Event.older_than(last_parsed_time).delete_all
     League.older_than(last_parsed_time).delete_all
  #   Participant.older_than(last_parsed_time).delete_all
-    Sport.older_than(last_parsed_time).delete_all
+ #   Sport.older_than(last_parsed_time).delete_all
  
    @log.write "Clearing DB finished\n"
 
