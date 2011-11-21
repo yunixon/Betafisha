@@ -161,17 +161,7 @@ h2.last-child:hover a {
 
 }
 
-.new_item {
-	text-indent: -9999px;
-	display: block;
-	color: #222;
-	width: 16px;
-	height: 16px;
-	float: right;
-	margin: 10px 25px 0px 0px;
-	background: url('../images/add.png') no-repeat  0px 0px;
 
-}
 
 .accordian {
 	margin-bottom: 10px;

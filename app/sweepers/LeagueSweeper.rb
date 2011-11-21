@@ -21,14 +21,7 @@ class LeagueSweeper < ActionController::Caching::Sweeper
   
   def expire_cache_for(league)
     # Expire the index page now that we added a new product
-    expire_action :controller => "/admin", :action => "leagues_manager"
-    expire_action :controller => "/site_top_navigation", :action => "coefficients"
-    expire_action :controller => "/site_top_navigation", :action => "bookmakers"
-    expire_action :controller => "/site_top_navigation", :action => "statistics"
-    expire_action :controller => "/site_top_navigation", :action => "tools"
-    expire_action :controller => "/sports", :action => "show"
-    expire_action :controller => "/leagues", :action => "show"
-    expire_action :controller => "/countries", :action => "show"
+    expire_fragment('all_available_leagues') 
   end
   
 end

@@ -3,8 +3,6 @@ class AdminController < ApplicationController
   before_filter :authenticate
   before_filter :admin_user
   
-  caches_action :leagues_manager
-
   uses_tiny_mce
 
   layout 'admin'
@@ -81,7 +79,6 @@ class AdminController < ApplicationController
 
   def leagues_manager
     @league = League.new
-    @sports = Sport.all
     respond_to do |format|
       format.html
       format.js

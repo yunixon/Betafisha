@@ -1,6 +1,6 @@
 body { background: #EEE url('../images/admin_bg.png') repeat-x -1px -1px; }
 
-.field { margin-top: 10px; }
+.field { margin-top: 10px; min-height: 40px; min-width: 350px; }
 .field b { font-size: 14px; }
 
 .field p { font-size: 12px; margin: 5px 0px 0px 20px;}
@@ -85,3 +85,16 @@ h2.acc_trigger {
 #country_submit, #sport_submit, #league_submit { float: left; margin-top: 0px;}
 
 .back_from_form:hover {  text-decoration: none;     background: #D13836; }
+
+
+.new_item {
+	text-indent: -9999px;
+	display: block;
+	color: #222;
+	width: 16px;
+	height: 16px;
+	float: right;
+	margin: 5px 25px 0px 0px;
+	background: url('../images/add.png') no-repeat  0px 0px;
+
+}

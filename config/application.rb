@@ -13,8 +13,10 @@ module Betafisha
     # -- all .rb files in that directory are automatically loaded.
 
     # Custom directories with classes and modules you want to be autoloadable.
+    
      config.autoload_paths += Dir["#{config.root}/lib/**/"] # include all subdirectories
-     config.load_paths += %W( #{RAILS_ROOT}/app/sweepers )
+     config.autoload_paths += Dir["#{config.root}/app/sweepers/"]
+     
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.
     # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
@@ -48,7 +50,6 @@ module Betafisha
     config.to_prepare { 
         Devise::SessionsController.layout "sign"
         Devise::RegistrationsController.layout "sign" 
-    } 
-    
+    }     
   end
 end
