@@ -32,6 +32,11 @@ class League < ActiveRecord::Base
   def self.get_league_by_country_and_sport( sport_id, country_id )
       where(:sport_id => sport_id, :country_id => country_id)
   end
+  
+  def common_value?
+    ActiveRecord::Base.logger.info @name
+    Common.find_by_element_name_and_table_name(self.name, 'league') ? true : false
+  end
 
 end
 

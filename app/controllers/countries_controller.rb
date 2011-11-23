@@ -3,8 +3,8 @@ class CountriesController < ApplicationController
 
   before_filter :authenticate, :only => [:edit, :update, :destroy]
   before_filter :admin_user, :only => [:edit, :update, :destroy]
-#  caches_action :show
-  cache_sweeper :country_sweeper
+
+  cache_sweeper :country_sweeper unless Rails.env.development?
   
   include CalculatingName
   

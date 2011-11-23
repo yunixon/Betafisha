@@ -20,7 +20,7 @@
     <%= f.select :country_id,
     	options_for_select( Country.order("name asc").all.collect { |p| [p.name, p.id] }),
     	:multiple => false, :size => 3
-    %> <%= link_to "Добавить", "/admin/country_new", :class => 'new_item', :id => 'new_country_item'  %>
+    %> <%= link_to "Добавить", "/admin/country_new", :class => 'new_item', :id => 'new_country_item'  %> <%= link_to "Удалить", "#", :class => 'delete_country_item' %>
   </div>
 
   <div class="field">

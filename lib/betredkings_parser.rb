@@ -71,7 +71,7 @@ class BetredkingsParser
                     element.children.each do |participant|
                       _participants_array << participant
                       _team_name = calculate_name(Betredking, participant['name'], 'participant')
-                      _team = Participant.new(:name => _team_name, :priority => 1)
+                      _team = Participant.find_or_create_by_name _team_name
                       _team.event_id = set_attribute_unless_given(_team, :event_id, _event.id)
                       _team.save
                       _team.touch
@@ -118,7 +118,10 @@ class BetredkingsParser
                   end
                 end
               else
-                _event_name = calculate_name(Betredking, _league_name, 'event')
+              
+              # проблема с уникальность названия ивента, при смене имени страны/спорта в коммон значении
+              
+                _event_name = calculate_name(Betredking, _league_name + "season", 'event')
                 _event = Event.find_or_create_by_name _event_name
                 _event.league_id = set_attribute_unless_given(_event, :league_id, _league.id)
                 _event.save
@@ -130,7 +133,7 @@ class BetredkingsParser
                   match.children.each do |participant|
                     _participants_hash[participant['id']] = participant['name']
                     _team_name = calculate_name(Betredking, participant['name'], 'participant')
-                    _team = Participant.create(:name => _team_name, :priority => 1)
+                    _team = Participant.find_or_create_by_name _team_name
                     _team.event_id = set_attribute_unless_given(_team, :event_id, _event.id)
                     _team.save
                     _team.touch

@@ -3,10 +3,10 @@ class SportsController < ApplicationController
   before_filter :authenticate, :only => [:edit, :update, :destroy]
   before_filter :admin_user, :only => [:edit, :update, :destroy]
   
-  cache_sweeper :sport_sweeper
+  cache_sweeper :sport_sweeper unless Rails.env.development?
   
   def index
-    @sports = Sport.find(:all)
+    @sports = Sport.all
   end
 
   def create
@@ -14,15 +14,12 @@ class SportsController < ApplicationController
     if @sport.save
       respond_to do |format|
         format.html
-        format.js { 
-          @sports = Sport.find(:all) 
-         }
+        format.js
       end
     end
   end
 
   def show
-    @sports = Sport.all
     @sport = Sport.find(params[:id])
   end
 
@@ -33,19 +30,18 @@ class SportsController < ApplicationController
   def update
     @sport = Sport.find(params[:id])
     @sport.update_attributes(params[:sport])
-
     respond_to do |format|
       format.html
-      format.js { @sports = Sport.find(:all) }
-   end
-
+      format.js
+    end
   end
 
   def destroy
     sport = Sport.find(params[:id])
     sport.destroy
     respond_to do |format|
-      format.js { @sports = Sport.find(:all) }
+      format.html
+      format.js
     end
   end
 

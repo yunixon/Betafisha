@@ -12,7 +12,7 @@ $(document).ready(function() {
     /**************** ********** ********************/
 
    /* BET TYPE FILTERS */
-    $('.allin-filter, .1x2-filter, .1or2-filter, .Outright-filter').click(function(){
+   /* $('.allin-filter, .1x2-filter, .1or2-filter, .Outright-filter').click(function(){
     $(this).addClass("active");
 	    $.ajax({
 	       		type: 'GET',
@@ -21,7 +21,7 @@ $(document).ready(function() {
 	       		dataType:'script'
 	       	});
       	return false;
-    });
+    });*/
 
     /**************** ********** ********************/
     /****************  STYLINGS  ********************/
@@ -36,6 +36,17 @@ $(document).ready(function() {
 
     $("ul.dropdown li ul li:has(ul)").find("a:first").append(" &raquo; ");
 
+
+  $("#cache-expire-button").click(function(){
+    $.ajax({
+     		type: 'GET',
+     		data: { filter_type: 'cache_expire' },
+     		url: '/admin/cache_expire',
+     		dataType:'script'
+    });
+    return false;
+  });
+  
 });
 
 // accordion init

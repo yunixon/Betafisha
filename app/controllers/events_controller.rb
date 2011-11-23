@@ -8,7 +8,6 @@ class EventsController < ApplicationController
   end
 
   def show
-    @sports = Sport.all
     @event = Event.find(params[:id])
   end
 

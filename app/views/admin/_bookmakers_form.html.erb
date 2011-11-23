@@ -7,7 +7,7 @@
     <b> Фильтры: </b> <br/>
     <%= f.label :table_name, "Таблицы:" %> <br/>
     <%= f.select :table_name, 
-    	options_for_select( ["sport", "country", "league", "participant", "event", "bet_type", "bet"], @params[:table_name] ), 
+    	options_for_select( ["sport", "country", "league", "participant", "event"], @params[:table_name] ), 
     	:multiple => false
     %>
   </div>

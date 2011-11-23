@@ -34,13 +34,13 @@ begin
    
     @log.write "#Clearing Bets & Participants started\n"
       Bet.delete_all
-      #Participant.delete_all
+#      Participant.delete_all
     @log.write "Clearing DB finished\n"
 
     #array for pids
     threads = []
 
-    threads[0] = spawn do
+=begin    threads[0] = spawn do
       begin
         @log.write "+Gamebookers parsing started #{Time.now}\n"
         GamebookersParser.parse!
@@ -52,7 +52,7 @@ begin
         @log.write "\n"
         @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
       end
-    end
+=end     end
 
     threads[1] = spawn do
       begin
@@ -66,9 +66,9 @@ begin
         @log.write "\n"
         @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
       end
-    end
+   end
 
-    threads[2] = spawn do
+=begin    threads[2] = spawn do
       begin
         @log.write "+Stan James parsing started #{Time.now}\n"
         StanjamesParser.parse!
@@ -94,7 +94,7 @@ begin
         @log.write "\n"
         @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
       end
-    end
+=end    end
 
     #waiting all parsers to finish
     wait(threads)
@@ -103,11 +103,11 @@ begin
  #   Bet.older_than(last_parsed_time).delete_all
  #   BetType.older_than(last_parsed_time).delete_all
  #   Bookmaker.older_than(last_parsed_time).delete_all
-    Country.older_than(last_parsed_time).delete_all
-    Event.older_than(last_parsed_time).delete_all
-    League.older_than(last_parsed_time).delete_all
- #   Participant.older_than(last_parsed_time).delete_all
- #   Sport.older_than(last_parsed_time).delete_all
+  #  Country.older_than(last_parsed_time).delete_all
+  #  Event.older_than(last_parsed_time).delete_all
+  #  League.older_than(last_parsed_time).delete_all
+  #   Participant.older_than(last_parsed_time).delete_all
+  #   Sport.older_than(last_parsed_time).delete_all
  
    @log.write "Clearing DB finished\n"
 

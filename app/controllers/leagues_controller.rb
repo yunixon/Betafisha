@@ -2,8 +2,8 @@ class LeaguesController < ApplicationController
   
   before_filter :authenticate, :only => [:edit, :update, :destroy]
   before_filter :admin_user, :only => [:edit, :update, :destroy]
-#  caches_action :show
-  cache_sweeper :league_sweeper
+
+  cache_sweeper :league_sweeper unless Rails.env.development?
   
   include CalculatingName
 
@@ -16,7 +16,6 @@ class LeaguesController < ApplicationController
   end
 
   def create
-    @sports = Sport.all
     @success = false
     
     country = Country.find(params[:league][:country_id])
@@ -43,7 +42,6 @@ class LeaguesController < ApplicationController
   end
 
   def show
-    @sports = Sport.all
     @coupon = Coupon.new
     @league = League.find(params[:id])
     if signed_in?
@@ -57,18 +55,15 @@ class LeaguesController < ApplicationController
   end
 
   def update
-   #!!!!!!!!!!!!!!!!!
     @league = League.find(params[:id])
     @league.update_attributes(params[:league])
-    
     respond_to do |format|
       format.html
-      format.js { @sports = Sport.all }
+      format.js
     end
   end
 
   def destroy
-
     league = League.find(params[:id])
     common_value = Common.find_by_element_name league.name
 
@@ -79,7 +74,7 @@ class LeaguesController < ApplicationController
     common_value.destroy unless common_value.nil?
 
     respond_to do |format|
-      format.js { @sports = Sport.all }
+      format.js
     end
   end
 

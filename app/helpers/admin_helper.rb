@@ -73,6 +73,17 @@ module AdminHelper
     return sport ||= ""
   end
 
+
+  def show_menu_controlls?
+    if controller_name == 'site_top_navigation'
+      false
+    elsif ['sports', 'leagues', 'countries'].include?(controller_name) and ['index', 'show'].include?(action_name)
+      false
+    else
+      true
+    end
+  end 
+
 end  
 
 

@@ -1,2 +1,0 @@
-class NavigationController < ApplicationController
-end

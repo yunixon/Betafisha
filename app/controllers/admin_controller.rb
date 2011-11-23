@@ -142,5 +142,9 @@ class AdminController < ApplicationController
       format.js
     end
   end
+  
+  def cache_expire
+     expire_fragment('all_available_leagues') 
+  end
 end
 

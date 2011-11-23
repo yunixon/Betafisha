@@ -3,7 +3,7 @@ class SiteTopNavigationController < ApplicationController
   def coefficients
   end
 
-  def bookmakersl
+  def bookmakers
   end
 
   def statistics

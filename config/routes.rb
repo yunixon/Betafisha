@@ -32,6 +32,8 @@ Betafisha::Application.routes.draw do
   match "leaguetocoupon", :to =>  "leagues#leaguetocoupon", :as => :leaguetocoupon
 
   # admin
+
+  
   get "admin/users_manager"
   match "admin" =>  "admin#users_manager", :as => :admin
 
@@ -56,6 +58,9 @@ Betafisha::Application.routes.draw do
   get "admin/delete_bookmaker_relation"
   match "admin/delete_bookmaker_relation" =>  "admin#delete_bookmaker_relation", :as => :add_bookmaker_relation
 
+  get "admin/cache_expire"
+  match "admin" =>  "admin#cache_expire", :as => :cache_expire
+  
   post "admin/league_edit"
   post "admin/league_new"
 
@@ -64,6 +69,7 @@ Betafisha::Application.routes.draw do
 
   post "admin/country_edit"
   post "admin/country_new"
+  
   
 
   # statc (flat) pages
