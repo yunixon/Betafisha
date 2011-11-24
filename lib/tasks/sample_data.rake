@@ -21,7 +21,7 @@ namespace :db do
       Rake::Task['db:drop'].execute
       Rake::Task['db:create'].execute
       Rake::Task['db:migrate'].execute
-      Rake::Task['db:populate'].execute
+      #Rake::Task['db:populate'].execute
   end
 
 end
