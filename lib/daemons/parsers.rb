@@ -40,7 +40,7 @@ begin
     #array for pids
     threads = []
 
-=begin    threads[0] = spawn do
+    threads[0] = spawn do
       begin
         @log.write "+Gamebookers parsing started #{Time.now}\n"
         GamebookersParser.parse!
@@ -52,7 +52,7 @@ begin
         @log.write "\n"
         @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
       end
-=end     end
+     end
 
     threads[1] = spawn do
       begin

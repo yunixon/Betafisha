@@ -23,30 +23,30 @@ $(document).ready(function() {
 		return false;
 	});
 
-	$('#admin_element_id').bind( "change", function() {
-  		$.ajax({
-	   		type: 'GET',
-	   		data: { table_name: $('#admin_table_name').val(),
-	   		        bookmaker_name: $('#admin_bookmaker_name').val(),
-	   		        element_id: $('#admin_element_id').val(),
-	   		        bookmaker_element_id: $('#admin_bookmaker_element_id').val()
-	   		       },
-	   		url: '/admin/bookmakers_manager',
-	   		dataType:'script'
-	   	});
+	$('#admin_common_element_id').bind( "change", function() {
+		$.ajax({
+   		type: 'GET',
+   		data: { table_name: $('#admin_table_name').val(),
+   		        bookmaker_name: $('#admin_bookmaker_name').val(),
+   		        common_element_id: $('#admin_common_element_id').val(),
+   		        bookmaker_element_id: $('#admin_bookmaker_element_id').val()
+   		       },
+   		url: '/admin/bookmakers_manager',
+   		dataType:'script'
+   	});
 	});
 
-		$('#show_relations').bind( "click", function() {
-  		$.ajax({
-	   		type: 'GET',
-	   		data: { table_name: $('#admin_table_name').val(),
-	   		        bookmaker_name: $('#admin_bookmaker_name').val(),
-	   		        element_id: $('#admin_element_id').val(),
-	   		        bookmaker_element_id: $('#admin_bookmaker_element_id').val()
-	   		       },
-	   		url: '/admin/bookmakers_manager',
-	   		dataType:'script'
-	   	});
+	$('#show_relations').bind( "click", function() {
+		$.ajax({
+   		type: 'GET',
+   		data: { table_name: $('#admin_table_name').val(),
+   		        bookmaker_name: $('#admin_bookmaker_name').val(),
+   		        common_element_id: $('#admin_common_element_id').val(),
+   		        bookmaker_element_id: $('#admin_bookmaker_element_id').val()
+   		       },
+   		url: '/admin/bookmakers_manager',
+   		dataType:'script'
+   	});
 	});
 
 	$('#admin_bookmaker_name, #admin_table_name').change(function() {
@@ -54,7 +54,7 @@ $(document).ready(function() {
 	   		type: 'GET',
 	   		data: { table_name: $('#admin_table_name').val(),
 	   		        bookmaker_name: $('#admin_bookmaker_name').val(),
-	   		        element_id: $('#admin_element_id').val()
+	   		        common_element_id: $('#admin_common_element_id').val()
               },
 	   		url: '/admin/bookmakers_manager',
 	   		dataType:'script'
@@ -66,8 +66,9 @@ $(document).ready(function() {
 	   		type: 'GET',
 	   		data: { table_name: $('#admin_table_name').val(),
 	   		        bookmaker_name: $('#admin_bookmaker_name').val(),
-	   		        element_id: $('#admin_element_id').val(),
-	   		        bookmaker_element_id: this.getAttribute('id')
+	   		        common_element_id: $('#admin_common_element_id').val(),
+	   		        bookmaker_element_id: this.getAttribute('id'),
+	   		        bookmaker_element_name: this.getAttribute('data')
 	   		      },
 	   		url: '/admin/delete_bookmaker_relation',
 	   		dataType:'script'

@@ -7,7 +7,7 @@
     <b> Фильтры: </b> <br/>
     <%= f.label :table_name, "Таблицы:" %> <br/>
     <%= f.select :table_name, 
-    	options_for_select( ["sport", "country", "league", "participant", "event"], @params[:table_name] ), 
+    	options_for_select( ["sport", "country", "league"], @params[:table_name] ), 
     	:multiple => false
     %>
   </div>
@@ -22,9 +22,9 @@
   
   <div class="field">
   <b> Выберите элементы для связи:   </b> <br/>
-  	<%= f.label :element_id, "Наши значения" %> <br/> 
-    <%= f.select :element_id, 
-    	options_for_select( @common_values.collect { |p| [ p["element_name"], p["id"] ] },  @params[:element_id]), 
+  	<%= f.label :common_element_id, "Наши значения" %> <br/> 
+    <%= f.select :common_element_id, 
+    	options_for_select( @common_values.collect { |p| [ p["element_name"], p["id"] ] },  @params[:common_element_id]), 
     	:multiple => false
     %> <br />    <%= link_to " * Кликните", "#", :id => "show_relations" %> или измените значение для просмотра уже существующих связей.<br />
    	<p>
@@ -43,16 +43,17 @@
   <div class="actions">
     <%= f.submit "Объединить" %>
   </div> 
-  <div class="field">
-    <% if !@elements.nil? %>
-      <ul>
-        <b>Существующие связи:</b>  
-        <% @elements.each do |element| %>
-        <li><span id="has_relation">  <%= element.element_name %> </span> <%= link_to "Удалить связь", "#", :class => "delete_relation", :id => element.id   %> </li>
-        <% end %>
-      </ul>
-    <% end %>
-  </div>
+  
+  <% if !@elements.nil? %>
+    <ul>
+      <b>Существующие связи:</b>  
+      <% @elements.each do |element| %>
+      <li><span id="has_relation">  <%= element.element_name %> </span> <%= link_to "Удалить связь", "#", :class => "delete_relation", :id => element.id, :data => element.element_name    %> </li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  
 <% end %>
 
 <%= javascript_include_tag 'forms.js' %>

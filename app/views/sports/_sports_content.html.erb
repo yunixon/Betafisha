@@ -17,30 +17,31 @@
         <div class="block">
           <ul class="countries">
             <% sport.leagues.get_countries.each do |countries| %>
+              <%# if countries.country.common_value? %>
                 <li class="country" id='sport_<%= sport.id %>_country_<%= countries.country.id %>'>
                   <% if !countries.country.flag_image.nil? %>
                     <%= image_tag "flags/" + countries.country.flag_image %>
                   <% end %>
-                  <%= link_to  "#{countries.country.name} (#{League.get_league_by_country_and_sport(sport.id, countries.country.id).count})", "#", :id => countries.country.id %>
+                  <%= link_to  "#{countries.country.name} (#{League.get_league_by_country_and_sport(sport.id, countries.country.id).count})", "#", :id => countries.country.id, :class => set_common_class(countries.country) %>
                   <% if show_menu_controlls? %>
                       <%= link_to "Удалить", countries.country, :class => 'delete_country_item' %>
                       <%= link_to "Редактировать", countries.country, :class => 'edit_country_item', :id => countries.country.id %>
                   <% end %>
                 </li>
-
-                <ul class="leagues">
-                  <% League.get_league_by_country_and_sport(sport.id, countries.country.id).each do |league| %>
-                     <%# if !league.events.empty? %>
-                        <%= content_tag_for(:li, league) do %>
-                            <%= link_to league.title, league %>
-                            <% if show_menu_controlls? %>
-                                <%= link_to "Удалить", league, :confirm => "Вы уверены?", :title => "Удалить #{league.name}", :class => 'delete_league_item' %>
-                                <%= link_to "Редактировать", league, :class => 'edit_league_item', :id => league.id %>
-                            <% end %>
-                        <% end %>
-                      <%# end %>
-                  <% end %>                  
-                </ul>
+                <%# if countries.country.common_value? %>
+                  <ul class="leagues">
+                    <% League.get_league_by_country_and_sport(sport.id, countries.country.id).each do |league| %>
+                       <%# if !league.events.empty? && league.common_value? %>
+                          <%= content_tag_for(:li, league) do %>
+                              <%= link_to league.title, league, :class => set_common_class(league) %>
+                              <% if show_menu_controlls? %>
+                                  <%= link_to "Удалить", league, :confirm => "Вы уверены?", :title => "Удалить #{league.name}", :class => 'delete_league_item' %>
+                                  <%= link_to "Редактировать", league, :class => 'edit_league_item', :id => league.id %>
+                              <% end %>
+                          <% end %>
+                        <%# end %>
+                      <% end %>                  
+                    </ul>
             <% end %>
           </ul>
         </div>

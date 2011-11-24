@@ -16,4 +16,9 @@ class Country < ActiveRecord::Base
   
   #find old elements, interval can be changed
   scope :older_than, lambda { |time| where("updated_at < ?", time) }
+  
+  def common_value?
+    Common.find_by_element_name_and_table_name(self.name, 'country') ? true : false
+  end
+  
 end

@@ -19,6 +19,10 @@ module SportsHelper
       else "empty"
     end
   end
+  
+  def set_common_class ( element )
+     'common' if element.common_value?
+  end
 
 end
 

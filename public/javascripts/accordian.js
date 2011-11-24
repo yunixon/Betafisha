@@ -73,13 +73,17 @@ $(document).ready(function() {
   // country expand
 	$('.countries li.country a').click( function() {
     $.cookie('nav_menu_country', $(this).parent().attr("id"),{ path: '/'});
+		
 		if( $(this).parent().next().is(':hidden') ) {
 			$('.countries li.country a').parent().removeClass('active').next().hide();
 			$(this).parent().toggleClass('active').next().show();
+		
+		} else {
+				$('.countries li.country a').removeClass('active');
+		    $(this).parent().next().hide();
 		}
 		return false;
 	});
-
 
 });
 

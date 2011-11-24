@@ -1,8 +1,38 @@
 module AdminHelper
 
-  def set_element_relation ( element )
-       
+  include CalculatingName
+  
+  
+  def exchange_element_relation(info, status)
+    bookmaker_element = bookmaker_element_by_id( info[:bookmaker_name], info[:bookmaker_element_id] ) if info
+    if bookmaker_element
+      bookmaker = bookmaker_model_by_name(info[:bookmaker_name]) # if status == 'remove'
+      old_name = (status == "create" ? bookmaker_element.element_name : bookmaker_element.common.element_name)
+      if status == 'create'
+        bookmaker_element.update_attribute( :common_id, info[:common_element_id] )
+      elsif status == 'remove'
+        bookmaker_element.update_attribute(:common_id, nil)
+      end
+      if info[:table_name] == "country"
+        country = ( status == "create" ? Country.find_by_name(bookmaker_element.common.element_name) : Country.find_by_name(bookmaker_element.element_name) ) 
+        check_previous_names( old_name, country.name , Country, :country_id, country.id, [:leagues], bookmaker) if country and old_name
+      elsif info[:table_name] == "league"
+        league = ( status == "create" ? League.find_by_name(bookmaker_element.common.element_name) : League.find_by_name(bookmaker_element.element_name) ) 
+        check_previous_names( old_name, league.name, League, :league_id, league.id,[:events, :coupons], bookmaker ) if league and old_name
+      end
+    end  
   end  
+
+  def bookmaker_model_by_name (bookmaker_name)
+    values = case bookmaker_name
+      when "Gamebookers" then Gamebooker
+      when "Betredkings" then Betredking
+      when "StanJames" then StanJame
+      when "Nordicbets" then Nordicbet
+      else "empty"
+    end
+  end
+
 
   def bookmaker_values (bookmaker_name, table_name)
     values = case bookmaker_name
@@ -26,10 +56,10 @@ module AdminHelper
 
   def bookmaker_element_by_id ( bookmaker_name, element_id )
     value = case bookmaker_name
-      when "Gamebookers" then Gamebooker.order("element_name asc").find( element_id )
-      when "Betredkings" then Betredking.order("element_name asc").find( element_id )
-      when "StanJames" then StanJame.order("element_name asc").find( element_id )
-      when "Nordicbets" then Nordicbet.order("element_name asc").find( element_id )
+      when "Gamebookers" then Gamebooker.find( element_id )
+      when "Betredkings" then Betredking.find( element_id )
+      when "StanJames" then StanJame.find( element_id )
+      when "Nordicbets" then Nordicbet.find( element_id )
       else "empty"
      end
   end

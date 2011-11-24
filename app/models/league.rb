@@ -34,7 +34,6 @@ class League < ActiveRecord::Base
   end
   
   def common_value?
-    ActiveRecord::Base.logger.info @name
     Common.find_by_element_name_and_table_name(self.name, 'league') ? true : false
   end
 

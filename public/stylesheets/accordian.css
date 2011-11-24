@@ -171,3 +171,5 @@ h2.last-child:hover a {
 */
 }
 
+a.common  { color: green; text-decoration: underline; }
+

@@ -31,14 +31,14 @@ module CalculatingName
          end
       end
       unless _name.present?
-        if type == 'country'
-          element_common_world = Common.find(:first, :conditions => {:element_name => 'World', :table_name => 'country'})
-          model.create(:table_name => type, :element_name => 'World', :common_id => element_common_world.id)
-          _name = 'World'
-        else
+       # if type == 'country'
+       #   element_common_world = Common.find_or_create_by_element_name_and_table_name(:element_name => element, :table_name => type)
+       #   model.create(:table_name => type, :element_name => element, :common_id => element_common_world.id)
+       #   _name = element
+       # else
           model.create(:table_name => type, :element_name => element)
           _name = element
-        end
+       # end
       end
     end
     return _name
@@ -83,11 +83,30 @@ module CalculatingName
     end
   end
 
-  def check_previous_names(old_name, new_name, parent_model, parent_model_id_symbol, parent_model_id, childrens = [])
+  def check_previous_names(old_name, new_name, parent_model, parent_model_id_symbol, parent_model_id, childrens = [], bookmaker=nil)
+    ActiveRecord::Base.logger.info "!!!!!!!" 
+    ActiveRecord::Base.logger.info "#{old_name}" 
+    ActiveRecord::Base.logger.info "#{new_name}" 
+    ActiveRecord::Base.logger.info " NeqO #{ new_name != old_name }"
+    ActiveRecord::Base.logger.info "finded #{ parent_model.find(:first, :conditions => ['name = ?', old_name]).present? }"
+    ActiveRecord::Base.logger.info parent_model_id
+    ActiveRecord::Base.logger.info bookmaker
+    ActiveRecord::Base.logger.info "!!!!!!!" 
     if new_name != old_name && parent_model.find(:first, :conditions => ['name = ?', old_name]).present?
       childrens.each do |childs|
         parent_model.find(:first, :conditions => ['name = ?', old_name]).send(childs).each do |l|
-          l.update_attribute(parent_model_id_symbol, parent_model_id)
+          
+          #if bookmaker.present?  
+            #ActiveRecord::Base.logger.info l.name
+            #ActiveRecord::Base.logger.info parent_model.name.downcase
+           # ActiveRecord::Base.logger.info bookmaker.find_by_element_name( l.name ).inspect
+            l.update_attribute(parent_model_id_symbol, parent_model_id) if bookmaker.find_by_element_name( l.name )
+          #else
+          #  ActiveRecord::Base.logger.info "else"
+          #  l.update_attribute(parent_model_id_symbol, parent_model_id)
+         # end
+          #l.update_attribute(parent_model_id_symbol, parent_model_id)
+          #l.save :validate => false
         end
       end
     end

@@ -30,21 +30,22 @@ class BetredkingsParser
           _country.touch
 
           country.children.each do |tournament|
+            _tournament_name = tournament['name']
             _league_name = calculate_name(Betredking,
                                           [_sport.name,
                                             _country.name,
-                                            tournament['name'].gsub(/[^a-zA-Z ]*/, '')
+                                            _tournament_name
                                           ].join(' | '),
                                           'league',
                                           true,
-                                          [_sport.name, _country.name, tournament['name'].gsub(/[^a-zA-Z ]*/, '')]
+                                          [_sport.name, _country.name, _tournament_name]
                                           )
 
             _league = League.find_or_create_by_name _league_name
             _league.sport_id = set_attribute_unless_given(_league, :sport_id, _sport.id)
             _league.country_id = set_attribute_unless_given(_league, :country_id, _country.id)
             _league.save
-            check_previous_names([_sport.name, _country.name, tournament['name'].gsub(/[^a-zA-Z ]*/, '')].join(' | '),
+            check_previous_names([_sport.name, _country.name, _tournament_name].join(' | '),
                                   _league_name,
                                   League,
                                   :league_id,
@@ -121,7 +122,7 @@ class BetredkingsParser
               
               # проблема с уникальность названия ивента, при смене имени страны/спорта в коммон значении
               
-                _event_name = calculate_name(Betredking, _league_name + "season", 'event')
+                _event_name = calculate_name(Betredking, _tournament_name, 'event')
                 _event = Event.find_or_create_by_name _event_name
                 _event.league_id = set_attribute_unless_given(_event, :league_id, _league.id)
                 _event.save
