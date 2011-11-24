@@ -83,30 +83,16 @@ module CalculatingName
     end
   end
 
-  def check_previous_names(old_name, new_name, parent_model, parent_model_id_symbol, parent_model_id, childrens = [], bookmaker=nil)
-    ActiveRecord::Base.logger.info "!!!!!!!" 
-    ActiveRecord::Base.logger.info "#{old_name}" 
-    ActiveRecord::Base.logger.info "#{new_name}" 
-    ActiveRecord::Base.logger.info " NeqO #{ new_name != old_name }"
-    ActiveRecord::Base.logger.info "finded #{ parent_model.find(:first, :conditions => ['name = ?', old_name]).present? }"
-    ActiveRecord::Base.logger.info parent_model_id
-    ActiveRecord::Base.logger.info bookmaker
-    ActiveRecord::Base.logger.info "!!!!!!!" 
+  def check_previous_names(old_name, new_name, parent_model, parent_model_id_symbol, parent_model_id, childrens = [], instant=false, bookmaker=nil)
     if new_name != old_name && parent_model.find(:first, :conditions => ['name = ?', old_name]).present?
       childrens.each do |childs|
         parent_model.find(:first, :conditions => ['name = ?', old_name]).send(childs).each do |l|
-          
-          #if bookmaker.present?  
-            #ActiveRecord::Base.logger.info l.name
-            #ActiveRecord::Base.logger.info parent_model.name.downcase
-           # ActiveRecord::Base.logger.info bookmaker.find_by_element_name( l.name ).inspect
+          # modified for instant exchange
+          if instant and bookmaker.present?
             l.update_attribute(parent_model_id_symbol, parent_model_id) if bookmaker.find_by_element_name( l.name )
-          #else
-          #  ActiveRecord::Base.logger.info "else"
-          #  l.update_attribute(parent_model_id_symbol, parent_model_id)
-         # end
-          #l.update_attribute(parent_model_id_symbol, parent_model_id)
-          #l.save :validate => false
+          else
+            l.update_attribute(parent_model_id_symbol, parent_model_id)
+          end
         end
       end
     end

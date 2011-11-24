@@ -1,5 +1,5 @@
 ENV["RAILS_ENV"] ||= "development"
-BOOKMAKER = "Gamebookers"
+#BOOKMAKER = "Gamebookers"
 SPORTS = [ 'basketball', 'football', 'ice_hockey', 'tennis',  'handball', 'floorball', 'baseball', 'rugby', 'volleyball' ]
 
 COMMON_BETTYPES = ['Outright', '1x2', '1or2']
@@ -9,7 +9,7 @@ NORDICBET = ['Result Winner', 'Result with draw', 'Result']
 STANJAMES = [["NBA Outright", "Eastern Conference", "Western Conference",
               "Tournament Outright Prices", "Outright Prices", "Australian Open 2012",
               "Wimbledon 2012", "French Open 2012", "Australian Open 2012",
-              "Davis Cup Outright 2011", "Men's Wimbledon 2012", "US Open 2012"],
+              "Davis Cup Outright 2011", "Men's Wimbledon 2012", "US Open 2012", 'Ladies 2012 Olympic Games-Outright'],
               'Match Betting',
               ["Draw No Bet", "Match Winner", "Match Prices"]]
 
@@ -21,7 +21,7 @@ Rails.application.require_environment!
 
 include CalculatingName
 
-_bookmaker = Bookmaker.find_or_create_by_name BOOKMAKER
+#_bookmaker = Bookmaker.find_or_create_by_name BOOKMAKER
 
 #Separately finding all betypes for each bookmaker
 COMMON_BETTYPES.each_with_index do |c,i|

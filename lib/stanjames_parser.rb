@@ -7,10 +7,11 @@ class StanjamesParser
                     'basketball-france', 'basketball-italy', 'basketball-greece', 
                     'basketball-turkey', 'basketball-us'
                    ],
-    :tennis => ['tennis-ladies', 
-                'tennis-matches', 
-                'tennis-mens', 
-                'tennis-outrights'
+    :tennis => [
+                #'tennis-ladies', 
+                #'tennis-matches', 
+                #'tennis-mens', 
+                #'tennis-outrights'
                 ],
     :football => ['football-ukraine', 'football-portugal', 'football-paraguay', 
                   'football-argentina', 'football-austria', 'football-belgium', 
@@ -22,7 +23,8 @@ class StanjamesParser
                   'football-russia', 'football-south-america', 'football-worldcup', 
                   'football-spain', 'football-sweden', 'football-switzerland', 
                   'football-turkey'
-                 ]
+                 ],
+      :volleyball => ['volleyball-international', 'volleyball-spain', 'volleyball-poland', 'volleyball-italy', 'volleyball-greece', 'volleyball-germany', 'volleyball' ]
     }
 
   def self.parse!

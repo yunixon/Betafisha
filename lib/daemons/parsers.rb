@@ -52,9 +52,9 @@ begin
         @log.write "\n"
         @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
       end
-     end
+   end
 
-    threads[1] = spawn do
+   threads[1] = spawn do
       begin
         @log.write "+Betredkings parsing started #{Time.now}\n"
         BetredkingsParser.parse!
@@ -68,7 +68,7 @@ begin
       end
    end
 
-=begin    threads[2] = spawn do
+   threads[2] = spawn do
       begin
         @log.write "+Stan James parsing started #{Time.now}\n"
         StanjamesParser.parse!
@@ -81,7 +81,8 @@ begin
         @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
       end
     end
-
+    
+=begin
     threads[3] = spawn do
       begin
        # @log.write "+Nordicbet parsing started #{Time.now}\n"
@@ -100,6 +101,7 @@ begin
     wait(threads)
 
    @log.write "#Clearing DB (old elements) started\n"
+   
  #   Bet.older_than(last_parsed_time).delete_all
  #   BetType.older_than(last_parsed_time).delete_all
  #   Bookmaker.older_than(last_parsed_time).delete_all

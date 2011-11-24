@@ -9,18 +9,16 @@ class AdminController < ApplicationController
 
   include AdminHelper
 
-  
   def add_bookmaker_relation
     @params = params[:admin]
     @bookmakers = Bookmaker.all
     respond_to do |format|
       format.js {
-
         exchange_element_relation(@params, "create") if @params
-
         @elements =  bookmaker_elements_by_common_id(@params[:bookmaker_name], @params[:common_element_id]) if @params[:common_element_id]
         @common_values = bookmaker_values_with_parents Common.where(:table_name => @params[:table_name]), @params[:table_name]
         @values = bookmaker_values_with_parents((bookmaker_values @params[:bookmaker_name], @params[:table_name]), @params[:table_name])
+        expire_fragment('all_available_leagues') 
       }
     end
   end
@@ -30,37 +28,31 @@ class AdminController < ApplicationController
     @bookmakers = Bookmaker.all
     respond_to do |format|
     format.js {
-     # ActiveRecord::Base.logger.info params.inspect
-      
       exchange_element_relation( @params, "remove" ) if @params
-      
       @elements =  bookmaker_elements_by_common_id(@params[:bookmaker_name], @params[:common_element_id]) if @params[:common_element_id]
-      #  ActiveRecord::Base.logger.info @elements.inspect + @params[:element_id]
       @common_values = bookmaker_values_with_parents Common.where(:table_name => @params[:table_name]), @params[:table_name]
       @values = bookmaker_values_with_parents((bookmaker_values @params[:bookmaker_name], @params[:table_name]), @params[:table_name])
+      expire_fragment('all_available_leagues') 
      }
     end
   end
 
   def bookmakers_manager
     @params = params
+
     @bookmakers = Bookmaker.all
     respond_to do |format|
       format.html {
         @params[:bookmaker_name] = 'Gamebookers'
         @params[:table_name] = 'sport'
-
         @common_values = bookmaker_values_with_parents Common.where(:table_name => @params[:table_name]), @params[:table_name]
         @values = bookmaker_values_with_parents((bookmaker_values @params[:bookmaker_name], @params[:table_name]), @params[:table_name])
-        #@elements = bookmaker_elements_by_common_id(@params[:bookmaker_name], @common_values.first.id)
-        #ActiveRecord::Base.logger.info @values.inspect
       }
       format.js {
-      
-          @elements = bookmaker_elements_by_common_id(@params[:bookmaker_name], @params[:common_element_id]) if @params[:common_element_id]
-
-          @common_values = bookmaker_values_with_parents Common.where(:table_name => @params[:table_name]), @params[:table_name]
-          @values = bookmaker_values_with_parents((bookmaker_values @params[:bookmaker_name], @params[:table_name]), @params[:table_name])
+        @elements = bookmaker_elements_by_common_id(@params[:bookmaker_name], @params[:common_element_id]) if @params[:common_element_id]
+        @common_values = bookmaker_values_with_parents Common.where(:table_name => @params[:table_name]), @params[:table_name]
+        @values = bookmaker_values_with_parents((bookmaker_values @params[:bookmaker_name], @params[:table_name]), @params[:table_name])
+        expire_fragment('all_available_leagues') 
       }
     end
   end
@@ -137,7 +129,7 @@ class AdminController < ApplicationController
   end
   
   def cache_expire
-     expire_fragment('all_available_leagues') 
+    expire_fragment('all_available_leagues') 
   end
 end
 

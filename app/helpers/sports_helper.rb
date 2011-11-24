@@ -21,7 +21,7 @@ module SportsHelper
   end
   
   def set_common_class ( element )
-     'common' if element.common_value?
+     'common' if element.common_value? and admin_signed_in?
   end
 
 end
