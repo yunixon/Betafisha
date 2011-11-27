@@ -1,36 +1,19 @@
 <% content_for :navigation do %>
-	  <ul class="dropdown">
-	      <li class = "active"><%= link_to t(:top_menu_coefficients), coefficients_path %></li>
-        <li><%= link_to t(:top_menu_bookmakers), bookmakers_path %></li>
-        <li><%= link_to t(:top_menu_statistics), statistics_path %></li>
-        <li><%= link_to t(:top_menu_tools), tools_path %>
-         <ul class="sub_menu">
-            <li>
-                Calculators
-        				<ul>
-        					<li>Dutching</li>
-        					<li>Hutching</li>
-        					<li>Hedging</li>
-        					<li>Bet Calculator</li>
-        				</ul>
-        		</li>
-           </ul>
-         </li>
-        <li><%= link_to "форум",  forums_path  %>
-
-        </li>
-	  </ul>
+  <%= render 'main_nav' %>
 <% end %>
+
 <% content_for :sub_navigation do %>
-  <ul>
-    <li><%= link_to "Главная", "#" %></li>
-    <li><%= link_to "Ближайшие", "#" %></li>
-    <li><%= link_to "Live ставки", "#" %></li>
-    <li><%= link_to "Топ матчи", "#" %></li>
-    <li><%= link_to "Dropping", "#" %></li>
-    <li><%= link_to "Вилки", "#" %></li>
-    <li><%= link_to "Фильтр", "#" %></li>
-  </ul>
+  <div id="sub_navigation" class="grid_20">
+    <ul>
+      <li><%= link_to "Главная", "#" %></li>
+      <li><%= link_to "Ближайшие", "#" %></li>
+      <li><%= link_to "Live ставки", "#" %></li>
+      <li><%= link_to "Топ матчи", "#" %></li>
+      <li><%= link_to "Dropping", "#" %></li>
+      <li><%= link_to "Вилки", "#" %></li>
+      <li><%= link_to "Фильтр", "#" %></li>
+    </ul>
+  </div>
 <% end %>
 
 <% content_for :breadcrumb do %>

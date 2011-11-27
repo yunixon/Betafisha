@@ -49,27 +49,7 @@
   <div id="navigation" class="grid_20">
     <div class="logo-image-wrapper"> <%= link_to "logo", root_path, :class => "logo-image" %> </div>
     <div class="top-nav">
-	    <ul class="dropdown">
-	        <li><%= link_to t(:top_menu_coefficients), coefficients_path %></li>
-          <li><%= link_to t(:top_menu_bookmakers), bookmakers_path %></li>
-          <li><%= link_to t(:top_menu_statistics), statistics_path %></li>
-          <li><%= link_to t(:top_menu_tools), tools_path %>
-           <ul class="sub_menu">
-              <li>
-                  Calculators
-          				<ul>
-          					<li>Dutching</li>
-          					<li>Hutching</li>
-          					<li>Hedging</li>
-          					<li>Bet Calculator</li>
-          				</ul>
-          		</li>
-             </ul>
-           </li>
-          <li  class = "active" ><%= link_to "форум",  forums_path  %>
-
-          </li>
-	    </ul>
+	    <%= render 'site_top_navigation/main_nav' %>
 	  </div>
   </div>
 </header>

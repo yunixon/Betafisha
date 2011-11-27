@@ -26,17 +26,17 @@ $(document).ready(function() {
     /**************** ********** ********************/
     /****************  STYLINGS  ********************/
     /**************** ********** ********************/
-    $("ul.dropdown li").hover(function(){
-        $(this).addClass("hover");
-        $('ul:first',this).css('visibility', 'visible');
+/*    $("ul.dropdown li").hover(function(){
+      $(this).addClass("hover");
+      $('div:first',this).css('visibility', 'visible');
     }, function(){
-        $(this).removeClass("hover");
-        $('ul:first',this).css('visibility', 'hidden');
+      $(this).removeClass("hover");
+      $('div:first',this).css('visibility', 'hidden');
     });
 
     $("ul.dropdown li ul li:has(ul)").find("a:first").append(" &raquo; ");
-
-
+*/
+  $('#tools-li a').click(function() { return false; });
   $("#cache-expire-button").click(function(){
     $.ajax({
      		type: 'GET',

@@ -3,7 +3,7 @@ class SportsController < ApplicationController
   before_filter :authenticate, :only => [:edit, :update, :destroy]
   before_filter :admin_user, :only => [:edit, :update, :destroy]
   
-  cache_sweeper :sport_sweeper unless Rails.env.development?
+  #cache_sweeper :sport_sweeper unless Rails.env.development?
   
   def index
     @sports = Sport.all

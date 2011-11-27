@@ -131,5 +131,12 @@ class AdminController < ApplicationController
   def cache_expire
     expire_fragment('all_available_leagues') 
   end
+  
+  def add_to_common
+  end
+  
+  def remove_from_common 
+  end
+  
 end
 

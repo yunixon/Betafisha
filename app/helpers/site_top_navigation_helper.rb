@@ -20,5 +20,9 @@ module SiteTopNavigationHelper
     @devise_mapping ||= Devise.mappings[:user]
   end
   
+  def menu_item_active? ( menu_item )
+    true if action_name == menu_item  
+  end 
+  
 end
 

@@ -1,32 +1,12 @@
 <% content_for :navigation do %>
-	  <ul class="dropdown">
-	      <li><%= link_to t(:top_menu_coefficients), coefficients_path %></li>
-        <li><%= link_to t(:top_menu_bookmakers), bookmakers_path %></li>
-        <li class = "active"><%= link_to t(:top_menu_statistics), statistics_path %></li>
-        <li><%= link_to t(:top_menu_tools), tools_path %>
-         <ul class="sub_menu">
-            <li>
-                Calculators
-        				<ul>
-        					<li>Dutching</li>
-        					<li>Hutching</li>
-        					<li>Hedging</li>
-        					<li>Bet Calculator</li>
-        				</ul>
-        		</li>
-           </ul>
-         </li>
-        <li><%= link_to "форум",  forums_path  %>
-
-        </li>
-	  </ul>
+  <%= render 'main_nav' %>
 <% end %>
 
 <% content_for :sub_navigation do %>
 <% end %>
 
 <% content_for :breadcrumb do %>
-  <%= t(:top_menu_bookmakers) %>
+  <%= link_to t(:top_menu_statistics) %>
 <% end %>
 
 <% content_for :left_nav do %>

@@ -32,8 +32,6 @@ Betafisha::Application.routes.draw do
   match "leaguetocoupon", :to =>  "leagues#leaguetocoupon", :as => :leaguetocoupon
 
   # admin
-
-  
   get "admin/users_manager"
   match "admin" =>  "admin#users_manager", :as => :admin
 
@@ -69,6 +67,10 @@ Betafisha::Application.routes.draw do
 
   post "admin/country_edit"
   post "admin/country_new"
+  
+  #devise
+  
+  
   
   
 
