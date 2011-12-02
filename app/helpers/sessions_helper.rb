@@ -5,7 +5,7 @@ module SessionsHelper
   end
 
   def admin_user
-    redirect_to root_path unless current_user.admin?
+    deny_access unless current_user.admin?
   end
 
   def deny_access

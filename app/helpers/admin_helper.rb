@@ -1,7 +1,7 @@
 module AdminHelper
 
   include CalculatingName
-   
+  
   def exchange_element_relation(info, status)
     bookmaker_element = bookmaker_element_by_id( info[:bookmaker_name], info[:bookmaker_element_id] ) if info
     if bookmaker_element
@@ -24,67 +24,67 @@ module AdminHelper
 
   def bookmaker_model_by_name (bookmaker_name)
     values = case bookmaker_name
-      when "Gamebookers"  then Gamebooker
-      when "Betredkings"  then Betredking
-      when "StanJames"    then StanJame
-      when "Nordicbets"   then Nordicbet
-      else nil
+    when "Gamebookers"  then Gamebooker
+    when "Betredkings"  then Betredking
+    when "StanJames"    then StanJame
+    when "Nordicbets"   then Nordicbet
+    else nil
     end
   end
 
   def bookmaker_values (bookmaker_name, table_name)
     values = case bookmaker_name
-      when "Gamebookers"  then Gamebooker.where(:table_name => table_name).order("element_name asc")
-      when "Betredkings"  then Betredking.where(:table_name => table_name).order("element_name asc")
-      when "StanJames"    then StanJame.where(:table_name => table_name).order("element_name asc")
-      when "Nordicbets"   then Nordicbet.where(:table_name => table_name).order("element_name asc")
-      else "empty"
+    when "Gamebookers"  then Gamebooker.where(:table_name => table_name).order("element_name asc")
+    when "Betredkings"  then Betredking.where(:table_name => table_name).order("element_name asc")
+    when "StanJames"    then StanJame.where(:table_name => table_name).order("element_name asc")
+    when "Nordicbets"   then Nordicbet.where(:table_name => table_name).order("element_name asc")
+    else "empty"
     end
   end
 
   def bookmaker_elements_by_common_id ( bookmaker_name, common_id )
     values = case bookmaker_name
-      when "Gamebookers"  then Gamebooker.where( :common_id => common_id ).order("element_name asc")
-      when "Betredkings"  then Betredking.where( :common_id => common_id ).order("element_name asc")
-      when "StanJames"    then StanJame.where( :common_id => common_id ).order("element_name asc")
-      when "Nordicbets"   then Nordicbet.where( :common_id => common_id ).order("element_name asc")
-      else "empty"
+    when "Gamebookers"  then Gamebooker.where( :common_id => common_id ).order("element_name asc")
+    when "Betredkings"  then Betredking.where( :common_id => common_id ).order("element_name asc")
+    when "StanJames"    then StanJame.where( :common_id => common_id ).order("element_name asc")
+    when "Nordicbets"   then Nordicbet.where( :common_id => common_id ).order("element_name asc")
+    else "empty"
     end
   end
 
   def bookmaker_element_by_id ( bookmaker_name, element_id )
     value = case bookmaker_name
-      when "Gamebookers"  then Gamebooker.find( element_id )
-      when "Betredkings"  then Betredking.find( element_id )
-      when "StanJames"    then StanJame.find( element_id )
-      when "Nordicbets"   then Nordicbet.find( element_id )
-      else "empty"
-     end
+    when "Gamebookers"  then Gamebooker.find( element_id )
+    when "Betredkings"  then Betredking.find( element_id )
+    when "StanJames"    then StanJame.find( element_id )
+    when "Nordicbets"   then Nordicbet.find( element_id )
+    else "empty"
+    end
   end
 
   def change_element_relation( tableName, elementId )
     value = case tableName
-      when "sport"        then Sport.find( elementId )
-      when "country"      then Country.find( elementId )
-      when "league"       then League.find( elementId )
-      when "participant"  then Participant.find( elementId )
-      when "event"        then Event.find( elementId )
-      when "bet_type"     then BetType.find( elementId )
-      when "bet"          then Bet.find( elementId )
-      else "empty"
+    when "sport"        then Sport.find( elementId )
+    when "country"      then Country.find( elementId )
+    when "league"       then League.find( elementId )
+    when "participant"  then Participant.find( elementId )
+    when "event"        then Event.find( elementId )
+    when "bet_type"     then BetType.find( elementId )
+    when "bet"          then Bet.find( elementId )
+    else "empty"
     end   
   end
 
-  def bookmaker_values_with_parents (bookmaker_values, table_name)
+  def bookmaker_values_with_parents (bookmaker_values, table_name, term=nil)
     values = case table_name
-       when "league"      then bookmaker_values.order("element_name asc").collect { |x| {'id' => x.id, 'element_name' => x.element_name} }
-       when "sport"       then bookmaker_values.order("element_name asc") 
-       when "country"     then bookmaker_values.order("element_name asc")
-       when "event"       then bookmaker_values.order("element_name asc") 
-       when "bet_type"    then bookmaker_values.order("element_name asc") 
-       when "participant" then bookmaker_values.order("element_name asc")
-       else "empty"
-     end
+    when "league"      then term.nil? ? bookmaker_values.order("element_name asc") : bookmaker_values.order("element_name asc").where("element_name like ?", "%#{term}%")             #.collect { |x| {'id' => x.id, 'element_name' => x.element_name} }
+    when "sport"       then term.nil? ? bookmaker_values.order("element_name asc") : bookmaker_values.order("element_name asc").where("element_name like ?", "%#{term}%") 
+    when "country"     then term.nil? ? bookmaker_values.order("element_name asc") : bookmaker_values.order("element_name asc").where("element_name like ?", "%#{term}%")
+    when "event"       then term.nil? ? bookmaker_values.order("element_name asc") : bookmaker_values.order("element_name asc").where("element_name like ?", "%#{term}%") 
+    when "bet_type"    then term.nil? ? bookmaker_values.order("element_name asc") : bookmaker_values.order("element_name asc").where("element_name like ?", "%#{term}%")
+    when "participant" then term.nil? ? bookmaker_values.order("element_name asc") : bookmaker_values.order("element_name asc").where("element_name like ?", "%#{term}%")
+    else "empty"
+    end
   end
   
   def show_menu_controlls?

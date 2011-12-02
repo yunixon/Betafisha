@@ -1,9 +1,10 @@
+# coding: utf-8
 class AdminController < ApplicationController
 
   before_filter :authenticate
   before_filter :admin_user
   
-  uses_tiny_mce
+  #uses_tiny_mce
 
   layout 'admin'
 
@@ -20,6 +21,7 @@ class AdminController < ApplicationController
         @values = bookmaker_values_with_parents((bookmaker_values @params[:bookmaker_name], @params[:table_name]), @params[:table_name])
         expire_fragment('all_available_leagues') 
       }
+      
     end
   end
 
@@ -27,19 +29,18 @@ class AdminController < ApplicationController
     @params = params
     @bookmakers = Bookmaker.all
     respond_to do |format|
-    format.js {
-      exchange_element_relation( @params, "remove" ) if @params
-      @elements =  bookmaker_elements_by_common_id(@params[:bookmaker_name], @params[:common_element_id]) if @params[:common_element_id]
-      @common_values = bookmaker_values_with_parents Common.where(:table_name => @params[:table_name]), @params[:table_name]
-      @values = bookmaker_values_with_parents((bookmaker_values @params[:bookmaker_name], @params[:table_name]), @params[:table_name])
-      expire_fragment('all_available_leagues') 
-     }
+      format.js {
+        exchange_element_relation( @params, "remove" ) if @params
+        @elements =  bookmaker_elements_by_common_id(@params[:bookmaker_name], @params[:common_element_id]) if @params[:common_element_id]
+        @common_values = bookmaker_values_with_parents Common.where(:table_name => @params[:table_name]), @params[:table_name]
+        @values = bookmaker_values_with_parents((bookmaker_values @params[:bookmaker_name], @params[:table_name]), @params[:table_name])
+        expire_fragment('all_available_leagues') 
+      }
     end
   end
 
   def bookmakers_manager
     @params = params
-
     @bookmakers = Bookmaker.all
     respond_to do |format|
       format.html {
@@ -50,12 +51,18 @@ class AdminController < ApplicationController
       }
       format.js {
         @elements = bookmaker_elements_by_common_id(@params[:bookmaker_name], @params[:common_element_id]) if @params[:common_element_id]
-        @common_values = bookmaker_values_with_parents Common.where(:table_name => @params[:table_name]), @params[:table_name]
-        @values = bookmaker_values_with_parents((bookmaker_values @params[:bookmaker_name], @params[:table_name]), @params[:table_name])
+        if @params[:filter] == "common"
+          @common_values = bookmaker_values_with_parents Common.where(:table_name => @params[:table_name]), @params[:table_name], @params[:term]
+          render :json => @common_values.collect { |p| [ p["element_name"], p["id"] ] } 
+        elsif @params[:filter] == "bookmaker"
+          @values = bookmaker_values_with_parents((bookmaker_values @params[:bookmaker_name], @params[:table_name]), @params[:table_name], @params[:term])
+          render :json => @values.collect { |p| [ p["element_name"], p["id"] ] }
+        end  
         expire_fragment('all_available_leagues') 
       }
     end
   end
+
 
   def users_manager
     @users = User.all

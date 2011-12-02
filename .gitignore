@@ -17,4 +17,5 @@ nbproject/
 .settings/
 rdoc/*
 /public/uploads/
-
+.sass-cache/
+public/assets/*

@@ -1,4 +1,4 @@
-body { background: #EEE url('../images/admin_bg.png') repeat-x -1px -1px; }
+body { background: #EEE url('../assets/admin_bg.png') repeat-x -1px -1px; }
 
 .field { margin-top: 10px; min-height: 40px; min-width: 350px; }
 .field b { font-size: 14px; }
@@ -16,11 +16,14 @@ input[type="text"], input[type="password"], select {
   min-width: 350px;
   border: 1px solid #ddd;
   color: #333;
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 4px;
   padding: 7px 5px 5px;
   font-weight: bold;
   background: #f5f5f5;
+}
+input[type="text"]:focus, input[type="password"]:focus, select:focus {
+  border: 1px solid #333;
 }
 
 div#content {   background: #f5f5f5; min-height: 100px; }
@@ -30,8 +33,8 @@ div#content {   background: #f5f5f5; min-height: 100px; }
 .field a { color: #eee; }
 
 
-.russia .ui-selectmenu-item-icon { background: url(../images/flags/ru.png) 0 0 no-repeat; }
-.usa .ui-selectmenu-item-icon { background: url(../images/flags/us.png) 0 0 no-repeat; }
+.russia .ui-selectmenu-item-icon { background: url(../assets/flags/ru.png) 0 0 no-repeat; }
+.usa .ui-selectmenu-item-icon { background: url(../assets/flags/us.png) 0 0 no-repeat; }
 
 
 h2.acc_trigger, .acc_container { width: 235px; }
@@ -84,7 +87,7 @@ h2.acc_trigger {
 
 #country_submit, #sport_submit, #league_submit { float: left; margin-top: 0px;}
 
-.back_from_form:hover {  text-decoration: none;     background: #D13836; }
+.back_from_form:hover {  text-decoration: none; background: #D13836; }
 
 
 .new_item {
@@ -95,6 +98,6 @@ h2.acc_trigger {
 	height: 16px;
 	float: right;
 	margin: 5px 25px 0px 0px;
-	background: url('../images/add.png') no-repeat  0px 0px;
+	background: url('../assets/add.png') no-repeat  0px 0px;
 
 }

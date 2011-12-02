@@ -2,8 +2,6 @@ jQuery.ajaxSetup({
   'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
 })
 
-//var $j = jQuery.noConflict();
-
 $(document).ready(function() {
 
   $('.form_info').hide();
@@ -89,6 +87,56 @@ $(document).ready(function() {
 			    {find: '.usa'},
 		    ]
   });
+
+	$( "#admin_common_element_id" ).autocomplete({
+      source: function( request, response ) {
+				        $.ajax({
+					        url: '/admin/bookmakers_manager',
+					        dataType: "json",
+					        data: {
+                          table_name: $('#admin_table_name').val(),
+       		                bookmaker_name: $('#admin_bookmaker_name').val(),
+       		                common_element_id: $('#admin_common_element_id').val(),
+       		                bookmaker_element_id: $('#admin_bookmaker_element_id').val(),
+						              term: request.term,
+						              filter: "common"
+					        },
+					        success: function( data ) {
+						        response(  $.map( data, function( item ) { return  { id: item[1], value: item[0] }  } ) );					        
+					        }
+			        }); 
+			      }
+
+	}).data( "autocomplete" )._renderItem = function( ul, item ) {
+			return $( "<li></li>" )
+				.data( "item.autocomplete", item )
+				.append( "<a>" + item.value + "</a>" )
+				.appendTo( ul ); 		};
+				
+	$( "#admin_bookmaker_element_id" ).autocomplete({
+      source: function( request, response ) {
+				        $.ajax({
+					        url: '/admin/bookmakers_manager',
+					        dataType: "json",
+					        data: {
+                          table_name: $('#admin_table_name').val(),
+       		                bookmaker_name: $('#admin_bookmaker_name').val(),
+       		                common_element_id: $('#admin_common_element_id').val(),
+       		                bookmaker_element_id: $('#admin_bookmaker_element_id').val(),
+						              term: request.term,
+						              filter: "common"
+					        },
+					        success: function( data ) {
+						        response(  $.map( data, function( item ) { return  { id: item[1], value: item[0] }  } ) );					        
+					        }
+			        }); 
+			      }
+
+	}).data( "autocomplete" )._renderItem = function( ul, item ) {
+			return $( "<li></li>" )
+				.data( "item.autocomplete", item )
+				.append( "<a>" + item.value + "</a>" )
+				.appendTo( ul ); 		};
 
 });
 

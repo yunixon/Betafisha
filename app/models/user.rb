@@ -14,7 +14,8 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable, :omniauthable, :encryptor => :sha512
+         :recoverable, :rememberable, :trackable, :token_authenticatable,
+                                               :encryptable, :confirmable, :lockable, :timeoutable, :omniauthable, :encryptor => :sha512
 
   email_regex = /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,3})$/i
 

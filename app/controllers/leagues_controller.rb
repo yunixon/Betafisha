@@ -1,3 +1,4 @@
+# coding: utf-8
 class LeaguesController < ApplicationController
   
   before_filter :authenticate, :only => [:edit, :update, :destroy]
@@ -22,12 +23,12 @@ class LeaguesController < ApplicationController
     sport = Sport.find(params[:league][:sport_id])
 
     league_name_full = [ sport.name, country.name, params[:league][:name] ].join(' | ') unless params[:league][:name] == ""
- 
+    
     @league = League.find_or_create_by_name league_name_full
     @league.title = params[:league][:name]
     @league.sport_id = set_attribute_unless_given(@league, :sport_id, sport.id)
     @league.country_id = set_attribute_unless_given(@league, :country_id, country.id)
-       
+    
     respond_to do |format|
       format.html { redirect_to leagues_manager_path}
       format.js {
@@ -85,15 +86,15 @@ class LeaguesController < ApplicationController
           @league = League.find(params[:sport_id].gsub("league_", "").to_i)
           if params['type'] == 'add_to_coupon'
            current_user.coupons.find_or_create_by_league_id params[:sport_id].gsub("league_", "").to_i
-          elsif params['type'] == 'remove_from_coupon'
+         elsif params['type'] == 'remove_from_coupon'
            coupon = Coupon.find_by_league_id params[:sport_id].gsub("league_", "").to_i
            coupon.destroy
-          end
-          @has_ligue = current_user.coupons.find_by_league_id params[:sport_id].gsub("league_", "").to_i
-        }
-      end
-    end
+         end
+         @has_ligue = current_user.coupons.find_by_league_id params[:sport_id].gsub("league_", "").to_i
+       }
+     end
    end
+ end
 
 end
 

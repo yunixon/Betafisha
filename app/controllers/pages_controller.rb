@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
-
+  before_filter :authenticate, :only => [:index, :edit, :update, :destroy]
   before_filter :admin_user, :only => [:index, :edit, :update, :destroy]
-  uses_tiny_mce
+ # uses_tiny_mce
   
   def coefficients
   end

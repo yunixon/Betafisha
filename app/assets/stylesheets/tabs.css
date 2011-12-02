@@ -72,28 +72,28 @@ ul.tabs li.active, ul.bet-tabs li.active {
 }
 
 .admin_profile_tab {
-	background: url('../images/ruby.png') no-repeat  5px 10px;
+	background: url('../assets/ruby.png') no-repeat  5px 10px;
 
 }
 
 .users_manager_tab {
-	background: url('../images/group_edit.png') no-repeat  5px 10px;
+	background: url('../assets/group_edit.png') no-repeat  5px 10px;
 }
 
 .leagues_manager_tab {
-	background: url('../images/sport_soccer.png') no-repeat  5px 10px;
+	background: url('../assets/sport_soccer.png') no-repeat  5px 10px;
 }
 
 .pages_manager_tab {
-	background: url('../images/page.png') no-repeat  5px 10px;
+	background: url('../assets/page.png') no-repeat  5px 10px;
 }
 
 .news_manager_tab {
-  background: url('../images/newspaper.png') no-repeat  5px 10px;
+  background: url('../assets/newspaper.png') no-repeat  5px 10px;
 }
 
 .bookmakers_manager_tab {
-  background: url('../images/chart_curve.png') no-repeat  5px 10px;
+  background: url('../assets/chart_curve.png') no-repeat  5px 10px;
 }
 
 .add_edit_form {
@@ -159,7 +159,7 @@ ul.tabs li.active, ul.bet-tabs li.active {
 	width: 16px;
 	height: 16px;
 	text-indent: -9999px;
-	background: url('../images/delete.png') no-repeat 0 0;
+	background: url('../assets/delete.png') no-repeat 0 0;
 }
 
 .new_league, .new_sport, .new_country, .edit_sport, .edit_country, .edit_league {

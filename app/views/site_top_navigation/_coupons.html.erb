@@ -2,11 +2,11 @@
   <ul>
   <% current_user.coupons.each_with_index do |c,i| %>
       <% if !c.league.nil?%>
-        <li class="<%= 'even' if i%2 == 0 %>"> <%= image_tag get_sport_image c.league.sport.name %> <%= image_tag "flags/#{c.league.country.flag_image}", :width => 16, :height => 11 %> <%= link_to c.league.title, c.league, :class => "coupon_league_name" %> <%= link_to "удалить лигу", "#", :class => "remove_coupon_from_list", :id => "league_#{c.league.id }", :data => "remove_from_coupon" %> </li>
+        <li class="<%= 'even' if i%2 == 0 %>"> <%#= image_tag get_sport_image c.league.sport.name %> <%#= image_tag "flags/#{c.league.country.flag_image}", :width => 16, :height => 11 %> <%= link_to c.league.title, c.league, :class => "coupon_league_name" %> <%= link_to "удалить лигу", "#", :class => "remove_coupon_from_list", :id => "league_#{c.league.id }", :data => "remove_from_coupon" %> </li>
       <% end %>
   <% end %>
   </ul>
 <% end %>
 
-<%= javascript_include_tag 'coupon.js' %>
+<%= javascript_include_tag 'coupon' %>
 

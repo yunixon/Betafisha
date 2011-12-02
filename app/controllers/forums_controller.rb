@@ -1,8 +1,9 @@
+# coding: utf-8
 class ForumsController < ApplicationController
-  
+
   before_filter :authenticate, :except => [:index, :show]
 
-  uses_tiny_mce
+  #uses_tiny_mce
 
   layout 'forum'
 

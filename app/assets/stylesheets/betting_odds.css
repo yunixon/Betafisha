@@ -25,9 +25,9 @@ border: 1px solid #CCC; }
 
 .add_coupon_manager, .remove_coupon_manager, .remove_coupon_from_list { float: left; display: block; text-indent: -9999px; width: 16px; height: 16px; margin-left: 5px;}
 .remove_coupon_from_list { float: right; margin-right: 2px; }
-.add_coupon_manager { background: url('../images/add.png') no-repeat 0 0; }
+.add_coupon_manager { background: url('../assets/add.png') no-repeat 0 0; }
 
-.remove_coupon_manager, .remove_coupon_from_list { background: url('../images/delete.png') no-repeat 0 0; }
+.remove_coupon_manager, .remove_coupon_from_list { background: url('../assets/delete.png') no-repeat 0 0; }
 
 .arrow_toggle_down { float: right; }
 
@@ -39,7 +39,7 @@ a.expand {
   height: 16px;
   overflow: hidden;
   text-indent: -9999px;
-  background: #fff url("../images/expand.png") 0 -50px ;
+  background: #fff url("../assets/expand.png") 0 -50px ;
 }
 
 div.bettings-odds-bookmakers a.active {
@@ -56,13 +56,13 @@ a#toggle-coupon-info {
   margin-top: 0px;
   margin-right: 10px;
   outline: none;
-  background: url("../images/toggle_up_dark.png") no-repeat right 3px;
+  background: url("../assets/toggle_up_dark.png") no-repeat right 3px;
   border-left: 1px solid #555;
   /*background: url("http://d1c2wop9xwia98.cloudfront.net/graphics/toggle_down_light.png") no-repeat 0 0;*/
 }
 
 a#toggle-coupon-info.active {
-  background: url("../images/toggle_down_dark.png") no-repeat right 3px;
+  background: url("../assets/toggle_down_dark.png") no-repeat right 3px;
 }
 
 a#toggle-coupon-clear {
@@ -74,7 +74,7 @@ a#toggle-coupon-clear {
   margin-top: 0px;
   margin-right: 10px;
   outline: none;
-  background: url("../images/title-close.png") no-repeat right 3px;
+  background: url("../assets/title-close.png") no-repeat right 3px;
   border-left: 1px solid #555;
 }
 

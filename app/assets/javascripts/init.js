@@ -7,35 +7,6 @@ $(document).ready(function() {
   accordionInit();
   accordionFromCookies();
 
-    /**************** ********** ********************/
-    /****************  EVENTS    ********************/
-    /**************** ********** ********************/
-
-   /* BET TYPE FILTERS */
-   /* $('.allin-filter, .1x2-filter, .1or2-filter, .Outright-filter').click(function(){
-    $(this).addClass("active");
-	    $.ajax({
-	       		type: 'GET',
-	       		data: { filter_type: this.getAttribute("class"), sport_id: this.getAttribute("id") },
-	       		url: '/coefficients',
-	       		dataType:'script'
-	       	});
-      	return false;
-    });*/
-
-    /**************** ********** ********************/
-    /****************  STYLINGS  ********************/
-    /**************** ********** ********************/
-/*    $("ul.dropdown li").hover(function(){
-      $(this).addClass("hover");
-      $('div:first',this).css('visibility', 'visible');
-    }, function(){
-      $(this).removeClass("hover");
-      $('div:first',this).css('visibility', 'hidden');
-    });
-
-    $("ul.dropdown li ul li:has(ul)").find("a:first").append(" &raquo; ");
-*/
   $('#tools-li a').click(function() { return false; });
   $("#cache-expire-button").click(function(){
     $.ajax({
@@ -68,4 +39,3 @@ function accordionFromCookies() {
       }
     }
 }
-

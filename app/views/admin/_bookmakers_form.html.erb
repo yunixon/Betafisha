@@ -1,13 +1,14 @@
 <%= form_for( :admin, :url => { :action =>"add_bookmaker_relation", :controller => "admin"}, :html => { :class => "bookmakers_form" }) do |f| %>
+
   <% flash.each do |key, value| %>
-	<div class="flash <%= key %>"> <%= value %> </div>
+	  <div class="flash <%= key %>"> <%= value %> </div>
   <% end %>
   
   <div class="field">
     <b> Фильтры: </b> <br/>
     <%= f.label :table_name, "Таблицы:" %> <br/>
     <%= f.select :table_name, 
-    	options_for_select( ["sport", "country", "league"], @params[:table_name] ), 
+    	options_for_select( ["country", "league"], @params[:table_name] ), 
     	:multiple => false
     %>
   </div>
@@ -19,42 +20,37 @@
     	:multiple => false, :class => "bookmaker_select"
     %> <br/>
   </div>
-  
+
   <div class="field">
   <b> Выберите элементы для связи:   </b> <br/>
   	<%= f.label :common_element_id, "Наши значения" %> <br/> 
-    <%= f.select :common_element_id, 
-    	options_for_select( @common_values.collect { |p| [ p["element_name"], p["id"] ] },  @params[:common_element_id]), 
-    	:multiple => false
-    %> <br />    <%= link_to " * Кликните", "#", :id => "show_relations" %> или измените значение для просмотра уже существующих связей.<br />
+  	<%= f.text_field :common_element_id ,{ :data => { :autocomplete_source => bookmakers_manager_path}, :placeholder => "введите наше значение...", :value => @common_item } %>
    	<p>
   </div>
   
   <% if !@values.nil? %>
 	  <div class="field">
 	  <%= f.label :bookmaker_element_id, "Значения для " + @params[:bookmaker_name] %><br/>
-		<%= f.select :bookmaker_element_id, 
-			options_for_select( @values.collect { |p| [ p["element_name"], p["id"] ] } , @params[:bookmaker_element_id]), 
-			:multiple => false, :class => "bookmaker_select"
-		%> <br/>
+	  <%= f.text_field :bookmaker_element_id ,{ :data => { :autocomplete_source => bookmakers_manager_path }, :placeholder => "введите значение букмекера...", :value => @bookmaker_item }%>
 	  </div>
   <% end %>
   
   <div class="actions">
     <%= f.submit "Объединить" %>
   </div> 
-  
-  <% if !@elements.nil? %>
-    <ul>
-      <b>Существующие связи:</b>  
-      <% @elements.each do |element| %>
-      <li><span id="has_relation">  <%= element.element_name %> </span> <%= link_to "Удалить связь", "#", :class => "delete_relation", :id => element.id, :data => element.element_name    %> </li>
-      <% end %>
-    </ul>
-  <% end %>
+
 
   
 <% end %>
 
-<%= javascript_include_tag 'forms.js' %>
+<% if !@elements.nil? %>
+  <ul>
+    <b>Существующие связи:</b>  
+    <% @elements.each do |element| %>
+    <li><span id="has_relation">  <%= element.element_name %> </span> <%= link_to "Удалить связь", "#", :class => "delete_relation", :id => element.id, :data => element.element_name    %> </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= javascript_include_tag 'forms' %>
 
