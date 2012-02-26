@@ -1,5 +1,5 @@
+# coding: utf-8
 class SiteTopNavigationController < ApplicationController
-
   def coefficients
   end
 
@@ -11,6 +11,5 @@ class SiteTopNavigationController < ApplicationController
 
   def tools
   end
-
 end
 

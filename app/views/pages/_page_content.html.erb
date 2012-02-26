@@ -3,26 +3,26 @@
 <% title @page.name %>
 
 <% if @page.permalink == 'bookmakers'%>
-	<ul>
-		<li>aaa</li>
-		<li>bbb</li>
-	</ul>
+  <ul>
+    <li>aaa</li>
+    <li>bbb</li>
+  </ul>
 <% end %>
 <p>
   <b><%= @page.name %></b>
 </p>
 
-	<p>
-	  <%= raw  @page.content %>
-	</p>
+  <p>
+    <%= raw  @page.content %>
+  </p>
 
-	<% if signed_in? && current_user.admin? %>
-	<p>
-	  <%= link_to "Edit", edit_page_path(@page) %> |
-	  <%= link_to "Destroy", @page, :confirm => 'Are you sure?', :method => :delete %> |
-	  <%= link_to "View All", pages_path %>
-	</p>
+  <% if signed_in? && current_user.admin? %>
+  <p>
+    <%= link_to "Edit", edit_page_path(@page) %>
+    <%= link_to "Destroy", @page, :confirm => 'Are you sure?', :method => :delete %>
+    <%= link_to "View All", pages_path %>
+  </p>
 
-	<% end %>
-	
-<% end %> 
+  <% end %>
+
+<% end %>

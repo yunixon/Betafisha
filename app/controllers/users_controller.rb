@@ -6,7 +6,7 @@ class UsersController < ApplicationController
  before_filter :admin_user,   :only => :destroy
 
   layout 'sign'
-  
+
   def index
     @users = User.all
     @users = User.order(:name).page params[:page]

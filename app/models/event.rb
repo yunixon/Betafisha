@@ -21,6 +21,4 @@ class Event < ActiveRecord::Base
 
 end
 
-
 #SELECT * FROM events e INNER JOIN bets b ON e.id = b.event_id INNER JOIN bet_types bt ON b.bet_type_id = bt.id WHERE bt.name = '1x2'
-

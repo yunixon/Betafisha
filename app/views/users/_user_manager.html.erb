@@ -1,12 +1,10 @@
-<% if user_signed_in? && current_user.admin? %>
+<% if admin_signed_in? %>
+	<ul class="users">
+	 <h2>Имя Email</h2>
+	  <%= render @users %>
+	</ul>
 
-		<ul class="users">
-		 <h2>Имя Email</h2>
-		  <%= render @users %>
-		</ul>
-		
-		<div id="my_pagination">
-		  <%= paginate @users, :remote => true %>
-		</div>
-		
+	<div id="my_pagination">
+	  <%= paginate @users, :remote => true %>
+	</div>	
 <% end %>

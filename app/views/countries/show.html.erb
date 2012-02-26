@@ -14,12 +14,10 @@
   </ul>
   </div>
 <% end %>
-
 <% content_for :breadcrumb do %>
    <%= link_to t(:top_menu_coefficients), coefficients_path %>
    »  <%= @country.name %>
 <% end %>
-
 <% content_for :left_nav do %>
   <div id="my_coupon">
     <div class="header">Мои Лиги<a id="toggle-coupon-info" href="#" class="active"></a></div>
@@ -32,13 +30,11 @@
 	  <%= render 'sports/sports_content' %>
 	</div>
 <% end %>
-
 <% content_for :content do %>
   <% @country.leagues.each do |l| %>
     <%= link_to l.name, l %> <br />
   <% end %>
 <% end %>
-
 <% content_for :right_nav do %>
   <div id="my_coupon">
     <div class="header">Мои Купон<a id="toggle-coupon-clear" href="#" class="active"></a></div>
@@ -50,4 +46,3 @@
     </div>
   </div>
 <% end %>
-

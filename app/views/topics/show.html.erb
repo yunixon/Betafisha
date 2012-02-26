@@ -6,7 +6,7 @@
 
 <div class="post first-post">
 
-  <div class="post-user"> 
+  <div class="post-user">
    <p> <%= @topic.user.username %> </p>
    <p> <%= @topic.created_at > 1.days.ago ? image_tag("http://www.awwwards.com/images/ico_pending.png") + " " + time_ago_in_words(@topic.created_at) + t( :ago ) : l(@topic.created_at, :format => :long) if !@topic.nil? %> </p>
   <% if current_user.admin? %>
@@ -15,13 +15,11 @@
   </div>
 
   <div class="post-content"> <%= @topic.content %> </div>
-  
-
 </div>
 
 <% for post in @topic.posts %>
   <div class="post">
-    <div class="post-user"> 
+    <div class="post-user">
        <p> <%= post.user.username %> </p>
        <p> <div class="post-info"> <%= post.created_at > 1.days.ago ? image_tag("http://www.awwwards.com/images/ico_pending.png") + " " + time_ago_in_words(post.created_at) + t( :ago ) : l(post.created_at, :format => :long) if !post.nil? %> </div> </p>
        <% if current_user.admin? %>
@@ -29,7 +27,6 @@
        <% end %>
     </div>
     <div class="post-content"> <%= post.content %> </div>
-    
   </div>
 
 <% end %>

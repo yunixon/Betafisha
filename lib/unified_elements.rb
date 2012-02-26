@@ -48,7 +48,7 @@ SPORTS.each do |style|
     sport.children.each do |group|
       _country_name = group['name'].include?('~') ? 'World' :
         group['name'].split(' - ').length == 2 ? group['name'].split(' - ').first  : 'World'
-      _league_name = group['name'].include?('~') ? group['name'].gsub('~','') : group['name'].split(' - ').last  
+      _league_name = group['name'].include?('~') ? group['name'].gsub('~','') : group['name'].split(' - ').last
       _league_name = group['name'] if group['name'].split(' - ').last == 'Championship'
       _country = calculate_common_name(_country_name, 'country')
       _league_name_full = [_sport.element_name, _country.element_name, _league_name].join(' | ')

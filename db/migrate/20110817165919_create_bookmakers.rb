@@ -1,10 +1,10 @@
 class CreateBookmakers < ActiveRecord::Migration
   def self.up
     create_table :bookmakers do |t|
-      
+
       t.string  :name
       t.integer :priority
-      
+
       t.timestamps
     end
   end

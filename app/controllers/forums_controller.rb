@@ -24,7 +24,7 @@ class ForumsController < ApplicationController
     if @forum.save
       redirect_to forums_path, :notice => "Successfully created forum."
     else
-      render :action => 'new'
+      render 'new'
     end
   end
 
@@ -37,7 +37,7 @@ class ForumsController < ApplicationController
     if @forum.update_attributes(params[:forum])
       redirect_to forums_path, :notice  => "Successfully updated forum."
     else
-      render :action => 'edit'
+      render 'edit'
     end
   end
 

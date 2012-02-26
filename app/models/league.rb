@@ -15,24 +15,24 @@ class League < ActiveRecord::Base
 
   #validates :title, :presence => true,
   #                  :length   => { :within => 2..128}
-                    
+
   default_scope :order => 'leagues.priority DESC'
 
   #find old elements, interval can be changed
   scope :older_than, lambda { |time| where("updated_at < ?", time) }
 
   def self.get_countries
-    find(:all, 
-         :select => "country_id, COUNT(country_id) AS duplicate_count", 
-         :conditions => "country_id IS NOT NULL", 
-         :group  => "country_id HAVING duplicate_count >= 1" 
+    find(:all,
+         :select => "country_id, COUNT(country_id) AS duplicate_count",
+         :conditions => "country_id IS NOT NULL",
+         :group  => "country_id HAVING duplicate_count >= 1"
          )
   end
 
   def self.get_league_by_country_and_sport( sport_id, country_id )
       where(:sport_id => sport_id, :country_id => country_id)
   end
-  
+
   def common_value?
     Common.find_by_element_name_and_table_name(self.name, 'league') ? true : false
   end

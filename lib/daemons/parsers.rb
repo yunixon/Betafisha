@@ -31,7 +31,7 @@ begin
   while $running do
 
     @log.write "========================================================================\n"
-   
+
     @log.write "#Clearing Bets & Participants started\n"
       Bet.delete_all
 #      Participant.delete_all
@@ -81,7 +81,7 @@ begin
         @log.write "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
       end
     end
-    
+
 =begin
     threads[3] = spawn do
       begin
@@ -101,7 +101,7 @@ begin
     wait(threads)
 
    @log.write "#Clearing DB (old elements) started\n"
-   
+
  #   Bet.older_than(last_parsed_time).delete_all
  #   BetType.older_than(last_parsed_time).delete_all
  #   Bookmaker.older_than(last_parsed_time).delete_all
@@ -110,13 +110,13 @@ begin
   #  League.older_than(last_parsed_time).delete_all
   #   Participant.older_than(last_parsed_time).delete_all
   #   Sport.older_than(last_parsed_time).delete_all
- 
+
    @log.write "Clearing DB finished\n"
 
     @log.write "Changing element titles\n"
     check_and_set_titles
     @log.write "Changing element titles finished\n"
-    
+
     @log.write "Deleting events without bets\n"
     Event.all.each do |e|
       e.destroy if e.bets.empty?

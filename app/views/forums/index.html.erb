@@ -5,7 +5,7 @@
     <th class="forum-name">Форум</th>
     <th class="forum-description">Описание</th>
     <th class="forum-updated">Последние обновление</th>
-    <% if user_signed_in?%>
+    <% if user_signed_in? %>
       <% if current_user.admin? %>
         <th class="forum-admin"></th>
       <% end %>
@@ -23,7 +23,7 @@
         <% if user_signed_in?%>
           <% if current_user.admin? %>
             <td class="forum-admin"><%= link_to "Редактировать", edit_forum_path(forum), :class => "forum-edit-icon" %> <%= link_to "Удалить", forum, :confirm => 'Вы уверены, что хотите удалить форум?', :class => "forum-delete-icon", :method => :delete %></td>
-          <% end %>   
+          <% end %>
         <% end %>
       </tr>
     <% end %>

@@ -1,3 +1,4 @@
+# coding: utf-8
 class PageSubjectsController < ApplicationController
   layout 'admin'
   def index
@@ -36,7 +37,7 @@ class PageSubjectsController < ApplicationController
       if @page_subject.save
         format.html { redirect_to(@page_subject, :notice => 'Page subject was successfully created.') }
       else
-        format.html { render :action => "new" }
+        format.html { render 'new' }
       end
     end
   end
@@ -48,7 +49,7 @@ class PageSubjectsController < ApplicationController
       if @page_subject.update_attributes(params[:page_subject])
         format.html { redirect_to(@page_subject, :notice => 'Page subject was successfully updated.') }
       else
-        format.html { render :action => "edit" }
+        format.html { render 'edit' }
       end
     end
   end

@@ -1,11 +1,12 @@
+# coding: utf-8
 class PagesController < ApplicationController
   before_filter :authenticate, :only => [:index, :edit, :update, :destroy]
   before_filter :admin_user, :only => [:index, :edit, :update, :destroy]
  # uses_tiny_mce
-  
+
   def coefficients
   end
-  
+
   def index
     @pages = Page.all
   end
@@ -13,9 +14,9 @@ class PagesController < ApplicationController
   def show
   	if params[:permalink]
     	@page = Page.find_by_permalink(params[:permalink])
-  	else 
+  	else
     	@page = Page.find(params[:id])
-    end   
+    end
   end
 
   def new
@@ -24,8 +25,7 @@ class PagesController < ApplicationController
 
   def create
     @page = Page.new(params[:page])
-    @page.page_subject_id = params[:page][:page_subject_id]
-    
+    @page.page_subject = PageSubject.find(params[:page][:page_subject_id])
     if @page.save
     	redirect_to admin_pages_manager_path, :notice => "Successfully created page."
     end

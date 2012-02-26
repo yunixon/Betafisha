@@ -1,21 +1,19 @@
 <%= form_for @sport do |f| %>
   <div class="form_name">
-  	Новый вид спорта
+    Новый вид спорта
   </div>
   <div class="field">
-  	<%= f.label :name, "Название" %> <br/>
+    <%= f.label :name, "Название" %> <br/>
     <%= f.text_field :name %>
   </div>
-  
-  <div class="field">
-  	<%= f.label :priority, "Приоритет" %> <br/>
-  	<%= f.text_field :priority, :class => 'priority' %>
-  </div>
-  
-  <div class="actions">
-  	<%= f.submit "Добавить" %> <%=  link_to 'Назад', leagues_manager_path, :class => 'back_from_form'  %> 
-  </div>
-  
-<% end %>
 
+  <div class="field">
+    <%= f.label :priority, "Приоритет" %> <br/>
+    <%= f.text_field :priority, :class => 'priority' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Добавить" %> <%=  link_to 'Назад', leagues_manager_path, :class => 'back_from_form' %>
+  </div>
+<% end %>
 <%= javascript_include_tag 'forms.js' %>

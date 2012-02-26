@@ -1,24 +1,28 @@
 <%= form_for @page do |f| %>
 
   <div class="field">
-  	<%= f.label :page_subject_id %> <br/>
-    <%= f.select :page_subject_id, 
-    	options_for_select( PageSubject.all.collect { |p| [p.name, p.id] }, @page.page_subject_id), 
-    	:multiple => false, :size => 3 
-    %> <%= link_to  "Добавить", new_page_subject_path , :class => 'new_item', :id => 'new_country_item'  %>
+    <%= f.label :page_subject_id %> <br/>
+    <%= f.select :page_subject_id,
+      options_for_select( PageSubject.all.collect { |p| [p.name, p.id] }, @page.page_subject_id),
+      :multiple => false, :size => 3
+    %> <%= link_to  "Добавить", new_page_subject_path , :class => 'new_item', :id => 'new_country_item' %>
   </div>
-  
+
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+
   <div class="field">
     <%= f.label :permalink %><br />
     <%= f.text_field :permalink %>
   </div>
+
   <div class="field">
     <%= f.label :content %><br />
     <%= f.text_area :content, :class => "mceEditor", :escape => false %>
   </div>
+
   <div class="actions"><%= f.submit %></div>
+
 <% end %>

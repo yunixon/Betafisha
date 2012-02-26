@@ -1,11 +1,11 @@
 class CreateCountries < ActiveRecord::Migration
   def self.up
     create_table :countries do |t|
-      
+
       t.string  :name
       t.string  :flag_image
       t.integer :priority
-      
+
       t.timestamps
     end
   end

@@ -1,10 +1,10 @@
 class CreateBetTypes < ActiveRecord::Migration
   def self.up
     create_table :bet_types do |t|
-    
+
       t.string  :name
       t.integer :priority
-      
+
       t.timestamps
     end
   end

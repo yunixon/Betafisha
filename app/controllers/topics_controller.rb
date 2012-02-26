@@ -1,3 +1,4 @@
+# coding: utf-8
 class TopicsController < ApplicationController
 
   before_filter :authenticate
@@ -17,14 +18,13 @@ class TopicsController < ApplicationController
   end
 
   def create
-    @topic = Topic.new( params[:topic] )
-    ActiveRecord::Base.logger.info params[:topic][:forum_id]
-    @topic.forum_id = params[:topic][:forum_id]
-    @topic.user_id = current_user.id 
+    @topic = current_user.topics.build(params[:topic])
+    @topic.forum = Forum.find(params[:topic][:forum_id])
+
     if @topic.save
       redirect_to @topic.forum, :notice => "Successfully created topic."
     else
-      render :action => 'new'
+      render 'new'
     end
   end
 
@@ -37,7 +37,7 @@ class TopicsController < ApplicationController
     if @topic.update_attributes(params[:topic])
       redirect_to @topic, :notice  => "Successfully updated topic."
     else
-      render :action => 'edit'
+      render 'edit'
     end
   end
 

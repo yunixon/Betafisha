@@ -1,16 +1,13 @@
 <li>
   <span class="page-name-span"><%= link_to page.name, page %></span>
-  <% if current_user.admin?  %>
-  
-  	<span class="delete-page-span"> <%= link_to "Удалить", page,
-														   :title => "Удалить #{page.name}",                              
-														   :method => "delete", 
-														   :confirm => "Вы уверены?", 
-														   :title => "Удалить #{page.name}",
-														   :page => params[:page],  
-				                        				   :class => "delete_page"%>  </span>  
-				                        				     
-    <span class="page-email-span"><%= link_to page.permalink, "/#{page.permalink}" %></span> 
-           
+  <% if current_user.admin? %>
+    <span class="delete-page-span"> <%= link_to "Удалить", page,
+                               :title => "Удалить #{page.name}",
+                               :method => "delete",
+                               :confirm => "Вы уверены?",
+                               :title => "Удалить #{page.name}",
+                               :page => params[:page],
+                                           :class => "delete_page"%></span>
+    <span class="page-email-span"><%= link_to page.permalink, "/#{page.permalink}" %></span>
   <% end %>
-</li> 
+</li>

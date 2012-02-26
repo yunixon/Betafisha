@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
 # core
-gem 'rails', '3.1.1'
-
+gem 'rails', '3.1.3'
+gem 'thin'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -40,18 +40,21 @@ gem 'daemons'
 
 group :test, :development do
   gem "rspec-rails"
-  gem 'rails-erd' 
+  gem 'rails-erd'
   gem 'nifty-generators'
-  gem 'ruby-debug'
+  #gem 'ruby-debug'
+  gem 'ruby-debug19'
+  #gem 'ripper'
+  #gem 'rails_best_practices'
 end
 
 group :test, :development do
-	#gem 'turn' #pretty print for test results 
+	#gem 'turn' #pretty print for test results
   gem 'capybara'
   #gem "cucumber-rails"
-  gem "factory_girl_rails"
+  #gem "factory_girl_rails"
   gem 'guard-rspec'
-  gem 'launchy'
+  #gem 'launchy'
 
 end
 
@@ -65,7 +68,7 @@ gem 'mocha'
 gem 'capistrano'
 
 # rich text editor
-gem 'tiny_mce'
+#gem 'tiny_mce'
 
 # image uploader
 gem 'carrierwave'

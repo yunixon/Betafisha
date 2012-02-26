@@ -119,7 +119,7 @@ class BetredkingsParser
                   end
                 end
               else
-              #      
+              #
                 _event_name = calculate_name(Betredking, _league_name, 'event')
                 _event = Event.find_or_create_by_name _event_name
                 _event.league_id = set_attribute_unless_given(_event, :league_id, _league.id)

@@ -1,63 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= title 'BetAfisha' %></title>
-
-	<!--[if lt IE 9]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
-  <%= csrf_meta_tag %>
-	<%= stylesheet_link_tag 'application'%>
-	<%= javascript_include_tag 'application' %>
-	<%#= include_tiny_mce_if_needed %>
-</head>
-<body>
-
-<body>
-<div class="top-line" style="width: 100%; height:25px; border-bottom: 1px solid #000; display: block; margin-bottom: 10px; text-align: center; position: relative; background: url(../images/top-line-bg.png) repeat;">
-  <div id="user_entrance" class="container_20">
-    <!--ul id="locale_switch">
-       <li id="locale_en"> <%#= link_to "en", "#{request.path}?locale=en" %> </li>
-       <li id="locale_ru"> <%#= link_to "ru", "#{request.path}?locale=ru" %> </li>
-    </ul-->
-    <ul>
-       <% if !user_signed_in? %>
-      	  <li><%= link_to t(:top_menu_sign_up),  new_user_registration_path %></li>
-       <% end %>
-	    <% if user_signed_in? %>
-	     <% if current_user.admin?  %>
-        <li><%= link_to "Админ панель", "/admin" %></li>
-        <% end %>
-	      <li><%= link_to t(:top_menu_sign_out), destroy_user_session_path %> <%= image_tag("../images/sign_in_icon.png") + " " +  current_user.email %></li>
-	   <% else %>
-	       <li><%= render 'devise/sessions/new_session_short' %>
-	   <% end %>
-	   <% if user_signed_in? %>
-      	  <li><%= link_to t(:top_menu_profile), current_user %></li>
-      <% end %>
-    </ul>
-  </div>
-</div>
-
-<header class="container_20">
-  <div id="navigation" class="grid_20">
-    <div class="logo-image-wrapper"> <%= link_to "logo", root_path, :class => "logo-image" %> </div>
-    <div class="top-nav">
-	    <%= render 'site_top_navigation/main_nav' %>
-	  </div>
-  </div>
-</header>
-
-<section class="container_20">
-  	<div id="content" class="grid_20">
-	    <%= yield %>
-  	</div>
-</section>
-
-<footer class="container_20">
-
-</footer>
-
-</body>
+  <head>
+    <title><%= title 'BetAfisha' %></title>
+  	<!--[if lt IE 9]>
+  	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  	<![endif]-->
+    <%= csrf_meta_tag %>
+  	<%= stylesheet_link_tag 'application'%>
+  	<%= javascript_include_tag 'application' %>
+  </head>
+  <body>
+    <div class="top-line" style="width: 100%; height:25px; border-bottom: 1px solid #000; display: block; margin-bottom: 10px; text-align: center; position: relative; background: url(../images/top-line-bg.png) repeat;">
+      <div id="user_entrance" class="container_20">
+        <!--ul id="locale_switch">
+           <li id="locale_en"> <%#= link_to "en", "#{request.path}?locale=en" %> </li>
+           <li id="locale_ru"> <%#= link_to "ru", "#{request.path}?locale=ru" %> </li>
+        </ul-->
+        <ul>
+           <% if !user_signed_in? %>
+          	  <li><%= link_to t(:top_menu_sign_up),  new_user_registration_path %></li>
+           <% end %>
+    	    <% if user_signed_in? %>
+    	     <% if current_user.admin?  %>
+            <li><%= link_to "Админ панель", "/admin" %></li>
+            <% end %>
+    	      <li><%= link_to t(:top_menu_sign_out), destroy_user_session_path %> <%= image_tag("../images/sign_in_icon.png") + " " +  current_user.username %></li>
+    	   <% else %>
+    	       <li><%= render 'devise/sessions/new_session_short' %>
+    	   <% end %>
+    	   <% if user_signed_in? %>
+          	  <li><%= link_to t(:top_menu_profile), current_user %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+    <header class="container_20">
+      <div id="navigation" class="grid_20">
+        <div class="logo-image-wrapper"> <%= link_to "logo", root_path, :class => "logo-image" %> </div>
+        <div class="top-nav">
+    	    <%= render 'site_top_navigation/main_nav' %>
+    	  </div>
+      </div>
+    </header>
+    <section class="container_20">
+      	<div id="content" class="grid_20">
+    	    <%= yield %>
+      	</div>
+    </section>
+    <footer class="container_20">
+    </footer>
+  </body>
 </html>

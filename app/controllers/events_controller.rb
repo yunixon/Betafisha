@@ -20,7 +20,7 @@ class EventsController < ApplicationController
     if @event.save
       redirect_to @event, :notice => "Successfully created event."
     else
-      render :action => 'new'
+      render 'new'
     end
   end
 
@@ -33,7 +33,7 @@ class EventsController < ApplicationController
     if @event.update_attributes(params[:event])
       redirect_to @event, :notice  => "Successfully updated event."
     else
-      render :action => 'edit'
+      render 'edit'
     end
   end
 
@@ -43,4 +43,3 @@ class EventsController < ApplicationController
     redirect_to events_url, :notice => "Successfully destroyed event."
   end
 end
-

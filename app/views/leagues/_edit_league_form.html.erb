@@ -1,33 +1,27 @@
 <%= form_for @league do |f| %>
-
   <div class="form_name">
     Редактирование лиги
-  </div> 
-  
+  </div>
   <div class="form_info">
   </div>
-  
   <div class="field">
   	<%= f.label :sport_id, "Вид спорта" %> <br/>
-    <%= f.select :sport_id, 
-    	options_for_select( Sport.all.collect { |p| [p.name, p.id] }, @league.sport.id ), 
-    	:multiple => false, :size => 3 
+    <%= f.select :sport_id,
+    	options_for_select( Sport.all.collect { |p| [p.name, p.id] }, @league.sport.id ),
+    	:multiple => false, :size => 3
     %> <%= link_to "Добавить", "/admin/sport_new", :class => 'new_item', :id => 'new_sport_item' %>
   </div>
-
   <div class="field">
   	<%= f.label :country_id, "Страна" %> <br/>
-    <%= f.select :country_id, 
-    	options_for_select( Country.all.collect { |p| [p.name, p.id] }, @league.country.id ), 
-    	:multiple => false, :size => 3 
+    <%= f.select :country_id,
+    	options_for_select( Country.all.collect { |p| [p.name, p.id] }, @league.country.id ),
+    	:multiple => false, :size => 3
     %> <%= link_to "Добавить", "/admin/country_new", :class => 'new_item', :id => 'new_country_item'  %>
   </div>
-
   <!--div class="field">
   	<%#= f.label :name, "Фиксированное Название" %> <br/>
     <%#= f.text_field :name, :readonly => "true" %>
   </div-->
-
   <div class="field">
   	<%= f.label :title, "Название" %> <br/>
     <%= f.text_field :title %> <br/>
@@ -37,17 +31,12 @@
         <span style="color: red"> Не используется как значение betafisha </span>
       <% end %>
   </div>
-  
   <div class="field">
   	<%= f.label :priority, "Приоритет" %> <br/>
   	<%= f.text_field :priority, :class => 'priority' %>
   </div>
-  
-
   <div class="actions">
   	<%= f.submit "Изменить" %> <%=  link_to 'Назад', leagues_manager_path, :class => 'back_from_form'  %>
   </div>
-  
 <% end %>
-
 <%= javascript_include_tag 'forms.js' %>

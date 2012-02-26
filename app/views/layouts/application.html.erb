@@ -2,20 +2,15 @@
 <html>
 <head>
   <title><%= title 'BetAfisha' %></title>
-
 	<!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-
   <%= csrf_meta_tag %>
 	<%= stylesheet_link_tag 'application'%>
 	<%= javascript_include_tag 'application' %>
-	<%#= include_tiny_mce_if_needed %>
 </head>
 <body>
-
 <div class="top-line" style="width: 100%; height:25px; border-bottom: 1px solid #000; display: block; margin-bottom: 10px; text-align: center; position: relative; background: url(../assets/top-line-bg.png) repeat;">
-
   <div id="user_entrance" class="container_20">
     <!--ul id="locale_switch">
        <li id="locale_en"> <%#= link_to "en", "#{request.path}?locale=en" %> </li>
@@ -29,7 +24,7 @@
 	        <% if current_user.admin?  %>
             <li><%= link_to "Админ панель", "/admin" %></li>
           <% end %>
-	      <li><%= link_to t(:top_menu_sign_out), destroy_user_session_path %> <%= image_tag("sign_in_icon.png") + " " +  current_user.email %></li>
+	      <li><%= link_to t(:top_menu_sign_out), destroy_user_session_path %> <%= image_tag("sign_in_icon.png") + " " +  current_user.username %></li>
 	    <% else %>
 	       <li><%= render 'devise/sessions/new_session_short' %>
 	    <% end %>
@@ -38,11 +33,8 @@
       <% end %>
     </ul>
   </div>
-
 </div>
-
 <header class="container_20">
-
   <div id="navigation" class="grid_20">
     <div class="logo-image-wrapper"> <%= link_to "logo", root_path, :class => "logo-image" %> </div>
     <div class="top-nav">
@@ -50,66 +42,51 @@
 	  </div>
   </div>
   <%= yield :sub_navigation%>
-
 </header>
-
 <section class="container_20">
 	<div id="wrapper" class="grid_20">
-
 	  <div id="banner"  class="grid_20" style=" height: 60px; margin-bottom: 10px; text-align: center;">
          <%= image_tag "banner-long.png",  :width=>"1000", :height=>"60" %>
     </div>
-
 	  <div id="breadcrumb"  class="grid_20">
        <%= yield :breadcrumb %>
     </div>
-
 		<div id="left_nav" class="grid_4">
       <%= yield :left_nav%>
 		</div>
-
 	  <div id="content" class="grid_11">
 		  <%# flash.each do |key, value| %>
 		    <div class="flash <%#= key %>"> <%#= value %> </div>
 		  <%# end %>
-
 		  <%= yield :content%>
 		  <%= yield%>
-
 	   </div>
-
 	  <div id="right_nav" class="grid_5">
       <%= yield :right_nav%>
       <div class="banner"><%= image_tag "banner-1.jpg",  :width=>"235", :height=>"422" %></div>
 			<div class="banner"><%= image_tag "banner-2.jpg",  :width=>"237", :height=>"357" %></div>
     </div>
 </section>
-
 <footer class="container_20">
 	  <div id="footer" class="grid_20">
-      
 	     <div id= "bottom_links" class="grid_4" style="float: right; margin-left: 10px;">
 	        <%= link_to "Информация", "/info/policy" %> |
 	        <%= link_to "Контакты", "/info/terms" %> |
         	<%= link_to "Faq", "/info/about" %>
        </div>
-
        <div id= "copyrights" class="grid_10">
       	<%= t(:footer_copyrights) %>
        </div>
         <div id="partners" class="grid_20" style="float: right;"> Партнеры: <a href="http://www.livescore.in/ru/" title="Livescore" target="_blank">Livescore</a>  </div>
   	</div>
-
   	<div id="debug" class="grid_20">
     	<%# if signed_in? %>
       	<%#= debug(params) if Rails.env.development? %>
       <%# end %>
   	</div>
 </footer>
-
 </body>
 </html>
-
 <script>
   $("a#toggle-coupon-info").click( function() {
     if($(this).parent().next().is(':hidden')){
@@ -122,4 +99,3 @@
     return false;
   });
 </script>
-

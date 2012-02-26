@@ -7,15 +7,15 @@ require File.dirname(__FILE__) + "/../../config/application"
 Rails.application.require_environment!
 
 $running = true
-Signal.trap("TERM") do 
+Signal.trap("TERM") do
   $running = false
 end
 
 while($running) do
-  
+
   # Replace this with your code
   Rails.logger.auto_flushing = true
   Rails.logger.info "This daemon is still running at #{Time.now}.\n"
-  
+
   sleep 10
 end

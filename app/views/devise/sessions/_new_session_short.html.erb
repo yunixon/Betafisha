@@ -1,11 +1,11 @@
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 
-    <%= f.label :email, "E-mail" %>
-    <%= f.text_field :email %>
+  <%= f.label :email, "E-mail" %>
+  <%= f.text_field :email %>
 
-    <%= f.label :password, "Пароль"  %>
-    <%= f.password_field :password %>
-    
-    <%= f.submit t(:sign_in_submit) %>
-  
+  <%= f.label :password, "Пароль" %>
+  <%= f.password_field :password %>
+
+  <%= f.submit t(:sign_in_submit) %>
+
 <% end %>

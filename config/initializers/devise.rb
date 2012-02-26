@@ -64,7 +64,7 @@ Devise.setup do |config|
   # without confirming the account, but blocking it after a certain period
   # (ie 2 days).
   # config.confirm_within = 2.days
-
+    config.reset_password_within = 6.days
   # Defines which key will be used when confirming an account
   # config.confirmation_keys = [ :email ]
 
@@ -172,9 +172,9 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
-  
+
   config.omniauth :twitter, "mb8vSIq1g6NMVp3qc0ksQ", "8eilJw7Id9kb4M4L6N5jl1f5out9luWppgLHAX0"
-  
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

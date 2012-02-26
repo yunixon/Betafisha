@@ -1,57 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
-  	<title><%= title 'BetAfisha' %></title>
-
-	<!--[if lt IE 9]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-  <%= csrf_meta_tag %>
-	<%= stylesheet_link_tag 'reset', 'grid','accordian','style','popup', 'sign' %>
-
-	<%= javascript_include_tag :defaults, 'textinputfilter', 'script', 'popup' %>
-
-</head>
-<body>
-
-<header class="container_20">
-  <div id="user_entrance" class="grid_20">
-    <!--ul id="locale_switch">
-       <li id="locale_en"> <%#= link_to "en", "#{request.path}?locale=en" %> </li>
-       <li id="locale_ru"> <%#= link_to "ru", "#{request.path}?locale=ru" %> </li>
-    </ul-->
-    <ul>
-     <% if !user_signed_in? %>
-      <li><%= link_to t(:top_menu_sign_up),  new_user_registration_path %></li>
-     <% end %>
-	   <% if user_signed_in? %>
-	    <li><%= link_to t(:top_menu_sign_out), destroy_user_session_path %> (<%= image_tag("../images/sign_in_icon.png") + " " +  current_user.username %>)</li>
-	   <% else %>
-	    <li><%= link_to t(:top_menu_sign_in), user_session_path  %></li>
-	   <% end %>
-	   <% if user_signed_in? %>
-      <li><%= link_to t(:top_menu_profile), current_user %></li>
-     <% end %>
-    </ul>
-
-  </div>
-</header>
-
-<section class="container_20">
-
-	<div id="wrapper" class="grid_9 push_5" >
-	    <div id="logo">
-       <%= link_to "logo", root_path, :class => "logo-image" %>
+  <head>
+    <title><%= title 'BetAfisha' %></title>
+  	<!--[if lt IE 9]>
+  	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  	<![endif]-->
+    <%= csrf_meta_tag %>
+  	<%= stylesheet_link_tag 'reset', 'grid','accordian','style','popup', 'sign' %>
+  	<%= javascript_include_tag :defaults, 'textinputfilter', 'script', 'popup' %>
+  </head>
+  <body>
+    <header class="container_20">
+      <div id="user_entrance" class="grid_20">
+        <!--ul id="locale_switch">
+           <li id="locale_en"> <%#= link_to "en", "#{request.path}?locale=en" %> </li>
+           <li id="locale_ru"> <%#= link_to "ru", "#{request.path}?locale=ru" %> </li>
+        </ul-->
+        <ul>
+         <% if !user_signed_in? %>
+          <li><%= link_to t(:top_menu_sign_up),  new_user_registration_path %></li>
+         <% end %>
+    	   <% if user_signed_in? %>
+    	    <li><%= link_to t(:top_menu_sign_out), destroy_user_session_path %> (<%= image_tag("../images/sign_in_icon.png") + " " +  current_user.username %>)</li>
+    	   <% else %>
+    	    <li><%= link_to t(:top_menu_sign_in), user_session_path  %></li>
+    	   <% end %>
+    	   <% if user_signed_in? %>
+          <li><%= link_to t(:top_menu_profile), current_user %></li>
+         <% end %>
+        </ul>
       </div>
-			<%= yield %>
-	  </div>
-</section>
-
-<footer class="container_20">
-  	<div id="debug" class="grid_20">
-  	</div>
-</footer>
-
-</body>
+    </header>
+    <section class="container_20">
+    	<div id="wrapper" class="grid_9 push_5" >
+    	    <div id="logo">
+           <%= link_to "logo", root_path, :class => "logo-image" %>
+          </div>
+    			<%= yield %>
+    	  </div>
+    </section>
+    <footer class="container_20">
+      	<div id="debug" class="grid_20">
+      	</div>
+    </footer>
+  </body>
 </html>
-

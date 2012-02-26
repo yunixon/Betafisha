@@ -66,15 +66,15 @@ module CalculatingName
   def set_attribute_unless_given(element, field, value)
     element.send(field).present? ? element.send(field) : value
   end
-  
+
   def check_and_set_titles
     MODELS_FOR_TITLE_CHECK.each do |model|
       model.all.each do |element|
-        if model == League 
+        if model == League
           if element.title.present?
            element.update_attribute(:title, element.title.split(" | ")[2]) if element.title.split(" | ").length == 3
-          else 
-            element.update_attribute(:title, element.name.split(" | ")[2]) if element.name.split(" | ").length == 3 
+          else
+            element.update_attribute(:title, element.name.split(" | ")[2]) if element.name.split(" | ").length == 3
           end # end of presents check
         else
           element.update_attribute(:title, element.name) unless element.title.present?

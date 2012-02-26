@@ -58,7 +58,7 @@ Betafisha::Application.routes.draw do
 
   get "admin/cache_expire"
   match "admin" =>  "admin#cache_expire", :as => :cache_expire
-  
+
   post "admin/league_edit"
   post "admin/league_new"
 
@@ -67,12 +67,12 @@ Betafisha::Application.routes.draw do
 
   post "admin/country_edit"
   post "admin/country_new"
-  
+
   #devise
-  
-  
-  
-  
+
+
+
+
 
   # statc (flat) pages
   resources :pages

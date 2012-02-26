@@ -3,25 +3,25 @@ class StanjamesParser
   URL = 'http://xml.stanjames.com/'
   SPORTS = {
     :ice_hockey => ['icehockey', 'icehockey-germany', 'icehockey-russia' ],
-    :basketball => ['basketball-russia', 'basketball-spain', 'basketball-germany', 
-                    'basketball-france', 'basketball-italy', 'basketball-greece', 
+    :basketball => ['basketball-russia', 'basketball-spain', 'basketball-germany',
+                    'basketball-france', 'basketball-italy', 'basketball-greece',
                     'basketball-turkey', 'basketball-us'
                    ],
     :tennis => [
-                #'tennis-ladies', 
-                #'tennis-matches', 
-                #'tennis-mens', 
+                #'tennis-ladies',
+                #'tennis-matches',
+                #'tennis-mens',
                 #'tennis-outrights'
                 ],
-    :football => ['football-ukraine', 'football-portugal', 'football-paraguay', 
-                  'football-argentina', 'football-austria', 'football-belgium', 
-                  'football-brazil', 'football-conference', 'football-denmark', 
-                  'football-euro-champions-league','football-finland', 'football-france', 
-                  'football-germany', 'football-holland', 'football-hungary', 
-                  'football-italy', 'football-major-league-soccer', 'football-mexico', 
-                  'football-poland', 'football-portugal', 'football-premiership', 
-                  'football-russia', 'football-south-america', 'football-worldcup', 
-                  'football-spain', 'football-sweden', 'football-switzerland', 
+    :football => ['football-ukraine', 'football-portugal', 'football-paraguay',
+                  'football-argentina', 'football-austria', 'football-belgium',
+                  'football-brazil', 'football-conference', 'football-denmark',
+                  'football-euro-champions-league','football-finland', 'football-france',
+                  'football-germany', 'football-holland', 'football-hungary',
+                  'football-italy', 'football-major-league-soccer', 'football-mexico',
+                  'football-poland', 'football-portugal', 'football-premiership',
+                  'football-russia', 'football-south-america', 'football-worldcup',
+                  'football-spain', 'football-sweden', 'football-switzerland',
                   'football-turkey'
                  ],
       :volleyball => ['volleyball-international', 'volleyball-spain', 'volleyball-poland', 'volleyball-italy', 'volleyball-greece', 'volleyball-germany', 'volleyball' ]

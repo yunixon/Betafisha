@@ -2,9 +2,9 @@ require 'spec_helper'
 
 describe "Pages" do
   before (:each) do
-     #register and confirm new user
-      @user = Factory(:user)
-      visit "http://localhost:3000/users/confirmation?confirmation_token=#{@user.confirmation_token}"
+    #register and confirm new user
+    @user = Factory(:user)
+    visit "http://localhost:3000/users/confirmation?confirmation_token=#{@user.confirmation_token}"
   end
 
   describe "GET /pages if guest" do
@@ -50,5 +50,4 @@ describe "Pages" do
       current_path.should == pages_path
     end
   end
-
 end

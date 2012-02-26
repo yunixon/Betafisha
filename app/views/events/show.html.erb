@@ -14,7 +14,6 @@
   </ul>
   </div>
 <% end %>
-
 <% content_for :breadcrumb do %>
    <%= link_to t(:top_menu_coefficients), coefficients_path %>
    »  <%= link_to @event.league.country.name,  @event.league.country %>
@@ -22,7 +21,6 @@
    » <%= link_to @event.league.name, @event.league %>
    » <%= @event.name %>
 <% end %>
-
 <% content_for :left_nav do %>
   <div id="my_coupon">
     <div class="header">Мои Лиги<a id="toggle-coupon-info" href="#" class="active"></a></div>
@@ -35,27 +33,22 @@
 	  <%= render 'sports/sports_content' %>
 	</div>
 <% end %>
-
 <% content_for :content do %>
   <div id="refresh_box">
     <ul class="bet-tabs">
         <li><a href="#towin-with-draw">1x2</a></li>
         <li><a href="#to-win">1or2</a></li>
     </ul>
-
     <div class="tab_container">
         <div id="towin-with-draw" class="tab_content">
           <%= render 'events/towin_with_draw' %>
         </div>
-
         <div id="to-win" class="tab_content">
           <%= render 'events/towin' %>
         </div>
-
       </div>
   </div>
 <% end %>
-
 <% content_for :right_nav do %>
   <div id="my_coupon">
     <div class="header">Мои Купон<a id="toggle-coupon-clear" href="#" class="active"></a></div>
@@ -67,4 +60,3 @@
     </div>
   </div>
 <% end %>
-

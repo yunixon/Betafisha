@@ -5,19 +5,19 @@ class ApplicationController < ActionController::Base
 
   include SessionsHelper
   include SiteNavigationHelper
-  
+
   #before_filter :set_locale
-  
+
  # def set_locale
  #     I18n.locale = params[:locale]
  # end
-  
+
 #  def default_url_options( options={} )
 #    if I18n.default_locale == "ru"
 #      { }
-#    else 
+#    else
 #      { :locale => I18n.locale }
 #    end
 #  end
- 
+
 end

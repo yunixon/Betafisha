@@ -1,7 +1,7 @@
 $:.unshift(File.expand_path('./lib', ENV['rvm_path']))
 require "rvm/capistrano"
 
-set :rvm_ruby_string, 'ree'
+set :rvm_ruby_string, '1.9.3'
 set :rvm_type, :user
 
 
@@ -14,10 +14,10 @@ set :user, "rvm"
 set :use_sudo, false
 set	:deploy_to, "/home/rvm/webapps/#{application}"
 
-set :deploy_via, :remote_cache
+#set :deploy_via, :remote_cache
 
 set :scm, :git
-set :repository,  "git@github.com:axgusev/Betafisha.git"
+set :repository,  "git@github.com:dxkxzx/Betafisha.git"
 set :branch, "master"
 set :ssh_options, { :forward_agent => true }
 

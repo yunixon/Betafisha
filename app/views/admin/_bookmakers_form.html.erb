@@ -1,56 +1,44 @@
 <%= form_for( :admin, :url => { :action =>"add_bookmaker_relation", :controller => "admin"}, :html => { :class => "bookmakers_form" }) do |f| %>
-
   <% flash.each do |key, value| %>
 	  <div class="flash <%= key %>"> <%= value %> </div>
   <% end %>
-  
   <div class="field">
     <b> Фильтры: </b> <br/>
     <%= f.label :table_name, "Таблицы:" %> <br/>
-    <%= f.select :table_name, 
-    	options_for_select( ["country", "league"], @params[:table_name] ), 
+    <%= f.select :table_name,
+    	options_for_select( ["country", "league"], @params[:table_name] ),
     	:multiple => false
     %>
   </div>
- 
   <div class="field">
   	<%= f.label :bookmaker_name, "Букмекеры:" %> <br/>
-    <%= f.select :bookmaker_name, 
-    	options_for_select( @bookmakers.collect { |p| [p.name] }, @params[:bookmaker_name]), 
+    <%= f.select :bookmaker_name,
+    	options_for_select( @bookmakers.collect { |p| [p.name] }, @params[:bookmaker_name]),
     	:multiple => false, :class => "bookmaker_select"
     %> <br/>
   </div>
-
   <div class="field">
   <b> Выберите элементы для связи:   </b> <br/>
-  	<%= f.label :common_element_id, "Наши значения" %> <br/> 
+  	<%= f.label :common_element_id, "Наши значения" %> <br/>
   	<%= f.text_field :common_element_id ,{ :data => { :autocomplete_source => bookmakers_manager_path}, :placeholder => "введите наше значение...", :value => @common_item } %>
    	<p>
   </div>
-  
   <% if !@values.nil? %>
 	  <div class="field">
 	  <%= f.label :bookmaker_element_id, "Значения для " + @params[:bookmaker_name] %><br/>
 	  <%= f.text_field :bookmaker_element_id ,{ :data => { :autocomplete_source => bookmakers_manager_path }, :placeholder => "введите значение букмекера...", :value => @bookmaker_item }%>
 	  </div>
   <% end %>
-  
   <div class="actions">
     <%= f.submit "Объединить" %>
-  </div> 
-
-
-  
+  </div>
 <% end %>
-
 <% if !@elements.nil? %>
   <ul>
-    <b>Существующие связи:</b>  
+    <b>Существующие связи:</b>
     <% @elements.each do |element| %>
     <li><span id="has_relation">  <%= element.element_name %> </span> <%= link_to "Удалить связь", "#", :class => "delete_relation", :id => element.id, :data => element.element_name    %> </li>
     <% end %>
   </ul>
 <% end %>
-
 <%= javascript_include_tag 'forms' %>
-

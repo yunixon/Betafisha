@@ -3,7 +3,7 @@ class AdminController < ApplicationController
 
   before_filter :authenticate
   before_filter :admin_user
-  
+
   #uses_tiny_mce
 
   layout 'admin'
@@ -19,9 +19,9 @@ class AdminController < ApplicationController
         @elements =  bookmaker_elements_by_common_id(@params[:bookmaker_name], @params[:common_element_id]) if @params[:common_element_id]
         @common_values = bookmaker_values_with_parents Common.where(:table_name => @params[:table_name]), @params[:table_name]
         @values = bookmaker_values_with_parents((bookmaker_values @params[:bookmaker_name], @params[:table_name]), @params[:table_name])
-        expire_fragment('all_available_leagues') 
+        expire_fragment('all_available_leagues')
       }
-      
+
     end
   end
 
@@ -34,7 +34,7 @@ class AdminController < ApplicationController
         @elements =  bookmaker_elements_by_common_id(@params[:bookmaker_name], @params[:common_element_id]) if @params[:common_element_id]
         @common_values = bookmaker_values_with_parents Common.where(:table_name => @params[:table_name]), @params[:table_name]
         @values = bookmaker_values_with_parents((bookmaker_values @params[:bookmaker_name], @params[:table_name]), @params[:table_name])
-        expire_fragment('all_available_leagues') 
+        expire_fragment('all_available_leagues')
       }
     end
   end
@@ -53,16 +53,15 @@ class AdminController < ApplicationController
         @elements = bookmaker_elements_by_common_id(@params[:bookmaker_name], @params[:common_element_id]) if @params[:common_element_id]
         if @params[:filter] == "common"
           @common_values = bookmaker_values_with_parents Common.where(:table_name => @params[:table_name]), @params[:table_name], @params[:term]
-          render :json => @common_values.collect { |p| [ p["element_name"], p["id"] ] } 
+          render :json => @common_values.collect { |p| [ p["element_name"], p["id"] ] }
         elsif @params[:filter] == "bookmaker"
           @values = bookmaker_values_with_parents((bookmaker_values @params[:bookmaker_name], @params[:table_name]), @params[:table_name], @params[:term])
           render :json => @values.collect { |p| [ p["element_name"], p["id"] ] }
-        end  
-        expire_fragment('all_available_leagues') 
+        end
+        expire_fragment('all_available_leagues')
       }
     end
   end
-
 
   def users_manager
     @users = User.all
@@ -77,12 +76,11 @@ class AdminController < ApplicationController
     end
   end
 
-  def pages_manager   
+  def pages_manager
     @page = Page.new
     @pages = Page.all
     @pages = Page.order(:name).page params[:page]
   end
-
 
   # creation and edition
   def sport_new
@@ -134,16 +132,9 @@ class AdminController < ApplicationController
       format.js
     end
   end
-  
-  def cache_expire
-    expire_fragment('all_available_leagues') 
-  end
-  
-  def add_to_common
-  end
-  
-  def remove_from_common 
-  end
-  
-end
 
+  def cache_expire
+    expire_fragment('all_available_leagues')
+  end
+
+end

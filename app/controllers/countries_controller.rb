@@ -5,9 +5,9 @@ class CountriesController < ApplicationController
   before_filter :admin_user, :only => [:edit, :update, :destroy]
 
   #cache_sweeper :country_sweeper unless Rails.env.development?
-  
+
   include CalculatingName
-  
+
   def index
     @countries = Country.find(:all)
   end
@@ -19,7 +19,7 @@ class CountriesController < ApplicationController
      flash[:success] = "Страна [" + @country.name +  "] была успешно добавлена."
      redirect_to leagues_manager_path
    end
-   
+
  end
 
  def show
@@ -52,4 +52,3 @@ def destroy
 end
 
 end
-

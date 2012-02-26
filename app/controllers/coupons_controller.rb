@@ -1,7 +1,7 @@
 class CouponsController < ApplicationController
 
   layout 'admin'
-  
+
   def index
     @coupons = Coupon.all
   end
@@ -19,7 +19,7 @@ class CouponsController < ApplicationController
     if @coupon.save
       redirect_to @coupon, :notice => "Successfully created coupon."
     else
-      render :action => 'new'
+      render 'new'
     end
   end
 
@@ -32,7 +32,7 @@ class CouponsController < ApplicationController
     if @coupon.update_attributes(params[:coupon])
       redirect_to @coupon, :notice  => "Successfully updated coupon."
     else
-      render :action => 'edit'
+      render 'edit'
     end
   end
 
@@ -41,6 +41,5 @@ class CouponsController < ApplicationController
     @coupon.destroy
     redirect_to coupons_url, :notice => "Successfully destroyed coupon."
   end
-  
-end
 
+end

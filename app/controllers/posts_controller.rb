@@ -1,6 +1,8 @@
+# coding: utf-8
 class PostsController < ApplicationController
 
-  before_filter :authenticate
+  before_filter :authenticate#, :only => [:edit, :update]
+  #before_filter :admin_user, :only => [:destroy]
 
   layout 'forum'
 
@@ -17,13 +19,13 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(params[:post])
-    @post.topic_id = params[:post][:topic_id]
-    @post.user_id = current_user.id 
+    @post = current_user.posts.build(params[:post])
+    @post.topic = Topic.find(params[:post][:topic_id])
+
     if @post.save
       redirect_to @post.topic, :notice => "Successfully created post."
     else
-      render :action => 'new'
+      render 'new'
     end
   end
 
@@ -36,7 +38,7 @@ class PostsController < ApplicationController
     if @post.update_attributes(params[:post])
       redirect_to @post, :notice  => "Successfully updated post."
     else
-      render :action => 'edit'
+      render 'edit'
     end
   end
 
