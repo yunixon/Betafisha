@@ -10,7 +10,6 @@ config/database.yml
 doc/
 nbproject/
 *.swp
-.pydevproject
 .DS_Store
 nbproject/
 .project
@@ -19,3 +18,5 @@ rdoc/*
 /public/uploads/
 .sass-cache/
 public/assets/*
+*.pdf
+/app/assets/images/*
